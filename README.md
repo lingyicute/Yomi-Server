@@ -130,8 +130,6 @@ docker-compose up -d
 ```
 	
 ## Compatible clients
-**Important**: default signIn verify code is **12345**
-
 [Android client for Teamgram](clients/teamgram-android.md)
 
 [iOS client for Teamgram](clients/teamgram-ios.md)
