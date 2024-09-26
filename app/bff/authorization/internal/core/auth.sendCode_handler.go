@@ -1,4 +1,4 @@
-// Copyright 2022 Teamgram Authors
+// Copyright 2022 Papercraft Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -334,8 +334,8 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 				if user.GetUser().GetUserType() == userpb.UserTypeTest {
 					needSendSms = false
 					codeData2.SentCodeType = model.SentCodeTypeApp
-					codeData2.PhoneCode = "12345"
-					codeData2.PhoneCodeExtraData = "12345"
+					codeData2.PhoneCode = "92323"
+					codeData2.PhoneCodeExtraData = "92323"
 					c.Logger.Infof("is test server: %v", codeData2)
 				} else {
 					if status, _ := c.svcCtx.StatusClient.StatusGetUserOnlineSessions(c.ctx, &statuspb.TLStatusGetUserOnlineSessions{
@@ -372,8 +372,8 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 			//if user.User.UserType == userpb.UserTypeTest {
 			//	c.Logger.Infof("test user: %s, %s", phoneNumber, user)
 			//	codeData2.SentCodeType = model.CodeTypeApp
-			//	codeData2.PhoneCode = "12345"
-			//	codeData2.PhoneCodeExtraData = "12345"
+			//	codeData2.PhoneCode = "92323"
+			//	codeData2.PhoneCodeExtraData = "92323"
 			//	go func() {
 			//		// c.pushSignInMessage(context.Background(), user.Id, codeData2.PhoneCode)
 			//	}()

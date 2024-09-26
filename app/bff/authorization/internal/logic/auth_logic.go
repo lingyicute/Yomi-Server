@@ -1,4 +1,4 @@
-// Copyright 2022 Teamgram Authors
+// Copyright 2022 Papercraft Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -202,7 +202,7 @@ func (m *AuthLogic) DoAuthSignIn(ctx context.Context,
 	}
 
 	// TODO(@benqi): check phone code valid, only number etc.
-	//if phoneCode != "12345" && codeData.PhoneCode != phoneCode {
+	//if phoneCode != "92323" && codeData.PhoneCode != phoneCode {
 	//	err := mtproto.NewRpcError2(mtproto.TLRpcErrorCodes_PHONE_CODE_INVALID)
 	//	return err
 	//}
@@ -219,7 +219,7 @@ func (m *AuthLogic) DoAuthSignIn(ctx context.Context,
 	//		err = mtproto.ErrPhoneCodeInvalid
 	//		return
 	//	}
-	//} else if phoneCode != "12345" {
+	//} else if phoneCode != "92323" {
 	//	err = mtproto.ErrPhoneCodeInvalid
 	//	return
 	//}
@@ -276,7 +276,7 @@ func (m *AuthLogic) DoAuthSignUp(ctx context.Context, authKeyId int64, phoneNumb
 		//		err = mtproto.ErrPhoneCodeInvalid
 		//		return
 		//	}
-		//} else if *phoneCode != "12345" {
+		//} else if *phoneCode != "92323" {
 		//	log.Errorf("verifySmsCode error: %v", err)
 		//	err = mtproto.ErrPhoneCodeInvalid
 		//	return

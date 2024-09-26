@@ -1,4 +1,4 @@
-# Teamgram - Unofficial open source [mtproto](https://core.telegram.org/mtproto) server written in golang
+# Papercraft - Unofficial open source [mtproto](https://core.telegram.org/mtproto) server written in golang
 > open source mtproto server implemented in golang with compatible telegram client.
 
 ## Introduce
@@ -19,8 +19,8 @@ Open source [mtproto](https://core.telegram.org/mtproto) server implementation w
 ## Architecture
 ![Architecture](docs/image/architecture-001.png)
 
-## Installing Teamgram 
-`Teamgram` relies on high-performance components: 
+## Installing Papercraft 
+`Papercraft` relies on high-performance components: 
 
 - **mysql5.7**
 - [redis](https://redis.io/)
@@ -29,7 +29,7 @@ Open source [mtproto](https://core.telegram.org/mtproto) server implementation w
 - [minio](https://docs.min.io/docs/minio-quickstart-guide.html#GNU/Linux)
 - [ffmpeg](https://www.johnvansickle.com/ffmpeg/)
 
-Privatization deployment Before `Teamgram`, please make sure that the above five components have been installed. If your server does not have the above components, you must first install Missing components. 
+Privatization deployment Before `Papercraft`, please make sure that the above five components have been installed. If your server does not have the above components, you must first install Missing components. 
 
 - [Centos9 Stream Build and Install](docs/install-centos-9.md) [@A Feel]
 - [CentOS7 teamgram-server环境搭建](docs/install-centos-7.md) [@saeipi]
@@ -130,14 +130,14 @@ docker-compose up -d
 ```
 	
 ## Compatible clients
-[Android client for Teamgram](clients/teamgram-android.md)
+[Android client for Papercraft](clients/teamgram-android.md)
 
-[iOS client for Teamgram](clients/teamgram-ios.md)
+[iOS client for Papercraft](clients/teamgram-ios.md)
 
-[tdesktop for Teamgram](clients/teamgram-tdesktop.md)
+[tdesktop for Papercraft](clients/teamgram-tdesktop.md)
 
 ## Feedback
-Please report bugs, concerns, suggestions by issues, or join telegram group **[Teamgram](https://t.me/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
+Please report bugs, concerns, suggestions by issues, or join telegram group **[Papercraft](https://t.me/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
 
 ## Notes
 If need enterprise edition:
