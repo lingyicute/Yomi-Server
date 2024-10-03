@@ -13,7 +13,7 @@ import (
 var (
 	MyAppName      = "Papercraft"
 	MyWebSite      = "papercraft-official.github.io"
-	TDotMe         = "papercraft-link.github.io"
+	TDotMe         = "papercraft-official.github.io"
 	PredefinedUser = false
 
 	// PredefinedUser2
@@ -24,14 +24,14 @@ var (
 func init() {
 	flag.StringVar(&MyAppName, "app_name", "Papercraft", "app_name")
 	flag.StringVar(&MyWebSite, "site_name", "papercraft-official.github.io", "site_name")
-	flag.StringVar(&TDotMe, "papercraft-link.github.io", "papercraft-link.github.io", "papercraft-link.github.io")
+	flag.StringVar(&TDotMe, "papercraft-official.github.io", "papercraft-official.github.io", "papercraft-official.github.io")
 	flag.BoolVar(&PredefinedUser, "predefined", false, "predefined")
 	flag.BoolVar(&PredefinedUser2, "predefined2", false, "predefined2")
 }
 
 func IsTDotMe(me string) bool {
 	switch me {
-	case "papercraft-link.github.io":
+	case "papercraft-official.github.io":
 		return true
 	case TDotMe:
 		return true

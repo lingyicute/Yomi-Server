@@ -137,7 +137,7 @@ docker-compose up -d
 [tdesktop for Papercraft](clients/papercraft-tdesktop.md)
 
 ## Feedback
-Please report bugs, concerns, suggestions by issues, or join papercraft group **[Papercraft](https://papercraft-link.github.io/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
+Please report bugs, concerns, suggestions by issues, or join papercraft group **[Papercraft](https://papercraft-official.github.io/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
 
 ## Give a Star! ⭐
 
