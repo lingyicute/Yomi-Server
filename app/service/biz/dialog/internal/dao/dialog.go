@@ -1,7 +1,7 @@
 // Copyright 2023 Papercraft Authors
 //  All rights reserved.
 //
-// Author: Benqi (wubenqi@gmail.com)
+// Author: @lingyicute
 //
 
 package dao
@@ -23,7 +23,7 @@ import (
 func (d *Dao) MakeDialog(dialogDO *dataobject.DialogsDO) *dialog.DialogExt {
 	dialog2 := mtproto.MakeTLDialog(&mtproto.Dialog{
 		Pinned:               false,
-		UnreadMark:           dialogDO.UnreadMark, // TODO(@benqi)
+		UnreadMark:           dialogDO.UnreadMark, // TODO
 		ViewForumAsMessages:  false,
 		Peer:                 mtproto.MakePeer(dialogDO.PeerType, dialogDO.PeerId),
 		TopMessage:           dialogDO.TopMessage,

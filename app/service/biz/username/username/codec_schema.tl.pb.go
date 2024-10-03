@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -244,7 +244,7 @@ func (m *TLUsernameData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_usernameData, layer)
 		return nil
 	}
@@ -408,7 +408,7 @@ func (m *TLUsernameNotExisted) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_usernameNotExisted, layer)
 		return nil
 	}
@@ -468,7 +468,7 @@ func (m *TLUsernameExisted) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_usernameExisted, layer)
 		return nil
 	}
@@ -528,7 +528,7 @@ func (m *TLUsernameExistedNotMe) Encode(x *mtproto.EncodeBuf, layer int32) error
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_usernameExistedNotMe, layer)
 		return nil
 	}
@@ -588,7 +588,7 @@ func (m *TLUsernameExistedIsMe) Encode(x *mtproto.EncodeBuf, layer int32) error 
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_usernameExistedIsMe, layer)
 		return nil
 	}
@@ -1107,7 +1107,7 @@ func (m *Vector_UsernameData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_UsernameData) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*UsernameData, l1)
 	for i := int32(0); i < l1; i++ {

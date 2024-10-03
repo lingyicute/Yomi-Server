@@ -28,7 +28,7 @@ func (c *UserCore) UserCheckPrivacy(in *user.TLUserCheckPrivacy) (*mtproto.Bool,
 		return mtproto.BoolTrue, nil
 	}
 
-	// TODO(@benqi): check allow
+	// TODO: check allow
 	// return rulesData2.IsAllow(peerId, isContact)
 	return mtproto.BoolTrue, nil
 

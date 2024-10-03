@@ -85,11 +85,11 @@ func (c *FullCodec) Receive() (interface{}, error) {
 	}
 
 	seqNum := binary.LittleEndian.Uint32(buf[:4])
-	// TODO(@benqi): check seqNum, save last seq_num
+	// TODO: check seqNum, save last seq_num
 	_ = seqNum
 
 	crc32 := binary.LittleEndian.Uint32(buf[len(buf)-4:])
-	// TODO(@benqi): check crc32
+	// TODO: check crc32
 	_ = crc32
 
 	authKeyId := int64(binary.LittleEndian.Uint64(buf[4:]))
@@ -113,7 +113,7 @@ func (c *FullCodec) Send(msg interface{}) error {
 	size := len(b) / 4
 
 	binary.LittleEndian.PutUint32(sb, uint32(size))
-	// TODO(@benqi): gen seq_num
+	// TODO: gen seq_num
 	var seqNum uint32 = 0
 	binary.LittleEndian.PutUint32(sb[4:], seqNum)
 	b = append(sb, b...)

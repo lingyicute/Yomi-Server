@@ -127,7 +127,7 @@ func (c *session) onInvokeAfterMsgs(ctx context.Context, gatewayId, clientIp str
 		}
 
 		if len(invokeAfterMsgs.MsgIds) == 0 {
-			// TODO(@benqi): invalid msgIds, ignore??
+			// TODO: invalid msgIds, ignore??
 
 			messages[i].Object = query
 		} else {
@@ -164,7 +164,7 @@ func (c *session) onInvokeAfterMsgs(ctx context.Context, gatewayId, clientIp str
 			}
 
 			if !found {
-				// TODO(@benqi): backup message, wait.
+				// TODO: backup message, wait.
 
 				messages[i].Object = query
 			}
@@ -380,7 +380,7 @@ func (c *session) onRpcRequest(ctx context.Context, gatewayId, clientIp string, 
 		msgId.seqNo,
 		reflect.TypeOf(query))
 
-	// TODO(@benqi): sync AuthUserId??
+	// TODO: sync AuthUserId??
 	//requestMessage := &mtproto.TLMessage2{
 	//	MsgId:  msgId.msgId,
 	//	Seqno:  msgId.seqNo,
@@ -561,7 +561,7 @@ func (c *session) onRpcResult(ctx context.Context, rpcResult *rpcApiMessage) {
 }
 
 func (c *session) sendRpcResult(ctx context.Context, rpcResult *mtproto.TLRpcResult) {
-	// TODO(@benqi): lookup inBoxMsg
+	// TODO: lookup inBoxMsg
 	msgId := c.inQueue.Lookup(rpcResult.ReqMsgId)
 	if msgId == nil {
 		logx.WithContext(ctx).Errorf("not found msgId, maybe removed: %d", rpcResult.ReqMsgId)

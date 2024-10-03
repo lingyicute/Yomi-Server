@@ -32,7 +32,7 @@ func (m BlockedList) Swap(i, j int) {
 	m[j], m[i] = m[i], m[j]
 }
 func (m BlockedList) Less(i, j int) bool {
-	// TODO(@benqi): if date[i] == date[j]
+	// TODO: if date[i] == date[j]
 	return m[i].Date < m[j].Date
 }
 

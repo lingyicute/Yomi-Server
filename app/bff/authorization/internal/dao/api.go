@@ -13,7 +13,7 @@ import (
 )
 
 func (d *Dao) CheckApiIdAndHash(apiId int32, apiHash string) error {
-	// TODO(@benqi): check api_id and api_hash
+	// TODO: check api_id and api_hash
 	// 400	API_ID_INVALID	API ID无效
 	// 400	API_ID_PUBLISHED_FLOOD	这个API ID已发布在某个地方，您现在不能使用
 

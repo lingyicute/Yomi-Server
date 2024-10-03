@@ -115,7 +115,7 @@ func (c *UserCore) UserImportContacts(in *user.TLUserImportContacts) (*user.User
 			phoneList = append(phoneList, c2.C.Phone)
 			popularContact := mtproto.MakeTLPopularContact(&mtproto.PopularContact{
 				ClientId:  c2.C.ClientId,
-				Importers: 1, // TODO(@benqi): get importers
+				Importers: 1, // TODO: get importers
 			})
 			popularContactMap[c2.C.Phone] = popularContact
 			// &popularContactData{c2.c.Phone, c2.c.ClientId})

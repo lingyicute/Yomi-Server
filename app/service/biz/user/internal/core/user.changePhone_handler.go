@@ -18,7 +18,7 @@ import (
 // user.changePhone user_id:int phone:string = Bool;
 func (c *UserCore) UserChangePhone(in *user.TLUserChangePhone) (*mtproto.Bool, error) {
 	c.svcCtx.Dao.UsersDAO.UpdateUser(c.ctx, map[string]interface{}{
-		"phone": in.Phone, // TODO(@benqi): country_code
+		"phone": in.Phone, // TODO: country_code
 	}, in.UserId)
 
 	c.svcCtx.Dao.UserContactsDAO.UpdatePhoneByContactId(c.ctx, in.Phone, in.UserId)

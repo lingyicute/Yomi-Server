@@ -28,7 +28,7 @@ import (
 // MessagesGetSavedHistory
 // messages.getSavedHistory#3d9a414d peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
 func (c *DialogsCore) MessagesGetSavedHistory(in *mtproto.TLMessagesGetSavedHistory) (*mtproto.Messages_Messages, error) {
-	// TODO(@benqi): 重复FromInputPeer2
+	// TODO: 重复FromInputPeer2
 	var (
 		err   error
 		peer  = mtproto.FromInputPeer2(c.MD.UserId, in.GetPeer())

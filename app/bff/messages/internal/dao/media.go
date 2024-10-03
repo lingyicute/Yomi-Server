@@ -1,7 +1,7 @@
 // Copyright 2022 Papercraft Authors
 //  All rights reserved.
 //
-// Author: Benqi (wubenqi@gmail.com)
+// Author: @lingyicute
 //
 
 package dao
@@ -201,18 +201,18 @@ func GetMessageMedia(ctx context.Context, d MediaHelper, userId, ownerId int64, 
 
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaDocumentExternal:
-		// TODO(@benqi): MessageMedia???
+		// TODO: MessageMedia???
 		// inputMediaDocumentExternal#fb52dc99 flags:# url:string ttl_seconds:flags.0?int = InputMedia;
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaGame:
 		// inputMediaGame#d33f43f3 id:InputGame = InputMedia;
 
-		// TODO(@benqi): Not impl inputMediaGame
+		// TODO: Not impl inputMediaGame
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaInvoice:
 		// inputMediaInvoice#d9799874 flags:# title:string description:string photo:flags.0?InputWebDocument invoice:Invoice payload:bytes provider:string provider_data:DataJSON start_param:flags.1?string = InputMedia;
 
-		// TODO(@benqi): Not impl inputMediaGame
+		// TODO: Not impl inputMediaGame
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaGeoLive:
 		// inputMediaGeoLive#971fa843 flags:# stopped:flags.0?true geo_point:InputGeoPoint heading:flags.2?int period:flags.1?int proximity_notification_radius:flags.3?int = InputMedia;

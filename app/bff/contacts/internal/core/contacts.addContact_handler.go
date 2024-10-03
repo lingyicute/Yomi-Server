@@ -76,7 +76,7 @@ func (c *ContactsCore) ContactsAddContact(in *mtproto.TLContactsAddContact) (*mt
 	cUser.MutualContact = mtproto.FromBool(changeMutual)
 	me, _ := users.GetUnsafeUserSelf(c.MD.UserId)
 
-	// TODO(@benqi): 性能优化，复用users
+	// TODO: 性能优化，复用users
 	rUpdates := mtproto.MakeUpdatesByUpdatesUsers(
 		[]*mtproto.User{me, cUser},
 		mtproto.MakeTLUpdatePeerSettings(&mtproto.Update{

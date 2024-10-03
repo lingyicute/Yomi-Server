@@ -14,7 +14,7 @@ import (
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
 var (
-	// TODO(@benqi): 使用更紧凑的前缀
+	// TODO: 使用更紧凑的前缀
 	messageDataNgenId       = "message_data_ngen_"
 	messageBoxUpdatesNgenId = "message_box_ngen_"
 	channelMessageBoxNgenId = "channel_message_box_ngen_"

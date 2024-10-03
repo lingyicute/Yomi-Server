@@ -45,19 +45,19 @@ const (
 )
 
 var (
-	// TODO(@benqi): 预先计算出fingerprint
+	// TODO: 预先计算出fingerprint
 	// 这里直接使用了0xc3b42b026ce86b21
 	// fingerprint uint64 = 12240908862933197005
 
-	// TODO(@benqi): 使用算法生成PQ
+	// TODO: 使用算法生成PQ
 	// 这里直接指定了PQ值: {0x17, 0xED, 0x48, 0x94, 0x1A, 0x08, 0xF9, 0x81}
 	pq = string([]byte{0x17, 0xED, 0x48, 0x94, 0x1A, 0x08, 0xF9, 0x81})
 
-	// TODO(@benqi): 直接指定了p和q
+	// TODO: 直接指定了p和q
 	p = []byte{0x49, 0x4C, 0x55, 0x3B}
 	q = []byte{0x53, 0x91, 0x10, 0x73}
 
-	// TODO(@benqi): 直接指定了dh2048_p和dh2048_g!!!
+	// TODO: 直接指定了dh2048_p和dh2048_g!!!
 	// andriod client 指定的good prime
 	//
 	// static const char *goodPrime = "
@@ -452,7 +452,7 @@ func (s *Server) onReqDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtp
 			}
 
 			var pqInnerData *mtproto.P_QInnerData
-			// TODO(@benqi):
+			// TODO:
 			switch innerData := o.(type) {
 			case *mtproto.TLPQInnerData:
 				handshakeType = mtproto.AuthKeyTypePerm
@@ -510,7 +510,7 @@ func (s *Server) onReqDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtp
 				return fmt.Errorf("process Req_DHParams - Wrong ServerNonce")
 			}
 
-			// TODO(@benqi): check dc
+			// TODO: check dc
 			// log.Info("processReq_DHParams - pqInnerData Decode sucess: ", pqInnerData.String())
 
 			// 检查NewNonce的长度(int256)
@@ -596,7 +596,7 @@ func (s *Server) onReqDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtp
 func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtproto.TLSetClient_DHParams) (*mtproto.SetClient_DHParamsAnswer, error) {
 	logx.Infof("set_client_DH_params#f5045f1f conn(%s) - state: {%s}, request: %s", c, ctx, request)
 
-	// TODO(@benqi): Impl SetClient_DHParams logic
+	// TODO: Impl SetClient_DHParams logic
 	// 客户端传输数据解析
 	// Nonce
 	if !bytes.Equal(request.Nonce, ctx.Nonce) {
@@ -632,7 +632,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 		return nil, err
 	}
 
-	// TODO(@benqi): 检查签名是否合法
+	// TODO: 检查签名是否合法
 	dBuf := mtproto.NewDecodeBuf(decryptedData[20:])
 	clientDHInnerData := mtproto.MakeTLClient_DHInnerData(nil)
 	clientDHInnerData.Data2.Constructor = mtproto.TLConstructor(dBuf.Int())
@@ -667,7 +667,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 
 	authKey := make([]byte, 256)
 
-	// TODO(@benqi): dhGenRetry and dhGenFail
+	// TODO: dhGenRetry and dhGenFail
 	copy(authKey[256-len(authKeyNum.Bytes()):], authKeyNum.Bytes())
 
 	authKeyAuxHash := make([]byte, len(ctx.NewNonce))
@@ -686,7 +686,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 
 	s.asyncRun(c.ConnId(),
 		func() error {
-			// TODO(@benqi): authKeyId生成后要检查在数据库里是否已经存在，有非常小的概率会碰撞
+			// TODO: authKeyId生成后要检查在数据库里是否已经存在，有非常小的概率会碰撞
 			// 如果碰撞让客户端重新再来一轮
 
 			// state.Ctx, _ = proto.Marshal(authKeyMD)
@@ -703,7 +703,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 				logx.Infof("onSetClient_DHParams conn(%s) - ctx: {%s}, reply: %s", c, ctx, dhGen)
 				return nil
 			} else {
-				// TODO(@benqi): dhGenFail
+				// TODO: dhGenFail
 				dhGen = mtproto.MakeTLDhGenRetry(&mtproto.SetClient_DHParamsAnswer{
 					Nonce:         ctx.Nonce,
 					ServerNonce:   ctx.ServerNonce,

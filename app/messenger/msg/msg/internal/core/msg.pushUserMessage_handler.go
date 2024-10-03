@@ -32,12 +32,12 @@ func (c *MsgCore) MsgPushUserMessage(in *msg.TLMsgPushUserMessage) (*mtproto.Boo
 
 	sendMe := in.UserId == peer.PeerId
 	if !sendMe {
-		// TODO(@benqi)
+		// TODO
 		// 1. check blocked
 		// 2. span
 	}
 
-	// TODO(@benqi): r.From.Type
+	// TODO: r.From.Type
 	switch in.PushType {
 	case 0:
 		_, err := c.sendUserOutgoingMessageV2(in.UserId, 0, peer.PeerId, boxMsg)
@@ -67,7 +67,7 @@ func (c *MsgCore) MsgPushUserMessage(in *msg.TLMsgPushUserMessage) (*mtproto.Boo
 			return nil, err
 		}
 
-		// TODO(@benqi): check
+		// TODO: check
 		// if sender.Restricted() {
 		//	err = mtproto.ErrUserRestricted
 		//	return
@@ -82,7 +82,7 @@ func (c *MsgCore) MsgPushUserMessage(in *msg.TLMsgPushUserMessage) (*mtproto.Boo
 
 		//sendMe := fromUserId == toUserId
 		//if !sendMe {
-		//	// TODO(@benqi)
+		//	// TODO
 		//	// 1. check blocked
 		//	// 2. span
 		//}

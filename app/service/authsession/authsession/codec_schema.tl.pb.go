@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -295,7 +295,7 @@ func (m *TLAuthKeyStateData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_authKeyStateData, layer)
 		return nil
 	}
@@ -469,7 +469,7 @@ func (m *TLClientSession) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_clientSession, layer)
 		return nil
 	}

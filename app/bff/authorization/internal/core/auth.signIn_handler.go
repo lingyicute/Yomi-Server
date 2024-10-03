@@ -129,7 +129,7 @@ func (c *AuthorizationCore) AuthSignIn(in *mtproto.TLAuthSignIn) (*mtproto.Auth_
 		}
 	}
 
-	// TODO(@benqi): err handle
+	// TODO: err handle
 	// do signIn...
 	var (
 		user *mtproto.ImmutableUser

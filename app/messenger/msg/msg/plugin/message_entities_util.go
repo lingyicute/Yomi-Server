@@ -1,7 +1,7 @@
 // Copyright 2024 Papercraft Authors
 //  All rights reserved.
 //
-// Author: Benqi (wubenqi@gmail.com)
+// Author: @lingyicute
 //
 
 package plugin
@@ -80,7 +80,7 @@ func RemakeMessage(ctx context.Context, plugin MsgPlugin, message *mtproto.Messa
 			}
 
 			if entity.UserId_INPUTUSER.UserId != 0 {
-				// TODO(@benqi): check user_id
+				// TODO: check user_id
 				entityMentionName := mtproto.MakeTLMessageEntityMentionName(&mtproto.MessageEntity{
 					Offset:       entity.Offset,
 					Length:       entity.Length,

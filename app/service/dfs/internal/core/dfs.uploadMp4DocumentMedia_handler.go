@@ -95,7 +95,7 @@ func (c *DfsCore) DfsUploadMp4DocumentMedia(in *dfs.TLDfsUploadMp4DocumentMedia)
 		document := mtproto.MakeTLDocument(&mtproto.Document{
 			Id:            documentId,
 			AccessHash:    accessHash,
-			FileReference: []byte{}, // TODO(@benqi): gen file_reference
+			FileReference: []byte{}, // TODO: gen file_reference
 			Date:          int32(time.Now().Unix()),
 			MimeType:      "video/mp4",
 			Size2:         fileInfo.GetFileSize(),
@@ -196,7 +196,7 @@ func (c *DfsCore) DfsUploadMp4DocumentMedia(in *dfs.TLDfsUploadMp4DocumentMedia)
 		document := mtproto.MakeTLDocument(&mtproto.Document{
 			Id:            documentId,
 			AccessHash:    accessHash,
-			FileReference: []byte{}, // TODO(@benqi): gen file_reference
+			FileReference: []byte{}, // TODO: gen file_reference
 			Date:          int32(time.Now().Unix()),
 			MimeType:      "video/mp4",
 			Size2:         fileInfo.GetFileSize(),

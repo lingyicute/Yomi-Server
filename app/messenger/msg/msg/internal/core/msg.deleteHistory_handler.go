@@ -75,7 +75,7 @@ func (c *MsgCore) deleteUserHistory(in *msg.TLMsgDeleteHistory) (reply *mtproto.
 		}).To_Messages_AffectedHistory(), nil
 	}
 
-	// TODO(@benqi): chat
+	// TODO: chat
 	pts = c.svcCtx.Dao.IDGenClient2.NextNPtsId(c.ctx, in.UserId, len(deleteIds)+1)
 	ptsCount = int32(len(deleteIds) + 1)
 	if in.JustClear {

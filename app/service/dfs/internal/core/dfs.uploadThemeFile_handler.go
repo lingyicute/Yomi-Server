@@ -163,7 +163,7 @@ func (c *DfsCore) DfsUploadThemeFile(in *dfs.TLDfsUploadThemeFile) (*mtproto.Doc
 	document := mtproto.MakeTLDocument(&mtproto.Document{
 		Id:            documentId,
 		AccessHash:    accessHash,
-		FileReference: []byte{}, // TODO(@benqi): gen file_reference
+		FileReference: []byte{}, // TODO: gen file_reference
 		Date:          int32(time.Now().Unix()),
 		MimeType:      in.GetMimeType(),
 		Size2:         fileInfo.GetFileSize(),

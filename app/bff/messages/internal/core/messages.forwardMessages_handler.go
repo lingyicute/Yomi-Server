@@ -151,7 +151,7 @@ func (c *MessagesCore) makeForwardMessages(
 		// err error
 	)
 
-	// TODO(@benqi): sorted map
+	// TODO: sorted map
 	findRandomIdById := func(id int32) int64 {
 		for i := 0; i < len(idList); i++ {
 			if id == idList[i] {
@@ -200,7 +200,7 @@ func (c *MessagesCore) makeForwardMessages(
 	groupedIds := make(map[int64]int64)
 	for _, box := range messageList.Datas {
 		m := box.Message
-		// TODO(@benqi): rid is 0
+		// TODO: rid is 0
 
 		if m.GetGroupedId() != nil {
 			groupedId := m.GetGroupedId().GetValue()
@@ -239,7 +239,7 @@ func (c *MessagesCore) makeForwardMessages(
 					fwdFrom.ChannelPost = &wrapperspb.Int32Value{Value: m.Id}
 					fwdFrom.PostAuthor = m.PostAuthor
 					fwdFrom.FromId = mtproto.MakePeerChannel(fromPeer.PeerId)
-					// TODO(@benqi): saved_from_peer and saved_from_msg_id??
+					// TODO: saved_from_peer and saved_from_msg_id??
 				} else {
 					fromId := box.SenderUserId
 					if c.checkForwardPrivacy(c.ctx, fromId, c.MD.UserId) {
@@ -285,7 +285,7 @@ func (c *MessagesCore) makeForwardMessages(
 			}
 		}
 
-		// TODO(@benqi): make message, ref sendMessage
+		// TODO: make message, ref sendMessage
 		m.PeerId = toPeer.ToPeer()
 		m.FromId = mtproto.MakePeerUser(c.MD.UserId)
 		m.Date = now

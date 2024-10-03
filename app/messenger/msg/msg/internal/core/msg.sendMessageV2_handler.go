@@ -113,7 +113,7 @@ func (c *MsgCore) sendUserOutgoingMessageV2(fromUserId, fromAuthKeyId, toUserId 
 		return nil, err
 	}
 
-	// TODO(@benqi): check
+	// TODO: check
 	// if sender.Restricted() {
 	//	err = mtproto.ErrUserRestricted
 	//	return
@@ -128,7 +128,7 @@ func (c *MsgCore) sendUserOutgoingMessageV2(fromUserId, fromAuthKeyId, toUserId 
 
 	sendMe := fromUserId == toUserId
 	if !sendMe {
-		// TODO(@benqi)
+		// TODO
 		// 1. check blocked
 		// 2. span
 	}
@@ -416,7 +416,7 @@ func (c *MsgCore) sendUserOutgoingMessageList(fromUserId, fromAuthKeyId, toUserI
 		return nil, err
 	}
 
-	// TODO(@benqi): check
+	// TODO: check
 	// if sender.Restricted() {
 	//	err = mtproto.ErrUserRestricted
 	//	return
@@ -431,7 +431,7 @@ func (c *MsgCore) sendUserOutgoingMessageList(fromUserId, fromAuthKeyId, toUserI
 
 	sendMe := fromUserId == toUserId
 	if !sendMe {
-		// TODO(@benqi)
+		// TODO
 		// 1. check blocked
 		// 2. span
 	}

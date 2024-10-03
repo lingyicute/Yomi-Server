@@ -69,7 +69,7 @@ func (s *Server) GatewaySendDataToGateway(ctx context.Context, in *gateway.TLGat
 		authKey *authKeyUtil
 	)
 
-	// TODO(@benqi): 并发问题
+	// TODO: 并发问题
 	authKey, connIdList := s.authSessionMgr.FoundSessionConnIdList(in.AuthKeyId, in.SessionId)
 	if connIdList == nil {
 		logger.Errorf("ReceiveData - not found connIdList - keyId: %d, sessionId: %d", in.AuthKeyId, in.SessionId)

@@ -146,7 +146,7 @@ func (d *Dao) sendMessageToInbox(ctx context.Context, fromId int64, peer *mtprot
 	}
 
 	tR := sqlx.TxWrapper(ctx, d.DB, func(tx *sqlx.Tx, result *sqlx.StoreResult) {
-		// TODO(@benqi): do ignore
+		// TODO: do ignore
 
 		// Pts:              pts,
 		// PtsCount:         ptsCount,
@@ -161,7 +161,7 @@ func (d *Dao) sendMessageToInbox(ctx context.Context, fromId int64, peer *mtprot
 			RandomId:          inBox.RandomId,
 			DialogMessageId:   inBox.DialogMessageId,
 			MessageData:       string(mData),
-			MessageFilterType: inBox.MessageFilterType, // TODO(@benqi): message_type
+			MessageFilterType: inBox.MessageFilterType, // TODO: message_type
 			Message:           message.Message,
 			Mentioned:         inBox.Mentioned,
 			MediaUnread:       inBox.MediaUnread,
@@ -251,7 +251,7 @@ func (d *Dao) sendMessageToInbox(ctx context.Context, fromId int64, peer *mtprot
 		}
 	})
 
-	// TODO(@benqi): process duplicate
+	// TODO: process duplicate
 
 	if tR.Err != nil {
 		return nil, tR.Err
@@ -369,7 +369,7 @@ func (d *Dao) DeleteInboxMessages(ctx context.Context, deleteUserId int64, peer 
 		}
 	}
 
-	// TODO(@benqi): sort
+	// TODO: sort
 
 	for userId, msgDOList := range deletedDialogsMap {
 		var (

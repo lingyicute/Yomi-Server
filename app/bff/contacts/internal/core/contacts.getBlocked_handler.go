@@ -42,8 +42,8 @@ func (c *ContactsCore) ContactsGetBlocked(in *mtproto.TLContactsGetBlocked) (*mt
 	})
 
 	if len(blockedList.GetDatas()) > 0 {
-		// TODO(@benqi): impl blockedSlice
-		// TODO(@benqi): layer119
+		// TODO: impl blockedSlice
+		// TODO: layer119
 		contactsBlocked = mtproto.MakeTLContactsBlocked(&mtproto.Contacts_Blocked{
 			Blocked: make([]*mtproto.PeerBlocked, 0, len(blockedList.GetDatas())),
 			Chats:   nil,

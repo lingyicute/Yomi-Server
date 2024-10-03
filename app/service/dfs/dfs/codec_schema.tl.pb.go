@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -124,7 +124,7 @@ func (m *TLDfsWriteFilePartData) Encode(x *mtproto.EncodeBuf, layer int32) error
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetCreator())
 		x.Long(m.GetFileId())
 		x.Int(m.GetFilePart())
@@ -151,7 +151,7 @@ func (m *TLDfsWriteFilePartData) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.Creator = dBuf.Long()
 		m.FileId = dBuf.Long()
 		m.FilePart = dBuf.Int()
@@ -238,7 +238,7 @@ func (m *TLDfsUploadProfilePhotoFileV2) Encode(x *mtproto.EncodeBuf, layer int32
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetCreator())
 		if m.GetFile() != nil {
 			m.GetFile().Encode(x, layer)
@@ -270,7 +270,7 @@ func (m *TLDfsUploadProfilePhotoFileV2) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.Creator = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m3 := &mtproto.InputFile{}
@@ -584,7 +584,7 @@ func (m *TLDfsUploadThemeFile) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetCreator())
 		m.GetFile().Encode(x, layer)
 		if m.GetThumb() != nil {
@@ -612,7 +612,7 @@ func (m *TLDfsUploadThemeFile) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.Creator = dBuf.Long()
 
 		m3 := &mtproto.InputFile{}

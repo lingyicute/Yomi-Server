@@ -28,7 +28,7 @@ import (
 // MessagesGetUnreadMentions
 // messages.getUnreadMentions#46578472 peer:InputPeer offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
 func (c *MessagesCore) MessagesGetUnreadMentions(in *mtproto.TLMessagesGetUnreadMentions) (*mtproto.Messages_Messages, error) {
-	// TODO(@benqi): 重复FromInputPeer2
+	// TODO: 重复FromInputPeer2
 	var (
 		err  error
 		peer = mtproto.FromInputPeer2(c.MD.UserId, in.GetPeer())
@@ -63,7 +63,7 @@ func (c *MessagesCore) MessagesGetUnreadMentions(in *mtproto.TLMessagesGetUnread
 			c.Logger.Errorf("messages.getHistory - error: %v", err)
 			return nil, err
 		} else {
-			// TODO(@benqi): check migratedToId
+			// TODO: check migratedToId
 			_ = chat
 		}
 
@@ -93,7 +93,7 @@ func (c *MessagesCore) MessagesGetUnreadMentions(in *mtproto.TLMessagesGetUnread
 		//}
 		//
 		//isChannel = true
-		//// TODO(@benqi): check kicked
+		//// TODO: check kicked
 		//_ = channel
 		//
 		//rValues = mtproto.MakeTLMessagesChannelMessages(&mtproto.Messages_Messages{

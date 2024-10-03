@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -221,7 +221,7 @@ func (m *TLSessionEntry) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_sessionEntry, layer)
 		return nil
 	}
@@ -353,7 +353,7 @@ func (m *TLUserSessionEntryList) Encode(x *mtproto.EncodeBuf, layer int32) error
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_userSessionEntryList, layer)
 		return nil
 	}
@@ -813,7 +813,7 @@ func (m *Vector_UserSessionEntryList) Encode(x *mtproto.EncodeBuf, layer int32) 
 }
 
 func (m *Vector_UserSessionEntryList) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*UserSessionEntryList, l1)
 	for i := int32(0); i < l1; i++ {

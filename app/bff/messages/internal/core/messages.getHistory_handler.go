@@ -29,7 +29,7 @@ import (
 // MessagesGetHistory
 // messages.getHistory#4423e6c5 peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
 func (c *MessagesCore) MessagesGetHistory(in *mtproto.TLMessagesGetHistory) (*mtproto.Messages_Messages, error) {
-	// TODO(@benqi): 重复FromInputPeer2
+	// TODO: 重复FromInputPeer2
 	var (
 		err  error
 		peer = mtproto.FromInputPeer2(c.MD.UserId, in.GetPeer())
@@ -54,7 +54,7 @@ func (c *MessagesCore) MessagesGetHistory(in *mtproto.TLMessagesGetHistory) (*mt
 				c.Logger.Errorf("messages.getHistory - error: %v", err)
 				return nil, err
 			}
-			// TODO(@benqi): check migratedToId
+			// TODO: check migratedToId
 			_ = chat
 		}
 	case mtproto.PEER_CHANNEL:

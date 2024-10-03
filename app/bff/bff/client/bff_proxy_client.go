@@ -70,7 +70,7 @@ func (c *BFFProxyClient) GetRpcClientByRequest(t interface{}) (zrpc.Client, erro
 		// logx.Errorf("%s blocked, License key from https://papercraft.net required to unlock enterprise features.", rt.Name())
 	}
 
-	// TODO(@benqi):
+	// TODO:
 	// err := mtproto.ErrMethodNotImpl
 	return nil, fmt.Errorf("not found method: %s", rt.Name())
 }
@@ -148,7 +148,7 @@ func (c *BFFProxyClient) InvokeContext(ctx context.Context, rpcMetaData *metadat
 		err,
 		time.Since(rt))
 
-	// TODO(@benqi): process header from serverF
+	// TODO: process header from serverF
 	// grpc.Header(&header)
 	// log.Debugf("Invoke - error: {%v}", err)
 
@@ -163,10 +163,10 @@ func (c *BFFProxyClient) InvokeContext(ctx context.Context, rpcMetaData *metadat
 		//	return nil, mtproto.NewRpcError(int32(mtproto.TLRpcErrorCodes_INTERNAL), "INTERNAL_SERVER_ERROR")
 		//}
 		//
-		//// TODO(@benqi): 哪些情况需要断开客户端连接
+		//// TODO: 哪些情况需要断开客户端连接
 		//if s, ok := status.FromError(err); ok {
 		//	//switch s.Code() {
-		//	//// TODO(@benqi): Rpc error, trailer has rpc_error metadata
+		//	//// TODO: Rpc error, trailer has rpc_error metadata
 		//	//case codes.Unknown:
 		//	//	return nil, grpc_util.RpcErrorFromMD(trailer)
 		//	//}

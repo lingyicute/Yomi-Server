@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -214,7 +214,7 @@ func (m *TLChannelDifference) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_channelDifference, layer)
 		return nil
 	}
@@ -406,7 +406,7 @@ func (m *TLDifferenceEmpty) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_differenceEmpty, layer)
 		return nil
 	}
@@ -493,7 +493,7 @@ func (m *TLDifference) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_difference, layer)
 		return nil
 	}
@@ -609,7 +609,7 @@ func (m *TLDifferenceSlice) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_differenceSlice, layer)
 		return nil
 	}
@@ -703,7 +703,7 @@ func (m *TLDifferenceTooLong) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_differenceTooLong, layer)
 		return nil
 	}
@@ -788,7 +788,7 @@ func (m *TLUpdatesGetDifferenceV2) Encode(x *mtproto.EncodeBuf, layer int32) err
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetAuthKeyId())
 		x.Long(m.GetUserId())
 		x.Int(m.GetPts())
@@ -816,7 +816,7 @@ func (m *TLUpdatesGetDifferenceV2) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.AuthKeyId = dBuf.Long()
 		m.UserId = dBuf.Long()
 		m.Pts = dBuf.Int()

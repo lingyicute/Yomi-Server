@@ -89,7 +89,7 @@ func (c *MsgCore) editUserOutgoingMessageV2(fromUserId, fromAuthKeyId, toUserId 
 		return nil, err
 	}
 
-	// TODO(@benqi): check
+	// TODO: check
 	// if sender.Restricted() {
 	//	err = mtproto.ErrUserRestricted
 	//	return

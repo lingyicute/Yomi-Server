@@ -85,7 +85,7 @@ func (c *IntermediateCodec) Receive() (interface{}, error) {
 		log.Infof("readFull2: %s", hex.EncodeToString(buf[:256]))
 	}
 
-	// TODO(@benqi): process report ack and quickack
+	// TODO: process report ack and quickack
 	// 截断QuickAck消息，客户端有问题
 	if size == 4 {
 		log.Errorf("Server response error: ", int32(binary.LittleEndian.Uint32(buf)))

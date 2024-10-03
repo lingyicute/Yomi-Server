@@ -121,7 +121,7 @@ func (c *session) onDestroyAuthKey(ctx context.Context, gatewayId string, msgId 
 		msgId.seqNo,
 		destroyAuthKey)
 
-	//// TODO(@benqi): FIXME
+	//// TODO: FIXME
 	// destroy_auth_key_ok#f660e1d4 = DestroyAuthKeyRes;
 	// destroy_auth_key_none#0a9f2259 = DestroyAuthKeyRes;
 	// destroy_auth_key_fail#ea109b13 = DestroyAuthKeyRes;
@@ -256,7 +256,7 @@ func (c *session) onDestroySession(ctx context.Context, gatewayId string, msgId 
 		// The result of this being applied to the current session is undefined.
 		logx.WithContext(ctx).Error("the result of this being applied to the current session is undefined.")
 
-		// TODO(@benqi): handle error???
+		// TODO: handle error???
 		return
 	}
 
@@ -324,7 +324,7 @@ func (c *session) onRpcDropAnswer(ctx context.Context, gatewayId string, msgId *
 	//		if v.state == kNetworkMessageStateReceived {
 	//			rpcAnswer.Constructor = mtproto.CRC32_rpc_answer_dropped
 	//			rpcAnswer.MsgId = request.ReqMsgId
-	//			// TODO(@benqi): set seqno and bytes
+	//			// TODO: set seqno and bytes
 	//			// rpcAnswer.Data2.SeqNo = 0
 	//			// rpcAnswer.Data2.Bytes = 0
 	//		} else if v.state == kNetworkMessageStateInvoked {

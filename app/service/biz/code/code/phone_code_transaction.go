@@ -14,19 +14,19 @@ import (
 
 // ToAuthSentCode
 // ///////////////////////////////////////////////////////////////////////////////////////////////////
-// TODO(@benqi): 如果手机号已经注册，检查是否有其他设备在线，有则使用sentCodeTypeApp
+// TODO: 如果手机号已经注册，检查是否有其他设备在线，有则使用sentCodeTypeApp
 //
 //	否则使用sentCodeTypeSms
 //
-// TODO(@benqi): 有则使用sentCodeTypeFlashCall和entCodeTypeCall？？
+// TODO: 有则使用sentCodeTypeFlashCall和entCodeTypeCall？？
 func (m *PhoneCodeTransaction) ToAuthSentCode() *mtproto.Auth_SentCode {
-	// TODO(@benqi): only use sms
+	// TODO: only use sms
 
 	authSentCode := mtproto.MakeTLAuthSentCode(&mtproto.Auth_SentCode{
 		Type:          makeAuthSentCodeType(m.SentCodeType, len(m.PhoneCode), m.FlashCallPattern),
 		PhoneCodeHash: m.PhoneCodeHash,
 		NextType:      makeAuthCodeType(m.NextCodeType),
-		Timeout:       &wrapperspb.Int32Value{Value: 60}, // TODO(@benqi): 默认60s
+		Timeout:       &wrapperspb.Int32Value{Value: 60}, // TODO: 默认60s
 	}).To_Auth_SentCode()
 	if m.SentCodeType == CodeTypeApp {
 		authSentCode.Timeout = nil

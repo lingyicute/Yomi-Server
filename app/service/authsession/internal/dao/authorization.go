@@ -56,7 +56,7 @@ func (d *Dao) GetAuthorization(ctx context.Context, authKeyId int64) (*mtproto.A
 
 	country, region := d.getCountryAndRegionByIp(cData.ClientIp())
 
-	// TODO(@benqi): fill plat_form, app_name, (country, region)
+	// TODO: fill plat_form, app_name, (country, region)
 	return mtproto.MakeTLAuthorization(&mtproto.Authorization{
 		Current:         false,
 		OfficialApp:     true,
@@ -100,7 +100,7 @@ func (d *Dao) GetAuthorizations(ctx context.Context, userId int64, excludeAuthKe
 			cData, _ := d.GetCacheAuthData(ctx, idx.id)
 			if cData != nil {
 				country, region := d.getCountryAndRegionByIp(cData.ClientIp())
-				// TODO(@benqi): fill plat_form, app_name, (country, region)
+				// TODO: fill plat_form, app_name, (country, region)
 				authorization := mtproto.MakeTLAuthorization(&mtproto.Authorization{
 					Current:         false,
 					OfficialApp:     true,

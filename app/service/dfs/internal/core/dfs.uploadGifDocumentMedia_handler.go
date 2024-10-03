@@ -127,7 +127,7 @@ func (c *DfsCore) uploadGifMedia(creatorId int64, media *mtproto.InputMedia, fil
 	document := mtproto.MakeTLDocument(&mtproto.Document{
 		Id:            documentId,
 		AccessHash:    accessHash,
-		FileReference: []byte{}, // TODO(@benqi): gen file_reference
+		FileReference: []byte{}, // TODO: gen file_reference
 		Date:          int32(time.Now().Unix()),
 		MimeType:      "image/gif",
 		Size2:         gifFileSize.Size,
@@ -186,7 +186,7 @@ func (c *DfsCore) uploadHasThumbGifMp4Media(creatorId int64, media *mtproto.Inpu
 		}
 	}
 
-	// TODO(@benqi): if x or y < 320
+	// TODO: if x or y < 320
 	thumb, err := imaging.Decode(bytes.NewReader(thumbFileData))
 	if err != nil {
 		c.Logger.Errorf("dfs.uploadGifDocumentMedia - %v", err)
@@ -228,7 +228,7 @@ func (c *DfsCore) uploadHasThumbGifMp4Media(creatorId int64, media *mtproto.Inpu
 	document := mtproto.MakeTLDocument(&mtproto.Document{
 		Id:            documentId,
 		AccessHash:    accessHash,
-		FileReference: []byte{}, // TODO(@benqi): gen file_reference
+		FileReference: []byte{}, // TODO: gen file_reference
 		Date:          int32(time.Now().Unix()),
 		MimeType:      "video/mp4",
 		Size2:         gifFileSize.Size,
@@ -346,7 +346,7 @@ func (c *DfsCore) uploadGifMp4Media(creatorId int64, media *mtproto.InputMedia) 
 	document := mtproto.MakeTLDocument(&mtproto.Document{
 		Id:            documentId,
 		AccessHash:    accessHash,
-		FileReference: []byte{}, // TODO(@benqi): gen file_reference
+		FileReference: []byte{}, // TODO: gen file_reference
 		Date:          int32(time.Now().Unix()),
 		MimeType:      "video/mp4",
 		Size2:         gifFileSize.Size,

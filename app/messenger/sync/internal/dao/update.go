@@ -32,7 +32,7 @@ func (d *Dao) AddSeqToUpdatesQueue(ctx context.Context, authId, userId int64, up
 }
 
 func (d *Dao) AddToPtsQueue(ctx context.Context, userId int64, pts, ptsCount int32, update *mtproto.Update) int32 {
-	// TODO(@benqi): check error
+	// TODO: check error
 	updateData, _ := jsonx.Marshal(update)
 
 	do := &dataobject.UserPtsUpdatesDO{

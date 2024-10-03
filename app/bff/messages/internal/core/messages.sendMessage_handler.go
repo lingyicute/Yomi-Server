@@ -49,7 +49,7 @@ func (c *MessagesCore) MessagesSendMessage(in *mtproto.TLMessagesSendMessage) (*
 		c.Logger.Errorf("message empty: %v", err)
 		return nil, err
 	}
-	// TODO(@benqi): calc utf16len(message)
+	// TODO: calc utf16len(message)
 	//else if len(request.Message) > 4000 {
 	//	err = mtproto.ErrMessageTooLong
 	//	c.Logger.Errorf("messages.sendMessage: %v", err)

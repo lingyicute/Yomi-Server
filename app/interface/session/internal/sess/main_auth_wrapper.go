@@ -1,7 +1,7 @@
 // Copyright 2024 Papercraft Authors
 //  All rights reserved.
 //
-// Author: Benqi (wubenqi@gmail.com)
+// Author: @lingyicute
 //
 
 package sess
@@ -64,7 +64,7 @@ func (s *SessionList) Reset(authId int64) (lastAuthId int64) {
 }
 
 func (s *SessionList) destroySession(sessionId int64) bool {
-	// TODO(@benqi):
+	// TODO:
 	if _, ok := s.sessions[sessionId]; ok {
 		// s.updates.onGenericSessionClose(sess)
 		delete(s.sessions, sessionId)
@@ -848,12 +848,12 @@ func (m *MainAuthWrapper) onSessionData(ctx context.Context, sessionMsg *session
 	message2 := new(mtproto.TLMessage2)
 	err := message2.Decode(mtproto.NewDecodeBuf(sessionMsg.buf))
 	if err != nil {
-		// TODO(@benqi): close frontend conn??
+		// TODO: close frontend conn??
 		logx.WithContext(ctx).Errorf("onSessionData - error: {%s}, data: {sessions: %s, gate_id: %d}", err, m, sessionMsg.gatewayId)
 		return
 	}
 
-	// TODO(@benqi): load onNew
+	// TODO: load onNew
 	if sList.cacheSalt == nil {
 		sList.cacheSalt, sList.cacheLastSalt, _ = m.cb.Dao.GetOrFetchNewSalt(ctx, sList.authId)
 	} else {
@@ -889,12 +889,12 @@ func (m *MainAuthWrapper) onSessionHttpData(ctx context.Context, sessionMsg *ses
 	//message2 := new(mtproto.TLMessage2)
 	//err := message2.Decode(mtproto.NewDecodeBuf(sessionMsg.buf))
 	//if err != nil {
-	//	// TODO(@benqi): close frontend conn??
+	//	// TODO: close frontend conn??
 	//	logx.WithContext(ctx).Errorf("onSessionHttpData - error: {%s}, data: {sessions: %s, gate_id: %d}", err, m, sessionMsg.gatewayId)
 	//	return
 	//}
 	//
-	//// TODO(@benqi): load onNew
+	//// TODO: load onNew
 	//if sList.cacheSalt == nil {
 	//	sList.cacheSalt, sList.cacheLastSalt, _ = m.cb.Dao.GetOrFetchNewSalt(ctx, sList.authId)
 	//} else {
@@ -995,7 +995,7 @@ func doRpcRequest(ctx context.Context, dao *dao.Dao, md *metadata.RpcMetadata, r
 		rpcResult mtproto.TLObject
 	)
 
-	// TODO(@benqi): change state.
+	// TODO: change state.
 	switch request.reqMsg.(type) {
 	case *mtproto.TLAuthBindTempAuthKey:
 		r := request.reqMsg.(*mtproto.TLAuthBindTempAuthKey)

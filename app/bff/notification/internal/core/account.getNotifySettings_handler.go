@@ -34,11 +34,11 @@ func (c *NotificationCore) AccountGetNotifySettings(in *mtproto.TLAccountGetNoti
 	peer := mtproto.FromInputNotifyPeer(c.MD.UserId, in.Peer)
 	switch peer.PeerType {
 	case mtproto.PEER_USER:
-		// TODO(@benqi): check peerUser Exists
+		// TODO: check peerUser Exists
 	case mtproto.PEER_CHAT:
-		// TODO(@benqi): check peerChat exists
+		// TODO: check peerChat exists
 	case mtproto.PEER_CHANNEL:
-		// TODO(@benqi): check peerChannel exists
+		// TODO: check peerChannel exists
 	case mtproto.PEER_USERS:
 	case mtproto.PEER_CHATS:
 	case mtproto.PEER_BROADCASTS:

@@ -21,7 +21,7 @@ func (c *UsernameCore) UsernameCheckChannelUsername(in *username.TLUsernameCheck
 		checked = usernameNotExisted
 	)
 
-	// TODO(@benqi): check len(username) >= 5
+	// TODO: check len(username) >= 5
 	usernameDO, _ := c.svcCtx.Dao.UsernameDAO.SelectByUsername(c.ctx, in.Username)
 	if usernameDO != nil {
 		if usernameDO.PeerType == mtproto.PEER_CHANNEL && usernameDO.PeerId == in.ChannelId {

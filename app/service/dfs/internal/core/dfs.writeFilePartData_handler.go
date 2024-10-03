@@ -50,7 +50,7 @@ func (c *DfsCore) DfsWriteFilePartData(in *dfs.TLDfsWriteFilePartData) (*mtproto
 			Mtime:             time.Now().Unix(),
 		})
 
-		// TODO(@benqi): error
+		// TODO: error
 		if err != nil {
 			c.Logger.Errorf("dfs.writeFilePartData - error: %v", err)
 			return nil, mtproto.ErrFilePartInvalid
@@ -62,7 +62,7 @@ func (c *DfsCore) DfsWriteFilePartData(in *dfs.TLDfsWriteFilePartData) (*mtproto
 			FilePartSize: len(in.Bytes),
 		})
 
-		// TODO(@benqi): error
+		// TODO: error
 		if err != nil {
 			c.Logger.Errorf("dfs.writeFilePartData - error: %v", err)
 			return nil, mtproto.ErrFilePartInvalid
@@ -79,7 +79,7 @@ func (c *DfsCore) DfsWriteFilePartData(in *dfs.TLDfsWriteFilePartData) (*mtproto
 					LastFilePartSize: len(in.Bytes),
 				})
 
-			// TODO(@benqi): error
+			// TODO: error
 			if err != nil {
 				c.Logger.Errorf("dfs.writeFilePartData - error: %v", err)
 				return nil, mtproto.ErrFilePartInvalid

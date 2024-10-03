@@ -95,7 +95,7 @@ func (c *PaddedIntermediateCodec) Decode(conn CodecReader) (interface{}, error) 
 	_ = needAck
 	n = int(c.packetLen & 0xffffff)
 	if n > MAX_MTPRORO_FRAME_SIZE {
-		// TODO(@benqi): close conn
+		// TODO: close conn
 		return nil, fmt.Errorf("too large data(%d)", n)
 	}
 

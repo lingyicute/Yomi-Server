@@ -172,7 +172,7 @@ func (d *Dao) OpenFile(ctx context.Context, ownerId, fileId int64, parts int32) 
 		return nil, err
 	}
 	if parts > 0 {
-		// TODO(@benqi): check fileInfo.FileTotalParts == parts
+		// TODO: check fileInfo.FileTotalParts == parts
 	}
 	return d.NewSSDBReader(fileInfo), nil
 }

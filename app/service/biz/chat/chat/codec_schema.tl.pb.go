@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -367,7 +367,7 @@ func (m *TLChatInviteAlready) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_chatInviteAlready, layer)
 		return nil
 	}
@@ -483,7 +483,7 @@ func (m *TLChatInvite) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_chatInvite, layer)
 		return nil
 	}
@@ -569,7 +569,7 @@ func (m *TLChatInvitePeek) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_chatInvitePeek, layer)
 		return nil
 	}
@@ -712,7 +712,7 @@ func (m *TLChatInviteImported) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_chatInviteImported, layer)
 		return nil
 	}
@@ -845,7 +845,7 @@ func (m *TLRecentChatInviteRequesters) Encode(x *mtproto.EncodeBuf, layer int32)
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_recentChatInviteRequesters, layer)
 		return nil
 	}
@@ -970,7 +970,7 @@ func (m *TLUserChatIdList) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_userChatIdList, layer)
 		return nil
 	}
@@ -1139,7 +1139,7 @@ func (m *TLChatCreateChat2) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetCreatorId())
 
 		x.VectorLong(m.GetUserIdList())
@@ -1167,7 +1167,7 @@ func (m *TLChatCreateChat2) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.CreatorId = dBuf.Long()
 
 		m.UserIdList = dBuf.VectorLong()
@@ -1507,7 +1507,7 @@ func (m *TLChatAddChatUser) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetChatId())
 		x.Long(m.GetInviterId())
 		x.Long(m.GetUserId())
@@ -1530,7 +1530,7 @@ func (m *TLChatAddChatUser) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.ChatId = dBuf.Long()
 		m.InviterId = dBuf.Long()
 		m.UserId = dBuf.Long()
@@ -1824,7 +1824,7 @@ func (m *TLChatExportChatInvite) Encode(x *mtproto.EncodeBuf, layer int32) error
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetChatId())
 		x.Long(m.GetAdminId())
 		if m.GetExpireDate() != nil {
@@ -1857,7 +1857,7 @@ func (m *TLChatExportChatInvite) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.ChatId = dBuf.Long()
 		m.AdminId = dBuf.Long()
 		if (flags & (1 << 2)) != 0 {
@@ -1989,7 +1989,7 @@ func (m *TLChatGetExportedChatInvites) Encode(x *mtproto.EncodeBuf, layer int32)
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetChatId())
 		x.Long(m.GetAdminId())
 		if m.GetOffsetDate() != nil {
@@ -2020,7 +2020,7 @@ func (m *TLChatGetExportedChatInvites) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.ChatId = dBuf.Long()
 		m.AdminId = dBuf.Long()
 		if (flags & (1 << 3)) != 0 {
@@ -2146,7 +2146,7 @@ func (m *TLChatGetChatInviteImporters) Encode(x *mtproto.EncodeBuf, layer int32)
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetSelfId())
 		x.Long(m.GetChatId())
 		if m.GetLink() != nil {
@@ -2179,7 +2179,7 @@ func (m *TLChatGetChatInviteImporters) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.SelfId = dBuf.Long()
 		m.ChatId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
@@ -2318,7 +2318,7 @@ func (m *TLChatEditExportedChatInvite) Encode(x *mtproto.EncodeBuf, layer int32)
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetSelfId())
 		x.Long(m.GetChatId())
 		x.String(m.GetLink())
@@ -2356,7 +2356,7 @@ func (m *TLChatEditExportedChatInvite) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.SelfId = dBuf.Long()
 		m.ChatId = dBuf.Long()
 		if (flags & (1 << 2)) != 0 {
@@ -2584,7 +2584,7 @@ func (m *TLChatHideChatJoinRequests) Encode(x *mtproto.EncodeBuf, layer int32) e
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetSelfId())
 		x.Long(m.GetChatId())
 		if m.GetLink() != nil {
@@ -2613,7 +2613,7 @@ func (m *TLChatHideChatJoinRequests) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.SelfId = dBuf.Long()
 		m.ChatId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
@@ -2688,7 +2688,7 @@ func (m *Vector_MutableChat) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_MutableChat) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.MutableChat, l1)
 	for i := int32(0); i < l1; i++ {
@@ -2734,7 +2734,7 @@ func (m *Vector_UserChatIdList) Encode(x *mtproto.EncodeBuf, layer int32) error 
 }
 
 func (m *Vector_UserChatIdList) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*UserChatIdList, l1)
 	for i := int32(0); i < l1; i++ {
@@ -2762,7 +2762,7 @@ func (m *Vector_ChatAdminWithInvites) Encode(x *mtproto.EncodeBuf, layer int32) 
 }
 
 func (m *Vector_ChatAdminWithInvites) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.ChatAdminWithInvites, l1)
 	for i := int32(0); i < l1; i++ {
@@ -2790,7 +2790,7 @@ func (m *Vector_ExportedChatInvite) Encode(x *mtproto.EncodeBuf, layer int32) er
 }
 
 func (m *Vector_ExportedChatInvite) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.ExportedChatInvite, l1)
 	for i := int32(0); i < l1; i++ {
@@ -2818,7 +2818,7 @@ func (m *Vector_ChatInviteImporter) Encode(x *mtproto.EncodeBuf, layer int32) er
 }
 
 func (m *Vector_ChatInviteImporter) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.ChatInviteImporter, l1)
 	for i := int32(0); i < l1; i++ {

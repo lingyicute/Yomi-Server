@@ -1,7 +1,7 @@
 // Copyright 2022 Papercraft Authors
 //  All rights reserved.
 //
-// Author: Benqi (wubenqi@gmail.com)
+// Author: @lingyicute
 //
 
 package codec
@@ -17,7 +17,7 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
-// TODO(@benqi): Quick ack (https://papercraft-official.github.io/mtproto#tcp-transport)
+// TODO: Quick ack (https://papercraft-official.github.io/mtproto#tcp-transport)
 //
 // The full, the intermediate and the abridged versions of the protocol have support for quick acknowledgment.
 // In this case, the client sets the highest-order length bit in the query packet,
@@ -33,7 +33,7 @@ import (
 const (
 	TRANSPORT_TCP  = 1 // TCP
 	TRANSPORT_HTTP = 2 // HTTP
-	TRANSPORT_UDP  = 3 // UDP, TODO(@benqi): 未发现有支持UDP的客户端
+	TRANSPORT_UDP  = 3 // UDP, TODO: 未发现有支持UDP的客户端
 )
 
 const (

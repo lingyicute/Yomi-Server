@@ -31,9 +31,6 @@ const (
 	// date = 1509066502,    2017/10/27 09:08:22
 	// expires = 1509070295, 2017/10/27 10:11:35
 	expiresTimeout = 3600 // 超时时间设置为3600秒
-
-	// support user: @benqi
-	// SUPPORT_USER_ID = 2
 )
 
 var config mtproto.TLConfig

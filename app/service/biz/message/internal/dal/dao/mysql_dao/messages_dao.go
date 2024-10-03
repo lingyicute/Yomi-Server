@@ -211,7 +211,7 @@ func (dao *MessagesDAO) SelectByMessageId(ctx context.Context, userId int64, use
 
 // SelectByMessageDataIdList
 // select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from messages where deleted = 0 and dialog_message_id in (:idList) order by user_message_box_id desc
-// TODO(@benqi): sqlmap
+// TODO: sqlmap
 func (dao *MessagesDAO) SelectByMessageDataIdList(ctx context.Context, tableName string, idList []int64) (rList []dataobject.MessagesDO, err error) {
 	var (
 		query  = "select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from " + tableName + " where deleted = 0 and dialog_message_id in (" + sqlx.InInt64List(idList) + ") order by user_message_box_id desc"
@@ -235,7 +235,7 @@ func (dao *MessagesDAO) SelectByMessageDataIdList(ctx context.Context, tableName
 
 // SelectByMessageDataIdListWithCB
 // select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from messages where deleted = 0 and dialog_message_id in (:idList) order by user_message_box_id desc
-// TODO(@benqi): sqlmap
+// TODO: sqlmap
 func (dao *MessagesDAO) SelectByMessageDataIdListWithCB(ctx context.Context, tableName string, idList []int64, cb func(sz, i int, v *dataobject.MessagesDO)) (rList []dataobject.MessagesDO, err error) {
 	var (
 		query  = "select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from " + tableName + " where deleted = 0 and dialog_message_id in (" + sqlx.InInt64List(idList) + ") order by user_message_box_id desc"

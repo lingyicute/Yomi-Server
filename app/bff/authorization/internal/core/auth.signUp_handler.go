@@ -94,7 +94,7 @@ func (c *AuthorizationCore) AuthSignUp(in *mtproto.TLAuthSignUp) (*mtproto.Auth_
 		return nil, err
 	}
 
-	// TODO(@benqi): register name ruler
+	// TODO: register name ruler
 	// check first name invalid
 	if in.FirstName == "" {
 		c.Logger.Errorf("check first_name error - empty")
@@ -102,7 +102,7 @@ func (c *AuthorizationCore) AuthSignUp(in *mtproto.TLAuthSignUp) (*mtproto.Auth_
 		return nil, err
 	}
 
-	// TODO(@benqi): PHONE_NUMBER_FLOOD
+	// TODO: PHONE_NUMBER_FLOOD
 	// <string name="PhoneNumberFlood">Sorry, you have deleted and re-created your account too many times recently.
 	//    Please wait for a few days before signing up again.</string>
 	//
@@ -159,7 +159,7 @@ func (c *AuthorizationCore) AuthSignUp(in *mtproto.TLAuthSignUp) (*mtproto.Auth_
 		return nil, err
 	}
 
-	// TODO(@benqi): remove to createNewUser
+	// TODO: remove to createNewUser
 	// user.Self = true
 
 	// bind auth_key and user_id

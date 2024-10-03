@@ -25,6 +25,6 @@ func (m DialogPinnedExtList) Swap(i, j int) {
 	m[j], m[i] = m[i], m[j]
 }
 func (m DialogPinnedExtList) Less(i, j int) bool {
-	// TODO(@benqi): if date[i] == date[j]
+	// TODO: if date[i] == date[j]
 	return m[i].Order < m[j].Order
 }

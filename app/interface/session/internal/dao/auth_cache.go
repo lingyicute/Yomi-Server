@@ -100,7 +100,7 @@ func (d *Dao) getFutureSaltList(ctx context.Context, authKeyId int64) ([]*mtprot
 
 func (d *Dao) GetOrFetchNewSalt(ctx context.Context, authKeyId int64) (salt, lastInvalidSalt *mtproto.TLFutureSalt, err error) {
 	cacheSalts, _ := d.getFutureSaltList(ctx, authKeyId)
-	//TODO(@benqi): check len(cacheSalts) > 0
+	//TODO: check len(cacheSalts) > 0
 	if len(cacheSalts) < 2 {
 		return nil, nil, fmt.Errorf("get salt error")
 	} else {
@@ -114,7 +114,7 @@ func (d *Dao) GetOrFetchNewSalt(ctx context.Context, authKeyId int64) (salt, las
 
 func (d *Dao) GetFutureSalts(ctx context.Context, authKeyId int64, num int32) ([]*mtproto.TLFutureSalt, error) {
 	cacheSalts, _ := d.getFutureSaltList(ctx, authKeyId)
-	//TODO(@benqi): check len(cacheSalts) > 0
+	//TODO: check len(cacheSalts) > 0
 
 	return cacheSalts, nil
 }

@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -1132,7 +1132,7 @@ func (m *Vector_MessageBox) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_MessageBox) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO(@benqi): Check crc32 invalid
+	dBuf.Int() // TODO: Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.MessageBox, l1)
 	for i := int32(0); i < l1; i++ {

@@ -34,7 +34,7 @@ func (c *DialogsCore) MessagesSetTyping(in *mtproto.TLMessagesSetTyping) (*mtpro
 		date = int32(time.Now().Unix())
 	)
 
-	// TODO(@benqi): push chat/channel时机
+	// TODO: push chat/channel时机
 	switch peer.PeerType {
 	case mtproto.PEER_USER:
 		updates := mtproto.MakeTLUpdateShort(&mtproto.Updates{

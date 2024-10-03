@@ -27,7 +27,7 @@ func (c *MessageCore) MessageSearch(in *message.TLMessageSearch) (*mtproto.Messa
 		limit   = in.Limit
 	)
 
-	// TODO(@benqi): check q
+	// TODO: check q
 	if offset == 0 {
 		offset = math.MaxInt32
 	}

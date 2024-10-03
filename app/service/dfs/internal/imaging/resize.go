@@ -116,7 +116,7 @@ func ReSizeImage(rb []byte, extName string, isABC bool, cb func(szType string, l
 			}
 		}
 
-		// TODO(@benqi): FIXME
+		// TODO: FIXME
 		var dst *image.NRGBA
 		if imgSz.isWidth {
 			dst = imaging.Resize(img, rsz, 0, imaging.Lanczos)

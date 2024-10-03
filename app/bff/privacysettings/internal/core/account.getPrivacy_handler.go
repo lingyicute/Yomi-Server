@@ -32,7 +32,7 @@ func (c *PrivacySettingsCore) AccountGetPrivacy(in *mtproto.TLAccountGetPrivacy)
 		rVal *mtproto.Account_PrivacyRules
 	)
 
-	// TODO(@benqi): Check request valid.
+	// TODO: Check request valid.
 	if key == mtproto.KEY_TYPE_INVALID {
 		err := mtproto.ErrPrivacyKeyInvalid
 		c.Logger.Errorf("account.getPrivacy - error: %v", err)

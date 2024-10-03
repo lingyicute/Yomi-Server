@@ -56,7 +56,7 @@ func (m *HandshakeStateCtx) DebugString() string {
 }
 
 type connContext struct {
-	// TODO(@benqi): lock
+	// TODO: lock
 	sync.Mutex
 	state           int // 是否握手阶段
 	authKeys        []*authKeyUtil

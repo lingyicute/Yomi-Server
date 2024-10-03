@@ -42,7 +42,7 @@ func New(ctx context.Context, svcCtx *svc.ServiceContext) *DialogCore {
 func makeDialog(dialogDO *dataobject.DialogsDO) *dialog.DialogExt {
 	dialog2 := mtproto.MakeTLDialog(&mtproto.Dialog{
 		Pinned:               false,
-		UnreadMark:           dialogDO.UnreadMark, // TODO(@benqi)
+		UnreadMark:           dialogDO.UnreadMark, // TODO
 		ViewForumAsMessages:  false,
 		Peer:                 mtproto.MakePeer(dialogDO.PeerType, dialogDO.PeerId),
 		TopMessage:           dialogDO.TopMessage,

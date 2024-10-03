@@ -100,7 +100,7 @@ func (d *Dao) PutCacheQRLoginCode(ctx context.Context, keyId int64, qrCode *mode
 		}
 	)
 
-	// TODO(@benqi): args error??
+	// TODO: args error??
 	if err = d.kv.HmsetCtx(ctx, key, args); err != nil {
 		logx.WithContext(ctx).Error("conn.Send(HMSET %s,%v) error(%v)", key, args, err)
 		return

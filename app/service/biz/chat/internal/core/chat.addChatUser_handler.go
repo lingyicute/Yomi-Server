@@ -72,7 +72,7 @@ func (c *ChatCore) ChatAddChatUser(in *chat.TLChatAddChatUser) (*mtproto.Mutable
 	}
 
 	if me != nil {
-		// TODO(@benqi): check
+		// TODO: check
 		// 400	CHAT_ADMIN_REQUIRED	You must be an admin in this chat to do this
 		if !me.CanInviteUsers() &&
 			!chat2.DefaultBannedRights().CanInviteUsers(int32(time.Now().Unix())) {

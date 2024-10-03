@@ -24,7 +24,7 @@ import (
 // load_type == 3 ? load around message
 // load_type == 4 ? load around date
 /*
-  // @benqi: 这什么鬼规则啊？？？
+  // 
   1. getHistory, ps: max_id:int min_id:int未使用
 	TLRPC.TL_messages_getHistory req = new TLRPC.TL_messages_getHistory();
 	req.peer = getInputPeer(lower_part);

@@ -106,7 +106,7 @@ func (d *Dao) GetCacheFile(ctx context.Context, bucket string, id int64, offset 
 	if cacheFile != nil {
 		r := d.NewSSDBReader(cacheFile)
 		r.Seek(offset, io.SeekStart)
-		// TODO(@benqi: check limit)
+		// TODO( check limit)
 		bytes = make([]byte, limit)
 		n, err = r.Read(bytes)
 		if err != nil {

@@ -56,7 +56,7 @@ func (c *MessagesCore) MessagesSearchGlobal(in *mtproto.TLMessagesSearchGlobal) 
 		limit = 50
 	}
 
-	// TODO(@benqi): Impl MessagesSearchGlobal logic
+	// TODO: Impl MessagesSearchGlobal logic
 	rValues := mtproto.MakeTLMessagesMessages(&mtproto.Messages_Messages{
 		Messages: []*mtproto.Message{},
 		Chats:    []*mtproto.Chat{},

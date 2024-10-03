@@ -30,7 +30,7 @@ func (m DialogExtList) Swap(i, j int) {
 }
 
 func (m DialogExtList) Less(i, j int) bool {
-	// TODO(@benqi): if date[i] == date[j]
+	// TODO: if date[i] == date[j]
 	return m[i].Order < m[j].Order
 }
 

@@ -103,7 +103,7 @@ func checkRpcWithoutLogin(tl mtproto.TLObject) bool {
 		*mtproto.TLLangpackGetLanguage:
 		return true
 
-	// TODO(@benqi): debug.
+	// TODO: debug.
 	case *mtproto.TLUploadGetWebFile,
 		*mtproto.TLUploadGetFile:
 		return true

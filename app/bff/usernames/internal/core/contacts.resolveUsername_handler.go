@@ -28,7 +28,7 @@ import (
 // ContactsResolveUsername
 // contacts.resolveUsername#f93ccba3 username:string = contacts.ResolvedPeer;
 func (c *UsernamesCore) ContactsResolveUsername(in *mtproto.TLContactsResolveUsername) (*mtproto.Contacts_ResolvedPeer, error) {
-	// TODO(@benqi):
+	// TODO:
 	// 401	AUTH_KEY_PERM_EMPTY	The temporary auth key must be binded to the permanent auth key to use these methods.
 	// 401	SESSION_PASSWORD_NEEDED	2FA is enabled, use a password to login
 	// 400	USERNAME_INVALID	The provided username is not valid

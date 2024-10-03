@@ -241,7 +241,7 @@ func newSessionInboundQueue() *sessionInboundQueue {
 }
 
 func (q *sessionInboundQueue) AddMsgId(msgId int64) (r *inboxMsg) {
-	// TODO(@benqi): resize 100
+	// TODO: resize 100
 
 	if msgId < q.minMsgId {
 		q.minMsgId = msgId

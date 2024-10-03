@@ -33,7 +33,7 @@ func (d *Dao) SetFileInfo(ctx context.Context, fileInfo *model.DfsFileInfo) (err
 		// args = append([]interface{}{key}, fileInfo.ToArgs()...)
 	)
 
-	// TODO(@benqi): args error??
+	// TODO: args error??
 	if err = d.ssdb.HmsetCtx(ctx, key, fileInfo.ToArgs()); err != nil {
 		logx.WithContext(ctx).Errorf("conn.Send(HMSET %s,%v) error(%v)", key, fileInfo, err)
 		return

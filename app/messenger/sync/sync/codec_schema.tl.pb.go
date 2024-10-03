@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -107,7 +107,7 @@ func (m *TLSyncUpdatesMe) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetUserId())
 		x.Long(m.GetPermAuthKeyId())
 		if m.GetServerId() != nil {
@@ -142,7 +142,7 @@ func (m *TLSyncUpdatesMe) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.UserId = dBuf.Long()
 		m.PermAuthKeyId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {

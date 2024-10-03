@@ -77,7 +77,7 @@ func (c *UserProfileCore) AccountUpdateStatus(in *mtproto.TLAccountUpdateStatus)
 	//	contactIdList := s.UserFacade.GetContactUserIdList(context.Background(), md.UserId)
 	//	blockedIdList := s.UserFacade.CheckBlockUserList(context.Background(), md.UserId, contactIdList)
 	//
-	//	// TODO(@benqi): push updateUserStatus规则
+	//	// TODO: push updateUserStatus规则
 	//	for _, id := range contactIdList {
 	//		if md.UserId == id {
 	//			// why??

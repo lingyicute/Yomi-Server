@@ -54,7 +54,7 @@ func (c *session) onSyncData(ctx context.Context, obj mtproto.TLObject) {
 }
 
 func (c *session) onSyncRpcResultData(ctx context.Context, reqMsgId int64, data []byte) {
-	// TODO(@benqi):
+	// TODO:
 	// log.Debugf("genericSession]]>> - %v", cntl)
 	c.pendingQueue.Remove(reqMsgId)
 	gatewayId := c.getGatewayId()
@@ -62,7 +62,7 @@ func (c *session) onSyncRpcResultData(ctx context.Context, reqMsgId int64, data 
 }
 
 func (c *session) onSyncSessionData(ctx context.Context, obj mtproto.TLObject) {
-	// TODO(@benqi):
+	// TODO:
 	gatewayId := c.getGatewayId()
 	pusMsgId := c.sessList.cb.getNextPushId()
 

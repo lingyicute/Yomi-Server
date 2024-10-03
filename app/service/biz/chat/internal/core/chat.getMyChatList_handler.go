@@ -35,7 +35,7 @@ func (c *ChatCore) ChatGetMyChatList(in *chat.TLChatGetMyChatList) (*chat.Vector
 				}
 			})
 	} else {
-		// TODO(@benqi):
+		// TODO:
 	}
 
 	return &chat.Vector_MutableChat{

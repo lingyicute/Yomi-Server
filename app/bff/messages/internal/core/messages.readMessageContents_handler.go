@@ -46,7 +46,7 @@ func (c *MessagesCore) MessagesReadMessageContents(in *mtproto.TLMessagesReadMes
 		}).To_Messages_AffectedMessages(), nil
 	}
 
-	// TODO(@benqi): check peer??
+	// TODO: check peer??
 	var (
 		peer *mtproto.PeerUtil
 	)
@@ -61,7 +61,7 @@ func (c *MessagesCore) MessagesReadMessageContents(in *mtproto.TLMessagesReadMes
 	}
 	contents := make([]*msgpb.ContentMessage, 0, len(messages.GetDatas()))
 	for _, m := range messages.GetDatas() {
-		// TODO(@benqi): check peer??
+		// TODO: check peer??
 		// peer := model.FromPeer(m.Message.ToId)
 		if m.Message.GetMentioned() {
 			contents = append(contents, &msgpb.ContentMessage{

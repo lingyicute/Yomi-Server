@@ -64,7 +64,7 @@ func (d *Dao) getAuthKey(ctx context.Context, keyId int64) (keyData *mtproto.Aut
 		return
 	}
 
-	// TODO(@benqi): check len(values)
+	// TODO: check len(values)
 
 	keyData = mtproto.MakeTLAuthKeyInfo(&mtproto.AuthKeyInfo{}).To_AuthKeyInfo()
 	for k, v := range values {
@@ -174,7 +174,7 @@ func (d *Dao) QueryAuthKeyV2(ctx context.Context, authKeyId int64) (*mtproto.Aut
 }
 
 func (d *Dao) SetAuthKeyV2(ctx context.Context, authKey *mtproto.AuthKeyInfo, expiredIn int32) (err error) {
-	// TODO(@benqi): expiredIn
+	// TODO: expiredIn
 	_ = expiredIn
 
 	tR := sqlx.TxWrapper(ctx, d.DB, func(tx *sqlx.Tx, result *sqlx.StoreResult) {

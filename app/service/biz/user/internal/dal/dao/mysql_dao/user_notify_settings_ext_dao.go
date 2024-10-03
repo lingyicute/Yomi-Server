@@ -25,7 +25,7 @@ import (
 
 // InsertOrUpdateExt
 // insert into user_notify_settings(user_id, peer_type, peer_id, show_previews, silent, mute_until, sound) values (:user_id, :peer_type, :peer_id, :show_previews, :silent, :mute_until, :sound) on duplicate key update show_previews = values(show_previews), silent = values(silent), mute_until = values(mute_until), sound = values(sound), deleted = 0
-// TODO(@benqi): sqlmap
+// TODO: sqlmap
 func (dao *UserNotifySettingsDAO) InsertOrUpdateExt(ctx context.Context, userId int64, peerType int32, peerId int64, cMap map[string]interface{}) (lastInsertId, rowsAffected int64, err error) {
 	var (
 		s1 []string
@@ -74,7 +74,7 @@ func (dao *UserNotifySettingsDAO) InsertOrUpdateExt(ctx context.Context, userId 
 
 // InsertOrUpdateExtTx
 // insert into user_notify_settings(user_id, peer_type, peer_id, show_previews, silent, mute_until, sound) values (:user_id, :peer_type, :peer_id, :show_previews, :silent, :mute_until, :sound) on duplicate key update show_previews = values(show_previews), silent = values(silent), mute_until = values(mute_until), sound = values(sound), deleted = 0
-// TODO(@benqi): sqlmap
+// TODO: sqlmap
 func (dao *UserNotifySettingsDAO) InsertOrUpdateExtTx(tx *sqlx.Tx, userId int64, peerType int32, peerId int64, cMap map[string]interface{}) (lastInsertId, rowsAffected int64, err error) {
 	var (
 		s1 []string
@@ -121,7 +121,7 @@ func (dao *UserNotifySettingsDAO) InsertOrUpdateExtTx(tx *sqlx.Tx, userId int64,
 
 // SelectListWithCB
 // select id, user_id, peer_type, peer_id, show_previews, silent, mute_until, sound from user_notify_settings where user_id = :user_id and deleted = 0
-// TODO(@benqi): sqlmap
+// TODO: sqlmap
 func (dao *UserNotifySettingsDAO) SelectListWithCB(ctx context.Context, userId int64, peers []*mtproto.PeerUtil, cb func(i int, v *dataobject.UserNotifySettingsDO)) (rList []dataobject.UserNotifySettingsDO, err error) {
 	var (
 		qVs                                   []string

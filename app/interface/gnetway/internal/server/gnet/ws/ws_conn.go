@@ -1,7 +1,7 @@
 // Copyright 2024 Papercraft Authors
 //  All rights reserved.
 //
-// Author: Benqi (wubenqi@gmail.com)
+// Author: @lingyicute
 //
 
 package ws

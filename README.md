@@ -139,16 +139,6 @@ docker-compose up -d
 ## Feedback
 Please report bugs, concerns, suggestions by issues, or join papercraft group **[Papercraft](https://papercraft-link.github.io/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
 
-## Notes
-If need enterprise edition:
-
-- sticker/theme/wallpaper/reactions/2fa/sms/push(apns/web/fcm)/secretchat/scheduled/...
-- channel/megagroup
-- audiocall/videocall/groupcall
-- bots
-
-please PM the **[author](https://papercraft-link.github.io/benqi)**
-
 ## Give a Star! ⭐
 
 If you like or are using this project to learn or start your solution, please give it a star. Thanks!

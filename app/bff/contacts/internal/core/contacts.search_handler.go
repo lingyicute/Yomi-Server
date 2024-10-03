@@ -67,7 +67,7 @@ func (c *ContactsCore) ContactsSearch(in *mtproto.TLContactsSearch) (*mtproto.Co
 		Chats:     []*mtproto.Chat{},
 	}).To_Contacts_Found()
 
-	// TODO(@benqi):
+	// TODO:
 	// This method will exclude the current user's contacts from the search results. It is assumed that searches among the user's contacts can be handled locally by the client.
 	//
 

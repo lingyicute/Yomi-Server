@@ -41,19 +41,19 @@ const (
 )
 
 var (
-	// TODO(@benqi): 预先计算出fingerprint
+	// TODO: 预先计算出fingerprint
 	// 这里直接使用了0xc3b42b026ce86b21
 	// fingerprint uint64 = 12240908862933197005
 
-	// TODO(@benqi): 使用算法生成PQ
+	// TODO: 使用算法生成PQ
 	// 这里直接指定了PQ值: {0x17, 0xED, 0x48, 0x94, 0x1A, 0x08, 0xF9, 0x81}
 	pq = string([]byte{0x17, 0xED, 0x48, 0x94, 0x1A, 0x08, 0xF9, 0x81})
 
-	// TODO(@benqi): 直接指定了p和q
+	// TODO: 直接指定了p和q
 	p = []byte{0x49, 0x4C, 0x55, 0x3B}
 	q = []byte{0x53, 0x91, 0x10, 0x73}
 
-	// TODO(@benqi): 直接指定了dh2048_p和dh2048_g!!!
+	// TODO: 直接指定了dh2048_p和dh2048_g!!!
 	// android client 指定的good prime
 	//
 	// static const char *goodPrime = "
@@ -164,7 +164,7 @@ func newHandshake(keyFile string, keyFingerprint uint64, createdCB keyCreatedF) 
 //
 //	_, obj, err := ParseFromIncomingMessage(mtpBuf[8:])
 //
-//	// TODO(@benqi): check msgId
+//	// TODO: check msgId
 //	// _ = msgId
 //
 //	//mtpMessage := &mtproto.UnencryptedMessage{}
@@ -395,7 +395,7 @@ func (s *handshake) onReqDHParams(ctx *HandshakeStateCtx, request *mtproto.TLReq
 	}
 
 	var pqInnerData *mtproto.P_QInnerData
-	// TODO(@benqi):
+	// TODO:
 	switch innerData := o.(type) {
 	case *mtproto.TLPQInnerData:
 		ctx.handshakeType = mtproto.AuthKeyTypePerm
@@ -453,7 +453,7 @@ func (s *handshake) onReqDHParams(ctx *HandshakeStateCtx, request *mtproto.TLReq
 		return nil, fmt.Errorf("process Req_DHParams - Wrong ServerNonce")
 	}
 
-	// TODO(@benqi): check dc
+	// TODO: check dc
 	// logx.Info("processReq_DHParams - pqInnerData Decode sucess: ", pqInnerData.String())
 
 	// 检查NewNonce的长度(int256)
@@ -523,7 +523,7 @@ func (s *handshake) onReqDHParams(ctx *HandshakeStateCtx, request *mtproto.TLReq
 func (s *handshake) onSetClientDHParams(ctx *HandshakeStateCtx, request *mtproto.TLSetClient_DHParams) (*mtproto.SetClient_DHParamsAnswer, error) {
 	logx.Infof("set_client_DH_params#f5045f1f - state: {%s}, request: %s", ctx, request)
 
-	// TODO(@benqi): Impl SetClient_DHParams logic
+	// TODO: Impl SetClient_DHParams logic
 	// 客户端传输数据解析
 	// Nonce
 	if !bytes.Equal(request.Nonce, ctx.Nonce) {
@@ -559,7 +559,7 @@ func (s *handshake) onSetClientDHParams(ctx *HandshakeStateCtx, request *mtproto
 		return nil, err
 	}
 
-	// TODO(@benqi): 检查签名是否合法
+	// TODO: 检查签名是否合法
 	dBuf := mtproto.NewDecodeBuf(decryptedData[20:])
 	clientDHInnerData := mtproto.MakeTLClient_DHInnerData(nil)
 	clientDHInnerData.Data2.Constructor = mtproto.TLConstructor(dBuf.Int())
@@ -594,7 +594,7 @@ func (s *handshake) onSetClientDHParams(ctx *HandshakeStateCtx, request *mtproto
 
 	authKey := make([]byte, 256)
 
-	// TODO(@benqi): dhGenRetry and dhGenFail
+	// TODO: dhGenRetry and dhGenFail
 	copy(authKey[256-len(authKeyNum.Bytes()):], authKeyNum.Bytes())
 
 	authKeyAuxHash := make([]byte, len(ctx.NewNonce))
@@ -608,7 +608,7 @@ func (s *handshake) onSetClientDHParams(ctx *HandshakeStateCtx, request *mtproto
 	// 至此key已经创建成功
 	authKeyId := int64(binary.LittleEndian.Uint64(authKeyAuxHash[len(ctx.NewNonce)+1+12 : len(ctx.NewNonce)+1+12+8]))
 
-	// TODO(@benqi): authKeyId生成后要检查在数据库里是否已经存在，有非常小的概率会碰撞
+	// TODO: authKeyId生成后要检查在数据库里是否已经存在，有非常小的概率会碰撞
 	// 如果碰撞让客户端重新再来一轮
 
 	// state.Ctx, _ = proto.Marshal(authKeyMD)
@@ -625,7 +625,7 @@ func (s *handshake) onSetClientDHParams(ctx *HandshakeStateCtx, request *mtproto
 		logx.Infof("onSetClient_DHParams - ctx: {%s}, reply: %s", ctx, dhGenOk)
 		return dhGenOk.To_SetClient_DHParamsAnswer(), nil
 	} else {
-		// TODO(@benqi): dhGenFail
+		// TODO: dhGenFail
 		dhGenRetry := &mtproto.TLDhGenRetry{Data2: &mtproto.SetClient_DHParamsAnswer{
 			Nonce:         ctx.Nonce,
 			ServerNonce:   ctx.ServerNonce,

@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: Benqi (wubenqi@gmail.com)
+ * Author: @lingyicute
  */
 
 // ConstructorList
@@ -230,7 +230,7 @@ func (m *TLInboxMessageData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_inboxMessageData, layer)
 		return nil
 	}
@@ -356,7 +356,7 @@ func (m *TLInboxMessageId) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_inboxMessageId, layer)
 		return nil
 	}
@@ -541,7 +541,7 @@ func (m *TLInboxDeleteUserHistoryToInbox) Encode(x *mtproto.EncodeBuf, layer int
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetFromId())
 		x.Long(m.GetPeerUserId())
 		x.Int(m.GetMaxId())
@@ -564,7 +564,7 @@ func (m *TLInboxDeleteUserHistoryToInbox) Decode(dBuf *mtproto.DecodeBuf) error 
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.FromId = dBuf.Long()
 		m.PeerUserId = dBuf.Long()
 		if (flags & (1 << 1)) != 0 {
@@ -802,7 +802,7 @@ func (m *TLInboxUpdatePinnedMessage) Encode(x *mtproto.EncodeBuf, layer int32) e
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetUserId())
 		x.Int(m.GetPeerType())
 		x.Long(m.GetPeerId())
@@ -827,7 +827,7 @@ func (m *TLInboxUpdatePinnedMessage) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.UserId = dBuf.Long()
 		if (flags & (1 << 1)) != 0 {
 			m.Unpin = true
@@ -912,7 +912,7 @@ func (m *TLInboxSendUserMessageToInboxV2) Encode(x *mtproto.EncodeBuf, layer int
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetUserId())
 		x.Long(m.GetFromId())
 		x.Long(m.GetFromAuthKeyId())
@@ -958,7 +958,7 @@ func (m *TLInboxSendUserMessageToInboxV2) Decode(dBuf *mtproto.DecodeBuf) error 
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.UserId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m.Out = true
@@ -1043,7 +1043,7 @@ func (m *TLInboxEditMessageToInboxV2) Encode(x *mtproto.EncodeBuf, layer int32) 
 
 		x.UInt(flags)
 
-		// flags Debug by @benqi
+		// flags Debug 
 		x.Long(m.GetUserId())
 		x.Long(m.GetFromId())
 		x.Long(m.GetFromAuthKeyId())
@@ -1087,7 +1087,7 @@ func (m *TLInboxEditMessageToInboxV2) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug by @benqi
+		// flags Debug 
 		m.UserId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m.Out = true

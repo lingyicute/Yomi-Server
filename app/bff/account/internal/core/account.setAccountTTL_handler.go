@@ -26,7 +26,7 @@ import (
 // AccountSetAccountTTL
 // account.setAccountTTL#2442485e ttl:AccountDaysTTL = Bool;
 func (c *AccountCore) AccountSetAccountTTL(in *mtproto.TLAccountSetAccountTTL) (*mtproto.Bool, error) {
-	// TODO(@benqi): Check ttl
+	// TODO: Check ttl
 	ttl := in.GetTtl().GetDays()
 	switch ttl {
 	case 30:

@@ -150,7 +150,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 		} else {
 			currentNumber = mtproto.FromBool(request.CurrentNumber)
 		}
-		// TODO(@benqi): check allow_flashcall rule
+		// TODO: check allow_flashcall rule
 		if !currentNumber && request.GetAllowFlashcall() {
 			err = mtproto.NewRpcError2(mtproto.TLRpcErrorCodes_BAD_REQUEST)
 			log.Errorf("current_number is true but allow_flashcall is false - %v", err)
@@ -172,7 +172,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 	// 	303	NETWORK_MIGRATE_X	重复查询到数据中心X
 	// 	303	PHONE_MIGRATE_X	重复查询到数据中心X
 	//
-	// TODO(@benqi): MIGRATE datacenter
+	// TODO: MIGRATE datacenter
 	// android client:
 	//  migrateErrors.push_back("NETWORK_MIGRATE_");
 	//  migrateErrors.push_back("PHONE_MIGRATE_");
@@ -194,13 +194,13 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 	//
 	// if userDO == nil {
 	//	// phone registered
-	//	// TODO(@benqi): 由phoneNumber和ip优选
+	//	// TODO: 由phoneNumber和ip优选
 	// } else {
-	//	// TODO(@benqi): 由userId优选
+	//	// TODO: 由userId优选
 	// }
 
 	// 5. Check INPUT_REQUEST_TOO_LONG
-	// TODO(@benqi):
+	// TODO:
 	// 	400	INPUT_REQUEST_TOO_LONG	The request is too big
 
 	// 5. banned phone number
@@ -215,7 +215,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 
 	// 400	PHONE_NUMBER_FLOOD	You asked for the code too many times.
 	// phone number flood
-	// TODO(@benqi): PHONE_NUMBER_FLOOD
+	// TODO: PHONE_NUMBER_FLOOD
 	// <string name="PhoneNumberFlood">Sorry, you have deleted and re-created your account too many times recently.
 	//    Please wait for a few days before signing up again.</string>
 	//

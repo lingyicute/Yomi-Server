@@ -31,7 +31,7 @@ func (c *UpdatesCore) UpdatesGetStateV2(in *updates.TLUpdatesGetStateV2) (*mtpro
 		Pts:         pts,
 		Qts:         0,
 		Seq:         seq,
-		Date:        int32(time.Now().Unix()), // TODO(@benqi): do.Date2???
+		Date:        int32(time.Now().Unix()), // TODO: do.Date2???
 		UnreadCount: 0,
 	}).To_Updates_State(), nil
 }

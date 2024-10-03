@@ -206,7 +206,7 @@ func (c *session) onSessionMessageData(ctx context.Context, gatewayId, clientIp 
 		c.closeDate = willCloseDate
 	}
 
-	// 2. TODO(@benqi): checkBadMsgNotification
+	// 2. TODO: checkBadMsgNotification
 	/*
 		const auto needResend = false
 			|| (errorCode == 16) // bad msg_id
@@ -234,7 +234,7 @@ func (c *session) onSessionMessageData(ctx context.Context, gatewayId, clientIp 
 		msgs []*mtproto.TLMessage2
 	)
 
-	// TODO(@benqi): ignore TLMsgCopy
+	// TODO: ignore TLMsgCopy
 	if msgContainer, ok := msg.Object.(*mtproto.TLMsgContainer); ok {
 		msgs = msgContainer.Messages
 
@@ -307,7 +307,7 @@ func (c *session) onSessionMessageData(ctx context.Context, gatewayId, clientIp 
 				// 第一次收到
 				c.processMsg(ctx, gatewayId, clientIp, inMsg, m2.Object)
 			} else {
-				// TODO(@benqi): resend
+				// TODO: resend
 				// 已经收到，返回发送状态
 				// c.notifyMsgsStateInfo(gatewayId, inMsg)
 				continue
@@ -684,7 +684,7 @@ func (c *session) sendQueueToGateway(ctx context.Context, gatewayId string) {
 			}
 			logx.WithContext(ctx).Infof("sendRawDirectToGateway - TLMsgRawDataContainer")
 			b, err = c.sendDirectToGateway(ctx, gatewayId, false, msgContainer, func(sentRaw *mtproto.TLMessageRawData) {
-				// TODO(@benqi):
+				// TODO:
 				// nothing do
 			})
 			// log.Debugf("err: %v, b: %v", err, b)
@@ -711,7 +711,7 @@ func (c *session) sendQueueToGateway(ctx context.Context, gatewayId string) {
 			}
 			logx.WithContext(ctx).Infof("sendRawDirectToGateway - TLMsgRawDataContainer")
 			b, err = c.sendDirectToGateway(ctx, gatewayId, false, msgContainer, func(sentRaw *mtproto.TLMessageRawData) {
-				// TODO(@benqi):
+				// TODO:
 				// nothing do
 			})
 			// log.Debugf("err: %v, b: %v", err, b)

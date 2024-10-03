@@ -37,7 +37,7 @@ func (c *DialogsCore) MessagesGetPeerSettings(in *mtproto.TLMessagesGetPeerSetti
 	if err != nil {
 		c.Logger.Errorf("messages.getPeerSettings - error: %v", err)
 
-		// TODO(@benqi): handle error
+		// TODO: handle error
 		peerSettings = mtproto.MakeTLPeerSettings(nil).To_PeerSettings()
 	}
 

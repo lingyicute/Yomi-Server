@@ -125,7 +125,7 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 			n = (int(c.packetLen[1]) | int(c.packetLen[2])<<8 | int(c.packetLen[3])<<16) << 2
 			// log.Debugf("n = %d", n)
 			if n > MAX_MTPRORO_FRAME_SIZE {
-				// TODO(@benqi): close conn
+				// TODO: close conn
 				return nil, fmt.Errorf("too large data(%d)", n)
 			}
 		}
@@ -173,7 +173,7 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 		n = (int(c.packetLen[1]) | int(c.packetLen[2])<<8 | int(c.packetLen[3])<<16) << 2
 		// log.Debugf("n = %d", n)
 		if n > MAX_MTPRORO_FRAME_SIZE {
-			// TODO(@benqi): close conn
+			// TODO: close conn
 			return nil, fmt.Errorf("too large data(%d)", n)
 		}
 		if buf, err = in.readN(n); err != nil {
@@ -192,7 +192,7 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 		n = (int(c.packetLen[1]) | int(c.packetLen[2])<<8 | int(c.packetLen[3])<<16) << 2
 		// log.Debugf("n = %d", n)
 		if n > MAX_MTPRORO_FRAME_SIZE {
-			// TODO(@benqi): close conn
+			// TODO: close conn
 			return nil, fmt.Errorf("too large data(%d)", n)
 		}
 		if buf, err = in.readN(n); err != nil {
@@ -209,6 +209,6 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 		return message, nil
 	}
 
-	// TODO(@benqi): close conn
+	// TODO: close conn
 	return nil, fmt.Errorf("unknown error")
 }

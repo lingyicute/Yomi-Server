@@ -37,7 +37,7 @@ import (
 )
 
 func makeMessageBoxByDO(boxDO *dataobject.MessagesDO) *mtproto.MessageBox {
-	// TODO(@benqi): check boxDO and dataDO
+	// TODO: check boxDO and dataDO
 	// message, _ := mtproto.DecodeMessage(int(boxDO.MessageType), hack.Bytes(boxDO.MessageData))
 
 	box := &mtproto.MessageBox{
@@ -154,7 +154,7 @@ func (d *Dao) sendMessageToOutbox(ctx context.Context, fromId int64, peer *mtpro
 		}
 
 		if rowsAffected == 0 {
-			// TODO(@benqi): random_id已经存在
+			// TODO: random_id已经存在
 			if lastInsertId > 0 {
 				result.Data = lastInsertId
 				return
@@ -183,14 +183,14 @@ func (d *Dao) sendMessageToOutbox(ctx context.Context, fromId int64, peer *mtpro
 			if dialogMessageId > 1 {
 				//// if box_id > 1, then dialogs already created.
 				//
-				//// TODO(@benqi): unread_count and unread_mentions_count
+				//// TODO: unread_count and unread_mentions_count
 				//cMap := map[string]interface{}{
 				//	"top_message": dialogDO.TopMessage,
 				//	"date2":       dialogDO.Date2,
 				//	"unread_mark": 0,
 				//}
 				//
-				//// TODO(@benqi): clear draft
+				//// TODO: clear draft
 				//if true {
 				//	cMap["draft_message_data"] = "null"
 				//	cMap["draft_type"] = 0
@@ -615,7 +615,7 @@ func (d *Dao) SendMessageToOutboxV1(ctx context.Context, fromId int64, peer *mtp
 		}
 
 		if rowsAffected == 0 {
-			// TODO(@benqi): random_id已经存在
+			// TODO: random_id已经存在
 			if lastInsertId > 0 {
 				result.Data = lastInsertId
 				return

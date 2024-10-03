@@ -167,7 +167,7 @@ func (d *Dao) PutUserContact(ctx context.Context, changeMutual bool, do *dataobj
 						return
 					}
 
-					// // TODO(@benqi): set addPhonePrivacyException
+					// // TODO: set addPhonePrivacyException
 					// if mtproto.FromBool(in.AddPhonePrivacyException) {
 					// 	//
 					// }

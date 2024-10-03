@@ -100,7 +100,7 @@ func (d *Dao) UpdatePhoneCodeData(ctx context.Context,
 	authKeyId int64,
 	phoneNumber, phoneCodeHash string,
 	codeData *model.PhoneCodeTransaction) error {
-	// TODO(@benqi): check state??
+	// TODO: check state??
 	return d.PutCachePhoneCode(ctx, authKeyId, phoneNumber, codeData)
 }
 
@@ -108,7 +108,7 @@ func (d *Dao) CheckCanDoAction(ctx context.Context,
 	authKeyId int64,
 	phoneNumber string,
 	actionType int) error {
-	// TODO(@benqi): check can do action
+	// TODO: check can do action
 
 	_ = authKeyId
 	_ = phoneNumber
