@@ -26,7 +26,7 @@ import (
 // auth.reportMissingCode#cb9deff6 phone_number:string phone_code_hash:string mnc:string = Bool;
 func (c *AuthorizationCore) AuthReportMissingCode(in *mtproto.TLAuthReportMissingCode) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("auth.reportMissingCode blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("auth.reportMissingCode blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

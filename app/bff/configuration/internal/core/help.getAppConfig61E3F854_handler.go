@@ -26,7 +26,7 @@ import (
 // help.getAppConfig#61e3f854 hash:int = help.AppConfig;
 func (c *ConfigurationCore) HelpGetAppConfig61E3F854(in *mtproto.TLHelpGetAppConfig61E3F854) (*mtproto.Help_AppConfig, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getAppConfig blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getAppConfig blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return mtproto.MakeTLHelpAppConfig(&mtproto.Help_AppConfig{
 		Hash: 0,

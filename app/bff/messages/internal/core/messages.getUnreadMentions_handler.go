@@ -105,7 +105,7 @@ func (c *MessagesCore) MessagesGetUnreadMentions(in *mtproto.TLMessagesGetUnread
 		//	NextRate: nil,
 		//	Pts:      channel.Pts(),
 		//}).To_Messages_Messages()
-		c.Logger.Errorf("messages.readHistory blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.readHistory blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:

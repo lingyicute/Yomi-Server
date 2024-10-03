@@ -37,7 +37,7 @@ func (c *FilesCore) UploadGetWebFile(in *mtproto.TLUploadGetWebFile) (*mtproto.U
 
 		return nil, err
 	default:
-		c.Logger.Errorf("upload.getWebFile blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("upload.getWebFile blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}

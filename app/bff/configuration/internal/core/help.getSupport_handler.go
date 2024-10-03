@@ -26,7 +26,7 @@ import (
 // help.getSupport#9cdf08cd = help.Support;
 func (c *ConfigurationCore) HelpGetSupport(in *mtproto.TLHelpGetSupport) (*mtproto.Help_Support, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getSupport blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getSupport blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

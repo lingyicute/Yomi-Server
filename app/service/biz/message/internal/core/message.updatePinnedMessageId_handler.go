@@ -26,7 +26,7 @@ func (c *MessageCore) MessageUpdatePinnedMessageId(in *message.TLMessageUpdatePi
 			c.Logger.Errorf("message.updatePinnedMessageId - error: %v", err)
 		}
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("message.updatePinnedMessageId blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("message.updatePinnedMessageId blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}

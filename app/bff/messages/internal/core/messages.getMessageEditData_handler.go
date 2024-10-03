@@ -128,7 +128,7 @@ func (c *MessagesCore) MessagesGetMessageEditData(in *mtproto.TLMessagesGetMessa
 		}
 	case mtproto.PEER_CHANNEL:
 		// TODO: not impl
-		c.Logger.Errorf("messages.getMessageEditData blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.getMessageEditData blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:

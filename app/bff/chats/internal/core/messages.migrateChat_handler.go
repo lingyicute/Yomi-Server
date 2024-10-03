@@ -26,7 +26,7 @@ import (
 // messages.migrateChat#a2875319 chat_id:long = Updates;
 func (c *ChatsCore) MessagesMigrateChat(in *mtproto.TLMessagesMigrateChat) (*mtproto.Updates, error) {
 	// TODO: not impl
-	c.Logger.Errorf("messages.migrateChat blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("messages.migrateChat blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

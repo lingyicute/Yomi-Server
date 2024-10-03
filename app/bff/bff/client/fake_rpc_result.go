@@ -297,6 +297,6 @@ func (c *BFFProxyClient) TryReturnFakeRpcResult(object mtproto.TLObject) (mtprot
 		}).To_Account_WebAuthorizations(), nil
 	}
 
-	logx.Errorf("%s blocked, License key from https://papercraft.net required to unlock enterprise features.", rt.Name())
+	logx.Errorf("%s blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.", rt.Name())
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

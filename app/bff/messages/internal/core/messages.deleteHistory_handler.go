@@ -32,7 +32,7 @@ func (c *MessagesCore) MessagesDeleteHistory(in *mtproto.TLMessagesDeleteHistory
 	)
 
 	if peer.IsChannel() {
-		c.Logger.Errorf("messages.deleteHistory blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.deleteHistory blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}
 

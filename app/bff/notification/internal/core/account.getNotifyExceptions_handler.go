@@ -73,7 +73,7 @@ func (c *NotificationCore) AccountGetNotifyExceptions(in *mtproto.TLAccountGetNo
 				chats := c.svcCtx.Plugin.GetChannelListByIdList(c.ctx, c.MD.UserId, channelIdList...)
 				rUpdates.PushChat(chats...)
 			} else {
-				c.Logger.Errorf("account.registerDevice blocked, License key from https://papercraft.net required to unlock enterprise features.")
+				c.Logger.Errorf("account.registerDevice blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 			}
 		})
 

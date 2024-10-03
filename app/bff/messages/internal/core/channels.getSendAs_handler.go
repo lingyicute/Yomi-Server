@@ -26,7 +26,7 @@ import (
 // channels.getSendAs#dc770ee peer:InputPeer = channels.SendAsPeers;
 func (c *MessagesCore) ChannelsGetSendAs(in *mtproto.TLChannelsGetSendAs) (*mtproto.Channels_SendAsPeers, error) {
 	// TODO: not impl
-	c.Logger.Errorf("contacts.getTopPeers blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("contacts.getTopPeers blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	// Disable sendAsPeers
 	return mtproto.MakeTLChannelsSendAsPeers(&mtproto.Channels_SendAsPeers{

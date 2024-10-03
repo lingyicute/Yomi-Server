@@ -26,7 +26,7 @@ import (
 // messages.getDefaultHistoryTTL#658b7188 = DefaultHistoryTTL;
 func (c *MessagesCore) MessagesGetDefaultHistoryTTL(in *mtproto.TLMessagesGetDefaultHistoryTTL) (*mtproto.DefaultHistoryTTL, error) {
 	// TODO: not impl
-	c.Logger.Errorf("messages.getDefaultHistoryTTL blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("messages.getDefaultHistoryTTL blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

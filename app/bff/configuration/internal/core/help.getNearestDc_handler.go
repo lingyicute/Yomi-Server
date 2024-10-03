@@ -29,7 +29,7 @@ func (c *ConfigurationCore) HelpGetNearestDc(in *mtproto.TLHelpGetNearestDc) (*m
 	_ = in
 
 	// TODO: not impl
-	c.Logger.Errorf("help.getNearestDc blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getNearestDc blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	rValue := mtproto.MakeTLNearestDc(&mtproto.NearestDc{
 		Country:   "CN",

@@ -28,7 +28,7 @@ import (
 // help.getAppChangelog#9010ef6f prev_app_version:string = Updates;
 func (c *ConfigurationCore) HelpGetAppChangelog(in *mtproto.TLHelpGetAppChangelog) (*mtproto.Updates, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getAppChangelog blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getAppChangelog blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	_ = in.GetPrevAppVersion()
 

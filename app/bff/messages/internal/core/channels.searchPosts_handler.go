@@ -26,7 +26,7 @@ import (
 // channels.searchPosts#d19f987b hashtag:string offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
 func (c *MessagesCore) ChannelsSearchPosts(in *mtproto.TLChannelsSearchPosts) (*mtproto.Messages_Messages, error) {
 	// TODO: not impl
-	c.Logger.Errorf("channels.searchPosts blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("channels.searchPosts blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

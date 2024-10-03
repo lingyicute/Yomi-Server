@@ -26,7 +26,7 @@ import (
 // auth.requestPasswordRecovery#d897bc66 = auth.PasswordRecovery;
 func (c *AuthorizationCore) AuthRequestPasswordRecovery(in *mtproto.TLAuthRequestPasswordRecovery) (*mtproto.Auth_PasswordRecovery, error) {
 	// TODO: not impl
-	c.Logger.Errorf("auth.requestPasswordRecovery blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("auth.requestPasswordRecovery blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

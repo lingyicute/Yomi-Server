@@ -34,7 +34,7 @@ func (c *MessageCore) MessageSearchByPinned(in *message.TLMessageSearchByPinned)
 				boxList = append(boxList, c.svcCtx.Dao.MakeMessageBox(c.ctx, in.UserId, v))
 			})
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("message.searchByPinned blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("message.searchByPinned blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}

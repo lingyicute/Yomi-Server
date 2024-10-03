@@ -104,7 +104,7 @@ func (c *DraftsCore) MessagesSaveDraft(in *mtproto.TLMessagesSaveDraft) (*mtprot
 			chats := c.svcCtx.Plugin.GetChannelListByIdList(c.ctx, c.MD.UserId, peer.PeerId)
 			syncUpdates.PushChat(chats...)
 		} else {
-			c.Logger.Errorf("messages.saveDraft blocked, License key from https://papercraft.net required to unlock enterprise features.")
+			c.Logger.Errorf("messages.saveDraft blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 			return nil, mtproto.ErrEnterpriseIsBlocked
 		}
 	}

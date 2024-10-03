@@ -78,7 +78,7 @@ func (c *ChatsCore) MessagesEditChatDefaultBannedRights(in *mtproto.TLMessagesEd
 			Seq:     0,
 		}).To_Updates()
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("messages.editChatDefaultBannedRights blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.editChatDefaultBannedRights blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:

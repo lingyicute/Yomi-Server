@@ -88,7 +88,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 		peer2 := mtproto.FromPeer(dialogEx.GetDialog().GetPeer())
 
 		if peer2.IsChannel() {
-			c.Logger.Errorf("messages.getDialogs blocked, License key from https://papercraft.net required to unlock enterprise features.")
+			c.Logger.Errorf("messages.getDialogs blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 		}
 
 		dialogEx.Dialog.NotifySettings = userpb.FindPeerPeerNotifySettings(notifySettingsList, peer2)
@@ -114,7 +114,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 				if !id2.Peer.IsChannel() {
 					msgIdList = append(msgIdList, id2.TopMessage)
 				} else {
-					c.Logger.Errorf("blocked, License key from https://papercraft.net required to unlock enterprise features.")
+					c.Logger.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 				}
 			}
 			if len(msgIdList) > 0 {
@@ -146,7 +146,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 			return chats.GetChatListByIdList(c.MD.UserId, id...)
 		},
 		func(ctx context.Context, selfUserId int64, id ...int64) []*mtproto.Chat {
-			c.Logger.Errorf("blocked, License key from https://papercraft.net required to unlock enterprise features.")
+			c.Logger.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 			return []*mtproto.Chat{}
 		})
 

@@ -26,7 +26,7 @@ import (
 // upload.getCdnFileHashes#4da54231 file_token:bytes offset:int = Vector<FileHash>;
 func (c *FilesCore) UploadGetCdnFileHashes(in *mtproto.TLUploadGetCdnFileHashes) (*mtproto.Vector_FileHash, error) {
 	// TODO: not impl
-	c.Logger.Errorf("upload.getCdnFileHashes blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("upload.getCdnFileHashes blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return &mtproto.Vector_FileHash{
 		Datas: []*mtproto.FileHash{},

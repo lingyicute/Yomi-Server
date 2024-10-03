@@ -95,7 +95,7 @@ func (c *FilesCore) UploadGetFile(in *mtproto.TLUploadGetFile) (*mtproto.Upload_
 			}
 			location = location2
 		} else {
-			c.Logger.Errorf("upload.getFile blocked, License key from https://papercraft.net required to unlock enterprise features.")
+			c.Logger.Errorf("upload.getFile blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 			return nil, mtproto.ErrEnterpriseIsBlocked
 		}
 	case mtproto.Predicate_inputGroupCallStream:

@@ -26,7 +26,7 @@ import (
 // contacts.resetTopPeerRating#1ae373ac category:TopPeerCategory peer:InputPeer = Bool;
 func (c *ContactsCore) ContactsResetTopPeerRating(in *mtproto.TLContactsResetTopPeerRating) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("contacts.resetTopPeerRating blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("contacts.resetTopPeerRating blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return mtproto.BoolTrue, nil
 }

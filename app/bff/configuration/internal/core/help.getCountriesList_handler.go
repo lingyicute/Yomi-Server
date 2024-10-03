@@ -26,7 +26,7 @@ import (
 // help.getCountriesList#735787a8 lang_code:string hash:int = help.CountriesList;
 func (c *ConfigurationCore) HelpGetCountriesList(in *mtproto.TLHelpGetCountriesList) (*mtproto.Help_CountriesList, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getCountriesList blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getCountriesList blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return mtproto.MakeTLHelpCountriesList(&mtproto.Help_CountriesList{
 		Countries: []*mtproto.Help_Country{},

@@ -26,7 +26,7 @@ import (
 // auth.resetLoginEmail#7e960193 phone_number:string phone_code_hash:string = auth.SentCode;
 func (c *AuthorizationCore) AuthResetLoginEmail(in *mtproto.TLAuthResetLoginEmail) (*mtproto.Auth_SentCode, error) {
 	// TODO: not impl
-	c.Logger.Errorf("auth.resetLoginEmail blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("auth.resetLoginEmail blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

@@ -84,7 +84,7 @@ func (s *Service) SyncPushBotUpdates(ctx context.Context, request *sync.TLSyncPu
 	c := core.New(ctx, s.svcCtx)
 	c.Logger.Debugf("sync.pushBotUpdates - metadata: %s, request: %s", c.MD, request)
 
-	c.Logger.Errorf("sync.pushBotUpdates blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("sync.pushBotUpdates blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return mtproto.EmptyVoid, nil
 }

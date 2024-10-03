@@ -105,7 +105,7 @@ func (c *NotificationCore) AccountUpdateNotifySettings(in *mtproto.TLAccountUpda
 				return nil, err
 			}
 		} else {
-			c.Logger.Errorf("account.updateNotifySettings blocked, License key from https://papercraft.net required to unlock enterprise features.")
+			c.Logger.Errorf("account.updateNotifySettings blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 			return nil, mtproto.ErrEnterpriseIsBlocked
 		}

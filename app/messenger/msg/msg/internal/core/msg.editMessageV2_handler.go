@@ -50,7 +50,7 @@ func (c *MsgCore) MsgEditMessageV2(in *msg.TLMsgEditMessageV2) (*mtproto.Updates
 	case mtproto.PEER_CHAT:
 		rUpdates, err = c.editChatOutgoingMessageV2(in.UserId, in.AuthKeyId, in.PeerId, newMessage, dstMessage)
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("msg.sendMessageV2 blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("msg.sendMessageV2 blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:
 		err = mtproto.ErrPeerIdInvalid

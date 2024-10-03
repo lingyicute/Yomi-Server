@@ -67,7 +67,7 @@ func (c *BFFProxyClient) GetRpcClientByRequest(t interface{}) (zrpc.Client, erro
 		return c2, nil
 	} else {
 		// logx.Errorf("not found method: %s", rt.Name())
-		// logx.Errorf("%s blocked, License key from https://papercraft.net required to unlock enterprise features.", rt.Name())
+		// logx.Errorf("%s blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.", rt.Name())
 	}
 
 	// TODO:

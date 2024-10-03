@@ -72,7 +72,7 @@ func (c *DraftsCore) MessagesGetAllDrafts(in *mtproto.TLMessagesGetAllDrafts) (*
 				chats := c.svcCtx.Plugin.GetChannelListByIdList(c.ctx, c.MD.UserId, channelIdList...)
 				rUpdates.PushChat(chats...)
 			} else {
-				c.Logger.Errorf("messages.getAllDrafts blocked, License key from https://papercraft.net required to unlock enterprise features.")
+				c.Logger.Errorf("messages.getAllDrafts blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 			}
 		})
 

@@ -26,7 +26,7 @@ import (
 // contacts.resolvePhone#8af94344 phone:string = contacts.ResolvedPeer;
 func (c *UsersCore) ContactsResolvePhone(in *mtproto.TLContactsResolvePhone) (*mtproto.Contacts_ResolvedPeer, error) {
 	// TODO: not impl
-	c.Logger.Errorf("contacts.resolvePhone blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("contacts.resolvePhone blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

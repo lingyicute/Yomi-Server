@@ -26,7 +26,7 @@ import (
 // account.verifyEmail#32da4cf purpose:EmailVerifyPurpose verification:EmailVerification = account.EmailVerified;
 func (c *AuthorizationCore) AccountVerifyEmail32DA4CF(in *mtproto.TLAccountVerifyEmail32DA4CF) (*mtproto.Account_EmailVerified, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.verifyEmail32DA4CF blocked, License key from https://papercraft.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.verifyEmail32DA4CF blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

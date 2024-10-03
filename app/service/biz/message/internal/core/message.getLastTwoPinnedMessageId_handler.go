@@ -28,7 +28,7 @@ func (c *MessageCore) MessageGetLastTwoPinnedMessageId(in *message.TLMessageGetL
 		dialogId := mtproto.MakeDialogId(in.UserId, in.PeerType, in.PeerId)
 		idList, _ = c.svcCtx.Dao.MessagesDAO.SelectLastTwoPinnedList(c.ctx, in.UserId, dialogId.A, dialogId.B)
 	case mtproto.PEER_CHANNEL:
-		logx.Errorf("blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		logx.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 	}
 
 	return &message.Vector_Int{

@@ -69,7 +69,7 @@ func (c *MessageCore) MessageSearch(in *message.TLMessageSearch) (*mtproto.Messa
 				})
 		}
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("message.search blocked, License key from https://papercraft.net required to unlock enterprise features.")
+		c.Logger.Errorf("message.search blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}
