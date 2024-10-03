@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
@@ -14,12 +14,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/plugin"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/plugin"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 
 	"github.com/zeromicro/go-zero/core/mr"
 )
@@ -44,7 +44,7 @@ func (c *MsgCore) MsgSendMessageV2(in *msg.TLMsgSendMessageV2) (*mtproto.Updates
 
 	for _, outBox := range outBoxList {
 		if outBox.GetScheduleDate().GetValue() != 0 {
-			c.Logger.Errorf("msg.sendMessageV2 blocked, License key from https://teamgram.net required to unlock enterprise features.")
+			c.Logger.Errorf("msg.sendMessageV2 blocked, License key from https://papercraft.net required to unlock enterprise features.")
 			return nil, mtproto.ErrEnterpriseIsBlocked
 		}
 	}
@@ -79,7 +79,7 @@ func (c *MsgCore) MsgSendMessageV2(in *msg.TLMsgSendMessageV2) (*mtproto.Updates
 			}
 		}
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("msg.sendMessageV2 blocked, License key from https://teamgram.net required to unlock enterprise features.")
+		c.Logger.Errorf("msg.sendMessageV2 blocked, License key from https://papercraft.net required to unlock enterprise features.")
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:
 		c.Logger.Errorf("msg.sendMessageV2 - error: invalid peer(%v)", peer)

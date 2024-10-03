@@ -11,8 +11,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/pkg/httpx/render"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/pkg/httpx/render"
 
 	"github.com/zeromicro/go-zero/rest/httpx"
 	"google.golang.org/protobuf/encoding/protojson"

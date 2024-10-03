@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package codec
@@ -25,14 +25,14 @@ import (
 	"io"
 	"math/rand"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/crypto"
 
 	log "github.com/zeromicro/go-zero/core/logx"
 )
 
 // PaddedIntermediateCodec
-// https://core.telegram.org/mtproto#tcp-transport
+// https://papercraft-official.github.io/mtproto#tcp-transport
 //
 // In case 4-byte data alignment is needed,
 // an intermediate version of the original protocol may be used:

@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
@@ -22,10 +22,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/teamgram/marmota/pkg/random2"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/crypto"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
+	"github.com/papercraft/marmota/pkg/random2"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/crypto"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

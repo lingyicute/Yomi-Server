@@ -9,9 +9,9 @@ package dao
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/chat/internal/dal/dataobject"
-	"github.com/teamgram/teamgram-server/pkg/env2"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/chat/internal/dal/dataobject"
+	"github.com/lingyicute/papercraft-server/pkg/env2"
 )
 
 // MakeChatInviteExported

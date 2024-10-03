@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,14 +21,14 @@ package core
 import (
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // HelpGetAppChangelog
 // help.getAppChangelog#9010ef6f prev_app_version:string = Updates;
 func (c *ConfigurationCore) HelpGetAppChangelog(in *mtproto.TLHelpGetAppChangelog) (*mtproto.Updates, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getAppChangelog blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getAppChangelog blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	_ = in.GetPrevAppVersion()
 

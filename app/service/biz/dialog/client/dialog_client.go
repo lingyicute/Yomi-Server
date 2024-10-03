@@ -5,7 +5,7 @@
  * Copyright 2024 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dialogclient
@@ -13,8 +13,8 @@ package dialogclient
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
 
 	"github.com/zeromicro/go-zero/zrpc"
 )

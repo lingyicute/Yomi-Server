@@ -17,8 +17,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/rest/httpx"

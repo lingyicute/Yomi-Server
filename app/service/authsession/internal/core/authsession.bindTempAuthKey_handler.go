@@ -1,18 +1,18 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/crypto"
-	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/crypto"
+	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
 
 	status2 "google.golang.org/grpc/status"
 )

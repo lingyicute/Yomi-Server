@@ -5,15 +5,15 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package chats_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/chats/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/chats/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/bff/chats/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/bff/chats/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/chats/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/bff/chats/internal/svc"
 )
 
 type (

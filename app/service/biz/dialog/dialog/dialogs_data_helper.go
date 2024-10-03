@@ -7,7 +7,7 @@
 package dialog
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 type DialogsDataHelper struct {

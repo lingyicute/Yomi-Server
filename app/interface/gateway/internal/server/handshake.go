@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package server
@@ -28,10 +28,10 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/teamgram/marmota/pkg/hack"
-	"github.com/teamgram/marmota/pkg/hex2"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/papercraft/marmota/pkg/hack"
+	"github.com/papercraft/marmota/pkg/hex2"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/crypto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

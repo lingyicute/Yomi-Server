@@ -7,7 +7,7 @@
 package user
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 func FindPeerPeerNotifySettings(settingsList []*PeerPeerNotifySettings, peer *mtproto.PeerUtil) *mtproto.PeerNotifySettings {

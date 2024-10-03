@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package inboxclient
@@ -22,9 +22,9 @@ import (
 	"context"
 	"strconv"
 
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"google.golang.org/protobuf/proto"

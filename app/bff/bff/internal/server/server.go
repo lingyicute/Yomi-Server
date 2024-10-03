@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package server
@@ -21,32 +21,32 @@ package server
 import (
 	"flag"
 
-	"github.com/teamgram/proto/mtproto"
-	account_helper "github.com/teamgram/teamgram-server/app/bff/account"
-	authorization_helper "github.com/teamgram/teamgram-server/app/bff/authorization"
-	autodownload_helper "github.com/teamgram/teamgram-server/app/bff/autodownload"
-	"github.com/teamgram/teamgram-server/app/bff/bff/internal/config"
-	chatinvites_helper "github.com/teamgram/teamgram-server/app/bff/chatinvites"
-	chats_helper "github.com/teamgram/teamgram-server/app/bff/chats"
-	configuration_helper "github.com/teamgram/teamgram-server/app/bff/configuration"
-	contacts_helper "github.com/teamgram/teamgram-server/app/bff/contacts"
-	dialogs_helper "github.com/teamgram/teamgram-server/app/bff/dialogs"
-	drafts_helper "github.com/teamgram/teamgram-server/app/bff/drafts"
-	files_helper "github.com/teamgram/teamgram-server/app/bff/files"
-	messages_helper "github.com/teamgram/teamgram-server/app/bff/messages"
-	miscellaneous_helper "github.com/teamgram/teamgram-server/app/bff/miscellaneous"
-	notification_helper "github.com/teamgram/teamgram-server/app/bff/notification"
-	nsfw_helper "github.com/teamgram/teamgram-server/app/bff/nsfw"
-	premium_helper "github.com/teamgram/teamgram-server/app/bff/premium"
-	privacysettingshelper "github.com/teamgram/teamgram-server/app/bff/privacysettings"
-	qrcode_helper "github.com/teamgram/teamgram-server/app/bff/qrcode"
-	savedmessagedialogshelper "github.com/teamgram/teamgram-server/app/bff/savedmessagedialogs"
-	sponsoredmessages_helper "github.com/teamgram/teamgram-server/app/bff/sponsoredmessages"
-	tos_helper "github.com/teamgram/teamgram-server/app/bff/tos"
-	updates_helper "github.com/teamgram/teamgram-server/app/bff/updates"
-	usernames_helper "github.com/teamgram/teamgram-server/app/bff/usernames"
-	userprofilehelper "github.com/teamgram/teamgram-server/app/bff/userprofile"
-	users_helper "github.com/teamgram/teamgram-server/app/bff/users"
+	"github.com/papercraft/proto/mtproto"
+	account_helper "github.com/lingyicute/papercraft-server/app/bff/account"
+	authorization_helper "github.com/lingyicute/papercraft-server/app/bff/authorization"
+	autodownload_helper "github.com/lingyicute/papercraft-server/app/bff/autodownload"
+	"github.com/lingyicute/papercraft-server/app/bff/bff/internal/config"
+	chatinvites_helper "github.com/lingyicute/papercraft-server/app/bff/chatinvites"
+	chats_helper "github.com/lingyicute/papercraft-server/app/bff/chats"
+	configuration_helper "github.com/lingyicute/papercraft-server/app/bff/configuration"
+	contacts_helper "github.com/lingyicute/papercraft-server/app/bff/contacts"
+	dialogs_helper "github.com/lingyicute/papercraft-server/app/bff/dialogs"
+	drafts_helper "github.com/lingyicute/papercraft-server/app/bff/drafts"
+	files_helper "github.com/lingyicute/papercraft-server/app/bff/files"
+	messages_helper "github.com/lingyicute/papercraft-server/app/bff/messages"
+	miscellaneous_helper "github.com/lingyicute/papercraft-server/app/bff/miscellaneous"
+	notification_helper "github.com/lingyicute/papercraft-server/app/bff/notification"
+	nsfw_helper "github.com/lingyicute/papercraft-server/app/bff/nsfw"
+	premium_helper "github.com/lingyicute/papercraft-server/app/bff/premium"
+	privacysettingshelper "github.com/lingyicute/papercraft-server/app/bff/privacysettings"
+	qrcode_helper "github.com/lingyicute/papercraft-server/app/bff/qrcode"
+	savedmessagedialogshelper "github.com/lingyicute/papercraft-server/app/bff/savedmessagedialogs"
+	sponsoredmessages_helper "github.com/lingyicute/papercraft-server/app/bff/sponsoredmessages"
+	tos_helper "github.com/lingyicute/papercraft-server/app/bff/tos"
+	updates_helper "github.com/lingyicute/papercraft-server/app/bff/updates"
+	usernames_helper "github.com/lingyicute/papercraft-server/app/bff/usernames"
+	userprofilehelper "github.com/lingyicute/papercraft-server/app/bff/userprofile"
+	users_helper "github.com/lingyicute/papercraft-server/app/bff/users"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"

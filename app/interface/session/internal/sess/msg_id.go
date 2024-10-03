@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package sess
@@ -21,7 +21,7 @@ package sess
 import (
 	"time"
 
-	"github.com/teamgram/marmota/pkg/sync2"
+	"github.com/papercraft/marmota/pkg/sync2"
 )
 
 var msgIdSeq = sync2.NewAtomicInt64(0)

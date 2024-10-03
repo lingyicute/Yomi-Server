@@ -13,7 +13,7 @@ package inbox
 import (
 	"reflect"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 var _ *mtproto.Bool

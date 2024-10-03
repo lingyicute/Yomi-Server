@@ -16,7 +16,7 @@
 package updates
 
 import (
-	mtproto "github.com/teamgram/proto/mtproto"
+	mtproto "github.com/papercraft/proto/mtproto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"

@@ -1,17 +1,17 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -28,7 +28,7 @@ func (c *MessageCore) MessageGetLastTwoPinnedMessageId(in *message.TLMessageGetL
 		dialogId := mtproto.MakeDialogId(in.UserId, in.PeerType, in.PeerId)
 		idList, _ = c.svcCtx.Dao.MessagesDAO.SelectLastTwoPinnedList(c.ctx, in.UserId, dialogId.A, dialogId.B)
 	case mtproto.PEER_CHANNEL:
-		logx.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
+		logx.Errorf("blocked, License key from https://papercraft.net required to unlock enterprise features.")
 	}
 
 	return &message.Vector_Int{

@@ -10,8 +10,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/crypto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -297,6 +297,6 @@ func (c *BFFProxyClient) TryReturnFakeRpcResult(object mtproto.TLObject) (mtprot
 		}).To_Account_WebAuthorizations(), nil
 	}
 
-	logx.Errorf("%s blocked, License key from https://teamgram.net required to unlock enterprise features.", rt.Name())
+	logx.Errorf("%s blocked, License key from https://papercraft.net required to unlock enterprise features.", rt.Name())
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

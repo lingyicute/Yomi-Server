@@ -17,7 +17,7 @@ import "schema.tl.core_types.proto";
 import "schema.tl.transport.proto";
 import "schema.tl.sync.proto";
 
-option go_package = "github.com/teamgram/teamgram-server/app/service/dfs/dfs";
+option go_package = "github.com/lingyicute/papercraft-server/app/service/dfs/dfs";
 
 enum TLConstructor {
     CRC32_UNKNOWN = 0;

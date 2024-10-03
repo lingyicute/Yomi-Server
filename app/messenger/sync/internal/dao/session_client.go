@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
@@ -24,8 +24,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	sessionclient "github.com/teamgram/teamgram-server/app/interface/session/client"
-	"github.com/teamgram/teamgram-server/app/interface/session/session"
+	sessionclient "github.com/lingyicute/papercraft-server/app/interface/session/client"
+	"github.com/lingyicute/papercraft-server/app/interface/session/session"
 
 	"github.com/zeromicro/go-zero/core/discov"
 	"github.com/zeromicro/go-zero/core/logx"

@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package main
 
 import (
-	"github.com/teamgram/marmota/pkg/commands"
+	"github.com/papercraft/marmota/pkg/commands"
 
-	"github.com/teamgram/teamgram-server/app/service/biz/biz/internal/server"
+	"github.com/lingyicute/papercraft-server/app/service/biz/biz/internal/server"
 )
 
 func main() {

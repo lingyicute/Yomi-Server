@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
@@ -23,7 +23,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"github.com/zeromicro/go-zero/core/logx"

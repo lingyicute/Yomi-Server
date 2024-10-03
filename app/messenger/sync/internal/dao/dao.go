@@ -1,23 +1,23 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dao
 
 import (
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	"github.com/teamgram/marmota/pkg/net/rpcx"
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	sync_client "github.com/teamgram/teamgram-server/app/messenger/sync/client"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/config"
-	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
-	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
-	status_client "github.com/teamgram/teamgram-server/app/service/status/client"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	"github.com/papercraft/marmota/pkg/net/rpcx"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	sync_client "github.com/lingyicute/papercraft-server/app/messenger/sync/client"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/config"
+	chat_client "github.com/lingyicute/papercraft-server/app/service/biz/chat/client"
+	idgen_client "github.com/lingyicute/papercraft-server/app/service/idgen/client"
+	status_client "github.com/lingyicute/papercraft-server/app/service/status/client"
 	"github.com/zeromicro/go-zero/core/stores/kv"
 	"github.com/zeromicro/go-zero/zrpc"
 )

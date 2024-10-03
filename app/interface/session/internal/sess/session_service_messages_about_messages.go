@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package sess
@@ -24,7 +24,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -226,7 +226,7 @@ func (c *session) checkBadMsgNotification(ctx context.Context, gatewayId string,
 	//
 
 	//=============================================================================================
-	// TODO(@benqi): Time Synchronization, https://core.telegram.org/mtproto#time-synchronization
+	// TODO(@benqi): Time Synchronization, https://papercraft-official.github.io/mtproto#time-synchronization
 	//
 	// Time Synchronization
 	//
@@ -292,7 +292,7 @@ func (c *session) checkBadMsgNotification(ctx context.Context, gatewayId string,
 		//=================================================================================================
 		// Check Message Identifier (msg_id)
 		//
-		// https://core.telegram.org/mtproto/description#message-identifier-msg-id
+		// https://papercraft-official.github.io/mtproto/description#message-identifier-msg-id
 		// Message Identifier (msg_id)
 		//
 		// A (time-dependent) 64-bit number used uniquely to identify a message within a session.

@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,8 +21,8 @@ package core
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto/rpc/metadata"
-	"github.com/teamgram/teamgram-server/app/bff/privacysettings/internal/svc"
+	"github.com/papercraft/proto/mtproto/rpc/metadata"
+	"github.com/lingyicute/papercraft-server/app/bff/privacysettings/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

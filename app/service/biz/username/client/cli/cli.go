@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: Teamgram (teamgram.io@gmail.com)
+// Author: Papercraft (papercraft.io@gmail.com)
 //
 
 package main
@@ -9,8 +9,8 @@ package main
 import (
 	"context"
 
-	username_client "github.com/teamgram/teamgram-server/app/service/biz/username/client"
-	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
+	username_client "github.com/lingyicute/papercraft-server/app/service/biz/username/client"
+	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"

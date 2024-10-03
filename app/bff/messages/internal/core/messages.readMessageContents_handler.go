@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,11 +21,11 @@ package core
 import (
 	"context"
 
-	"github.com/teamgram/marmota/pkg/threading2"
-	"github.com/teamgram/proto/mtproto"
-	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
-	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
+	"github.com/papercraft/marmota/pkg/threading2"
+	"github.com/papercraft/proto/mtproto"
+	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
 )
 
 // MessagesReadMessageContents

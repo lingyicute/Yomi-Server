@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present, Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2024-present, Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package config

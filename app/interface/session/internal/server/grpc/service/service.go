@@ -5,7 +5,7 @@
  * Copyright 2024 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package service
@@ -14,8 +14,8 @@ import (
 	"context"
 	"strconv"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/interface/session/internal/svc"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/interface/session/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

@@ -5,7 +5,7 @@
  * Copyright 2024 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package service
@@ -13,9 +13,9 @@ package service
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/internal/core"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/internal/core"
 )
 
 // InboxEditUserMessageToInbox

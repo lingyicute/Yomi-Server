@@ -4,7 +4,7 @@ SRC_DIR=.
 DST_DIR=$GOPATH/src/
 
 #GOGOPROTO_PATH=$GOPATH/src/github.com/gogo/protobuf/protobuf
-MTPROTO_PATH=$GOPATH/src/github.com/teamgram/proto/mtproto
+MTPROTO_PATH=$GOPATH/src/github.com/papercraft/proto/mtproto
 
 protoc -I=$SRC_DIR:$MTPROTO_PATH --proto_path=$GOPATH/src:./ --go_out=$DST_DIR --go-grpc_out=require_unimplemented_servers=false:$DST_DIR $SRC_DIR/*.proto
 

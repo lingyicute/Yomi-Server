@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AccountRegisterDevice
 // account.registerDevice#ec86017a flags:# no_muted:flags.0?true token_type:int token:string app_sandbox:Bool secret:bytes other_uids:Vector<long> = Bool;
 func (c *NotificationCore) AccountRegisterDevice(in *mtproto.TLAccountRegisterDevice) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.registerDevice blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.registerDevice blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return mtproto.BoolTrue, nil
 }

@@ -9,8 +9,8 @@ package plugin
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
 )
 
 type MsgPlugin interface {

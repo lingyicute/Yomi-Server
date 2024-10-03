@@ -7,7 +7,7 @@
 package chat
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 func (m *Vector_MutableChat) Length() int32 {

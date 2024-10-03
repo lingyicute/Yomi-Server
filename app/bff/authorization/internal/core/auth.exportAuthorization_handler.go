@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,8 +21,8 @@ package core
 import (
 	"strconv"
 
-	"github.com/teamgram/marmota/pkg/hack"
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/marmota/pkg/hack"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AuthExportAuthorization

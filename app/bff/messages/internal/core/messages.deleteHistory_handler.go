@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
-	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
+	"github.com/papercraft/proto/mtproto"
+	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
+	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
 )
 
 // MessagesDeleteHistory
@@ -32,7 +32,7 @@ func (c *MessagesCore) MessagesDeleteHistory(in *mtproto.TLMessagesDeleteHistory
 	)
 
 	if peer.IsChannel() {
-		c.Logger.Errorf("messages.deleteHistory blocked, License key from https://teamgram.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.deleteHistory blocked, License key from https://papercraft.net required to unlock enterprise features.")
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}
 

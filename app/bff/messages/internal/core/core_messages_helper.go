@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -11,12 +11,12 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
-	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
-	mediapb "github.com/teamgram/teamgram-server/app/service/media/media"
-	"github.com/teamgram/teamgram-server/pkg/phonenumber"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	mediapb "github.com/lingyicute/papercraft-server/app/service/media/media"
+	"github.com/lingyicute/papercraft-server/pkg/phonenumber"
 )
 
 // draft

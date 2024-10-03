@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package mysql_dao
@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/dal/dataobject"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // MessagesReadMentions
 // messages.readMentions#f0189d3 peer:InputPeer = messages.AffectedHistory;
 func (c *MessagesCore) MessagesReadMentions(in *mtproto.TLMessagesReadMentions) (*mtproto.Messages_AffectedHistory, error) {
 	// TODO: not impl
-	c.Logger.Errorf("messages.readMentions blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("messages.readMentions blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

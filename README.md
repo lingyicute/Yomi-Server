@@ -1,8 +1,8 @@
-# Papercraft - Unofficial open source [mtproto](https://core.telegram.org/mtproto) server written in golang
-> open source mtproto server implemented in golang with compatible telegram client.
+# Papercraft - Unofficial open source [mtproto](https://papercraft-official.github.io/mtproto) server written in golang
+> open source mtproto server implemented in golang with compatible papercraft client.
 
 ## Introduce
-Open source [mtproto](https://core.telegram.org/mtproto) server implementation written in golang, support private deployment.
+Open source [mtproto](https://papercraft-official.github.io/mtproto) server implementation written in golang, support private deployment.
 
 ## Features
 - MTProto 2.0
@@ -32,7 +32,7 @@ Open source [mtproto](https://core.telegram.org/mtproto) server implementation w
 Privatization deployment Before `Papercraft`, please make sure that the above five components have been installed. If your server does not have the above components, you must first install Missing components. 
 
 - [Centos9 Stream Build and Install](docs/install-centos-9.md) [@A Feel]
-- [CentOS7 teamgram-server环境搭建](docs/install-centos-7.md) [@saeipi]
+- [CentOS7 papercraft-server环境搭建](docs/install-centos-7.md) [@saeipi]
 
 If you have the above components, it is recommended to use them directly. If not, it is recommended to use `docker-compose-env.yaml`.
 
@@ -44,45 +44,45 @@ If you have the above components, it is recommended to use them directly. If not
 #### Get source code　
 
 ```
-git clone https://github.com/teamgram/teamgram-server.git
-cd teamgram-server
+git clone https://github.com/lingyicute/papercraft-server.git
+cd papercraft-server
 ```
 
 #### Init data
 - init database
 
 	```
-	1. create database teamgram
-	2. init teamgram database
-		mysql -uroot teamgram < teamgramd/sql/1_teamgram.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220321.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220326.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220328.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220401.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220412.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220419.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220423.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220504.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220721.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220826.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20220919.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20221008.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20221011.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20221016.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20221023.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20221101.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20221127.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20230707.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240107.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240108.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240111.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240112.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240113.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240114.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240420.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240620.sql
-		mysql -uroot teamgram < teamgramd/sql/migrate-20240828.sql
-		mysql -uroot teamgram < teamgramd/sql/z_init.sql
+	1. create database papercraft
+	2. init papercraft database
+		mysql -uroot papercraft < papercraftd/sql/1_papercraft.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220321.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220326.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220328.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220401.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220412.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220419.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220423.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220504.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220721.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220826.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20220919.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20221008.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20221011.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20221016.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20221023.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20221101.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20221127.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20230707.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240107.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240108.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240111.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240112.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240113.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240114.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240420.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240620.sql
+		mysql -uroot papercraft < papercraftd/sql/migrate-20240828.sql
+		mysql -uroot papercraft < papercraftd/sql/z_init.sql
 	```
 
 - init minio buckets
@@ -103,7 +103,7 @@ make
 #### Run
 
 ```
-cd teamgramd/bin
+cd papercraftd/bin
 ./runall2.sh
 ```
 
@@ -115,8 +115,8 @@ cd teamgramd/bin
 #### Get source code
 
 ```
-git clone https://github.com/teamgram/teamgram-server.git
-cd teamgram-server
+git clone https://github.com/lingyicute/papercraft-server.git
+cd papercraft-server
 ```
 
 #### Run
@@ -130,14 +130,14 @@ docker-compose up -d
 ```
 	
 ## Compatible clients
-[Android client for Papercraft](clients/teamgram-android.md)
+[Android client for Papercraft](clients/papercraft-android.md)
 
-[iOS client for Papercraft](clients/teamgram-ios.md)
+[iOS client for Papercraft](clients/papercraft-ios.md)
 
-[tdesktop for Papercraft](clients/teamgram-tdesktop.md)
+[tdesktop for Papercraft](clients/papercraft-tdesktop.md)
 
 ## Feedback
-Please report bugs, concerns, suggestions by issues, or join telegram group **[Papercraft](https://t.me/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
+Please report bugs, concerns, suggestions by issues, or join papercraft group **[Papercraft](https://papercraft-link.github.io/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
 
 ## Notes
 If need enterprise edition:
@@ -147,7 +147,7 @@ If need enterprise edition:
 - audiocall/videocall/groupcall
 - bots
 
-please PM the **[author](https://t.me/benqi)**
+please PM the **[author](https://papercraft-link.github.io/benqi)**
 
 ## Give a Star! ⭐
 
@@ -155,4 +155,4 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## Visitors Count
 
-<img align="left" src = "https://profile-counter.glitch.me/teamgram-server/count.svg" alt="Loading" />
+<img align="left" src = "https://profile-counter.glitch.me/papercraft-server/count.svg" alt="Loading" />

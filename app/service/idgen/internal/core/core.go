@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
@@ -14,8 +14,8 @@ import (
 
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/teamgram/proto/mtproto/rpc/metadata"
-	"github.com/teamgram/teamgram-server/app/service/idgen/internal/svc"
+	"github.com/papercraft/proto/mtproto/rpc/metadata"
+	"github.com/lingyicute/papercraft-server/app/service/idgen/internal/svc"
 )
 
 type IdgenCore struct {

@@ -10,12 +10,12 @@ import (
 	"context"
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
-	media_client "github.com/teamgram/teamgram-server/app/service/media/client"
-	mediapb "github.com/teamgram/teamgram-server/app/service/media/media"
-	"github.com/teamgram/teamgram-server/pkg/phonenumber"
+	"github.com/papercraft/proto/mtproto"
+	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	media_client "github.com/lingyicute/papercraft-server/app/service/media/client"
+	mediapb "github.com/lingyicute/papercraft-server/app/service/media/media"
+	"github.com/lingyicute/papercraft-server/pkg/phonenumber"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

@@ -5,7 +5,7 @@
  * Copyright (c) 2024-present,  Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dataobject

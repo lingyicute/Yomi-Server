@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AccountUpdatePersonalChannel
 // account.updatePersonalChannel#d94305e0 channel:InputChannel = Bool;
 func (c *UserProfileCore) AccountUpdatePersonalChannel(in *mtproto.TLAccountUpdatePersonalChannel) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.updatePersonalChannel blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.updatePersonalChannel blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

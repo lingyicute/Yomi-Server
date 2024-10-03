@@ -13,16 +13,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 )
 
 // MessagesEditChatAdmin

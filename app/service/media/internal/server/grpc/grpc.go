@@ -1,18 +1,18 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package grpc
 
 import (
-	"github.com/teamgram/teamgram-server/app/service/media/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/svc"
-	"github.com/teamgram/teamgram-server/app/service/media/media"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/service/media/media"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/zrpc"

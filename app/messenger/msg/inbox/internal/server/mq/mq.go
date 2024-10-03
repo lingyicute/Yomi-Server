@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package mq
@@ -23,10 +23,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/internal/core"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/internal/svc"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/internal/core"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/threading"

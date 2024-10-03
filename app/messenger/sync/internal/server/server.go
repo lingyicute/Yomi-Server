@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package server
@@ -12,10 +12,10 @@ package server
 import (
 	"flag"
 
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/config"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/server/mq"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/svc"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/config"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/server/mq"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"

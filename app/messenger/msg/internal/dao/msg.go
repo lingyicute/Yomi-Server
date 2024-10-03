@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
@@ -22,8 +22,8 @@ import (
 	"context"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/internal/dal/dataobject"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 )

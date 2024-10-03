@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // HelpGetAppConfig61E3F854
 // help.getAppConfig#61e3f854 hash:int = help.AppConfig;
 func (c *ConfigurationCore) HelpGetAppConfig61E3F854(in *mtproto.TLHelpGetAppConfig61E3F854) (*mtproto.Help_AppConfig, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getAppConfig blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getAppConfig blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return mtproto.MakeTLHelpAppConfig(&mtproto.Help_AppConfig{
 		Hash: 0,

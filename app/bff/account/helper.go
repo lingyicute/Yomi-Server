@@ -5,15 +5,15 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package account_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/account/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/account/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/bff/account/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/bff/account/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/account/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/bff/account/internal/svc"
 )
 
 type (

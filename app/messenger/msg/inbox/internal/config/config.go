@@ -4,14 +4,14 @@
  * Copyright 2022 Papercraft Authors
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package config
 
 import (
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
 	"github.com/zeromicro/go-zero/core/stores/kv"
 	"github.com/zeromicro/go-zero/zrpc"
 )

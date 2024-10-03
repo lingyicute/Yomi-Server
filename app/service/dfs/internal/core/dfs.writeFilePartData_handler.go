@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
@@ -12,9 +12,9 @@ package core
 import (
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/dfs"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
 )
 
 // DfsWriteFilePartData

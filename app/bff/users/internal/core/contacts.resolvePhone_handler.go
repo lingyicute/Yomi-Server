@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // ContactsResolvePhone
 // contacts.resolvePhone#8af94344 phone:string = contacts.ResolvedPeer;
 func (c *UsersCore) ContactsResolvePhone(in *mtproto.TLContactsResolvePhone) (*mtproto.Contacts_ResolvedPeer, error) {
 	// TODO: not impl
-	c.Logger.Errorf("contacts.resolvePhone blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("contacts.resolvePhone blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

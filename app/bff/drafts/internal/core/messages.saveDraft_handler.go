@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,11 +21,11 @@ package core
 import (
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 )
 
 // MessagesSaveDraft
@@ -104,7 +104,7 @@ func (c *DraftsCore) MessagesSaveDraft(in *mtproto.TLMessagesSaveDraft) (*mtprot
 			chats := c.svcCtx.Plugin.GetChannelListByIdList(c.ctx, c.MD.UserId, peer.PeerId)
 			syncUpdates.PushChat(chats...)
 		} else {
-			c.Logger.Errorf("messages.saveDraft blocked, License key from https://teamgram.net required to unlock enterprise features.")
+			c.Logger.Errorf("messages.saveDraft blocked, License key from https://papercraft.net required to unlock enterprise features.")
 			return nil, mtproto.ErrEnterpriseIsBlocked
 		}
 	}

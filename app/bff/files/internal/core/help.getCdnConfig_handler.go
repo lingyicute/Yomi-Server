@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // HelpGetCdnConfig
 // help.getCdnConfig#52029342 = CdnConfig;
 func (c *FilesCore) HelpGetCdnConfig(in *mtproto.TLHelpGetCdnConfig) (*mtproto.CdnConfig, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getCdnConfig blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getCdnConfig blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	rValue := mtproto.MakeTLCdnConfig(&mtproto.CdnConfig{
 		PublicKeys: []*mtproto.CdnPublicKey{},

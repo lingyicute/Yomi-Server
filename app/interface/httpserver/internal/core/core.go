@@ -9,9 +9,9 @@ package core
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/rpc/metadata"
-	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/svc"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/rpc/metadata"
+	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

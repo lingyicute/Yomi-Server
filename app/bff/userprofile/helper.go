@@ -5,15 +5,15 @@
  * Copyright 2024 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package userprofilehelper
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/userprofile/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/userprofile/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/bff/userprofile/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/bff/userprofile/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/userprofile/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/bff/userprofile/internal/svc"
 )
 
 type (

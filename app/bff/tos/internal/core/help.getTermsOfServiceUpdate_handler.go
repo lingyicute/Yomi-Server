@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,14 +21,14 @@ package core
 import (
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // HelpGetTermsOfServiceUpdate
 // help.getTermsOfServiceUpdate#2ca51fd1 = help.TermsOfServiceUpdate;
 func (c *TosCore) HelpGetTermsOfServiceUpdate(in *mtproto.TLHelpGetTermsOfServiceUpdate) (*mtproto.Help_TermsOfServiceUpdate, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getTermsOfServiceUpdate blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getTermsOfServiceUpdate blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	rValue := mtproto.MakeTLHelpTermsOfServiceUpdateEmpty(&mtproto.Help_TermsOfServiceUpdate{
 		Expires: int32(time.Now().Unix() + 3600),

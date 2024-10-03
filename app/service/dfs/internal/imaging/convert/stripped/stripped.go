@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package main
@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/teamgram/marmota/pkg/bytes2"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging"
+	"github.com/papercraft/marmota/pkg/bytes2"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/imaging"
 )
 
 func main() {

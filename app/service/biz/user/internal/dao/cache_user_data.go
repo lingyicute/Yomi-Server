@@ -13,12 +13,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/teamgram/marmota/pkg/stores/sqlc"
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dal/dataobject"
-	"github.com/teamgram/teamgram-server/app/service/biz/user/user"
-	"github.com/teamgram/teamgram-server/app/service/media/media"
+	"github.com/papercraft/marmota/pkg/stores/sqlc"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dal/dataobject"
+	"github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/lingyicute/papercraft-server/app/service/media/media"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"github.com/zeromicro/go-zero/core/logx"

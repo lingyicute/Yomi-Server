@@ -1,7 +1,7 @@
-// Copyright (c) 2024-present, Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2024-present, Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
@@ -12,8 +12,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/config"
-	"github.com/teamgram/teamgram-server/app/interface/session/client"
+	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/config"
+	"github.com/lingyicute/papercraft-server/app/interface/session/client"
 
 	"github.com/zeromicro/go-zero/core/discov"
 	"github.com/zeromicro/go-zero/core/hash"

@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,9 +21,9 @@ package core
 import (
 	"math"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
 )
 
 // MsgReadHistoryV2

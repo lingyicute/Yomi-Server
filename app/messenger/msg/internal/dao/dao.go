@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dao
@@ -13,15 +13,15 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/teamgram/marmota/pkg/idempotent"
-	inbox_client "github.com/teamgram/teamgram-server/app/messenger/msg/inbox/client"
-	sync_client "github.com/teamgram/teamgram-server/app/messenger/sync/client"
-	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
-	dialog_client "github.com/teamgram/teamgram-server/app/service/biz/dialog/client"
-	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
-	username_client "github.com/teamgram/teamgram-server/app/service/biz/username/client"
-	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
-	"github.com/teamgram/teamgram-server/pkg/deduplication"
+	"github.com/papercraft/marmota/pkg/idempotent"
+	inbox_client "github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/client"
+	sync_client "github.com/lingyicute/papercraft-server/app/messenger/sync/client"
+	chat_client "github.com/lingyicute/papercraft-server/app/service/biz/chat/client"
+	dialog_client "github.com/lingyicute/papercraft-server/app/service/biz/dialog/client"
+	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
+	username_client "github.com/lingyicute/papercraft-server/app/service/biz/username/client"
+	idgen_client "github.com/lingyicute/papercraft-server/app/service/idgen/client"
+	"github.com/lingyicute/papercraft-server/pkg/deduplication"
 
 	"github.com/zeromicro/go-zero/core/stores/redis"
 )

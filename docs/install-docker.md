@@ -1,4 +1,4 @@
-# teamgram服务端 Docker部署
+# papercraft服务端 Docker部署
 > 原文: https://www.jianshu.com/p/808664f47b53
 >
 > 作者 @saeipi
@@ -15,8 +15,8 @@ CGO_ENABLED=0 \
 GOOS=linux \
 GOARCH=amd64
 
-RUN mkdir -p /teamgram
-WORKDIR /teamgram
+RUN mkdir -p /papercraft
+WORKDIR /papercraft
 COPY . .
 RUN chmod -R 777 *.sh
 RUN /bin/sh -c ./build.sh
@@ -26,13 +26,13 @@ FROM centos:7.9.2009
 
 RUN yum -y install vim && yum -y install net-tools
 
-RUN mkdir -p /teamgram
-COPY --from=build /teamgram/teamgramd /teamgram/teamgramd
+RUN mkdir -p /papercraft
+COPY --from=build /papercraft/papercraftd /papercraft/papercraftd
 
-WORKDIR /teamgram/teamgramd/etc
+WORKDIR /papercraft/papercraftd/etc
 RUN rm -rf *
 
-WORKDIR /teamgram/teamgramd/bin
+WORKDIR /papercraft/papercraftd/bin
 RUN chmod -R 777 *.sh
 ENTRYPOINT ["./runall2.sh"]
 
@@ -51,19 +51,19 @@ restart: always
 ports:
 - 3306:3306
 networks:
-- teamgram-net
+- papercraft-net
 volumes:
 - ./docker/scripts/mysql:/docker-entrypoint-initdb.d
-- /Volumes/data/teamgram/volumes/mysql/data:/var/lib/mysql
-#- /Volumes/data/teamgram/volumes/mysql/conf:/etc/mysql
-- /Volumes/data/teamgram/volumes/mysql/mysql-files:/var/lib/mysql-files
-- /Volumes/data/teamgram/volumes/mysql/log:/var/log/mysql
+- /Volumes/data/papercraft/volumes/mysql/data:/var/lib/mysql
+#- /Volumes/data/papercraft/volumes/mysql/conf:/etc/mysql
+- /Volumes/data/papercraft/volumes/mysql/mysql-files:/var/lib/mysql-files
+- /Volumes/data/papercraft/volumes/mysql/log:/var/log/mysql
 privileged: true
 environment:
 TZ: Asia/Shanghai
-MYSQL_ROOT_PASSWORD: teamgram2022
+MYSQL_ROOT_PASSWORD: papercraft2022
 ALLOW_HOST: "%"
-MYSQL_DATABASE: teamgram
+MYSQL_DATABASE: papercraft
 command: [
 '--character-set-server=utf8mb4',
 '--collation-server=utf8mb4_unicode_ci',
@@ -77,11 +77,11 @@ restart: always
 ports:
 - 6379:6379
 networks:
-- teamgram-net
+- papercraft-net
 volumes:
-- /Volumes/data/teamgram/volumes/redis/data:/data
-- /Volumes/data/teamgram/volumes/redis/conf:/usr/local/etc/redis
-- /Volumes/data/teamgram/volumes/redis/config/redis.conf:/usr/local/redis/config/redis.conf
+- /Volumes/data/papercraft/volumes/redis/data:/data
+- /Volumes/data/papercraft/volumes/redis/conf:/usr/local/etc/redis
+- /Volumes/data/papercraft/volumes/redis/config/redis.conf:/usr/local/redis/config/redis.conf
 environment:
 TZ: Asia/Shanghai
 sysctls:
@@ -96,10 +96,10 @@ ports:
 - '9000:9000'
 - '9001:9001'
 networks:
-- teamgram-net
+- papercraft-net
 volumes:
-- /Volumes/data/teamgram/volumes/minio/data:/data
-- /Volumes/data/teamgram/volumes/minio/config:/root/.minio
+- /Volumes/data/papercraft/volumes/minio/data:/data
+- /Volumes/data/papercraft/volumes/minio/config:/root/.minio
 environment:
 MINIO_ROOT_USER: minio
 MINIO_ROOT_PASSWORD: miniostorage
@@ -111,7 +111,7 @@ restart: always
 ports:
 - 2181:2181
 networks:
-- teamgram-net
+- papercraft-net
 environment:
 TZ: Asia/Shanghai
 
@@ -123,7 +123,7 @@ ports:
 - 9092:9092
 - 9093:9093
 networks:
-- teamgram-net
+- papercraft-net
 environment:
 TZ: Asia/Shanghai
 KAFKA_BROKER_ID: 0
@@ -143,27 +143,27 @@ ports:
 - 2379:2379
 - 2380:2380
 networks:
-- teamgram-net
+- papercraft-net
 environment:
 - ALLOW_NONE_AUTHENTICATION=yes
 - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
 
-teamgram:
+papercraft:
 build:
 context: ./
 dockerfile: Dockerfile
-image: teamgram:0.86.2
-container_name: teamgram
+image: papercraft:0.86.2
+container_name: papercraft
 restart: always
 ports:
 - 10443:10443
 - 5222:5222
 - 8801:8801
 networks:
-- teamgram-net
+- papercraft-net
 volumes:
-- ./docker/etc:/teamgram/teamgramd/etc
-- /Volumes/data/teamgram/volumes/logs:/teamgram/teamgramd/logs
+- ./docker/etc:/papercraft/papercraftd/etc
+- /Volumes/data/papercraft/volumes/logs:/papercraft/papercraftd/logs
 depends_on:
 - mysql
 - redis
@@ -172,7 +172,7 @@ depends_on:
 - etcd
 
 networks:
-teamgram-net:
+papercraft-net:
 driver: bridge
 ipam:
 driver: default
@@ -186,10 +186,10 @@ ip_range: 192.168.1.0/24
 ## 3、mysql初始化脚本 init_database.sh
 ```
 #!/bin/bash
-# 将teamgram2.sql改名为init-teamgram2.sql 确保先执行
+# 将papercraft2.sql改名为init-papercraft2.sql 确保先执行
 MYSQL_USER=${MYSQL_USER:-root}
-MYSQL_PASSWORD=${MYSQL_PASSWORD:-teamgram2022}
-MYSQL_DB="teamgram"
+MYSQL_PASSWORD=${MYSQL_PASSWORD:-papercraft2022}
+MYSQL_DB="papercraft"
 SCRIPT_PATH=$(cd $(dirname $0);pwd)
 SQL_FILE="/sqls"
 
@@ -241,7 +241,7 @@ Mode: file
 Path: ../logs/authsession
 Mysql:
 Addr: mysql:3306
-DSN: root:@tcp(mysql:3306)/teamgram?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+DSN: root:@tcp(mysql:3306)/papercraft?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
 Active: 64
 Idle: 64
 IdleTimeout: 4h
@@ -254,25 +254,25 @@ Cache:
 - Host: redis:6379
 ```
 
-## 5、teamgram在主机部署
+## 5、papercraft在主机部署
 ```
-# 将teamgram容器注释
-#  teamgram:
+# 将papercraft容器注释
+#  papercraft:
 #    build:
 #      context: ./
 #      dockerfile: Dockerfile
-#    image: teamgram:0.86.2
-#    container_name: teamgram
+#    image: papercraft:0.86.2
+#    container_name: papercraft
 #    restart: always
 #    ports:
 #      - 10443:10443
 #      - 5222:5222
 #      - 8801:8801
 #    networks:
-#      - teamgram-net
+#      - papercraft-net
 #    volumes:
-#      - ./docker/etc:/teamgram/teamgramd/etc
-#      - /Volumes/data/teamgram/volumes/logs:/teamgram/teamgramd/logs
+#      - ./docker/etc:/papercraft/papercraftd/etc
+#      - /Volumes/data/papercraft/volumes/logs:/papercraft/papercraftd/logs
 #    depends_on:
 #      - mysql
 #      - redis

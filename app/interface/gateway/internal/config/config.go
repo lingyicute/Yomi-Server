@@ -1,16 +1,16 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package config
 
 import (
-	"github.com/teamgram/marmota/pkg/net2"
+	"github.com/papercraft/marmota/pkg/net2"
 	"github.com/zeromicro/go-zero/zrpc"
 )
 

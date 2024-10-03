@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // ChannelsGetSendAs
 // channels.getSendAs#dc770ee peer:InputPeer = channels.SendAsPeers;
 func (c *MessagesCore) ChannelsGetSendAs(in *mtproto.TLChannelsGetSendAs) (*mtproto.Channels_SendAsPeers, error) {
 	// TODO: not impl
-	c.Logger.Errorf("contacts.getTopPeers blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("contacts.getTopPeers blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	// Disable sendAsPeers
 	return mtproto.MakeTLChannelsSendAsPeers(&mtproto.Channels_SendAsPeers{

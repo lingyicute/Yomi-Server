@@ -5,16 +5,16 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package notification_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/notification/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/notification/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/bff/notification/internal/svc"
-	"github.com/teamgram/teamgram-server/app/bff/notification/plugin"
+	"github.com/lingyicute/papercraft-server/app/bff/notification/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/notification/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/bff/notification/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/bff/notification/plugin"
 )
 
 type (

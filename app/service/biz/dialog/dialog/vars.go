@@ -9,7 +9,7 @@ package dialog
 import (
 	"fmt"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 const (

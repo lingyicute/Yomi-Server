@@ -13,16 +13,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 )
 
 /*
@@ -222,7 +222,7 @@ func (c *MessagesCore) MessagesGetMessagesViews(in *mtproto.TLMessagesGetMessage
 		//	c.Logger.Errorf("messages.getMessagesViews#5784d3e -  error: invalid peer(%v) type", peer)
 		//	return nil, mtproto.ErrMsgIdInvalid
 		//}
-		c.Logger.Errorf("messages.getRecentLocations blocked, License key from https://teamgram.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.getRecentLocations blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:

@@ -9,8 +9,8 @@ package main
 import (
 	"context"
 
-	status_client "github.com/teamgram/teamgram-server/app/service/status/client"
-	"github.com/teamgram/teamgram-server/app/service/status/status"
+	status_client "github.com/lingyicute/papercraft-server/app/service/status/client"
+	"github.com/lingyicute/papercraft-server/app/service/status/status"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/zrpc"

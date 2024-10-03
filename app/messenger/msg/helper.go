@@ -5,13 +5,13 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package msg_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/messenger/msg/internal/server"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/internal/server"
 )
 
 var (

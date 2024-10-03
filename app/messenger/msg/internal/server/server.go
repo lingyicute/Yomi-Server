@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package server
@@ -21,11 +21,11 @@ package server
 import (
 	"flag"
 
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	inbox_helper "github.com/teamgram/teamgram-server/app/messenger/msg/inbox"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/internal/config"
-	msg_helper "github.com/teamgram/teamgram-server/app/messenger/msg/msg"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	inbox_helper "github.com/lingyicute/papercraft-server/app/messenger/msg/inbox"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/internal/config"
+	msg_helper "github.com/lingyicute/papercraft-server/app/messenger/msg/msg"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"

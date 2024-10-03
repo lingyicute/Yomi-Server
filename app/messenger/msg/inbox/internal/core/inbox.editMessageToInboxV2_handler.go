@@ -13,17 +13,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/internal/dal/dataobject"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/internal/dal/dataobject"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 )

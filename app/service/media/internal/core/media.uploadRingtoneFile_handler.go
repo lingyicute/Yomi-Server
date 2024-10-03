@@ -13,21 +13,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/media/media"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/media/media"
 )
 
 // MediaUploadRingtoneFile
 // media.uploadRingtoneFile flags:# owner_id:long file:InputFile mime_type:string file_name:string = Document;
 func (c *MediaCore) MediaUploadRingtoneFile(in *media.TLMediaUploadRingtoneFile) (*mtproto.Document, error) {
 	// TODO: not impl
-	c.Logger.Errorf("media.uploadRingtoneFile blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("media.uploadRingtoneFile blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

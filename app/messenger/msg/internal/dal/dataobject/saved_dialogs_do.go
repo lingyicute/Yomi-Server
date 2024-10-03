@@ -2,16 +2,16 @@
  * WARNING! All changes made in this file will be lost!
  *   Created from by 'dalgen'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dataobject
 
 import (
-	dialog_helper "github.com/teamgram/teamgram-server/app/service/biz/dialog"
+	dialog_helper "github.com/lingyicute/papercraft-server/app/service/biz/dialog"
 )
 
 type (

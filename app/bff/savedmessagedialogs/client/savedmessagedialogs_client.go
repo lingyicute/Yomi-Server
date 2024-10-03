@@ -5,7 +5,7 @@
  * Copyright 2024 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package savedmessagedialogsclient
@@ -13,7 +13,7 @@ package savedmessagedialogsclient
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/zrpc"
 )

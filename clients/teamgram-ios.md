@@ -1,30 +1,30 @@
-# [teamgram-ios](https://github.com/teamgram/teamgram-ios)
+# [papercraft-ios](https://github.com/papercraft/papercraft-ios)
 
 ## Install
 
-- Get *[teamgram-ios](https://github.com/teamgram/teamgram-ios)* source code
+- Get *[papercraft-ios](https://github.com/papercraft/papercraft-ios)* source code
 ```
-mkdir ~/Teamgram
-cd ~/Teamgram
-git clone --recursive https://github.com/teamgram/teamgram-ios.git
+mkdir ~/Papercraft
+cd ~/Papercraft
+git clone --recursive https://github.com/papercraft/papercraft-ios.git
 ```
 
-- build, see [build teamgram-ios](https://github.com/teamgram/teamgram-ios#compilation-guide), and google
+- build, see [build papercraft-ios](https://github.com/papercraft/papercraft-ios#compilation-guide), and google
 ```
-cd ~/Teamgram/teamgram-ios
+cd ~/Papercraft/papercraft-ios
 sh r.sh
 ```
 
 ## Patch
 
-**Default connect to Teamgram Test Server.**
+**Default connect to Papercraft Test Server.**
 
 If you want to connect to your own server, you can modify the following code:
 
-[Network.swift#L473](https://github.com/teamgram/teamgram-ios/blob/teamgram/submodules/TelegramCore/Sources/Network/Network.swift#L473)
+[Network.swift#L473](https://github.com/papercraft/papercraft-ios/blob/papercraft/submodules/papercraftCore/Sources/Network/Network.swift#L473)
 
 ```
-https://github.com/teamgram/teamgram-ios/blob/teamgram/submodules/TelegramCore/Sources/Network/Network.swift#L473
+https://github.com/papercraft/papercraft-ios/blob/papercraft/submodules/papercraftCore/Sources/Network/Network.swift#L473
 if testingEnvironment {
     seedAddressList = [
         1: ["XXX.XXX.XXX.XXX"]

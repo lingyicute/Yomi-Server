@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,10 +21,10 @@ package core
 import (
 	"math"
 
-	"github.com/teamgram/proto/mtproto"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 )
 
 // MessagesSearch
@@ -57,7 +57,7 @@ func (c *MessagesCore) MessagesSearch(in *mtproto.TLMessagesSearch) (*mtproto.Me
 	peer := mtproto.FromInputPeer2(c.MD.UserId, in.Peer)
 	if peer.IsChannel() {
 		// TODO: not impl
-		c.Logger.Errorf("messages.search blocked, License key from https://teamgram.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.search blocked, License key from https://papercraft.net required to unlock enterprise features.")
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}
 

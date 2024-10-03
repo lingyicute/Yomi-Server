@@ -5,7 +5,7 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package service
@@ -13,9 +13,9 @@ package service
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/core"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/dfs"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/core"
 )
 
 // DfsWriteFilePartData

@@ -13,21 +13,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 )
 
 // UserGetBirthdays
 // user.getBirthdays user_id:long = Vector<ContactBirthday>;
 func (c *UserCore) UserGetBirthdays(in *user.TLUserGetBirthdays) (*user.Vector_ContactBirthday, error) {
 	// TODO: not impl
-	c.Logger.Errorf("user.getBirthdays blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("user.getBirthdays blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	rV := &user.Vector_ContactBirthday{
 		Datas: make([]*mtproto.ContactBirthday, 0),

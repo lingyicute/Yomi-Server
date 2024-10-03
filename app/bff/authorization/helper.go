@@ -5,17 +5,17 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package authorization_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/svc"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/plugin"
-	"github.com/teamgram/teamgram-server/pkg/code"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/plugin"
+	"github.com/lingyicute/papercraft-server/pkg/code"
 )
 
 type (

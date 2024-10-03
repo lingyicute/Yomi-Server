@@ -1,13 +1,13 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package user
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 func (m *Vector_ContactData) ToContacts() []*mtproto.Contact {

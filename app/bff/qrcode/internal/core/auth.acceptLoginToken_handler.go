@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -23,11 +23,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/bff/qrcode/internal/model"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
-	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/bff/qrcode/internal/model"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )

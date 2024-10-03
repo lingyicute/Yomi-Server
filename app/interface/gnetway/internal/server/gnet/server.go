@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,9 +20,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/teamgram/marmota/pkg/cache"
-	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/config"
-	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/svc"
+	"github.com/papercraft/marmota/pkg/cache"
+	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/config"
+	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/svc"
 
 	"github.com/panjf2000/gnet/v2"
 	"github.com/panjf2000/gnet/v2/pkg/logging"

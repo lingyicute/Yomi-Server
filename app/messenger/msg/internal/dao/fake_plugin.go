@@ -9,8 +9,8 @@ package dao
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
 )
 
 func (d *Dao) ReadReactionUnreadMessage(ctx context.Context, userId int64, msgId int32) error {

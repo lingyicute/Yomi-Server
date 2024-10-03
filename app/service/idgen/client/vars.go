@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package idgen_client
@@ -9,7 +9,7 @@ package idgen_client
 import (
 	"strconv"
 
-	"github.com/teamgram/teamgram-server/app/service/idgen/idgen"
+	"github.com/lingyicute/papercraft-server/app/service/idgen/idgen"
 )
 
 // ///////////////////////////////////////////////////////////////////////////////////////////

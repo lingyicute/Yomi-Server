@@ -16,7 +16,7 @@ package sync
 import (
 	"fmt"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )

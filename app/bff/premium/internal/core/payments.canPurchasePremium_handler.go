@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // PaymentsCanPurchasePremium
 // payments.canPurchasePremium#9fc19eb6 purpose:InputStorePaymentPurpose = Bool;
 func (c *PremiumCore) PaymentsCanPurchasePremium(in *mtproto.TLPaymentsCanPurchasePremium) (*mtproto.Bool, error) {
 	// TODO: not impl
-	// c.Logger.Errorf("payments.canPurchasePremium blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	// c.Logger.Errorf("payments.canPurchasePremium blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return mtproto.BoolFalse, nil
 }

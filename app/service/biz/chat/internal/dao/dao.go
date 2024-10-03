@@ -13,19 +13,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
 
 import (
-	"github.com/teamgram/marmota/pkg/net/rpcx"
-	"github.com/teamgram/teamgram-server/app/service/biz/chat/plugin"
+	"github.com/papercraft/marmota/pkg/net/rpcx"
+	"github.com/lingyicute/papercraft-server/app/service/biz/chat/plugin"
 
-	"github.com/teamgram/marmota/pkg/stores/sqlc"
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	"github.com/teamgram/teamgram-server/app/service/biz/chat/internal/config"
-	media_client "github.com/teamgram/teamgram-server/app/service/media/client"
+	"github.com/papercraft/marmota/pkg/stores/sqlc"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	"github.com/lingyicute/papercraft-server/app/service/biz/chat/internal/config"
+	media_client "github.com/lingyicute/papercraft-server/app/service/media/client"
 )
 
 // Dao dao.

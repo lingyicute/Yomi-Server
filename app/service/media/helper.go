@@ -5,17 +5,17 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package media_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/service/media/internal/config"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/dal/dataobject"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/dao"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/config"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/dal/dataobject"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/dao"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/svc"
 )
 
 type (

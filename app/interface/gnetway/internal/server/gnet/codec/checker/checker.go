@@ -18,8 +18,8 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 	"fmt"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/server/gnet"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/server/gnet"
 )
 
 var (

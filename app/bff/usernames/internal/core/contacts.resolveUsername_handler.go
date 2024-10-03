@@ -13,16 +13,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
-	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
 )
 
 // ContactsResolveUsername
@@ -80,7 +80,7 @@ func (c *UsernamesCore) ContactsResolveUsername(in *mtproto.TLContactsResolveUse
 		if c.svcCtx.Plugin != nil {
 			resolvedPeer.Chats = c.svcCtx.Plugin.GetChannelListByIdList(c.ctx, c.MD.UserId, peer.PeerId)
 		} else {
-			c.Logger.Errorf("contacts.resolveUsername blocked, License key from https://teamgram.net required to unlock enterprise features.")
+			c.Logger.Errorf("contacts.resolveUsername blocked, License key from https://papercraft.net required to unlock enterprise features.")
 		}
 	}
 

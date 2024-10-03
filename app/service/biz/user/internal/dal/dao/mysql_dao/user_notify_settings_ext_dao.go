@@ -14,11 +14,11 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 	"strings"
 
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dal/dataobject"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

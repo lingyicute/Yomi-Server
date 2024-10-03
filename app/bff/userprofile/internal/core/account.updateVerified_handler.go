@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AccountUpdateVerified
 // account.updateVerified flags:# id:long verified:flags.0?true = User;
 func (c *UserProfileCore) AccountUpdateVerified(in *mtproto.TLAccountUpdateVerified) (*mtproto.User, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.updateVerified blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.updateVerified blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

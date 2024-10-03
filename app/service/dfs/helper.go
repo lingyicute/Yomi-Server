@@ -5,19 +5,19 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dfs_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/config"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/dao"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/minio_util"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/server/http"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/config"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/dao"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/imaging"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/minio_util"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/server/http"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/stores/kv"
 	"github.com/zeromicro/go-zero/zrpc"

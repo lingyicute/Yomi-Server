@@ -1,22 +1,22 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
 
 import (
-	"github.com/teamgram/teamgram-server/app/service/biz/updates/updates"
+	"github.com/lingyicute/papercraft-server/app/service/biz/updates/updates"
 )
 
 // UpdatesGetChannelDifferenceV2
 // updates.getChannelDifferenceV2 auth_key_id:long user_id:long channel_id:long pts:int limit:int = ChannelDifference;
 func (c *UpdatesCore) UpdatesGetChannelDifferenceV2(in *updates.TLUpdatesGetChannelDifferenceV2) (*updates.ChannelDifference, error) {
-	c.Logger.Errorf("updates.getChannelDifferenceV2 blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("updates.getChannelDifferenceV2 blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return updates.MakeTLChannelDifference(&updates.ChannelDifference{
 		Final:        false,

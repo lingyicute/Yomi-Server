@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
@@ -12,11 +12,11 @@ package core
 import (
 	"google.golang.org/protobuf/proto"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
-	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
+	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 )
 
 // InboxEditChatMessageToInbox

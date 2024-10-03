@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -22,11 +22,11 @@ import (
 	"context"
 	"sort"
 
-	"github.com/teamgram/proto/mtproto"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
-	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/proto/mtproto"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
+	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 
 	"github.com/zeromicro/go-zero/core/mr"
 )
@@ -88,7 +88,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 		peer2 := mtproto.FromPeer(dialogEx.GetDialog().GetPeer())
 
 		if peer2.IsChannel() {
-			c.Logger.Errorf("messages.getDialogs blocked, License key from https://teamgram.net required to unlock enterprise features.")
+			c.Logger.Errorf("messages.getDialogs blocked, License key from https://papercraft.net required to unlock enterprise features.")
 		}
 
 		dialogEx.Dialog.NotifySettings = userpb.FindPeerPeerNotifySettings(notifySettingsList, peer2)
@@ -114,7 +114,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 				if !id2.Peer.IsChannel() {
 					msgIdList = append(msgIdList, id2.TopMessage)
 				} else {
-					c.Logger.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
+					c.Logger.Errorf("blocked, License key from https://papercraft.net required to unlock enterprise features.")
 				}
 			}
 			if len(msgIdList) > 0 {
@@ -146,7 +146,7 @@ func (c *DialogsCore) MessagesGetDialogs(in *mtproto.TLMessagesGetDialogs) (*mtp
 			return chats.GetChatListByIdList(c.MD.UserId, id...)
 		},
 		func(ctx context.Context, selfUserId int64, id ...int64) []*mtproto.Chat {
-			c.Logger.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
+			c.Logger.Errorf("blocked, License key from https://papercraft.net required to unlock enterprise features.")
 			return []*mtproto.Chat{}
 		})
 

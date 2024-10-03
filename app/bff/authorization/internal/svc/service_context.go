@@ -13,17 +13,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package svc
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/dao"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/logic"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/plugin"
-	"github.com/teamgram/teamgram-server/pkg/code"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/dao"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/logic"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/plugin"
+	"github.com/lingyicute/papercraft-server/pkg/code"
 )
 
 type ServiceContext struct {

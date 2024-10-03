@@ -13,13 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // HelpGetNearestDc
@@ -29,7 +29,7 @@ func (c *ConfigurationCore) HelpGetNearestDc(in *mtproto.TLHelpGetNearestDc) (*m
 	_ = in
 
 	// TODO: not impl
-	c.Logger.Errorf("help.getNearestDc blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getNearestDc blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	rValue := mtproto.MakeTLNearestDc(&mtproto.NearestDc{
 		Country:   "CN",

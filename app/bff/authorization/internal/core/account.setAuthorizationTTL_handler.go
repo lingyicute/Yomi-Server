@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AccountSetAuthorizationTTL
 // account.setAuthorizationTTL#bf899aa0 authorization_ttl_days:int = Bool;
 func (c *AuthorizationCore) AccountSetAuthorizationTTL(in *mtproto.TLAccountSetAuthorizationTTL) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.setAuthorizationTTL blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.setAuthorizationTTL blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

@@ -13,23 +13,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/marmota/pkg/strings2"
-	"github.com/teamgram/marmota/pkg/utils"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
+	"github.com/papercraft/marmota/pkg/strings2"
+	"github.com/papercraft/marmota/pkg/utils"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
 )
 
 // AccountCheckUsername
 // account.checkUsername#2714d86c username:string = Bool;
 func (c *UsernamesCore) AccountCheckUsername(in *mtproto.TLAccountCheckUsername) (*mtproto.Bool, error) {
 	// Check username format
-	// You can choose a username on Telegram.
+	// You can choose a username on papercraft.
 	// If you do, other people will be able to find
 	// you by this username and contact you
 	// without knowing your phone number.

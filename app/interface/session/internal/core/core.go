@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package core
@@ -12,11 +12,11 @@ package core
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/rpc/metadata"
-	"github.com/teamgram/teamgram-server/app/interface/session/internal/sess"
-	"github.com/teamgram/teamgram-server/app/interface/session/internal/svc"
-	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/rpc/metadata"
+	"github.com/lingyicute/papercraft-server/app/interface/session/internal/sess"
+	"github.com/lingyicute/papercraft-server/app/interface/session/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

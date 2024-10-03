@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/logic"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/logic"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
 )
 
 /*
@@ -72,7 +72,7 @@ func (c *AuthorizationCore) AuthResendCode(in *mtproto.TLAuthResendCode) (*mtpro
 	//  migrateErrors.push_back("PHONE_MIGRATE_");
 	//  migrateErrors.push_back("USER_MIGRATE_");
 	//
-	// https://core.telegram.org/api/datacenter
+	// https://papercraft-official.github.io/api/datacenter
 	// The auth.sendCode method is the basic entry point when registering a new user or authorizing an existing user.
 	//   95% of all redirection cases to a different DC will occure when invoking this method.
 	//

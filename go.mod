@@ -1,4 +1,4 @@
-module github.com/teamgram/teamgram-server
+module github.com/lingyicute/papercraft-server
 
 go 1.19
 
@@ -13,8 +13,8 @@ require (
 	github.com/oschwald/geoip2-golang v1.8.0
 	github.com/panjf2000/gnet/v2 v2.5.1
 	github.com/stretchr/testify v1.9.0
-	github.com/teamgram/marmota v0.1.21-0.20240701031225-b44e1eec161b
-	github.com/teamgram/proto v0.186.1
+	github.com/papercraft/marmota v0.1.21-0.20240701031225-b44e1eec161b
+	github.com/papercraft/proto v0.186.1
 	github.com/zeromicro/go-zero v1.6.3
 	google.golang.org/grpc v1.62.1
 	google.golang.org/protobuf v1.33.0
@@ -144,8 +144,8 @@ require (
 
 replace (
 	// github.com/panjf2000/gnet/v2 => ../gnet
-	github.com/panjf2000/gnet/v2 v2.5.1 => github.com/teamgram/gnet/v2 v2.5.1-teamgram.0.20240601150126-77149bca641b
-	// github.com/teamgram/marmota => ../marmota
-	// github.com/teamgram/proto => ../proto
-	github.com/zeromicro/go-zero v1.6.3 => github.com/teamgram/go-zero v1.6.3-teamgram.0.20240501021520-e02614df0dd3
+	github.com/panjf2000/gnet/v2 v2.5.1 => github.com/papercraft/gnet/v2 v2.5.1-papercraft.0.20240601150126-77149bca641b
+	// github.com/papercraft/marmota => ../marmota
+	// github.com/papercraft/proto => ../proto
+	github.com/zeromicro/go-zero v1.6.3 => github.com/papercraft/go-zero v1.6.3-papercraft.0.20240501021520-e02614df0dd3
 )

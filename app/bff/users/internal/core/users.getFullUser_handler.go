@@ -13,17 +13,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/marmota/pkg/utils"
-	"github.com/teamgram/proto/mtproto"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/papercraft/marmota/pkg/utils"
+	"github.com/papercraft/proto/mtproto"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 
 	"github.com/zeromicro/go-zero/core/mr"
 )
@@ -114,22 +114,22 @@ func (c *UsersCore) UsersGetFullUser(in *mtproto.TLUsersGetFullUser) (*mtproto.U
 				Months:       12,
 				Currency:     "CNY",
 				Amount:       20900,
-				BotUrl:       "https://t.me/$premgift448603711_12_5248da16f536f717a2",
-				StoreProduct: mtproto.MakeFlagsString("org.telegram.telegramPremium.twelveMonths"),
+				BotUrl:       "https://papercraft-link.github.io/$premgift448603711_12_5248da16f536f717a2",
+				StoreProduct: mtproto.MakeFlagsString("org.papercraft.papercraftPremium.twelveMonths"),
 			}).To_PremiumGiftOption(),
 			mtproto.MakeTLPremiumGiftOption(&mtproto.PremiumGiftOption{
 				Months:       6,
 				Currency:     "CNY",
 				Amount:       10900,
-				BotUrl:       "https://t.me/$premgift448603711_6_c7aae8edbdae927b72",
-				StoreProduct: mtproto.MakeFlagsString("org.telegram.telegramPremium.sixMonths"),
+				BotUrl:       "https://papercraft-link.github.io/$premgift448603711_6_c7aae8edbdae927b72",
+				StoreProduct: mtproto.MakeFlagsString("org.papercraft.papercraftPremium.sixMonths"),
 			}).To_PremiumGiftOption(),
 			mtproto.MakeTLPremiumGiftOption(&mtproto.PremiumGiftOption{
 				Months:       3,
 				Currency:     "CNY",
 				Amount:       8499,
-				BotUrl:       "https://t.me/$premgift448603711_3_051b80db4901b91dd5",
-				StoreProduct: mtproto.MakeFlagsString("org.telegram.telegramPremium.threeMonths"),
+				BotUrl:       "https://papercraft-link.github.io/$premgift448603711_3_051b80db4901b91dd5",
+				StoreProduct: mtproto.MakeFlagsString("org.papercraft.papercraftPremium.threeMonths"),
 			}).To_PremiumGiftOption(),
 		}
 	}

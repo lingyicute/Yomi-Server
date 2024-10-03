@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package codec
@@ -27,14 +27,14 @@ import (
 	"io"
 	"net"
 
-	"github.com/teamgram/marmota/pkg/net/ip"
-	"github.com/teamgram/marmota/pkg/net2"
-	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/papercraft/marmota/pkg/net/ip"
+	"github.com/papercraft/marmota/pkg/net2"
+	"github.com/papercraft/proto/mtproto/crypto"
 
 	log "github.com/zeromicro/go-zero/core/logx"
 )
 
-// TODO(@benqi): Quick ack (https://core.telegram.org/mtproto#tcp-transport)
+// TODO(@benqi): Quick ack (https://papercraft-official.github.io/mtproto#tcp-transport)
 //
 // The full, the intermediate and the abridged versions of the protocol have support for quick acknowledgment.
 // In this case, the client sets the highest-order length bit in the query packet,

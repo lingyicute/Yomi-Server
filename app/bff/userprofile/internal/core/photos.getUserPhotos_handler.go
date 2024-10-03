@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
-	mediapb "github.com/teamgram/teamgram-server/app/service/media/media"
+	"github.com/papercraft/proto/mtproto"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	mediapb "github.com/lingyicute/papercraft-server/app/service/media/media"
 )
 
 // PhotosGetUserPhotos

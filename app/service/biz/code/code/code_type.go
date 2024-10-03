@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package code
@@ -21,7 +21,7 @@ package code
 import (
 	"fmt"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -68,7 +68,7 @@ func MakeCodeType(phoneRegistered, allowFlashCall, currentNumber bool) (int, int
 	//	authSentCode.SetType(authSentCodeType.To_Auth_SentCodeType())
 	//} else {
 	//	// TODO(@benqi): sentCodeTypeFlashCall and sentCodeTypeCall, nextType
-	//	// telegramd, we only use sms
+	//	// papercraftd, we only use sms
 	//	authSentCodeType := &mtproto.TLAuthSentCodeTypeSms{Data2: &mtproto.Auth_SentCodeType_Data{
 	//		Length: code.GetPhoneCodeLength(),
 	//	}}

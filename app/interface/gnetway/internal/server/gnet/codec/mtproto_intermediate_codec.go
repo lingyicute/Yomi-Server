@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,11 +19,11 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // IntermediateCodec
-// https://core.telegram.org/mtproto#tcp-transport
+// https://papercraft-official.github.io/mtproto#tcp-transport
 //
 // In case 4-byte data alignment is needed,
 // an intermediate version of the original protocol may be used:

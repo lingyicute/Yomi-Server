@@ -1,18 +1,18 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dao
 
 import (
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/config"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/minio_util"
-	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/config"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/minio_util"
+	idgen_client "github.com/lingyicute/papercraft-server/app/service/idgen/client"
 
 	"github.com/minio/minio-go/v7"
 	"github.com/zeromicro/go-zero/core/stores/kv"

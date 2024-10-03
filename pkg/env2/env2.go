@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package env2
@@ -11,9 +11,9 @@ import (
 )
 
 var (
-	MyAppName      = "Teamgram"
-	MyWebSite      = "teamgram.net"
-	TDotMe         = "t.me"
+	MyAppName      = "Papercraft"
+	MyWebSite      = "papercraft.net"
+	TDotMe         = "papercraft-link.github.io"
 	PredefinedUser = false
 
 	// PredefinedUser2
@@ -22,18 +22,18 @@ var (
 )
 
 func init() {
-	flag.StringVar(&MyAppName, "app_name", "Teamgram", "app_name")
-	flag.StringVar(&MyWebSite, "site_name", "teamgram.net", "site_name")
-	flag.StringVar(&TDotMe, "t.me", "t.me", "t.me")
+	flag.StringVar(&MyAppName, "app_name", "Papercraft", "app_name")
+	flag.StringVar(&MyWebSite, "site_name", "papercraft.net", "site_name")
+	flag.StringVar(&TDotMe, "papercraft-link.github.io", "papercraft-link.github.io", "papercraft-link.github.io")
 	flag.BoolVar(&PredefinedUser, "predefined", false, "predefined")
 	flag.BoolVar(&PredefinedUser2, "predefined2", false, "predefined2")
 }
 
 func IsTDotMe(me string) bool {
 	switch me {
-	case "teamgram.me":
+	case "papercraft.me":
 		return true
-	case "t.me":
+	case "papercraft-link.github.io":
 		return true
 	case TDotMe:
 		return true

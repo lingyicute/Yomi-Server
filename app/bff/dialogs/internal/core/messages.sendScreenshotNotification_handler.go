@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // MessagesSendScreenshotNotification
 // messages.sendScreenshotNotification#c97df020 peer:InputPeer reply_to_msg_id:int random_id:long = Updates;
 func (c *DialogsCore) MessagesSendScreenshotNotification(in *mtproto.TLMessagesSendScreenshotNotification) (*mtproto.Updates, error) {
 	// TODO: not impl
-	// c.Logger.Errorf("messages.sendScreenshotNotification blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	// c.Logger.Errorf("messages.sendScreenshotNotification blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return mtproto.MakeEmptyUpdates(), nil
 }

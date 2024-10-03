@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package main
@@ -23,9 +23,9 @@ import (
 	"flag"
 	"os"
 
-	"github.com/teamgram/marmota/pkg/commands"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/config"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/dao"
+	"github.com/papercraft/marmota/pkg/commands"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/config"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/dao"
 	"github.com/zeromicro/go-zero/core/conf"
 
 	"github.com/zeromicro/go-zero/core/logx"

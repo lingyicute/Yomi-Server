@@ -13,14 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
 
 import (
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	"github.com/teamgram/teamgram-server/app/service/authsession/internal/dal/dao/mysql_dao"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	"github.com/lingyicute/papercraft-server/app/service/authsession/internal/dal/dao/mysql_dao"
 )
 
 type Mysql struct {

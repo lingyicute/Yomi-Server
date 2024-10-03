@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
@@ -24,7 +24,7 @@ import (
 	"io"
 	"path/filepath"
 
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
 
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/encrypt"

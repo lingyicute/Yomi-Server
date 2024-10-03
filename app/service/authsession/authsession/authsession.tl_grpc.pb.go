@@ -17,7 +17,7 @@ package authsession
 
 import (
 	context "context"
-	mtproto "github.com/teamgram/proto/mtproto"
+	mtproto "github.com/papercraft/proto/mtproto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

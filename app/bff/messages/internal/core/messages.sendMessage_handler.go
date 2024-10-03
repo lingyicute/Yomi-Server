@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,8 +21,8 @@ package core
 import (
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	"github.com/papercraft/proto/mtproto"
+	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
 	"github.com/zeromicro/go-zero/core/contextx"
 	"github.com/zeromicro/go-zero/core/threading"
 )

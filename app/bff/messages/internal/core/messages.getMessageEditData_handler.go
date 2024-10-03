@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
+	"github.com/papercraft/proto/mtproto"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
 )
 
 /*
@@ -128,7 +128,7 @@ func (c *MessagesCore) MessagesGetMessageEditData(in *mtproto.TLMessagesGetMessa
 		}
 	case mtproto.PEER_CHANNEL:
 		// TODO: not impl
-		c.Logger.Errorf("messages.getMessageEditData blocked, License key from https://teamgram.net required to unlock enterprise features.")
+		c.Logger.Errorf("messages.getMessageEditData blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:

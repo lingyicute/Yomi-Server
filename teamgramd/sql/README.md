@@ -1,10 +1,10 @@
 # init database
-## init teamgram
+## init papercraft
 
-- create database teamgram
+- create database papercraft
 
-- init teamgram data
+- init papercraft data
 
 ```
-mysql -uroot teamgram < teamgram2.sql
+mysql -uroot papercraft < papercraft2.sql
 ```

@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AccountSendVerifyEmailCode
 // account.sendVerifyEmailCode#98e037bb purpose:EmailVerifyPurpose email:string = account.SentEmailCode;
 func (c *AuthorizationCore) AccountSendVerifyEmailCode(in *mtproto.TLAccountSendVerifyEmailCode) (*mtproto.Account_SentEmailCode, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.sendVerifyEmailCode blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.sendVerifyEmailCode blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

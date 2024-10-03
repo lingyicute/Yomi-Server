@@ -5,14 +5,14 @@
  * Copyright 2024 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package service
 
 import (
-	"github.com/teamgram/teamgram-server/app/interface/gateway/gateway"
-	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/interface/gateway/gateway"
+	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/svc"
 )
 
 type Service struct {

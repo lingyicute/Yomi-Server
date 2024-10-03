@@ -1,13 +1,13 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
 
 import (
-	"github.com/teamgram/marmota/pkg/container2/sets"
+	"github.com/papercraft/marmota/pkg/container2/sets"
 
 	"github.com/zeromicro/go-zero/core/discov"
 	"github.com/zeromicro/go-zero/core/hash"

@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package dao
@@ -12,14 +12,14 @@ package dao
 import (
 	"context"
 
-	"github.com/teamgram/marmota/pkg/cache"
-	"github.com/teamgram/marmota/pkg/net/ip"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/rpc/metadata"
-	bff_proxy_client "github.com/teamgram/teamgram-server/app/bff/bff/client"
-	"github.com/teamgram/teamgram-server/app/interface/session/internal/config"
-	authsession_client "github.com/teamgram/teamgram-server/app/service/authsession/client"
-	status_client "github.com/teamgram/teamgram-server/app/service/status/client"
+	"github.com/papercraft/marmota/pkg/cache"
+	"github.com/papercraft/marmota/pkg/net/ip"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/rpc/metadata"
+	bff_proxy_client "github.com/lingyicute/papercraft-server/app/bff/bff/client"
+	"github.com/lingyicute/papercraft-server/app/interface/session/internal/config"
+	authsession_client "github.com/lingyicute/papercraft-server/app/service/authsession/client"
+	status_client "github.com/lingyicute/papercraft-server/app/service/status/client"
 
 	"github.com/zeromicro/go-zero/zrpc"
 )

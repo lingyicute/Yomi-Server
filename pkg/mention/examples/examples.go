@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package main
@@ -21,7 +21,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/teamgram/teamgram-server/pkg/mention"
+	"github.com/lingyicute/papercraft-server/pkg/mention"
 )
 
 var testRuneStr = []rune(`1) a b (@ababab)

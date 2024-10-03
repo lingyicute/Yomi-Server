@@ -11,10 +11,10 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/config"
-	"github.com/teamgram/teamgram-server/app/service/media/internal/svc"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/config"
+	"github.com/lingyicute/papercraft-server/app/service/media/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 )

@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package grpc
 
 import (
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/internal/svc"
-	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/internal/svc"
+	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"

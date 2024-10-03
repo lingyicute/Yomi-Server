@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package code
@@ -21,8 +21,8 @@ package code
 import (
 	"context"
 
-	"github.com/teamgram/teamgram-server/pkg/code/conf"
-	"github.com/teamgram/teamgram-server/pkg/code/none"
+	"github.com/lingyicute/papercraft-server/pkg/code/conf"
+	"github.com/lingyicute/papercraft-server/pkg/code/none"
 )
 
 type VerifyCodeInterface interface {

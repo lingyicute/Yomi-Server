@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // HelpGetCountriesList
 // help.getCountriesList#735787a8 lang_code:string hash:int = help.CountriesList;
 func (c *ConfigurationCore) HelpGetCountriesList(in *mtproto.TLHelpGetCountriesList) (*mtproto.Help_CountriesList, error) {
 	// TODO: not impl
-	c.Logger.Errorf("help.getCountriesList blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("help.getCountriesList blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return mtproto.MakeTLHelpCountriesList(&mtproto.Help_CountriesList{
 		Countries: []*mtproto.Help_Country{},

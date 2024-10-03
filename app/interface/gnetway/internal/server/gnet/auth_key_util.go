@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,8 +16,8 @@
 package gnet
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/crypto"
 )
 
 type AuthKeyUtil = authKeyUtil

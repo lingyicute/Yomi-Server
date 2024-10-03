@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package main
@@ -27,7 +27,7 @@ import (
 
 	"github.com/minio/minio-go/v7"
 
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/imaging"
 )
 
 var imageFile = flag.String("image", "", "convert image file")

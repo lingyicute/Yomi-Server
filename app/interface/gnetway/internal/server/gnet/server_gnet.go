@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,10 +25,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/server/gnet/ws"
-	"github.com/teamgram/teamgram-server/app/interface/session/client"
-	"github.com/teamgram/teamgram-server/app/interface/session/session"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/server/gnet/ws"
+	"github.com/lingyicute/papercraft-server/app/interface/session/client"
+	"github.com/lingyicute/papercraft-server/app/interface/session/session"
 
 	"github.com/gobwas/ws/wsutil"
 	"github.com/panjf2000/gnet/v2"

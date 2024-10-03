@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package me
@@ -24,8 +24,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/teamgram/marmota/pkg/hack"
-	"github.com/teamgram/teamgram-server/pkg/code/conf"
+	"github.com/papercraft/marmota/pkg/hack"
+	"github.com/lingyicute/papercraft-server/pkg/code/conf"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

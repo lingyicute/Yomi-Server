@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AuthRequestFirebaseSms
 // auth.requestFirebaseSms#89464b50 flags:# phone_number:string phone_code_hash:string safety_net_token:flags.0?string ios_push_secret:flags.1?string = Bool;
 func (c *AuthorizationCore) AuthRequestFirebaseSms(in *mtproto.TLAuthRequestFirebaseSms) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("auth.requestFirebaseSms blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("auth.requestFirebaseSms blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

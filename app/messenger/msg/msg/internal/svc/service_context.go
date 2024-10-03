@@ -13,26 +13,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package svc
 
 import (
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	"github.com/teamgram/marmota/pkg/net/rpcx"
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
-	inbox_client "github.com/teamgram/teamgram-server/app/messenger/msg/inbox/client"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/internal/dao"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/internal/config"
-	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/plugin"
-	sync_client "github.com/teamgram/teamgram-server/app/messenger/sync/client"
-	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
-	dialog_client "github.com/teamgram/teamgram-server/app/service/biz/dialog/client"
-	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
-	username_client "github.com/teamgram/teamgram-server/app/service/biz/username/client"
-	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
-	"github.com/teamgram/teamgram-server/pkg/deduplication"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	"github.com/papercraft/marmota/pkg/net/rpcx"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
+	inbox_client "github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/client"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/internal/dao"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/internal/config"
+	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/plugin"
+	sync_client "github.com/lingyicute/papercraft-server/app/messenger/sync/client"
+	chat_client "github.com/lingyicute/papercraft-server/app/service/biz/chat/client"
+	dialog_client "github.com/lingyicute/papercraft-server/app/service/biz/dialog/client"
+	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
+	username_client "github.com/lingyicute/papercraft-server/app/service/biz/username/client"
+	idgen_client "github.com/lingyicute/papercraft-server/app/service/idgen/client"
+	"github.com/lingyicute/papercraft-server/pkg/deduplication"
 	"github.com/zeromicro/go-zero/core/stores/kv"
 	"github.com/zeromicro/go-zero/core/stores/redis"
 )

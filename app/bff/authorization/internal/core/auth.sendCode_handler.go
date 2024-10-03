@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -22,13 +22,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/teamgram/marmota/pkg/threading2"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/logic"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
-	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
-	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
-	statuspb "github.com/teamgram/teamgram-server/app/service/status/status"
+	"github.com/papercraft/marmota/pkg/threading2"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/logic"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
+	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
+	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	statuspb "github.com/lingyicute/papercraft-server/app/service/status/status"
 
 	"google.golang.org/grpc/status"
 )
@@ -104,7 +104,7 @@ import (
 |303 |	NETWORK_MIGRATE_X |	Repeat the query to data-center X |
 |303 |	PHONE_MIGRATE_X |	Repeat the query to data-center X |
 |400 |	PHONE_NUMBER_APP_SIGNUP_FORBIDDEN |	You can't sign up using this app |
-|400 |	PHONE_NUMBER_BANNED |	The provided phone number is banned from telegram |
+|400 |	PHONE_NUMBER_BANNED |	The provided phone number is banned from papercraft |
 |400 |	PHONE_NUMBER_FLOOD |	You asked for the code too many times. |
 |400 |	PHONE_NUMBER_INVALID |	Invalid phone number |
 |406 |	PHONE_PASSWORD_FLOOD |	You have tried logging in too many times |
@@ -178,7 +178,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 	//  migrateErrors.push_back("PHONE_MIGRATE_");
 	//  migrateErrors.push_back("USER_MIGRATE_");
 	//
-	// https://core.telegram.org/api/datacenter
+	// https://papercraft-official.github.io/api/datacenter
 	// The auth.sendCode method is the basic entry point when registering a new user or authorizing an existing user.
 	//   95% of all redirection cases to a different DC will occure when invoking this method.
 	//
@@ -269,7 +269,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 	}
 
 	if phoneRegistered {
-		// https://core.telegram.org/api/auth#future-auth-tokens
+		// https://papercraft-official.github.io/api/auth#future-auth-tokens
 		// TODO:
 		//  At all times, the future auth token database should contain at most 20 tokens:
 		//  evict older tokens as new tokens are added to stay below this limit.

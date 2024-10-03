@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -25,13 +25,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/rpc/metadata"
-	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/svc"
-	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
-	"github.com/teamgram/teamgram-server/pkg/code/conf"
-	"github.com/teamgram/teamgram-server/pkg/env2"
-	"github.com/teamgram/teamgram-server/pkg/phonenumber"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/rpc/metadata"
+	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/svc"
+	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
+	"github.com/lingyicute/papercraft-server/pkg/code/conf"
+	"github.com/lingyicute/papercraft-server/pkg/env2"
+	"github.com/lingyicute/papercraft-server/pkg/phonenumber"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

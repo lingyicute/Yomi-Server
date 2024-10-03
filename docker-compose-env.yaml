@@ -15,7 +15,7 @@ services:
     ports:
       - 127.0.0.1:2181:2181
     networks:
-      - teamgram_net
+      - papercraft_net
 
   #消息队列 - Message queue
   kafka:
@@ -34,7 +34,7 @@ services:
     volumes:
       - ./data/kafka/data:/data
     networks:
-      - teamgram_net
+      - papercraft_net
     depends_on:
       - zookeeper
 
@@ -63,7 +63,7 @@ services:
     restart: always
     command: /usr/local/bin/etcd
     networks:
-      - teamgram_net
+      - papercraft_net
 
   redis:
     image: redis
@@ -80,7 +80,7 @@ services:
     privileged: true
     command: redis-server --appendonly yes
     networks:
-      - teamgram_net
+      - papercraft_net
 
   mysql:
     image: mysql:5.7
@@ -92,16 +92,16 @@ services:
       #TZ: Asia/Shanghai
       # root 密码 - root password
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-my_root_secret}
-      MYSQL_DATABASE: teamgram
-      MYSQL_USER: teamgram
-      MYSQL_PASSWORD: ${DB_PASSWORD:-teamgram}
+      MYSQL_DATABASE: papercraft
+      MYSQL_USER: papercraft
+      MYSQL_PASSWORD: ${DB_PASSWORD:-papercraft}
       # MYSQL_ALLOW_EMPTY_PASSWORD: "true"
     ports:
       - 127.0.0.1:3306:3306
     volumes:
       # 数据挂载 - Data mounting
       - ./data/mysql/data:/var/lib/mysql
-      - ./teamgramd/sql:/docker-entrypoint-initdb.d/
+      - ./papercraftd/sql:/docker-entrypoint-initdb.d/
       #- /etc/localtime:/etc/localtime
       # 日志
     command:
@@ -113,7 +113,7 @@ services:
     privileged: true
     restart: always
     networks:
-      - teamgram_net
+      - papercraft_net
 
   minio:
     image: minio/minio
@@ -129,7 +129,7 @@ services:
     command: server /data --console-address ":9001"
     restart: always
     networks:
-      - teamgram_net
+      - papercraft_net
 
   minio_mc:
     image: minio/mc:latest
@@ -138,10 +138,10 @@ services:
       - ./minio_init.sh:/minio_init.sh
     entrypoint: /minio_init.sh
     networks:
-      - teamgram_net
+      - papercraft_net
 
 networks:
-  teamgram_net:
+  papercraft_net:
     driver: bridge
     ipam:
       config:

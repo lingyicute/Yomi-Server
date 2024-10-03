@@ -13,14 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dal/dataobject"
-	"github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dal/dataobject"
+	"github.com/lingyicute/papercraft-server/app/service/biz/user/user"
 )
 
 // UserGetNotifySettingsList

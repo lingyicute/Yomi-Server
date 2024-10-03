@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AccountToggleSponsoredMessages
 // account.toggleSponsoredMessages#b9d9a38d enabled:Bool = Bool;
 func (c *SponsoredMessagesCore) AccountToggleSponsoredMessages(in *mtproto.TLAccountToggleSponsoredMessages) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.toggleSponsoredMessages blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.toggleSponsoredMessages blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

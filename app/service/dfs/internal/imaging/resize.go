@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package imaging
@@ -23,8 +23,8 @@ import (
 	"image"
 	"strings"
 
-	"github.com/teamgram/marmota/pkg/bytes2"
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/marmota/pkg/bytes2"
+	"github.com/papercraft/proto/mtproto"
 
 	"github.com/disintegration/imaging"
 	"github.com/zeromicro/go-zero/core/logx"

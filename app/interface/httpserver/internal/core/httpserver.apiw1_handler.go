@@ -11,10 +11,10 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/crypto"
-	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/dao"
-	sessionpb "github.com/teamgram/teamgram-server/app/interface/session/session"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/crypto"
+	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/dao"
+	sessionpb "github.com/lingyicute/papercraft-server/app/interface/session/session"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

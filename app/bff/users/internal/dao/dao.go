@@ -13,18 +13,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
 
 import (
-	"github.com/teamgram/marmota/pkg/net/rpcx"
-	"github.com/teamgram/teamgram-server/app/bff/users/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/users/internal/plugin"
-	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
-	dialog_client "github.com/teamgram/teamgram-server/app/service/biz/dialog/client"
-	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
+	"github.com/papercraft/marmota/pkg/net/rpcx"
+	"github.com/lingyicute/papercraft-server/app/bff/users/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/users/internal/plugin"
+	chat_client "github.com/lingyicute/papercraft-server/app/service/biz/chat/client"
+	dialog_client "github.com/lingyicute/papercraft-server/app/service/biz/dialog/client"
+	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
 )
 
 type Dao struct {

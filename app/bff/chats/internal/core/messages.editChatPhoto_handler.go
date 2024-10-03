@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -21,10 +21,10 @@ package core
 import (
 	"math/rand"
 
-	"github.com/teamgram/proto/mtproto"
-	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
-	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
-	mediapb "github.com/teamgram/teamgram-server/app/service/media/media"
+	"github.com/papercraft/proto/mtproto"
+	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
+	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	mediapb "github.com/lingyicute/papercraft-server/app/service/media/media"
 )
 
 // MessagesEditChatPhoto

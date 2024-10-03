@@ -13,14 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/dfs"
 )
 
 // UploadGetFile
@@ -95,7 +95,7 @@ func (c *FilesCore) UploadGetFile(in *mtproto.TLUploadGetFile) (*mtproto.Upload_
 			}
 			location = location2
 		} else {
-			c.Logger.Errorf("upload.getFile blocked, License key from https://teamgram.net required to unlock enterprise features.")
+			c.Logger.Errorf("upload.getFile blocked, License key from https://papercraft.net required to unlock enterprise features.")
 			return nil, mtproto.ErrEnterpriseIsBlocked
 		}
 	case mtproto.Predicate_inputGroupCallStream:

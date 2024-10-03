@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package bff_proxy_client
@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/teamgram/marmota/pkg/net/rpcx"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/proto/mtproto/rpc/metadata"
+	"github.com/papercraft/marmota/pkg/net/rpcx"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/papercraft/proto/mtproto/rpc/metadata"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/zrpc"
@@ -67,7 +67,7 @@ func (c *BFFProxyClient) GetRpcClientByRequest(t interface{}) (zrpc.Client, erro
 		return c2, nil
 	} else {
 		// logx.Errorf("not found method: %s", rt.Name())
-		// logx.Errorf("%s blocked, License key from https://teamgram.net required to unlock enterprise features.", rt.Name())
+		// logx.Errorf("%s blocked, License key from https://papercraft.net required to unlock enterprise features.", rt.Name())
 	}
 
 	// TODO(@benqi):

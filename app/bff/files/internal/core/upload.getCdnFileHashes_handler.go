@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // UploadGetCdnFileHashes
 // upload.getCdnFileHashes#4da54231 file_token:bytes offset:int = Vector<FileHash>;
 func (c *FilesCore) UploadGetCdnFileHashes(in *mtproto.TLUploadGetCdnFileHashes) (*mtproto.Vector_FileHash, error) {
 	// TODO: not impl
-	c.Logger.Errorf("upload.getCdnFileHashes blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("upload.getCdnFileHashes blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return &mtproto.Vector_FileHash{
 		Datas: []*mtproto.FileHash{},

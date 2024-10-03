@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package imaging
@@ -22,7 +22,7 @@ import (
 	"image"
 	"io"
 
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging/jpeg"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/imaging/jpeg"
 )
 
 func EncodeStripped(w io.Writer, img image.Image, quality int) error {

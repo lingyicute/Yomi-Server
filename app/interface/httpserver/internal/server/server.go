@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present, Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2024-present, Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package server
@@ -12,9 +12,9 @@ package server
 import (
 	"flag"
 
-	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/config"
-	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/server/http"
-	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/config"
+	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/server/http"
+	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"

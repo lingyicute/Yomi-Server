@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package codec
@@ -24,13 +24,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 
 	log "github.com/zeromicro/go-zero/core/logx"
 )
 
 // FullCodec
-// https://core.telegram.org/mtproto#tcp-transport
+// https://papercraft-official.github.io/mtproto#tcp-transport
 //
 // If a payload (packet) needs to be transmitted from server to client or from client to server,
 // it is encapsulated as follows:

@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package none
@@ -21,8 +21,8 @@ package none
 import (
 	"context"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/pkg/code/conf"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/pkg/code/conf"
 )
 
 func New(c *conf.SmsVerifyCodeConfig) *noneVerifyCode {

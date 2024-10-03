@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
+// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,10 +19,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
-// https://core.telegram.org/mtproto#tcp-transport
+// https://papercraft-official.github.io/mtproto#tcp-transport
 //
 // There is an abridged version of the same protocol:
 // if the client sends 0xef as the first byte (**important:** only prior to the very first data packet),

@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AuthBindTempAuthKey
 // auth.bindTempAuthKey#cdd42a05 perm_auth_key_id:long nonce:long expires_at:int encrypted_message:bytes = Bool;
 func (c *AuthorizationCore) AuthBindTempAuthKey(in *mtproto.TLAuthBindTempAuthKey) (*mtproto.Bool, error) {
 	// TODO: not impl
-	// c.Logger.Errorf("auth.bindTempAuthKey blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	// c.Logger.Errorf("auth.bindTempAuthKey blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return mtproto.BoolTrue, nil
 }

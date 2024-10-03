@@ -107,27 +107,27 @@ cd ffmpeg-5.0-amd64-static/
 cp ff* /usr/local/bin/
 ```
 
-## Install Teamgram Server
+## Install Papercraft Server
 
 ### Get source code 
 ```
-git clone https://github.com/teamgram/teamgram-server.git
-cd teamgram-server
+git clone https://github.com/lingyicute/papercraft-server.git
+cd papercraft-server
 ```
 
 ### Init Database 
-- create teamgram database
+- create papercraft database
 ```
 mysql -uroot -p
-mysql> create database teamgram;
+mysql> create database papercraft;
 mysql> exit
 ```
 
 - import sql scripts
 ```
-mysql -uroot teamgram < teamgramd/sql/1_teamgram.sql
-mysql -uroot teamgram < teamgramd/sql/migrate-*.sql
-mysql -uroot teamgram < teamgramd/sql/z_init.sql
+mysql -uroot papercraft < papercraftd/sql/1_papercraft.sql
+mysql -uroot papercraft < papercraftd/sql/migrate-*.sql
+mysql -uroot papercraft < papercraftd/sql/z_init.sql
 ```
 
 ### Build
@@ -138,7 +138,7 @@ make
 
 ### Modify config file 
 ```
-vim ../teamgramd/etc/dfs.yaml
+vim ../papercraftd/etc/dfs.yaml
 {
 AccessKeyID: minioadmin
 SecretAccessKey: minioadmin
@@ -147,7 +147,7 @@ SSDB:
   - Host: 127.0.0.1:9221
 }
 
-vim ../teamgramd/etc/gateway.yaml
+vim ../papercraftd/etc/gateway.yaml
 {
 Addrs:
     - 0.0.0.0:10443  #modity listen port..
@@ -155,7 +155,7 @@ Addrs:
 ```
 
 ```
-cd ../teamgramd/bin/
+cd ../papercraftd/bin/
 ./runall2.sh
 firewall-cmd --zone=public --permanent --add-port=10443/tcp
 firewall-cmd --reload

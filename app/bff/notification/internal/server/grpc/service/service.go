@@ -5,13 +5,13 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package service
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/notification/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/bff/notification/internal/svc"
 )
 
 type Service struct {

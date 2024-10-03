@@ -5,13 +5,13 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package idgen_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/service/idgen/internal/server"
+	"github.com/lingyicute/papercraft-server/app/service/idgen/internal/server"
 )
 
 var (

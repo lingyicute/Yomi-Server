@@ -10,9 +10,9 @@ import (
 	"context"
 	"sort"
 
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
-	"github.com/teamgram/teamgram-server/pkg/mention"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
+	"github.com/lingyicute/papercraft-server/pkg/mention"
 
 	"mvdan.cc/xurls/v2"
 )

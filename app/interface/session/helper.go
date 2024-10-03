@@ -5,13 +5,13 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package session_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/interface/session/internal/server"
+	"github.com/lingyicute/papercraft-server/app/interface/session/internal/server"
 
 	"github.com/zeromicro/go-zero/zrpc"
 )

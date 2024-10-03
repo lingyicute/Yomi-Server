@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Teamgram Studio (https://teamgram.io).
+ * Copyright (c) 2024-present,  Papercraft Studio (https://papercraft.io).
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package svc
@@ -13,8 +13,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/config"
-	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/dao"
+	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/config"
+	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/dao"
 
 	"github.com/zeromicro/go-zero/core/netx"
 )

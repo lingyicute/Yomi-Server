@@ -5,16 +5,16 @@
  * Copyright 2022 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package qrcode_helper
 
 import (
-	"github.com/teamgram/teamgram-server/app/bff/qrcode/internal/config"
-	"github.com/teamgram/teamgram-server/app/bff/qrcode/internal/server/grpc/service"
-	"github.com/teamgram/teamgram-server/app/bff/qrcode/internal/svc"
-	"github.com/teamgram/teamgram-server/app/bff/qrcode/plugin"
+	"github.com/lingyicute/papercraft-server/app/bff/qrcode/internal/config"
+	"github.com/lingyicute/papercraft-server/app/bff/qrcode/internal/server/grpc/service"
+	"github.com/lingyicute/papercraft-server/app/bff/qrcode/internal/svc"
+	"github.com/lingyicute/papercraft-server/app/bff/qrcode/plugin"
 )
 
 type (

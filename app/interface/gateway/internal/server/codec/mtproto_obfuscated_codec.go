@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package codec
@@ -21,8 +21,8 @@ package codec
 import (
 	"io"
 
-	"github.com/teamgram/marmota/pkg/net2"
-	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/papercraft/marmota/pkg/net2"
+	"github.com/papercraft/proto/mtproto/crypto"
 
 	log "github.com/zeromicro/go-zero/core/logx"
 )

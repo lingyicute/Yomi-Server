@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
@@ -24,11 +24,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/teamgram/marmota/pkg/threading2"
-	"github.com/teamgram/proto/mtproto"
-	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/ffmpegutil"
-	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
+	"github.com/papercraft/marmota/pkg/threading2"
+	"github.com/papercraft/proto/mtproto"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/dfs"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/ffmpegutil"
+	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )

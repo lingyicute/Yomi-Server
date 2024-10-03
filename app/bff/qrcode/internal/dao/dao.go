@@ -13,18 +13,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package dao
 
 import (
-	kafka "github.com/teamgram/marmota/pkg/mq"
-	"github.com/teamgram/marmota/pkg/net/rpcx"
-	"github.com/teamgram/teamgram-server/app/bff/qrcode/internal/config"
-	sync_client "github.com/teamgram/teamgram-server/app/messenger/sync/client"
-	authsession_client "github.com/teamgram/teamgram-server/app/service/authsession/client"
-	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
+	kafka "github.com/papercraft/marmota/pkg/mq"
+	"github.com/papercraft/marmota/pkg/net/rpcx"
+	"github.com/lingyicute/papercraft-server/app/bff/qrcode/internal/config"
+	sync_client "github.com/lingyicute/papercraft-server/app/messenger/sync/client"
+	authsession_client "github.com/lingyicute/papercraft-server/app/service/authsession/client"
+	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
 	"github.com/zeromicro/go-zero/core/stores/kv"
 )
 

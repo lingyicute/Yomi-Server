@@ -13,13 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package config
 
 import (
-	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/papercraft/marmota/pkg/stores/sqlx"
 	"github.com/zeromicro/go-zero/core/stores/cache"
 	"github.com/zeromicro/go-zero/core/stores/kv"
 	"github.com/zeromicro/go-zero/zrpc"

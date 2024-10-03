@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: teamgramio (teamgram.io@gmail.com)
+// Author: papercraftio (papercraft.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/teamgram/proto/mtproto"
+	"github.com/papercraft/proto/mtproto"
 )
 
 // AccountSaveAutoDownloadSettings
 // account.saveAutoDownloadSettings#76f36233 flags:# low:flags.0?true high:flags.1?true settings:AutoDownloadSettings = Bool;
 func (c *AutoDownloadCore) AccountSaveAutoDownloadSettings(in *mtproto.TLAccountSaveAutoDownloadSettings) (*mtproto.Bool, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.saveAutoDownloadSettings blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	c.Logger.Errorf("account.saveAutoDownloadSettings blocked, License key from https://papercraft.net required to unlock enterprise features.")
 
 	return mtproto.BoolTrue, nil
 }

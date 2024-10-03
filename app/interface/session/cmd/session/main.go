@@ -5,14 +5,14 @@
  * Copyright 2024 Papercraft Authors.
  *  All rights reserved.
  *
- * Author: teamgramio (teamgram.io@gmail.com)
+ * Author: papercraftio (papercraft.io@gmail.com)
  */
 
 package main
 
 import (
-	"github.com/teamgram/marmota/pkg/commands"
-	"github.com/teamgram/teamgram-server/app/interface/session/internal/server"
+	"github.com/papercraft/marmota/pkg/commands"
+	"github.com/lingyicute/papercraft-server/app/interface/session/internal/server"
 )
 
 func main() {
