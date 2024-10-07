@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
@@ -12,10 +12,10 @@ package core
 import (
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dal/dataobject"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dao"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dal/dataobject"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dao"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/user"
 )
 
 type contactItem = dao.ContactItem
@@ -115,7 +115,7 @@ func (c *UserCore) UserImportContacts(in *user.TLUserImportContacts) (*user.User
 			phoneList = append(phoneList, c2.C.Phone)
 			popularContact := mtproto.MakeTLPopularContact(&mtproto.PopularContact{
 				ClientId:  c2.C.ClientId,
-				Importers: 1, // TODO: get importers
+				Importers: 1, // TODO(@benqi): get importers
 			})
 			popularContactMap[c2.C.Phone] = popularContact
 			// &popularContactData{c2.c.Phone, c2.c.ClientId})

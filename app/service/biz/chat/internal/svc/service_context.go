@@ -1,18 +1,18 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package svc
 
 import (
-	"github.com/lingyicute/papercraft-server/app/service/biz/chat/internal/config"
-	"github.com/lingyicute/papercraft-server/app/service/biz/chat/internal/dao"
-	"github.com/lingyicute/papercraft-server/app/service/biz/chat/plugin"
+	"github.com/teamgram/teamgram-server/app/service/biz/chat/internal/config"
+	"github.com/teamgram/teamgram-server/app/service/biz/chat/internal/dao"
+	"github.com/teamgram/teamgram-server/app/service/biz/chat/plugin"
 )
 
 type ServiceContext struct {

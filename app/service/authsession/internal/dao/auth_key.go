@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -25,10 +25,10 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/papercraft/marmota/pkg/stores/sqlc"
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/authsession/internal/dal/dataobject"
+	"github.com/teamgram/marmota/pkg/stores/sqlc"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/authsession/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/contextx"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -64,7 +64,7 @@ func (d *Dao) getAuthKey(ctx context.Context, keyId int64) (keyData *mtproto.Aut
 		return
 	}
 
-	// TODO: check len(values)
+	// TODO(@benqi): check len(values)
 
 	keyData = mtproto.MakeTLAuthKeyInfo(&mtproto.AuthKeyInfo{}).To_AuthKeyInfo()
 	for k, v := range values {
@@ -174,7 +174,7 @@ func (d *Dao) QueryAuthKeyV2(ctx context.Context, authKeyId int64) (*mtproto.Aut
 }
 
 func (d *Dao) SetAuthKeyV2(ctx context.Context, authKey *mtproto.AuthKeyInfo, expiredIn int32) (err error) {
-	// TODO: expiredIn
+	// TODO(@benqi): expiredIn
 	_ = expiredIn
 
 	tR := sqlx.TxWrapper(ctx, d.DB, func(tx *sqlx.Tx, result *sqlx.StoreResult) {

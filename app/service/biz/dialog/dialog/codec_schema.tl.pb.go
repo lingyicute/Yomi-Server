@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package dialog
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -382,7 +382,7 @@ func (m *TLDialogExt) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_dialogExt, layer)
 		return nil
 	}
@@ -537,7 +537,7 @@ func (m *TLDialogFilterExt) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_dialogFilterExt, layer)
 		return nil
 	}
@@ -673,7 +673,7 @@ func (m *TLDialogPinnedExt) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_dialogPinnedExt, layer)
 		return nil
 	}
@@ -802,7 +802,7 @@ func (m *TLSimpleDialogsData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_simpleDialogsData, layer)
 		return nil
 	}
@@ -928,7 +928,7 @@ func (m *TLUpdateDraftMessage) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_updateDraftMessage, layer)
 		return nil
 	}
@@ -1062,7 +1062,7 @@ func (m *TLSavedDialogList) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_savedDialogList, layer)
 		return nil
 	}
@@ -1881,7 +1881,7 @@ func (m *TLDialogInsertOrUpdateDialog) Encode(x *mtproto.EncodeBuf, layer int32)
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Int(m.GetPeerType())
 		x.Long(m.GetPeerId())
@@ -1923,7 +1923,7 @@ func (m *TLDialogInsertOrUpdateDialog) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		m.PeerType = dBuf.Int()
 		m.PeerId = dBuf.Long()
@@ -2492,7 +2492,7 @@ func (m *TLDialogGetMyDialogsData) Encode(x *mtproto.EncodeBuf, layer int32) err
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 
 	default:
@@ -2513,7 +2513,7 @@ func (m *TLDialogGetMyDialogsData) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m.User = true
@@ -2885,7 +2885,7 @@ func (m *TLDialogUpdateUnreadCount) Encode(x *mtproto.EncodeBuf, layer int32) er
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Int(m.GetPeerType())
 		x.Long(m.GetPeerId())
@@ -2919,7 +2919,7 @@ func (m *TLDialogUpdateUnreadCount) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		m.PeerType = dBuf.Int()
 		m.PeerId = dBuf.Long()
@@ -2956,7 +2956,7 @@ func (m *Vector_PeerWithDraftMessage) Encode(x *mtproto.EncodeBuf, layer int32) 
 }
 
 func (m *Vector_PeerWithDraftMessage) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*PeerWithDraftMessage, l1)
 	for i := int32(0); i < l1; i++ {
@@ -2984,7 +2984,7 @@ func (m *Vector_DialogPeer) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_DialogPeer) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.DialogPeer, l1)
 	for i := int32(0); i < l1; i++ {
@@ -3012,7 +3012,7 @@ func (m *Vector_DialogExt) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_DialogExt) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*DialogExt, l1)
 	for i := int32(0); i < l1; i++ {
@@ -3040,7 +3040,7 @@ func (m *Vector_DialogFilterExt) Encode(x *mtproto.EncodeBuf, layer int32) error
 }
 
 func (m *Vector_DialogFilterExt) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*DialogFilterExt, l1)
 	for i := int32(0); i < l1; i++ {
@@ -3068,7 +3068,7 @@ func (m *Vector_DialogPinnedExt) Encode(x *mtproto.EncodeBuf, layer int32) error
 }
 
 func (m *Vector_DialogPinnedExt) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*DialogPinnedExt, l1)
 	for i := int32(0); i < l1; i++ {

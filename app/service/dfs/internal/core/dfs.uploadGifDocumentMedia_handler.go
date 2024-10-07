@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
@@ -17,11 +17,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/bytes2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/dfs"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/imaging"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
+	"github.com/teamgram/marmota/pkg/bytes2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
+	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging"
+	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
 )
 
 const (
@@ -127,7 +127,7 @@ func (c *DfsCore) uploadGifMedia(creatorId int64, media *mtproto.InputMedia, fil
 	document := mtproto.MakeTLDocument(&mtproto.Document{
 		Id:            documentId,
 		AccessHash:    accessHash,
-		FileReference: []byte{}, // TODO: gen file_reference
+		FileReference: []byte{}, // TODO(@benqi): gen file_reference
 		Date:          int32(time.Now().Unix()),
 		MimeType:      "image/gif",
 		Size2:         gifFileSize.Size,
@@ -186,7 +186,7 @@ func (c *DfsCore) uploadHasThumbGifMp4Media(creatorId int64, media *mtproto.Inpu
 		}
 	}
 
-	// TODO: if x or y < 320
+	// TODO(@benqi): if x or y < 320
 	thumb, err := imaging.Decode(bytes.NewReader(thumbFileData))
 	if err != nil {
 		c.Logger.Errorf("dfs.uploadGifDocumentMedia - %v", err)
@@ -228,7 +228,7 @@ func (c *DfsCore) uploadHasThumbGifMp4Media(creatorId int64, media *mtproto.Inpu
 	document := mtproto.MakeTLDocument(&mtproto.Document{
 		Id:            documentId,
 		AccessHash:    accessHash,
-		FileReference: []byte{}, // TODO: gen file_reference
+		FileReference: []byte{}, // TODO(@benqi): gen file_reference
 		Date:          int32(time.Now().Unix()),
 		MimeType:      "video/mp4",
 		Size2:         gifFileSize.Size,
@@ -346,7 +346,7 @@ func (c *DfsCore) uploadGifMp4Media(creatorId int64, media *mtproto.InputMedia) 
 	document := mtproto.MakeTLDocument(&mtproto.Document{
 		Id:            documentId,
 		AccessHash:    accessHash,
-		FileReference: []byte{}, // TODO: gen file_reference
+		FileReference: []byte{}, // TODO(@benqi): gen file_reference
 		Date:          int32(time.Now().Unix()),
 		MimeType:      "video/mp4",
 		Size2:         gifFileSize.Size,

@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package sess
@@ -15,12 +15,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/queue2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/papercraft/proto/mtproto/rpc/metadata"
-	"github.com/lingyicute/papercraft-server/app/interface/session/internal/dao"
-	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
-	"github.com/lingyicute/papercraft-server/app/service/status/status"
+	"github.com/teamgram/marmota/pkg/queue2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/proto/mtproto/rpc/metadata"
+	"github.com/teamgram/teamgram-server/app/interface/session/internal/dao"
+	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
+	"github.com/teamgram/teamgram-server/app/service/status/status"
 
 	"github.com/zeromicro/go-zero/core/contextx"
 	"github.com/zeromicro/go-zero/core/jsonx"
@@ -64,7 +64,7 @@ func (s *SessionList) Reset(authId int64) (lastAuthId int64) {
 }
 
 func (s *SessionList) destroySession(sessionId int64) bool {
-	// TODO:
+	// TODO(@benqi):
 	if _, ok := s.sessions[sessionId]; ok {
 		// s.updates.onGenericSessionClose(sess)
 		delete(s.sessions, sessionId)
@@ -848,12 +848,12 @@ func (m *MainAuthWrapper) onSessionData(ctx context.Context, sessionMsg *session
 	message2 := new(mtproto.TLMessage2)
 	err := message2.Decode(mtproto.NewDecodeBuf(sessionMsg.buf))
 	if err != nil {
-		// TODO: close frontend conn??
+		// TODO(@benqi): close frontend conn??
 		logx.WithContext(ctx).Errorf("onSessionData - error: {%s}, data: {sessions: %s, gate_id: %d}", err, m, sessionMsg.gatewayId)
 		return
 	}
 
-	// TODO: load onNew
+	// TODO(@benqi): load onNew
 	if sList.cacheSalt == nil {
 		sList.cacheSalt, sList.cacheLastSalt, _ = m.cb.Dao.GetOrFetchNewSalt(ctx, sList.authId)
 	} else {
@@ -889,12 +889,12 @@ func (m *MainAuthWrapper) onSessionHttpData(ctx context.Context, sessionMsg *ses
 	//message2 := new(mtproto.TLMessage2)
 	//err := message2.Decode(mtproto.NewDecodeBuf(sessionMsg.buf))
 	//if err != nil {
-	//	// TODO: close frontend conn??
+	//	// TODO(@benqi): close frontend conn??
 	//	logx.WithContext(ctx).Errorf("onSessionHttpData - error: {%s}, data: {sessions: %s, gate_id: %d}", err, m, sessionMsg.gatewayId)
 	//	return
 	//}
 	//
-	//// TODO: load onNew
+	//// TODO(@benqi): load onNew
 	//if sList.cacheSalt == nil {
 	//	sList.cacheSalt, sList.cacheLastSalt, _ = m.cb.Dao.GetOrFetchNewSalt(ctx, sList.authId)
 	//} else {
@@ -995,7 +995,7 @@ func doRpcRequest(ctx context.Context, dao *dao.Dao, md *metadata.RpcMetadata, r
 		rpcResult mtproto.TLObject
 	)
 
-	// TODO: change state.
+	// TODO(@benqi): change state.
 	switch request.reqMsg.(type) {
 	case *mtproto.TLAuthBindTempAuthKey:
 		r := request.reqMsg.(*mtproto.TLAuthBindTempAuthKey)

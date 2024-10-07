@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,19 +13,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
 // ContactsGetContactIDs
 // contacts.getContactIDs#7adc669d hash:long = Vector<int>;
 func (c *ContactsCore) ContactsGetContactIDs(in *mtproto.TLContactsGetContactIDs) (*mtproto.Vector_Int, error) {
-	//  clients not use
+	// @benqi: clients not use
 
 	return &mtproto.Vector_Int{
 		Datas: []int32{},

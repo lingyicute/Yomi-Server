@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,23 +13,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/teamgram/proto/mtproto"
+	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 	"github.com/zeromicro/go-zero/core/mr"
 )
 
 // MessagesGetHistory
 // messages.getHistory#4423e6c5 peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
 func (c *MessagesCore) MessagesGetHistory(in *mtproto.TLMessagesGetHistory) (*mtproto.Messages_Messages, error) {
-	// TODO: 重复FromInputPeer2
+	// TODO(@benqi): 重复FromInputPeer2
 	var (
 		err  error
 		peer = mtproto.FromInputPeer2(c.MD.UserId, in.GetPeer())
@@ -54,7 +54,7 @@ func (c *MessagesCore) MessagesGetHistory(in *mtproto.TLMessagesGetHistory) (*mt
 				c.Logger.Errorf("messages.getHistory - error: %v", err)
 				return nil, err
 			}
-			// TODO: check migratedToId
+			// TODO(@benqi): check migratedToId
 			_ = chat
 		}
 	case mtproto.PEER_CHANNEL:

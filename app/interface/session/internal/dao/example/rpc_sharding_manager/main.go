@@ -1,4 +1,4 @@
-// Copyright © 2024 Papercraft Authors. All Rights Reserved.
+// Copyright © 2024 Teamgram Authors. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/net/ip"
-	"github.com/lingyicute/papercraft-server/app/interface/session/internal/config"
-	"github.com/lingyicute/papercraft-server/app/interface/session/internal/dao"
+	"github.com/teamgram/marmota/pkg/net/ip"
+	"github.com/teamgram/teamgram-server/app/interface/session/internal/config"
+	"github.com/teamgram/teamgram-server/app/interface/session/internal/dao"
 
 	"github.com/zeromicro/go-zero/core/conf"
 )

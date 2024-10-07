@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package status
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -221,7 +221,7 @@ func (m *TLSessionEntry) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_sessionEntry, layer)
 		return nil
 	}
@@ -353,7 +353,7 @@ func (m *TLUserSessionEntryList) Encode(x *mtproto.EncodeBuf, layer int32) error
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_userSessionEntryList, layer)
 		return nil
 	}
@@ -813,7 +813,7 @@ func (m *Vector_UserSessionEntryList) Encode(x *mtproto.EncodeBuf, layer int32) 
 }
 
 func (m *Vector_UserSessionEntryList) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*UserSessionEntryList, l1)
 	for i := int32(0); i < l1; i++ {

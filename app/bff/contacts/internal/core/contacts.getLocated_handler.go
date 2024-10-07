@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
 // ContactsGetLocated
 // contacts.getLocated#d348bc44 flags:# background:flags.1?true geo_point:InputGeoPoint self_expires:flags.0?int = Updates;
 func (c *ContactsCore) ContactsGetLocated(in *mtproto.TLContactsGetLocated) (*mtproto.Updates, error) {
 	// TODO: not impl
-	c.Logger.Errorf("contacts.getLocated blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	c.Logger.Errorf("contacts.getLocated blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 	return mtproto.MakeEmptyUpdates(), nil
 }

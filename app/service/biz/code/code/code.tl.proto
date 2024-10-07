@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 syntax = "proto3";
@@ -17,7 +17,7 @@ import "schema.tl.core_types.proto";
 import "schema.tl.transport.proto";
 import "schema.tl.sync.proto";
 
-option go_package = "github.com/lingyicute/papercraft-server/app/service/biz/code/code";
+option go_package = "github.com/teamgram/teamgram-server/app/service/biz/code/code";
 
 enum TLConstructor {
     CRC32_UNKNOWN = 0;

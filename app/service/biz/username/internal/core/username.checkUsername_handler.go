@@ -1,16 +1,16 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
 
 import (
-	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
 )
 
 // UsernameCheckUsername

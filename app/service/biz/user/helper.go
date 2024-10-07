@@ -2,19 +2,19 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package user_helper
 
 import (
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/config"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dao"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/server/grpc/service"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/svc"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/config"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dao"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/server/grpc/service"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/svc"
 )
 
 type (

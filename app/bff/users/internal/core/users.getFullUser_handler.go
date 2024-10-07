@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,17 +13,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/marmota/pkg/utils"
-	"github.com/papercraft/proto/mtproto"
-	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
-	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/teamgram/marmota/pkg/utils"
+	"github.com/teamgram/proto/mtproto"
+	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
+	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 
 	"github.com/zeromicro/go-zero/core/mr"
 )
@@ -114,22 +114,22 @@ func (c *UsersCore) UsersGetFullUser(in *mtproto.TLUsersGetFullUser) (*mtproto.U
 				Months:       12,
 				Currency:     "CNY",
 				Amount:       20900,
-				BotUrl:       "https://papercraft-official.github.io/$premgift448603711_12_5248da16f536f717a2",
-				StoreProduct: mtproto.MakeFlagsString("org.papercraft.papercraftPremium.twelveMonths"),
+				BotUrl:       "https://t.me/$premgift448603711_12_5248da16f536f717a2",
+				StoreProduct: mtproto.MakeFlagsString("org.telegram.telegramPremium.twelveMonths"),
 			}).To_PremiumGiftOption(),
 			mtproto.MakeTLPremiumGiftOption(&mtproto.PremiumGiftOption{
 				Months:       6,
 				Currency:     "CNY",
 				Amount:       10900,
-				BotUrl:       "https://papercraft-official.github.io/$premgift448603711_6_c7aae8edbdae927b72",
-				StoreProduct: mtproto.MakeFlagsString("org.papercraft.papercraftPremium.sixMonths"),
+				BotUrl:       "https://t.me/$premgift448603711_6_c7aae8edbdae927b72",
+				StoreProduct: mtproto.MakeFlagsString("org.telegram.telegramPremium.sixMonths"),
 			}).To_PremiumGiftOption(),
 			mtproto.MakeTLPremiumGiftOption(&mtproto.PremiumGiftOption{
 				Months:       3,
 				Currency:     "CNY",
 				Amount:       8499,
-				BotUrl:       "https://papercraft-official.github.io/$premgift448603711_3_051b80db4901b91dd5",
-				StoreProduct: mtproto.MakeFlagsString("org.papercraft.papercraftPremium.threeMonths"),
+				BotUrl:       "https://t.me/$premgift448603711_3_051b80db4901b91dd5",
+				StoreProduct: mtproto.MakeFlagsString("org.telegram.telegramPremium.threeMonths"),
 			}).To_PremiumGiftOption(),
 		}
 	}

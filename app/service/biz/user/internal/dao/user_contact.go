@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -24,11 +24,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/papercraft/marmota/pkg/container2"
-	"github.com/papercraft/marmota/pkg/stores/sqlc"
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dal/dataobject"
+	"github.com/teamgram/marmota/pkg/container2"
+	"github.com/teamgram/marmota/pkg/stores/sqlc"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"github.com/zeromicro/go-zero/core/mr"
@@ -167,7 +167,7 @@ func (d *Dao) PutUserContact(ctx context.Context, changeMutual bool, do *dataobj
 						return
 					}
 
-					// // TODO: set addPhonePrivacyException
+					// // TODO(@benqi): set addPhonePrivacyException
 					// if mtproto.FromBool(in.AddPhonePrivacyException) {
 					// 	//
 					// }

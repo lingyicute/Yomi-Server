@@ -1,13 +1,13 @@
-// Copyright (c) 2024-present, Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2024-present, Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package http
 
 import (
-	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/svc"
+	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )

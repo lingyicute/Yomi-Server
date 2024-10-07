@@ -2,18 +2,18 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright 2024 Papercraft Authors.
+ * Copyright 2024 Teamgram Authors.
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package sponsoredmessages_helper
 
 import (
-	"github.com/lingyicute/papercraft-server/app/bff/sponsoredmessages/internal/config"
-	"github.com/lingyicute/papercraft-server/app/bff/sponsoredmessages/internal/server/grpc/service"
-	"github.com/lingyicute/papercraft-server/app/bff/sponsoredmessages/internal/svc"
+	"github.com/teamgram/teamgram-server/app/bff/sponsoredmessages/internal/config"
+	"github.com/teamgram/teamgram-server/app/bff/sponsoredmessages/internal/server/grpc/service"
+	"github.com/teamgram/teamgram-server/app/bff/sponsoredmessages/internal/svc"
 )
 
 type (

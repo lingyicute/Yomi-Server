@@ -2,18 +2,18 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package main
 
 import (
-	"github.com/papercraft/marmota/pkg/commands"
+	"github.com/teamgram/marmota/pkg/commands"
 
-	"github.com/lingyicute/papercraft-server/app/service/biz/username/internal/server"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/internal/server"
 )
 
 func main() {

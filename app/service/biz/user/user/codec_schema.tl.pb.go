@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package user
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -530,7 +530,7 @@ func (m *TLLastSeenData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_lastSeenData, layer)
 		return nil
 	}
@@ -656,7 +656,7 @@ func (m *TLPeerPeerNotifySettings) Encode(x *mtproto.EncodeBuf, layer int32) err
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_peerPeerNotifySettings, layer)
 		return nil
 	}
@@ -815,7 +815,7 @@ func (m *TLUserImportedContacts) Encode(x *mtproto.EncodeBuf, layer int32) error
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_userImportedContacts, layer)
 		return nil
 	}
@@ -1002,7 +1002,7 @@ func (m *TLUsersDataFound) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_usersDataFound, layer)
 		return nil
 	}
@@ -1082,7 +1082,7 @@ func (m *TLUsersIdFound) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_usersIdFound, layer)
 		return nil
 	}
@@ -1248,7 +1248,7 @@ func (m *TLUserGetImmutableUser) Encode(x *mtproto.EncodeBuf, layer int32) error
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetId())
 
 		x.VectorLong(m.GetContacts())
@@ -1271,7 +1271,7 @@ func (m *TLUserGetImmutableUser) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.Id = dBuf.Long()
 		if (flags & (1 << 1)) != 0 {
 			m.Privacy = true
@@ -1901,7 +1901,7 @@ func (m *TLUserCheckPrivacy) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Int(m.GetKeyType())
 		x.Long(m.GetPeerId())
@@ -1924,7 +1924,7 @@ func (m *TLUserCheckPrivacy) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		m.KeyType = dBuf.Int()
 		m.PeerId = dBuf.Long()
@@ -2580,7 +2580,7 @@ func (m *TLUserSetContentSettings) Encode(x *mtproto.EncodeBuf, layer int32) err
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 
 	default:
@@ -2601,7 +2601,7 @@ func (m *TLUserSetContentSettings) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m.SensitiveEnabled = true
@@ -3768,7 +3768,7 @@ func (m *TLUserUpdateBotData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetBotId())
 		if m.GetBotChatHistory() != nil {
 			m.GetBotChatHistory().Encode(x, layer)
@@ -3808,7 +3808,7 @@ func (m *TLUserUpdateBotData) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.BotId = dBuf.Long()
 		if (flags & (1 << 15)) != 0 {
 			m3 := &mtproto.Bool{}
@@ -3866,7 +3866,7 @@ func (m *TLUserGetImmutableUserV2) Encode(x *mtproto.EncodeBuf, layer int32) err
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetId())
 		if m.GetTo() != nil {
 			x.VectorLong(m.GetTo())
@@ -3890,7 +3890,7 @@ func (m *TLUserGetImmutableUserV2) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.Id = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m.Privacy = true
@@ -3932,7 +3932,7 @@ func (m *TLUserGetMutableUsersV2) Encode(x *mtproto.EncodeBuf, layer int32) erro
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 
 		x.VectorLong(m.GetId())
 
@@ -3958,7 +3958,7 @@ func (m *TLUserGetMutableUsersV2) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 
 		m.Id = dBuf.VectorLong()
 
@@ -4121,7 +4121,7 @@ func (m *TLUserSetColor) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Int(m.GetColor())
 		x.Long(m.GetBackgroundEmojiId())
@@ -4144,7 +4144,7 @@ func (m *TLUserSetColor) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		if (flags & (1 << 1)) != 0 {
 			m.ForProfile = true
@@ -4176,7 +4176,7 @@ func (m *TLUserUpdateBirthday) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		if m.GetBirthday() != nil {
 			m.GetBirthday().Encode(x, layer)
@@ -4200,7 +4200,7 @@ func (m *TLUserUpdateBirthday) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		if (flags & (1 << 1)) != 0 {
 			m3 := &mtproto.Birthday{}
@@ -4312,7 +4312,7 @@ func (m *Vector_LastSeenData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_LastSeenData) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*LastSeenData, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4340,7 +4340,7 @@ func (m *Vector_ImmutableUser) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_ImmutableUser) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.ImmutableUser, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4368,7 +4368,7 @@ func (m *Vector_PeerPeerNotifySettings) Encode(x *mtproto.EncodeBuf, layer int32
 }
 
 func (m *Vector_PeerPeerNotifySettings) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*PeerPeerNotifySettings, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4396,7 +4396,7 @@ func (m *Vector_PrivacyRule) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_PrivacyRule) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.PrivacyRule, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4442,7 +4442,7 @@ func (m *Vector_PeerBlocked) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_PeerBlocked) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.PeerBlocked, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4470,7 +4470,7 @@ func (m *Vector_ContactData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_ContactData) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.ContactData, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4498,7 +4498,7 @@ func (m *Vector_InputContact) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_InputContact) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.InputContact, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4526,7 +4526,7 @@ func (m *Vector_UserData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_UserData) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.UserData, l1)
 	for i := int32(0); i < l1; i++ {
@@ -4554,7 +4554,7 @@ func (m *Vector_ContactBirthday) Encode(x *mtproto.EncodeBuf, layer int32) error
 }
 
 func (m *Vector_ContactBirthday) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.ContactBirthday, l1)
 	for i := int32(0); i < l1; i++ {

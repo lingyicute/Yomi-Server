@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package dao
@@ -9,8 +9,8 @@ package dao
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
 )
 
 func (d *Dao) ReadReactionUnreadMessage(ctx context.Context, userId int64, msgId int32) error {

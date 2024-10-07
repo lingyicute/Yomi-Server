@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -23,12 +23,12 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
-	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
-	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
+	"github.com/teamgram/proto/mtproto"
+	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -151,7 +151,7 @@ func (c *MessagesCore) makeForwardMessages(
 		// err error
 	)
 
-	// TODO: sorted map
+	// TODO(@benqi): sorted map
 	findRandomIdById := func(id int32) int64 {
 		for i := 0; i < len(idList); i++ {
 			if id == idList[i] {
@@ -168,7 +168,7 @@ func (c *MessagesCore) makeForwardMessages(
 	switch fromPeer.PeerType {
 	case mtproto.PEER_CHANNEL:
 		// TODO: not impl
-		c.Logger.Errorf("messages.forwardMessages blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+		c.Logger.Errorf("messages.forwardMessages blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:
@@ -200,7 +200,7 @@ func (c *MessagesCore) makeForwardMessages(
 	groupedIds := make(map[int64]int64)
 	for _, box := range messageList.Datas {
 		m := box.Message
-		// TODO: rid is 0
+		// TODO(@benqi): rid is 0
 
 		if m.GetGroupedId() != nil {
 			groupedId := m.GetGroupedId().GetValue()
@@ -239,7 +239,7 @@ func (c *MessagesCore) makeForwardMessages(
 					fwdFrom.ChannelPost = &wrapperspb.Int32Value{Value: m.Id}
 					fwdFrom.PostAuthor = m.PostAuthor
 					fwdFrom.FromId = mtproto.MakePeerChannel(fromPeer.PeerId)
-					// TODO: saved_from_peer and saved_from_msg_id??
+					// TODO(@benqi): saved_from_peer and saved_from_msg_id??
 				} else {
 					fromId := box.SenderUserId
 					if c.checkForwardPrivacy(c.ctx, fromId, c.MD.UserId) {
@@ -285,7 +285,7 @@ func (c *MessagesCore) makeForwardMessages(
 			}
 		}
 
-		// TODO: make message, ref sendMessage
+		// TODO(@benqi): make message, ref sendMessage
 		m.PeerId = toPeer.ToPeer()
 		m.FromId = mtproto.MakePeerUser(c.MD.UserId)
 		m.Date = now

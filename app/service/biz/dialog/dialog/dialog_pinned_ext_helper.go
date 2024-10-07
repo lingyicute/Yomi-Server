@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dialog
@@ -25,6 +25,6 @@ func (m DialogPinnedExtList) Swap(i, j int) {
 	m[j], m[i] = m[i], m[j]
 }
 func (m DialogPinnedExtList) Less(i, j int) bool {
-	// TODO: if date[i] == date[j]
+	// TODO(@benqi): if date[i] == date[j]
 	return m[i].Order < m[j].Order
 }

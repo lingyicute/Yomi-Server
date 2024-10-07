@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package gateway
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )

@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -11,12 +11,12 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
-	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
-	mediapb "github.com/lingyicute/papercraft-server/app/service/media/media"
-	"github.com/lingyicute/papercraft-server/pkg/phonenumber"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
+	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	mediapb "github.com/teamgram/teamgram-server/app/service/media/media"
+	"github.com/teamgram/teamgram-server/pkg/phonenumber"
 )
 
 // draft
@@ -193,18 +193,18 @@ func (c *MessagesCore) makeMediaByInputMedia(media *mtproto.InputMedia) (message
 
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaDocumentExternal:
-		// TODO: MessageMedia???
+		// TODO(@benqi): MessageMedia???
 		// inputMediaDocumentExternal#fb52dc99 flags:# url:string ttl_seconds:flags.0?int = InputMedia;
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaGame:
 		// inputMediaGame#d33f43f3 id:InputGame = InputMedia;
 
-		// TODO: Not impl inputMediaGame
+		// TODO(@benqi): Not impl inputMediaGame
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaInvoice:
 		// inputMediaInvoice#d9799874 flags:# title:string description:string photo:flags.0?InputWebDocument invoice:Invoice payload:bytes provider:string provider_data:DataJSON start_param:flags.1?string = InputMedia;
 
-		// TODO: Not impl inputMediaGame
+		// TODO(@benqi): Not impl inputMediaGame
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaGeoLive:
 		// inputMediaGeoLive#971fa843 flags:# stopped:flags.0?true geo_point:InputGeoPoint heading:flags.2?int period:flags.1?int proximity_notification_radius:flags.3?int = InputMedia;
@@ -216,7 +216,7 @@ func (c *MessagesCore) makeMediaByInputMedia(media *mtproto.InputMedia) (message
 	case mtproto.Predicate_inputMediaPoll:
 		// inputMediaPoll#f94e5f1 flags:# poll:Poll correct_answers:flags.0?Vector<bytes> solution:flags.1?string solution_entities:flags.1?Vector<MessageEntity> = InputMedia;
 
-		// TODO: Not impl inputMediaPoll
+		// TODO(@benqi): Not impl inputMediaPoll
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaDice:
 		// inputMediaDice#e66fbf7b emoticon:string = InputMedia;
@@ -250,7 +250,7 @@ func (c *MessagesCore) makeMediaByInputMedia(media *mtproto.InputMedia) (message
 	return
 }
 
-//// TODO: mention...
+//// TODO(@benqi): mention...
 //func (c *MessagesCore) fixMessageEntities(fromId int64, peer *mtproto.PeerUtil, noWebpage bool, message *mtproto.Message, hasBot func() bool) (*mtproto.Message, error) {
 //	var (
 //		entities mtproto.MessageEntitySlice
@@ -298,7 +298,7 @@ func (c *MessagesCore) makeMediaByInputMedia(media *mtproto.InputMedia) (message
 //	}
 //
 //	if !noWebpage && firstUrl != "" {
-//		// TODO: disable
+//		// TODO(@benqi): disable
 //		if c.svcCtx.Plugin != nil {
 //			ctx, _ := metadata.RpcMetadataToOutgoing(c.ctx, c.MD)
 //			webpage, _ := c.svcCtx.Plugin.GetWebpagePreview(ctx, firstUrl)
@@ -318,7 +318,7 @@ func (c *MessagesCore) makeMediaByInputMedia(media *mtproto.InputMedia) (message
 //			}
 //
 //			if entity.UserId_INPUTUSER.UserId != 0 {
-//				// TODO: check user_id
+//				// TODO(@benqi): check user_id
 //				entityMentionName := mtproto.MakeTLMessageEntityMentionName(&mtproto.MessageEntity{
 //					Offset:       entity.Offset,
 //					Length:       entity.Length,

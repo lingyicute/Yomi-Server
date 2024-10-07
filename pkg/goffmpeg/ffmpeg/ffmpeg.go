@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"strings"
 
-	"github.com/lingyicute/papercraft-server/pkg/goffmpeg/utils"
+	"github.com/teamgram/teamgram-server/pkg/goffmpeg/utils"
 )
 
 // Configuration ...

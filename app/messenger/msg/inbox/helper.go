@@ -2,20 +2,20 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package inbox_helper
 
 import (
-	kafka "github.com/papercraft/marmota/pkg/mq"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/internal/config"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/internal/core"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/internal/server/mq"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/internal/svc"
+	kafka "github.com/teamgram/marmota/pkg/mq"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/internal/config"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/internal/core"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/internal/server/mq"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/internal/svc"
 )
 
 type (

@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package core
@@ -9,9 +9,9 @@ package core
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/papercraft/proto/mtproto/rpc/metadata"
-	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/svc"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/proto/mtproto/rpc/metadata"
+	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

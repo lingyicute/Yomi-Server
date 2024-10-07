@@ -1,4 +1,4 @@
-// Copyright © 2024 Papercraft Authors. All Rights Reserved.
+// Copyright © 2024 Teamgram Authors. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 	"fmt"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/server/gnet"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/server/gnet"
 )
 
 var (

@@ -1,7 +1,7 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package httpx
@@ -11,8 +11,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/pkg/httpx/render"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/pkg/httpx/render"
 
 	"github.com/zeromicro/go-zero/rest/httpx"
 	"google.golang.org/protobuf/encoding/protojson"

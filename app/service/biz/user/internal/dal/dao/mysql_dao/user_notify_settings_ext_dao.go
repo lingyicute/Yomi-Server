@@ -2,7 +2,7 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2022-present,  Papercraft Authors.
+ * Copyright (c) 2022-present,  Teamgram Authors.
  *  All rights reserved.
  *
  * Author: teagramio (teagram.io@gmail.com)
@@ -14,18 +14,18 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 	"strings"
 
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/lingyicute/papercraft-server/app/service/biz/user/internal/dal/dataobject"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/teamgram-server/app/service/biz/user/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
 // InsertOrUpdateExt
 // insert into user_notify_settings(user_id, peer_type, peer_id, show_previews, silent, mute_until, sound) values (:user_id, :peer_type, :peer_id, :show_previews, :silent, :mute_until, :sound) on duplicate key update show_previews = values(show_previews), silent = values(silent), mute_until = values(mute_until), sound = values(sound), deleted = 0
-// TODO: sqlmap
+// TODO(@benqi): sqlmap
 func (dao *UserNotifySettingsDAO) InsertOrUpdateExt(ctx context.Context, userId int64, peerType int32, peerId int64, cMap map[string]interface{}) (lastInsertId, rowsAffected int64, err error) {
 	var (
 		s1 []string
@@ -74,7 +74,7 @@ func (dao *UserNotifySettingsDAO) InsertOrUpdateExt(ctx context.Context, userId 
 
 // InsertOrUpdateExtTx
 // insert into user_notify_settings(user_id, peer_type, peer_id, show_previews, silent, mute_until, sound) values (:user_id, :peer_type, :peer_id, :show_previews, :silent, :mute_until, :sound) on duplicate key update show_previews = values(show_previews), silent = values(silent), mute_until = values(mute_until), sound = values(sound), deleted = 0
-// TODO: sqlmap
+// TODO(@benqi): sqlmap
 func (dao *UserNotifySettingsDAO) InsertOrUpdateExtTx(tx *sqlx.Tx, userId int64, peerType int32, peerId int64, cMap map[string]interface{}) (lastInsertId, rowsAffected int64, err error) {
 	var (
 		s1 []string
@@ -121,7 +121,7 @@ func (dao *UserNotifySettingsDAO) InsertOrUpdateExtTx(tx *sqlx.Tx, userId int64,
 
 // SelectListWithCB
 // select id, user_id, peer_type, peer_id, show_previews, silent, mute_until, sound from user_notify_settings where user_id = :user_id and deleted = 0
-// TODO: sqlmap
+// TODO(@benqi): sqlmap
 func (dao *UserNotifySettingsDAO) SelectListWithCB(ctx context.Context, userId int64, peers []*mtproto.PeerUtil, cb func(i int, v *dataobject.UserNotifySettingsDO)) (rList []dataobject.UserNotifySettingsDO, err error) {
 	var (
 		qVs                                   []string

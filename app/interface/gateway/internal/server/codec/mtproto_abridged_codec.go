@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package codec
@@ -24,12 +24,12 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	log "github.com/zeromicro/go-zero/core/logx"
 )
 
-// https://papercraft-official.github.io/mtproto#tcp-transport
+// https://core.telegram.org/mtproto#tcp-transport
 //
 // There is an abridged version of the same protocol:
 // if the client sends 0xef as the first byte (**important:** only prior to the very first data packet),
@@ -97,7 +97,7 @@ func (c *AbridgedCodec) Receive() (interface{}, error) {
 		log.Infof("readFull2: %s", hex.EncodeToString(buf[:256]))
 	}
 
-	// TODO: process report ack and quickack
+	// TODO(@benqi): process report ack and quickack
 	// 截断QuickAck消息，客户端有问题
 	if size == 4 {
 		log.Errorf("server response error: ", int32(binary.LittleEndian.Uint32(buf)))

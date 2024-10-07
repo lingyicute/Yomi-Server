@@ -2,19 +2,19 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright 2022 Papercraft Authors.
+ * Copyright 2022 Teamgram Authors.
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package drafts_helper
 
 import (
-	"github.com/lingyicute/papercraft-server/app/bff/drafts/internal/config"
-	"github.com/lingyicute/papercraft-server/app/bff/drafts/internal/server/grpc/service"
-	"github.com/lingyicute/papercraft-server/app/bff/drafts/internal/svc"
-	"github.com/lingyicute/papercraft-server/app/bff/drafts/plugin"
+	"github.com/teamgram/teamgram-server/app/bff/drafts/internal/config"
+	"github.com/teamgram/teamgram-server/app/bff/drafts/internal/server/grpc/service"
+	"github.com/teamgram/teamgram-server/app/bff/drafts/internal/svc"
+	"github.com/teamgram/teamgram-server/app/bff/drafts/plugin"
 )
 
 type (

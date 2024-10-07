@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,18 +13,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/marmota/pkg/container2/sets"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/internal/dal/dataobject"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
-	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
+	"github.com/teamgram/marmota/pkg/container2/sets"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/internal/dal/dataobject"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
+	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
 )
 
 // InboxUpdatePinnedMessage

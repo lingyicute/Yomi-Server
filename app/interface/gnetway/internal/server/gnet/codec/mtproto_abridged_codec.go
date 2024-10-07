@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,10 +19,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
-// https://papercraft-official.github.io/mtproto#tcp-transport
+// https://core.telegram.org/mtproto#tcp-transport
 //
 // There is an abridged version of the same protocol:
 // if the client sends 0xef as the first byte (**important:** only prior to the very first data packet),
@@ -125,7 +125,7 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 			n = (int(c.packetLen[1]) | int(c.packetLen[2])<<8 | int(c.packetLen[3])<<16) << 2
 			// log.Debugf("n = %d", n)
 			if n > MAX_MTPRORO_FRAME_SIZE {
-				// TODO: close conn
+				// TODO(@benqi): close conn
 				return nil, fmt.Errorf("too large data(%d)", n)
 			}
 		}
@@ -173,7 +173,7 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 		n = (int(c.packetLen[1]) | int(c.packetLen[2])<<8 | int(c.packetLen[3])<<16) << 2
 		// log.Debugf("n = %d", n)
 		if n > MAX_MTPRORO_FRAME_SIZE {
-			// TODO: close conn
+			// TODO(@benqi): close conn
 			return nil, fmt.Errorf("too large data(%d)", n)
 		}
 		if buf, err = in.readN(n); err != nil {
@@ -192,7 +192,7 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 		n = (int(c.packetLen[1]) | int(c.packetLen[2])<<8 | int(c.packetLen[3])<<16) << 2
 		// log.Debugf("n = %d", n)
 		if n > MAX_MTPRORO_FRAME_SIZE {
-			// TODO: close conn
+			// TODO(@benqi): close conn
 			return nil, fmt.Errorf("too large data(%d)", n)
 		}
 		if buf, err = in.readN(n); err != nil {
@@ -209,6 +209,6 @@ func (c *AbridgedCodec) Decode(conn CodecReader) (interface{}, error) {
 		return message, nil
 	}
 
-	// TODO: close conn
+	// TODO(@benqi): close conn
 	return nil, fmt.Errorf("unknown error")
 }

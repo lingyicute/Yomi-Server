@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,8 +18,8 @@ package gnet
 import (
 	"errors"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/server/gnet/codec"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/server/gnet/codec"
 
 	"github.com/panjf2000/gnet/v2"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -30,7 +30,7 @@ func (s *Server) onTcpData(ctx *connContext, c gnet.Conn) (action gnet.Action) {
 		var (
 			err error
 		)
-		ctx.codec, err = codec.CreateMTProtoCodec(c)
+		ctx.codec, err = codec.CreateCodec(c)
 		if err != nil {
 			if errors.Is(err, codec.ErrUnexpectedEOF) {
 				return gnet.None

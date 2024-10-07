@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
@@ -12,9 +12,9 @@ package core
 import (
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/dfs"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
+	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
 )
 
 // DfsWriteFilePartData
@@ -50,7 +50,7 @@ func (c *DfsCore) DfsWriteFilePartData(in *dfs.TLDfsWriteFilePartData) (*mtproto
 			Mtime:             time.Now().Unix(),
 		})
 
-		// TODO: error
+		// TODO(@benqi): error
 		if err != nil {
 			c.Logger.Errorf("dfs.writeFilePartData - error: %v", err)
 			return nil, mtproto.ErrFilePartInvalid
@@ -62,7 +62,7 @@ func (c *DfsCore) DfsWriteFilePartData(in *dfs.TLDfsWriteFilePartData) (*mtproto
 			FilePartSize: len(in.Bytes),
 		})
 
-		// TODO: error
+		// TODO(@benqi): error
 		if err != nil {
 			c.Logger.Errorf("dfs.writeFilePartData - error: %v", err)
 			return nil, mtproto.ErrFilePartInvalid
@@ -79,7 +79,7 @@ func (c *DfsCore) DfsWriteFilePartData(in *dfs.TLDfsWriteFilePartData) (*mtproto
 					LastFilePartSize: len(in.Bytes),
 				})
 
-			// TODO: error
+			// TODO(@benqi): error
 			if err != nil {
 				c.Logger.Errorf("dfs.writeFilePartData - error: %v", err)
 				return nil, mtproto.ErrFilePartInvalid

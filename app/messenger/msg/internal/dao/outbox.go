@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -25,19 +25,19 @@ import (
 	"math"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/hack"
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/internal/dal/dataobject"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
-	idgen_client "github.com/lingyicute/papercraft-server/app/service/idgen/client"
+	"github.com/teamgram/marmota/pkg/hack"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/internal/dal/dataobject"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
 func makeMessageBoxByDO(boxDO *dataobject.MessagesDO) *mtproto.MessageBox {
-	// TODO: check boxDO and dataDO
+	// TODO(@benqi): check boxDO and dataDO
 	// message, _ := mtproto.DecodeMessage(int(boxDO.MessageType), hack.Bytes(boxDO.MessageData))
 
 	box := &mtproto.MessageBox{
@@ -154,7 +154,7 @@ func (d *Dao) sendMessageToOutbox(ctx context.Context, fromId int64, peer *mtpro
 		}
 
 		if rowsAffected == 0 {
-			// TODO: random_id已经存在
+			// TODO(@benqi): random_id已经存在
 			if lastInsertId > 0 {
 				result.Data = lastInsertId
 				return
@@ -183,14 +183,14 @@ func (d *Dao) sendMessageToOutbox(ctx context.Context, fromId int64, peer *mtpro
 			if dialogMessageId > 1 {
 				//// if box_id > 1, then dialogs already created.
 				//
-				//// TODO: unread_count and unread_mentions_count
+				//// TODO(@benqi): unread_count and unread_mentions_count
 				//cMap := map[string]interface{}{
 				//	"top_message": dialogDO.TopMessage,
 				//	"date2":       dialogDO.Date2,
 				//	"unread_mark": 0,
 				//}
 				//
-				//// TODO: clear draft
+				//// TODO(@benqi): clear draft
 				//if true {
 				//	cMap["draft_message_data"] = "null"
 				//	cMap["draft_type"] = 0
@@ -615,7 +615,7 @@ func (d *Dao) SendMessageToOutboxV1(ctx context.Context, fromId int64, peer *mtp
 		}
 
 		if rowsAffected == 0 {
-			// TODO: random_id已经存在
+			// TODO(@benqi): random_id已经存在
 			if lastInsertId > 0 {
 				result.Data = lastInsertId
 				return

@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package dao
@@ -9,8 +9,8 @@ package dao
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/internal/dal/dataobject"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/internal/dal/dataobject"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -31,7 +31,7 @@ func (d *Dao) GetOffsetIdBackwardSavedHistoryMessages(ctx context.Context, userI
 		_ = rList
 		// logx.WithContext(ctx).Infof("GetOffsetIdBackwardHistoryMessages: %v", rList)
 	case mtproto.PEER_CHANNEL:
-		logx.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+		logx.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 	}
 
 	messages = mtproto.ToSafeMessageBoxList(messages)
@@ -53,7 +53,7 @@ func (d *Dao) GetOffsetIdForwardSavedHistoryMessages(ctx context.Context, userId
 			})
 		_ = rList
 	case mtproto.PEER_CHANNEL:
-		logx.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+		logx.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 	}
 
 	messages = mtproto.ToSafeMessageBoxList(messages)
@@ -75,7 +75,7 @@ func (d *Dao) GetOffsetDateBackwardSavedHistoryMessages(ctx context.Context, use
 			})
 		_ = rList
 	case mtproto.PEER_CHANNEL:
-		logx.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+		logx.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 	}
 
 	messages = mtproto.ToSafeMessageBoxList(messages)
@@ -97,7 +97,7 @@ func (d *Dao) GetOffsetDateForwardSavedHistoryMessages(ctx context.Context, user
 			})
 		_ = rList
 	case mtproto.PEER_CHANNEL:
-		logx.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+		logx.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 	}
 
 	messages = mtproto.ToSafeMessageBoxList(messages)

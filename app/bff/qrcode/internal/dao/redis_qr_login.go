@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/lingyicute/papercraft-server/app/bff/qrcode/internal/model"
+	"github.com/teamgram/teamgram-server/app/bff/qrcode/internal/model"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -100,7 +100,7 @@ func (d *Dao) PutCacheQRLoginCode(ctx context.Context, keyId int64, qrCode *mode
 		}
 	)
 
-	// TODO: args error??
+	// TODO(@benqi): args error??
 	if err = d.kv.HmsetCtx(ctx, key, args); err != nil {
 		logx.WithContext(ctx).Error("conn.Send(HMSET %s,%v) error(%v)", key, args, err)
 		return

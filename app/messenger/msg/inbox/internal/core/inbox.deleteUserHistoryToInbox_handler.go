@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
 )
 
 // InboxDeleteUserHistoryToInbox
@@ -40,7 +40,7 @@ func (c *InboxCore) InboxDeleteUserHistoryToInbox(in *inbox.TLInboxDeleteUserHis
 		return mtproto.EmptyVoid, nil
 	}
 
-	// TODO: chat
+	// TODO(@benqi): chat
 	pts = c.svcCtx.Dao.IDGenClient2.NextNPtsId(c.ctx, in.PeerUserId, len(deleteIds)+1)
 	ptsCount = int32(len(deleteIds) + 1)
 

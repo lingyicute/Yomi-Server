@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package media
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -236,7 +236,7 @@ func (m *TLPhotoSizeList) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_photoSizeList, layer)
 		return nil
 	}
@@ -380,7 +380,7 @@ func (m *TLVideoSizeList) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_videoSizeList, layer)
 		return nil
 	}
@@ -442,7 +442,7 @@ func (m *TLMediaUploadPhotoFile) Encode(x *mtproto.EncodeBuf, layer int32) error
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetOwnerId())
 		m.GetFile().Encode(x, layer)
 		if m.GetStickers() != nil {
@@ -474,7 +474,7 @@ func (m *TLMediaUploadPhotoFile) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.OwnerId = dBuf.Long()
 
 		m3 := &mtproto.InputFile{}
@@ -530,7 +530,7 @@ func (m *TLMediaUploadProfilePhotoFile) Encode(x *mtproto.EncodeBuf, layer int32
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetOwnerId())
 		if m.GetFile() != nil {
 			m.GetFile().Encode(x, layer)
@@ -562,7 +562,7 @@ func (m *TLMediaUploadProfilePhotoFile) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.OwnerId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m3 := &mtproto.InputFile{}
@@ -1013,7 +1013,7 @@ func (m *TLMediaUploadThemeFile) Encode(x *mtproto.EncodeBuf, layer int32) error
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetOwnerId())
 		m.GetFile().Encode(x, layer)
 		if m.GetThumb() != nil {
@@ -1041,7 +1041,7 @@ func (m *TLMediaUploadThemeFile) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.OwnerId = dBuf.Long()
 
 		m3 := &mtproto.InputFile{}
@@ -1080,7 +1080,7 @@ func (m *TLMediaUploadStickerFile) Encode(x *mtproto.EncodeBuf, layer int32) err
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetOwnerId())
 		m.GetFile().Encode(x, layer)
 		if m.GetThumb() != nil {
@@ -1109,7 +1109,7 @@ func (m *TLMediaUploadStickerFile) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.OwnerId = dBuf.Long()
 
 		m3 := &mtproto.InputFile{}
@@ -1149,7 +1149,7 @@ func (m *TLMediaUploadRingtoneFile) Encode(x *mtproto.EncodeBuf, layer int32) er
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetOwnerId())
 		m.GetFile().Encode(x, layer)
 		x.String(m.GetMimeType())
@@ -1173,7 +1173,7 @@ func (m *TLMediaUploadRingtoneFile) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.OwnerId = dBuf.Long()
 
 		m3 := &mtproto.InputFile{}
@@ -1203,7 +1203,7 @@ func (m *Vector_PhotoSizeList) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_PhotoSizeList) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*PhotoSizeList, l1)
 	for i := int32(0); i < l1; i++ {
@@ -1231,7 +1231,7 @@ func (m *Vector_Document) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_Document) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*mtproto.Document, l1)
 	for i := int32(0); i < l1; i++ {

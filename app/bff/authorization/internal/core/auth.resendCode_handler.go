@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,15 +13,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/logic"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/logic"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
 )
 
 /*
@@ -66,13 +66,13 @@ func (c *AuthorizationCore) AuthResendCode(in *mtproto.TLAuthResendCode) (*mtpro
 	// 	303	NETWORK_MIGRATE_X	重复查询到数据中心X
 	// 	303	PHONE_MIGRATE_X	重复查询到数据中心X
 	//
-	// TODO: MIGRATE datacenter
+	// TODO(@benqi): MIGRATE datacenter
 	// android client:
 	//  migrateErrors.push_back("NETWORK_MIGRATE_");
 	//  migrateErrors.push_back("PHONE_MIGRATE_");
 	//  migrateErrors.push_back("USER_MIGRATE_");
 	//
-	// https://papercraft-official.github.io/api/datacenter
+	// https://core.telegram.org/api/datacenter
 	// The auth.sendCode method is the basic entry point when registering a new user or authorizing an existing user.
 	//   95% of all redirection cases to a different DC will occure when invoking this method.
 	//
@@ -88,13 +88,13 @@ func (c *AuthorizationCore) AuthResendCode(in *mtproto.TLAuthResendCode) (*mtpro
 	//
 	// if userDO == nil {
 	//	// phone registered
-	//	// TODO: 由phoneNumber和ip优选
+	//	// TODO(@benqi): 由phoneNumber和ip优选
 	// } else {
-	//	// TODO: 由userId优选
+	//	// TODO(@benqi): 由userId优选
 	// }
 
 	// 5. Check INPUT_REQUEST_TOO_LONG
-	// TODO:
+	// TODO(@benqi):
 	// 	400	INPUT_REQUEST_TOO_LONG	The request is too big
 
 	// 5. banned phone number
@@ -109,7 +109,7 @@ func (c *AuthorizationCore) AuthResendCode(in *mtproto.TLAuthResendCode) (*mtpro
 
 	// 400	PHONE_NUMBER_FLOOD	You asked for the code too many times.
 	// phone number flood
-	// TODO: PHONE_NUMBER_FLOOD
+	// TODO(@benqi): PHONE_NUMBER_FLOOD
 	// <string name="PhoneNumberFlood">Sorry, you have deleted and re-created your account too many times recently.
 	//    Please wait for a few days before signing up again.</string>
 	//
@@ -150,7 +150,7 @@ func (c *AuthorizationCore) AuthResendCode(in *mtproto.TLAuthResendCode) (*mtpro
 			//		m.VerifyCodeInterface.SendSmsVerifyCode(context.Background(), phoneNumber, codeData.PhoneCode, codeData.PhoneCodeHash)
 			//	}
 			//
-			//	// TODO: after sendSms success, save codeData
+			//	// TODO(@benqi): after sendSms success, save codeData
 			//	codeData.State = model.CodeStateSent
 			//	m.AuthCore.UpdatePhoneCodeData(context.Background(), authKeyId, phoneNumber, codeData.PhoneCodeHash, codeData)
 			//}()

@@ -1,57 +1,57 @@
 #!/usr/bin/env bash
 
 PWD=`pwd`
-PAPERCRAFTAPP=${PWD}"/app"
-INSTALL=${PWD}"/papercraftd"
+TEAMGRAMAPP=${PWD}"/app"
+INSTALL=${PWD}"/yomid"
 
 echo "build idgen ..."
-cd ${PAPERCRAFTAPP}/service/idgen/cmd/idgen
+cd ${TEAMGRAMAPP}/service/idgen/cmd/idgen
 go build -o ${INSTALL}/bin/idgen
 
 echo "build status ..."
-cd ${PAPERCRAFTAPP}/service/status/cmd/status
+cd ${TEAMGRAMAPP}/service/status/cmd/status
 go build -o ${INSTALL}/bin/status
 
 echo "build dfs ..."
-cd ${PAPERCRAFTAPP}/service/dfs/cmd/dfs
+cd ${TEAMGRAMAPP}/service/dfs/cmd/dfs
 go build -o ${INSTALL}/bin/dfs
 
 echo "build media ..."
-cd ${PAPERCRAFTAPP}/service/media/cmd/media
+cd ${TEAMGRAMAPP}/service/media/cmd/media
 go build -o ${INSTALL}/bin/media
 
 echo "build authsession ..."
-cd ${PAPERCRAFTAPP}/service/authsession/cmd/authsession
+cd ${TEAMGRAMAPP}/service/authsession/cmd/authsession
 go build -o ${INSTALL}/bin/authsession
 
 echo "build biz ..."
-cd ${PAPERCRAFTAPP}/service/biz/biz/cmd/biz
+cd ${TEAMGRAMAPP}/service/biz/biz/cmd/biz
 go build -o ${INSTALL}/bin/biz
 
 echo "build msg ..."
-cd ${PAPERCRAFTAPP}/messenger/msg/cmd/msg
+cd ${TEAMGRAMAPP}/messenger/msg/cmd/msg
 go build -o ${INSTALL}/bin/msg
 
 echo "build sync ..."
-cd ${PAPERCRAFTAPP}/messenger/sync/cmd/sync
+cd ${TEAMGRAMAPP}/messenger/sync/cmd/sync
 go build -o ${INSTALL}/bin/sync
 
 echo "build bff ..."
-cd ${PAPERCRAFTAPP}/bff/bff/cmd/bff
+cd ${TEAMGRAMAPP}/bff/bff/cmd/bff
 go build -o ${INSTALL}/bin/bff
 
 echo "build session ..."
-cd ${PAPERCRAFTAPP}/interface/session/cmd/session
+cd ${TEAMGRAMAPP}/interface/session/cmd/session
 go build -o ${INSTALL}/bin/session
 
 echo "build gateway ..."
-cd ${PAPERCRAFTAPP}/interface/gateway/cmd/gateway
+cd ${TEAMGRAMAPP}/interface/gateway/cmd/gateway
 go build -o ${INSTALL}/bin/gateway
 
 echo "build gnetway ..."
-cd ${PAPERCRAFTAPP}/interface/gnetway/cmd/gnetway
+cd ${TEAMGRAMAPP}/interface/gnetway/cmd/gnetway
 go build -o ${INSTALL}/bin/gnetway
 
 #echo "build httpserver ..."
-#cd ${PAPERCRAFTAPP}/interface/httpserver/cmd/httpserver
+#cd ${TEAMGRAMAPP}/interface/httpserver/cmd/httpserver
 #go build -o ${INSTALL}/bin/httpserver

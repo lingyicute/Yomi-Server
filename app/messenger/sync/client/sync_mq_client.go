@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package sync_client
@@ -10,9 +10,9 @@ import (
 	"context"
 	"strconv"
 
-	kafka "github.com/papercraft/marmota/pkg/mq"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	kafka "github.com/teamgram/marmota/pkg/mq"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"google.golang.org/protobuf/proto"

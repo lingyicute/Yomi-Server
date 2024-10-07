@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package dao
@@ -12,10 +12,10 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/cache"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/config"
-	sessionpb "github.com/lingyicute/papercraft-server/app/interface/session/session"
+	"github.com/teamgram/marmota/pkg/cache"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/config"
+	sessionpb "github.com/teamgram/teamgram-server/app/interface/session/session"
 
 	"github.com/zeromicro/go-zero/core/collection"
 	"github.com/zeromicro/go-zero/core/logx"

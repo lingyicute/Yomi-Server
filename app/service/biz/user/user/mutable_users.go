@@ -1,13 +1,13 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package user
 
 import (
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
 func (m *Vector_ImmutableUser) GetUnsafeUser(selfId, id int64) (*mtproto.User, error) {

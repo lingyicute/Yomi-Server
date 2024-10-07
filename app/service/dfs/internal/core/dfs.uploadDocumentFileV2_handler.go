@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
@@ -16,12 +16,12 @@ import (
 	"image"
 	"math/rand"
 
-	"github.com/papercraft/marmota/pkg/bytes2"
-	"github.com/papercraft/marmota/pkg/threading2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/dfs"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/imaging"
-	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
+	"github.com/teamgram/marmota/pkg/bytes2"
+	"github.com/teamgram/marmota/pkg/threading2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/dfs/dfs"
+	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging"
+	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
 )
 
 // DfsUploadDocumentFileV2

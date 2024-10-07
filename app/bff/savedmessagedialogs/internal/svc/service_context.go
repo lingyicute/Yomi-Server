@@ -1,4 +1,4 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,14 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package svc
 
 import (
-	"github.com/lingyicute/papercraft-server/app/bff/savedmessagedialogs/internal/config"
-	"github.com/lingyicute/papercraft-server/app/bff/savedmessagedialogs/internal/dao"
+	"github.com/teamgram/teamgram-server/app/bff/savedmessagedialogs/internal/config"
+	"github.com/teamgram/teamgram-server/app/bff/savedmessagedialogs/internal/dao"
 )
 
 type ServiceContext struct {

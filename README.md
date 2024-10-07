@@ -1,8 +1,8 @@
-# Papercraft - Unofficial open source [mtproto](https://papercraft-official.github.io/mtproto) server written in golang
-> open source mtproto server implemented in golang with compatible papercraft client.
+# Teamgram - Unofficial open source [mtproto](https://core.telegram.org/mtproto) server written in golang
+> open source mtproto server implemented in golang with compatible telegram client.
 
 ## Introduce
-Open source [mtproto](https://papercraft-official.github.io/mtproto) server implementation written in golang, support private deployment.
+Open source [mtproto](https://core.telegram.org/mtproto) server implementation written in golang, support private deployment.
 
 ## Features
 - MTProto 2.0
@@ -10,7 +10,7 @@ Open source [mtproto](https://papercraft-official.github.io/mtproto) server impl
   - Intermediate
   - Padded intermediate
   - Full
-- API Layer: 186
+- API Layer: 189
 - private chat
 - basic group
 - contacts
@@ -19,8 +19,8 @@ Open source [mtproto](https://papercraft-official.github.io/mtproto) server impl
 ## Architecture
 ![Architecture](docs/image/architecture-001.png)
 
-## Installing Papercraft 
-`Papercraft` relies on high-performance components: 
+## Installing Teamgram 
+`Teamgram` relies on high-performance components: 
 
 - **mysql5.7**
 - [redis](https://redis.io/)
@@ -29,60 +29,60 @@ Open source [mtproto](https://papercraft-official.github.io/mtproto) server impl
 - [minio](https://docs.min.io/docs/minio-quickstart-guide.html#GNU/Linux)
 - [ffmpeg](https://www.johnvansickle.com/ffmpeg/)
 
-Privatization deployment Before `Papercraft`, please make sure that the above five components have been installed. If your server does not have the above components, you must first install Missing components. 
+Privatization deployment Before `Teamgram`, please make sure that the above five components have been installed. If your server does not have the above components, you must first install Missing components. 
 
 - [Centos9 Stream Build and Install](docs/install-centos-9.md) [@A Feel]
-- [CentOS7 papercraft-server环境搭建](docs/install-centos-7.md) [@saeipi]
+- [CentOS7 teamgram-server环境搭建](docs/install-centos-7.md) [@saeipi]
 
 If you have the above components, it is recommended to use them directly. If not, it is recommended to use `docker-compose-env.yaml`.
 
 
 ### Source code deployment
-#### Install [Go environment](https://go.dev/doc/install). Make sure Go version is at least 1.17.
+#### Install [Go environment](https://go.dev/doc/install). Make sure Go version is at least 1.19.
 
 
 #### Get source code　
 
 ```
-git clone https://github.com/lingyicute/papercraft-server.git
-cd papercraft-server
+git clone https://github.com/teamgram/teamgram-server.git
+cd teamgram-server
 ```
 
 #### Init data
 - init database
 
 	```
-	1. create database papercraft
-	2. init papercraft database
-		mysql -uroot papercraft < papercraftd/sql/1_papercraft.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220321.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220326.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220328.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220401.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220412.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220419.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220423.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220504.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220721.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220826.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20220919.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20221008.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20221011.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20221016.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20221023.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20221101.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20221127.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20230707.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240107.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240108.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240111.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240112.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240113.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240114.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240420.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240620.sql
-		mysql -uroot papercraft < papercraftd/sql/migrate-20240828.sql
-		mysql -uroot papercraft < papercraftd/sql/z_init.sql
+	1. create database teamgram
+	2. init teamgram database
+		mysql -uroot teamgram < yomid/sql/1_teamgram.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220321.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220326.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220328.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220401.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220412.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220419.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220423.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220504.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220721.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220826.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20220919.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20221008.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20221011.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20221016.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20221023.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20221101.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20221127.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20230707.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240107.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240108.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240111.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240112.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240113.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240114.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240420.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240620.sql
+		mysql -uroot teamgram < yomid/sql/migrate-20240828.sql
+		mysql -uroot teamgram < yomid/sql/z_init.sql
 	```
 
 - init minio buckets
@@ -103,7 +103,7 @@ make
 #### Run
 
 ```
-cd papercraftd/bin
+cd yomid/bin
 ./runall2.sh
 ```
 
@@ -115,8 +115,8 @@ cd papercraftd/bin
 #### Get source code
 
 ```
-git clone https://github.com/lingyicute/papercraft-server.git
-cd papercraft-server
+git clone https://github.com/teamgram/teamgram-server.git
+cd teamgram-server
 ```
 
 #### Run
@@ -130,14 +130,26 @@ docker-compose up -d
 ```
 	
 ## Compatible clients
-[Android client for Papercraft](clients/papercraft-android.md)
+**Important**: default signIn verify code is **12345**
 
-[iOS client for Papercraft](clients/papercraft-ios.md)
+[Android client for Teamgram](clients/teamgram-android.md)
 
-[tdesktop for Papercraft](clients/papercraft-tdesktop.md)
+[iOS client for Teamgram](clients/teamgram-ios.md)
+
+[tdesktop for Teamgram](clients/teamgram-tdesktop.md)
 
 ## Feedback
-Please report bugs, concerns, suggestions by issues, or join papercraft group **[Papercraft](https://papercraft-official.github.io/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
+Please report bugs, concerns, suggestions by issues, or join telegram group **[Teamgram](https://t.me/+TjD5LZJ5XLRlCYLF)** to discuss problems around source code.
+
+## Notes
+If need enterprise edition:
+
+- sticker/theme/wallpaper/reactions/2fa/sms/push(apns/web/fcm)/secretchat/scheduled/...
+- channel/megagroup
+- audiocall/videocall/groupcall
+- bots
+
+please PM the **[author](https://t.me/benqi)**
 
 ## Give a Star! ⭐
 
@@ -145,4 +157,4 @@ If you like or are using this project to learn or start your solution, please gi
 
 ## Visitors Count
 
-<img align="left" src = "https://profile-counter.glitch.me/papercraft-server/count.svg" alt="Loading" />
+<img align="left" src = "https://profile-counter.glitch.me/teamgram-server/count.svg" alt="Loading" />

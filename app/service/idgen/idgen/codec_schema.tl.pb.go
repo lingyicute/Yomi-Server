@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package idgen
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -242,7 +242,7 @@ func (m *TLIdVal) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_idVal, layer)
 		return nil
 	}
@@ -308,7 +308,7 @@ func (m *TLIdVals) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_idVals, layer)
 		return nil
 	}
@@ -375,7 +375,7 @@ func (m *TLSeqIdVal) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_seqIdVal, layer)
 		return nil
 	}
@@ -532,7 +532,7 @@ func (m *TLInputId) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_inputId, layer)
 		return nil
 	}
@@ -596,7 +596,7 @@ func (m *TLInputIds) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_inputIds, layer)
 		return nil
 	}
@@ -661,7 +661,7 @@ func (m *TLInputSeqId) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_inputSeqId, layer)
 		return nil
 	}
@@ -730,7 +730,7 @@ func (m *TLInputNSeqId) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_inputNSeqId, layer)
 		return nil
 	}
@@ -1127,7 +1127,7 @@ func (m *Vector_IdVal) Encode(x *mtproto.EncodeBuf, layer int32) error {
 }
 
 func (m *Vector_IdVal) Decode(dBuf *mtproto.DecodeBuf) error {
-	dBuf.Int() // TODO: Check crc32 invalid
+	dBuf.Int() // TODO(@benqi): Check crc32 invalid
 	l1 := dBuf.Int()
 	m.Datas = make([]*IdVal, l1)
 	for i := int32(0); i < l1; i++ {

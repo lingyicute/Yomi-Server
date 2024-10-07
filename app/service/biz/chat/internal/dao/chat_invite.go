@@ -1,7 +1,7 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package dao
@@ -9,9 +9,9 @@ package dao
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/chat/internal/dal/dataobject"
-	"github.com/lingyicute/papercraft-server/pkg/env2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/chat/internal/dal/dataobject"
+	"github.com/teamgram/teamgram-server/pkg/env2"
 )
 
 // MakeChatInviteExported

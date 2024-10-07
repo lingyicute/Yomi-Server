@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,14 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/teamgram/proto/mtproto"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 )
 
 // AccountGetNotifySettings
@@ -34,11 +34,11 @@ func (c *NotificationCore) AccountGetNotifySettings(in *mtproto.TLAccountGetNoti
 	peer := mtproto.FromInputNotifyPeer(c.MD.UserId, in.Peer)
 	switch peer.PeerType {
 	case mtproto.PEER_USER:
-		// TODO: check peerUser Exists
+		// TODO(@benqi): check peerUser Exists
 	case mtproto.PEER_CHAT:
-		// TODO: check peerChat exists
+		// TODO(@benqi): check peerChat exists
 	case mtproto.PEER_CHANNEL:
-		// TODO: check peerChannel exists
+		// TODO(@benqi): check peerChannel exists
 	case mtproto.PEER_USERS:
 	case mtproto.PEER_CHATS:
 	case mtproto.PEER_BROADCASTS:

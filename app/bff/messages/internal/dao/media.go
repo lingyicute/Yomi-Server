@@ -1,7 +1,7 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package dao
@@ -10,12 +10,12 @@ import (
 	"context"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
-	media_client "github.com/lingyicute/papercraft-server/app/service/media/client"
-	mediapb "github.com/lingyicute/papercraft-server/app/service/media/media"
-	"github.com/lingyicute/papercraft-server/pkg/phonenumber"
+	"github.com/teamgram/proto/mtproto"
+	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	media_client "github.com/teamgram/teamgram-server/app/service/media/client"
+	mediapb "github.com/teamgram/teamgram-server/app/service/media/media"
+	"github.com/teamgram/teamgram-server/pkg/phonenumber"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -201,18 +201,18 @@ func GetMessageMedia(ctx context.Context, d MediaHelper, userId, ownerId int64, 
 
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaDocumentExternal:
-		// TODO: MessageMedia???
+		// TODO(@benqi): MessageMedia???
 		// inputMediaDocumentExternal#fb52dc99 flags:# url:string ttl_seconds:flags.0?int = InputMedia;
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaGame:
 		// inputMediaGame#d33f43f3 id:InputGame = InputMedia;
 
-		// TODO: Not impl inputMediaGame
+		// TODO(@benqi): Not impl inputMediaGame
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaInvoice:
 		// inputMediaInvoice#d9799874 flags:# title:string description:string photo:flags.0?InputWebDocument invoice:Invoice payload:bytes provider:string provider_data:DataJSON start_param:flags.1?string = InputMedia;
 
-		// TODO: Not impl inputMediaGame
+		// TODO(@benqi): Not impl inputMediaGame
 		messageMedia = mtproto.MakeTLMessageMediaUnsupported(nil).To_MessageMedia()
 	case mtproto.Predicate_inputMediaGeoLive:
 		// inputMediaGeoLive#971fa843 flags:# stopped:flags.0?true geo_point:InputGeoPoint heading:flags.2?int period:flags.1?int proximity_notification_radius:flags.3?int = InputMedia;

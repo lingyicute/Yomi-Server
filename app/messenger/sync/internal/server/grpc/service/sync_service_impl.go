@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package service
@@ -13,9 +13,9 @@ package service
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/core"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/core"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
 )
 
 // SyncUpdatesMe
@@ -84,7 +84,7 @@ func (s *Service) SyncPushBotUpdates(ctx context.Context, request *sync.TLSyncPu
 	c := core.New(ctx, s.svcCtx)
 	c.Logger.Debugf("sync.pushBotUpdates - metadata: %s, request: %s", c.MD, request)
 
-	c.Logger.Errorf("sync.pushBotUpdates blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	c.Logger.Errorf("sync.pushBotUpdates blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 	return mtproto.EmptyVoid, nil
 }

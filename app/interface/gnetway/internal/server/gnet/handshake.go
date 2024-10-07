@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package gnet
@@ -29,12 +29,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/hack"
-	"github.com/papercraft/marmota/pkg/hex2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/papercraft/proto/mtproto/crypto"
-	sessionclient "github.com/lingyicute/papercraft-server/app/interface/session/client"
-	"github.com/lingyicute/papercraft-server/app/interface/session/session"
+	"github.com/teamgram/marmota/pkg/hack"
+	"github.com/teamgram/marmota/pkg/hex2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/proto/mtproto/crypto"
+	sessionclient "github.com/teamgram/teamgram-server/app/interface/session/client"
+	"github.com/teamgram/teamgram-server/app/interface/session/session"
 
 	"github.com/panjf2000/gnet/v2"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -45,19 +45,19 @@ const (
 )
 
 var (
-	// TODO: 预先计算出fingerprint
+	// TODO(@benqi): 预先计算出fingerprint
 	// 这里直接使用了0xc3b42b026ce86b21
 	// fingerprint uint64 = 12240908862933197005
 
-	// TODO: 使用算法生成PQ
+	// TODO(@benqi): 使用算法生成PQ
 	// 这里直接指定了PQ值: {0x17, 0xED, 0x48, 0x94, 0x1A, 0x08, 0xF9, 0x81}
 	pq = string([]byte{0x17, 0xED, 0x48, 0x94, 0x1A, 0x08, 0xF9, 0x81})
 
-	// TODO: 直接指定了p和q
+	// TODO(@benqi): 直接指定了p和q
 	p = []byte{0x49, 0x4C, 0x55, 0x3B}
 	q = []byte{0x53, 0x91, 0x10, 0x73}
 
-	// TODO: 直接指定了dh2048_p和dh2048_g!!!
+	// TODO(@benqi): 直接指定了dh2048_p和dh2048_g!!!
 	// andriod client 指定的good prime
 	//
 	// static const char *goodPrime = "
@@ -452,7 +452,7 @@ func (s *Server) onReqDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtp
 			}
 
 			var pqInnerData *mtproto.P_QInnerData
-			// TODO:
+			// TODO(@benqi):
 			switch innerData := o.(type) {
 			case *mtproto.TLPQInnerData:
 				handshakeType = mtproto.AuthKeyTypePerm
@@ -510,7 +510,7 @@ func (s *Server) onReqDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtp
 				return fmt.Errorf("process Req_DHParams - Wrong ServerNonce")
 			}
 
-			// TODO: check dc
+			// TODO(@benqi): check dc
 			// log.Info("processReq_DHParams - pqInnerData Decode sucess: ", pqInnerData.String())
 
 			// 检查NewNonce的长度(int256)
@@ -596,7 +596,7 @@ func (s *Server) onReqDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtp
 func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, request *mtproto.TLSetClient_DHParams) (*mtproto.SetClient_DHParamsAnswer, error) {
 	logx.Infof("set_client_DH_params#f5045f1f conn(%s) - state: {%s}, request: %s", c, ctx, request)
 
-	// TODO: Impl SetClient_DHParams logic
+	// TODO(@benqi): Impl SetClient_DHParams logic
 	// 客户端传输数据解析
 	// Nonce
 	if !bytes.Equal(request.Nonce, ctx.Nonce) {
@@ -632,7 +632,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 		return nil, err
 	}
 
-	// TODO: 检查签名是否合法
+	// TODO(@benqi): 检查签名是否合法
 	dBuf := mtproto.NewDecodeBuf(decryptedData[20:])
 	clientDHInnerData := mtproto.MakeTLClient_DHInnerData(nil)
 	clientDHInnerData.Data2.Constructor = mtproto.TLConstructor(dBuf.Int())
@@ -667,7 +667,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 
 	authKey := make([]byte, 256)
 
-	// TODO: dhGenRetry and dhGenFail
+	// TODO(@benqi): dhGenRetry and dhGenFail
 	copy(authKey[256-len(authKeyNum.Bytes()):], authKeyNum.Bytes())
 
 	authKeyAuxHash := make([]byte, len(ctx.NewNonce))
@@ -686,7 +686,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 
 	s.asyncRun(c.ConnId(),
 		func() error {
-			// TODO: authKeyId生成后要检查在数据库里是否已经存在，有非常小的概率会碰撞
+			// TODO(@benqi): authKeyId生成后要检查在数据库里是否已经存在，有非常小的概率会碰撞
 			// 如果碰撞让客户端重新再来一轮
 
 			// state.Ctx, _ = proto.Marshal(authKeyMD)
@@ -703,7 +703,7 @@ func (s *Server) onSetClientDHParams(c gnet.Conn, ctx *HandshakeStateCtx, reques
 				logx.Infof("onSetClient_DHParams conn(%s) - ctx: {%s}, reply: %s", c, ctx, dhGen)
 				return nil
 			} else {
-				// TODO: dhGenFail
+				// TODO(@benqi): dhGenFail
 				dhGen = mtproto.MakeTLDhGenRetry(&mtproto.SetClient_DHParamsAnswer{
 					Nonce:         ctx.Nonce,
 					ServerNonce:   ctx.ServerNonce,

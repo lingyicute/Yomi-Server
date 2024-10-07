@@ -1,7 +1,7 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package main
@@ -10,8 +10,8 @@ import (
 	"context"
 	"flag"
 
-	media_client "github.com/lingyicute/papercraft-server/app/service/media/client"
-	"github.com/lingyicute/papercraft-server/app/service/media/media"
+	media_client "github.com/teamgram/teamgram-server/app/service/media/client"
+	"github.com/teamgram/teamgram-server/app/service/media/media"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/zrpc"

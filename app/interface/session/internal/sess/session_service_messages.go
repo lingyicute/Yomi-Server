@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package sess
@@ -23,7 +23,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -121,7 +121,7 @@ func (c *session) onDestroyAuthKey(ctx context.Context, gatewayId string, msgId 
 		msgId.seqNo,
 		destroyAuthKey)
 
-	//// TODO: FIXME
+	//// TODO(@benqi): FIXME
 	// destroy_auth_key_ok#f660e1d4 = DestroyAuthKeyRes;
 	// destroy_auth_key_none#0a9f2259 = DestroyAuthKeyRes;
 	// destroy_auth_key_fail#ea109b13 = DestroyAuthKeyRes;
@@ -256,7 +256,7 @@ func (c *session) onDestroySession(ctx context.Context, gatewayId string, msgId 
 		// The result of this being applied to the current session is undefined.
 		logx.WithContext(ctx).Error("the result of this being applied to the current session is undefined.")
 
-		// TODO: handle error???
+		// TODO(@benqi): handle error???
 		return
 	}
 
@@ -324,7 +324,7 @@ func (c *session) onRpcDropAnswer(ctx context.Context, gatewayId string, msgId *
 	//		if v.state == kNetworkMessageStateReceived {
 	//			rpcAnswer.Constructor = mtproto.CRC32_rpc_answer_dropped
 	//			rpcAnswer.MsgId = request.ReqMsgId
-	//			// TODO: set seqno and bytes
+	//			// TODO(@benqi): set seqno and bytes
 	//			// rpcAnswer.Data2.SeqNo = 0
 	//			// rpcAnswer.Data2.Bytes = 0
 	//		} else if v.state == kNetworkMessageStateInvoked {

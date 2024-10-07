@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
@@ -12,9 +12,9 @@ package core
 import (
 	"math"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/internal/dal/dataobject"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/internal/dal/dataobject"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
 )
 
 // MessageSearch
@@ -27,7 +27,7 @@ func (c *MessageCore) MessageSearch(in *message.TLMessageSearch) (*mtproto.Messa
 		limit   = in.Limit
 	)
 
-	// TODO: check q
+	// TODO(@benqi): check q
 	if offset == 0 {
 		offset = math.MaxInt32
 	}
@@ -69,7 +69,7 @@ func (c *MessageCore) MessageSearch(in *message.TLMessageSearch) (*mtproto.Messa
 				})
 		}
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("message.search blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+		c.Logger.Errorf("message.search blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	}

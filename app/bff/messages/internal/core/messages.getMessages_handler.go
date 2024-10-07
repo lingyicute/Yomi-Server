@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,17 +13,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/marmota/pkg/container2/linkedmap"
-	"github.com/papercraft/proto/mtproto"
-	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/teamgram/marmota/pkg/container2/linkedmap"
+	"github.com/teamgram/proto/mtproto"
+	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 )
 
 // MessagesGetMessages
@@ -43,6 +43,12 @@ func (c *MessagesCore) MessagesGetMessages(in *mtproto.TLMessagesGetMessages) (*
 		switch id.PredicateName {
 		case mtproto.Predicate_inputMessageID:
 			idList = append(idList, id.Id)
+		case mtproto.Predicate_inputMessageReplyTo:
+			idList = append(idList, id.Id)
+		case mtproto.Predicate_inputMessagePinned:
+			// TODO: not impl
+		case mtproto.Predicate_inputMessageCallbackQuery:
+			// TODO: not impl
 		default:
 			// client not use: inputMessageReplyTo, inputMessagePinned
 			err := mtproto.ErrInputConstructorInvalid

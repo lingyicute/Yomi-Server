@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -21,14 +21,14 @@ package core
 import (
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
 // AccountResetPassword
 // account.resetPassword#9308ce1b = account.ResetPasswordResult;
 func (c *AuthorizationCore) AccountResetPassword(in *mtproto.TLAccountResetPassword) (*mtproto.Account_ResetPasswordResult, error) {
 	// TODO: not impl
-	c.Logger.Errorf("account.resetPassword blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	c.Logger.Errorf("account.resetPassword blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 	return mtproto.MakeTLAccountResetPasswordFailedWait(&mtproto.Account_ResetPasswordResult{
 		RetryDate: int32(time.Now().Unix() + 30*24*60*60),

@@ -29,15 +29,15 @@ Thumbs.db
 data/*
 !data/.gitkeep
 
-papercraftd/bin/*
-!papercraftd/bin/config.json
-!papercraftd/bin/killall.sh
-!papercraftd/bin/runall2.sh
-!papercraftd/bin/runall-docker.sh
-!papercraftd/bin/server_pkcs1.key
+yomid/bin/*
+!yomid/bin/config.json
+!yomid/bin/killall.sh
+!yomid/bin/runall2.sh
+!yomid/bin/runall-docker.sh
+!yomid/bin/server_pkcs1.key
 
-papercraftd/logs/*
-!papercraftd/logs/.gitkeep
+yomid/logs/*
+!yomid/logs/.gitkeep
 
 /app/messenger/biz_server
 /app/bff/account/cmd/account/account

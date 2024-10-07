@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/model"
+	"github.com/teamgram/teamgram-server/app/service/dfs/internal/model"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -106,7 +106,7 @@ func (d *Dao) GetCacheFile(ctx context.Context, bucket string, id int64, offset 
 	if cacheFile != nil {
 		r := d.NewSSDBReader(cacheFile)
 		r.Seek(offset, io.SeekStart)
-		// TODO( check limit)
+		// TODO(@benqi: check limit)
 		bytes = make([]byte, limit)
 		n, err = r.Read(bytes)
 		if err != nil {

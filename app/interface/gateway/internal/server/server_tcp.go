@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package server
@@ -28,12 +28,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/papercraft/marmota/pkg/hack"
-	"github.com/papercraft/marmota/pkg/net2"
-	"github.com/papercraft/marmota/pkg/timer2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/interface/gateway/internal/server/codec"
-	sessionpb "github.com/lingyicute/papercraft-server/app/interface/session/session"
+	"github.com/teamgram/marmota/pkg/hack"
+	"github.com/teamgram/marmota/pkg/net2"
+	"github.com/teamgram/marmota/pkg/timer2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/interface/gateway/internal/server/codec"
+	sessionpb "github.com/teamgram/teamgram-server/app/interface/session/session"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -56,7 +56,7 @@ func (m *HandshakeStateCtx) DebugString() string {
 }
 
 type connContext struct {
-	// TODO: lock
+	// TODO(@benqi): lock
 	sync.Mutex
 	state           int // 是否握手阶段
 	authKeys        []*authKeyUtil

@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  *   Created from by 'dalgen'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package mysql_dao
@@ -18,8 +18,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/internal/dal/dataobject"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -211,7 +211,7 @@ func (dao *MessagesDAO) SelectByMessageId(ctx context.Context, userId int64, use
 
 // SelectByMessageDataIdList
 // select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from messages where deleted = 0 and dialog_message_id in (:idList) order by user_message_box_id desc
-// TODO: sqlmap
+// TODO(@benqi): sqlmap
 func (dao *MessagesDAO) SelectByMessageDataIdList(ctx context.Context, tableName string, idList []int64) (rList []dataobject.MessagesDO, err error) {
 	var (
 		query  = "select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from " + tableName + " where deleted = 0 and dialog_message_id in (" + sqlx.InInt64List(idList) + ") order by user_message_box_id desc"
@@ -235,7 +235,7 @@ func (dao *MessagesDAO) SelectByMessageDataIdList(ctx context.Context, tableName
 
 // SelectByMessageDataIdListWithCB
 // select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from messages where deleted = 0 and dialog_message_id in (:idList) order by user_message_box_id desc
-// TODO: sqlmap
+// TODO(@benqi): sqlmap
 func (dao *MessagesDAO) SelectByMessageDataIdListWithCB(ctx context.Context, tableName string, idList []int64, cb func(sz, i int, v *dataobject.MessagesDO)) (rList []dataobject.MessagesDO, err error) {
 	var (
 		query  = "select user_id, user_message_box_id, dialog_id1, dialog_id2, dialog_message_id, sender_user_id, peer_type, peer_id, random_id, message_filter_type, message_data, message, mentioned, media_unread, pinned, has_reaction, reaction, reaction_date, reaction_unread, saved_peer_type, saved_peer_id, date2, ttl_period from " + tableName + " where deleted = 0 and dialog_message_id in (" + sqlx.InInt64List(idList) + ") order by user_message_box_id desc"

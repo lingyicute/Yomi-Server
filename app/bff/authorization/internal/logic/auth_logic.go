@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package logic
@@ -22,10 +22,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/dao"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
-	"github.com/lingyicute/papercraft-server/pkg/code"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/dao"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
+	"github.com/teamgram/teamgram-server/pkg/code"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -71,7 +71,7 @@ func (m *AuthLogic) DoAuthSendCode(
 		}
 	}
 
-	// TODO: after sendSms success, save codeData
+	// TODO(@benqi): after sendSms success, save codeData
 	m.Dao.UpdatePhoneCodeData(ctx, authKeyId, phoneNumber, codeData.PhoneCodeHash, codeData)
 
 	//if codeData.State == model.CodeStateSend {
@@ -91,7 +91,7 @@ func (m *AuthLogic) DoAuthSendCode(
 	//			m.VerifyCodeInterface.SendSmsVerifyCode(context.Background(), phoneNumber, codeData.PhoneCode, codeData.PhoneCodeHash)
 	//		}
 	//
-	//		// TODO: after sendSms success, save codeData
+	//		// TODO(@benqi): after sendSms success, save codeData
 	//		m.AuthCore.UpdatePhoneCodeData(context.Background(), authKeyId, phoneNumber, codeData.PhoneCodeHash, codeData)
 	//	}()
 	//}
@@ -109,16 +109,16 @@ func (m *AuthLogic) DoAuthReSendCode(ctx context.Context,
 		return
 	}
 
-	//// TODO: attempts
+	//// TODO(@benqi): attempts
 	//if do.Attempts > 3 {
-	//	// TODO: 输入了太多次错
+	//	// TODO(@benqi): 输入了太多次错
 	//
 	// 误的phone code
 	//	err := mtproto.NewFloodWaitX(15*60, "too many attempts.")
 	//	return err
 	//}
 	//
-	//// TODO: check phone code valid, only number etc.
+	//// TODO(@benqi): check phone code valid, only number etc.
 	//if do.Code == "" {
 	//	err := mtproto.NewRpcError(int32(mtproto.TLRpcErrorCodes_PHONE_CODE_INVALID), "code invalid")
 	//	log.Error(err.Error())
@@ -133,7 +133,7 @@ func (m *AuthLogic) DoAuthReSendCode(ctx context.Context,
 
 	now := int32(time.Now().Unix())
 	if now > codeData.PhoneCodeExpired {
-		// TODO: update timeout state?
+		// TODO(@benqi): update timeout state?
 		err = mtproto.ErrPhoneCodeExpired
 		return
 	}
@@ -152,7 +152,7 @@ func (m *AuthLogic) DoAuthReSendCode(ctx context.Context,
 	//		m.VerifyCodeInterface.SendSmsVerifyCode(context.Background(), phoneNumber, codeData.PhoneCode, codeData.PhoneCodeHash)
 	//	}
 	//
-	//	// TODO: after sendSms success, save codeData
+	//	// TODO(@benqi): after sendSms success, save codeData
 	//	codeData.State = model.CodeStateSent
 	//	m.AuthCore.UpdatePhoneCodeData(context.Background(), authKeyId, phoneNumber, codeData.PhoneCodeHash, codeData)
 	//}()
@@ -176,14 +176,14 @@ func (m *AuthLogic) DoAuthSignIn(ctx context.Context,
 		return
 	}
 
-	//// TODO: attempts
+	//// TODO(@benqi): attempts
 	//if do.Attempts > 3 {
-	//	// TODO: 输入了太多次错误的phone code
+	//	// TODO(@benqi): 输入了太多次错误的phone code
 	//	err := mtproto.NewFloodWaitX(15*60, "too many attempts.")
 	//	return err
 	//}
 
-	// TODO: 重复请求处理...
+	// TODO(@benqi): 重复请求处理...
 	// check state invalid.
 	if codeData.State != model.CodeStateOk &&
 		codeData.State != model.CodeStateSent &&
@@ -195,14 +195,14 @@ func (m *AuthLogic) DoAuthSignIn(ctx context.Context,
 
 	now := int32(time.Now().Unix())
 	if now > codeData.PhoneCodeExpired {
-		// TODO: update timeout state?
+		// TODO(@benqi): update timeout state?
 		// code.dao.AuthPhoneTransactionsDAO.UpdateState(kCodeStateTimeout, do.Id)
 		err = mtproto.ErrPhoneCodeExpired
 		return
 	}
 
-	// TODO: check phone code valid, only number etc.
-	//if phoneCode != "92323" && codeData.PhoneCode != phoneCode {
+	// TODO(@benqi): check phone code valid, only number etc.
+	//if phoneCode != "12345" && codeData.PhoneCode != phoneCode {
 	//	err := mtproto.NewRpcError2(mtproto.TLRpcErrorCodes_PHONE_CODE_INVALID)
 	//	return err
 	//}
@@ -219,7 +219,7 @@ func (m *AuthLogic) DoAuthSignIn(ctx context.Context,
 	//		err = mtproto.ErrPhoneCodeInvalid
 	//		return
 	//	}
-	//} else if phoneCode != "92323" {
+	//} else if phoneCode != "12345" {
 	//	err = mtproto.ErrPhoneCodeInvalid
 	//	return
 	//}
@@ -236,15 +236,15 @@ func (m *AuthLogic) DoAuthSignIn(ctx context.Context,
 }
 
 // DoAuthSignUp
-// TODO: 合并DoSignUp和DoSignIn部分代码
+// TODO(@benqi): 合并DoSignUp和DoSignIn部分代码
 func (m *AuthLogic) DoAuthSignUp(ctx context.Context, authKeyId int64, phoneNumber string, phoneCode *string, phoneCodeHash string) (codeData *model.PhoneCodeTransaction, err error) {
 	if codeData, err = m.Dao.GetPhoneCode(ctx, authKeyId, phoneNumber, phoneCodeHash); err != nil {
 		return
 	}
 
-	// TODO: 重复请求处理...
+	// TODO(@benqi): 重复请求处理...
 	// check state invalid.
-	// TODO: remote client error, state is Ok
+	// TODO(@benqi): remote client error, state is Ok
 	if codeData.State != model.CodeStateOk &&
 		codeData.State != model.CodeStateSignIn &&
 		codeData.State != model.CodeStateDeleted &&
@@ -256,7 +256,7 @@ func (m *AuthLogic) DoAuthSignUp(ctx context.Context, authKeyId int64, phoneNumb
 
 	now := int32(time.Now().Unix())
 	if now > codeData.PhoneCodeExpired {
-		// TODO: update timeout state?
+		// TODO(@benqi): update timeout state?
 		err = mtproto.ErrPhoneCodeExpired
 		return
 	}
@@ -276,7 +276,7 @@ func (m *AuthLogic) DoAuthSignUp(ctx context.Context, authKeyId int64, phoneNumb
 		//		err = mtproto.ErrPhoneCodeInvalid
 		//		return
 		//	}
-		//} else if *phoneCode != "92323" {
+		//} else if *phoneCode != "12345" {
 		//	log.Errorf("verifySmsCode error: %v", err)
 		//	err = mtproto.ErrPhoneCodeInvalid
 		//	return

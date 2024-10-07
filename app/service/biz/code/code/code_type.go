@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package code
@@ -21,7 +21,7 @@ package code
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -58,23 +58,23 @@ const (
 // MakeCodeType
 // by params(phoneRegistered, allowFlashCall, currentNumber) ==> sentType and nextType
 //
-// FIXME: ignore it.
+// FIXME(@benqi): ignore it.
 func MakeCodeType(phoneRegistered, allowFlashCall, currentNumber bool) (int, int) {
 	//if phoneRegistered {
-	//	// TODO: check other session online
+	//	// TODO(@benqi): check other session online
 	//	authSentCodeType := &mtproto.TLAuthSentCodeTypeApp{Data2: &mtproto.Auth_SentCodeType_Data{
 	//		Length: code.GetPhoneCodeLength(),
 	//	}}
 	//	authSentCode.SetType(authSentCodeType.To_Auth_SentCodeType())
 	//} else {
-	//	// TODO: sentCodeTypeFlashCall and sentCodeTypeCall, nextType
-	//	// papercraftd, we only use sms
+	//	// TODO(@benqi): sentCodeTypeFlashCall and sentCodeTypeCall, nextType
+	//	// telegramd, we only use sms
 	//	authSentCodeType := &mtproto.TLAuthSentCodeTypeSms{Data2: &mtproto.Auth_SentCodeType_Data{
 	//		Length: code.GetPhoneCodeLength(),
 	//	}}
 	//	authSentCode.SetType(authSentCodeType.To_Auth_SentCodeType())
 	//
-	//	// TODO: nextType
+	//	// TODO(@benqi): nextType
 	//	// authSentCode.SetNextType()
 	//}
 	_ = phoneRegistered

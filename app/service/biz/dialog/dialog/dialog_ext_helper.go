@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dialog
@@ -11,7 +11,7 @@ import (
 	"math"
 	"sync"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"github.com/zeromicro/go-zero/core/mr"
@@ -30,7 +30,7 @@ func (m DialogExtList) Swap(i, j int) {
 }
 
 func (m DialogExtList) Less(i, j int) bool {
-	// TODO: if date[i] == date[j]
+	// TODO(@benqi): if date[i] == date[j]
 	return m[i].Order < m[j].Order
 }
 

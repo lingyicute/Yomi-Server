@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -21,11 +21,11 @@ package core
 import (
 	"context"
 
-	"github.com/papercraft/marmota/pkg/threading2"
-	"github.com/papercraft/proto/mtproto"
-	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
+	"github.com/teamgram/marmota/pkg/threading2"
+	"github.com/teamgram/proto/mtproto"
+	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
 )
 
 // MessagesReadMessageContents
@@ -46,7 +46,7 @@ func (c *MessagesCore) MessagesReadMessageContents(in *mtproto.TLMessagesReadMes
 		}).To_Messages_AffectedMessages(), nil
 	}
 
-	// TODO: check peer??
+	// TODO(@benqi): check peer??
 	var (
 		peer *mtproto.PeerUtil
 	)
@@ -61,7 +61,7 @@ func (c *MessagesCore) MessagesReadMessageContents(in *mtproto.TLMessagesReadMes
 	}
 	contents := make([]*msgpb.ContentMessage, 0, len(messages.GetDatas()))
 	for _, m := range messages.GetDatas() {
-		// TODO: check peer??
+		// TODO(@benqi): check peer??
 		// peer := model.FromPeer(m.Message.ToId)
 		if m.Message.GetMentioned() {
 			contents = append(contents, &msgpb.ContentMessage{

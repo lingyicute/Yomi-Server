@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,22 +13,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
-	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
 )
 
 // ContactsResolveUsername
 // contacts.resolveUsername#f93ccba3 username:string = contacts.ResolvedPeer;
 func (c *UsernamesCore) ContactsResolveUsername(in *mtproto.TLContactsResolveUsername) (*mtproto.Contacts_ResolvedPeer, error) {
-	// TODO:
+	// TODO(@benqi):
 	// 401	AUTH_KEY_PERM_EMPTY	The temporary auth key must be binded to the permanent auth key to use these methods.
 	// 401	SESSION_PASSWORD_NEEDED	2FA is enabled, use a password to login
 	// 400	USERNAME_INVALID	The provided username is not valid
@@ -80,7 +80,7 @@ func (c *UsernamesCore) ContactsResolveUsername(in *mtproto.TLContactsResolveUse
 		if c.svcCtx.Plugin != nil {
 			resolvedPeer.Chats = c.svcCtx.Plugin.GetChannelListByIdList(c.ctx, c.MD.UserId, peer.PeerId)
 		} else {
-			c.Logger.Errorf("contacts.resolveUsername blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+			c.Logger.Errorf("contacts.resolveUsername blocked, License key from https://teamgram.net required to unlock enterprise features.")
 		}
 	}
 

@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -21,12 +21,12 @@ package core
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	chatpb "github.com/lingyicute/papercraft-server/app/service/biz/chat/chat"
-	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
-	"github.com/lingyicute/papercraft-server/app/service/biz/updates/updates"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/teamgram/proto/mtproto"
+	chatpb "github.com/teamgram/teamgram-server/app/service/biz/chat/chat"
+	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
+	"github.com/teamgram/teamgram-server/app/service/biz/updates/updates"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 
 	"github.com/zeromicro/go-zero/core/mr"
 )
@@ -91,7 +91,7 @@ func (c *DialogsCore) MessagesGetPeerDialogs(in *mtproto.TLMessagesGetPeerDialog
 			case mtproto.PEER_USER:
 			case mtproto.PEER_CHAT:
 			case mtproto.PEER_CHANNEL:
-				c.Logger.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+				c.Logger.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 				continue
 			default:
 				err := mtproto.ErrInputConstructorInvalid
@@ -188,7 +188,7 @@ func (c *DialogsCore) MessagesGetPeerDialogs(in *mtproto.TLMessagesGetPeerDialog
 		peer2 := mtproto.FromPeer(dialogEx.GetDialog().GetPeer())
 		dialogEx.Dialog.NotifySettings = userpb.FindPeerPeerNotifySettings(notifySettingsList, peer2)
 		if peer2.IsChannel() {
-			c.Logger.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+			c.Logger.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 		}
 	}
 
@@ -202,7 +202,7 @@ func (c *DialogsCore) MessagesGetPeerDialogs(in *mtproto.TLMessagesGetPeerDialog
 			)
 			for _, id2 := range id {
 				if id2.Peer.IsChannel() {
-					c.Logger.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+					c.Logger.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 				} else {
 					msgIdList = append(msgIdList, id2.TopMessage)
 				}
@@ -236,7 +236,7 @@ func (c *DialogsCore) MessagesGetPeerDialogs(in *mtproto.TLMessagesGetPeerDialog
 			return chats.GetChatListByIdList(c.MD.UserId, id...)
 		},
 		func(ctx context.Context, selfUserId int64, id ...int64) []*mtproto.Chat {
-			c.Logger.Errorf("blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+			c.Logger.Errorf("blocked, License key from https://teamgram.net required to unlock enterprise features.")
 			return []*mtproto.Chat{}
 		})
 

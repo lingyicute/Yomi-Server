@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package sess
@@ -24,7 +24,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/contextx"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -127,7 +127,7 @@ func (c *session) onInvokeAfterMsgs(ctx context.Context, gatewayId, clientIp str
 		}
 
 		if len(invokeAfterMsgs.MsgIds) == 0 {
-			// TODO: invalid msgIds, ignore??
+			// TODO(@benqi): invalid msgIds, ignore??
 
 			messages[i].Object = query
 		} else {
@@ -164,7 +164,7 @@ func (c *session) onInvokeAfterMsgs(ctx context.Context, gatewayId, clientIp str
 			}
 
 			if !found {
-				// TODO: backup message, wait.
+				// TODO(@benqi): backup message, wait.
 
 				messages[i].Object = query
 			}
@@ -380,7 +380,7 @@ func (c *session) onRpcRequest(ctx context.Context, gatewayId, clientIp string, 
 		msgId.seqNo,
 		reflect.TypeOf(query))
 
-	// TODO: sync AuthUserId??
+	// TODO(@benqi): sync AuthUserId??
 	//requestMessage := &mtproto.TLMessage2{
 	//	MsgId:  msgId.msgId,
 	//	Seqno:  msgId.seqNo,
@@ -561,7 +561,7 @@ func (c *session) onRpcResult(ctx context.Context, rpcResult *rpcApiMessage) {
 }
 
 func (c *session) sendRpcResult(ctx context.Context, rpcResult *mtproto.TLRpcResult) {
-	// TODO: lookup inBoxMsg
+	// TODO(@benqi): lookup inBoxMsg
 	msgId := c.inQueue.Lookup(rpcResult.ReqMsgId)
 	if msgId == nil {
 		logx.WithContext(ctx).Errorf("not found msgId, maybe removed: %d", rpcResult.ReqMsgId)

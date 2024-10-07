@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -10,8 +10,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/dal/dataobject"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 )
@@ -32,7 +32,7 @@ func (d *Dao) AddSeqToUpdatesQueue(ctx context.Context, authId, userId int64, up
 }
 
 func (d *Dao) AddToPtsQueue(ctx context.Context, userId int64, pts, ptsCount int32, update *mtproto.Update) int32 {
-	// TODO: check error
+	// TODO(@benqi): check error
 	updateData, _ := jsonx.Marshal(update)
 
 	do := &dataobject.UserPtsUpdatesDO{

@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package sess
@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -206,7 +206,7 @@ func (c *session) onSessionMessageData(ctx context.Context, gatewayId, clientIp 
 		c.closeDate = willCloseDate
 	}
 
-	// 2. TODO: checkBadMsgNotification
+	// 2. TODO(@benqi): checkBadMsgNotification
 	/*
 		const auto needResend = false
 			|| (errorCode == 16) // bad msg_id
@@ -234,7 +234,7 @@ func (c *session) onSessionMessageData(ctx context.Context, gatewayId, clientIp 
 		msgs []*mtproto.TLMessage2
 	)
 
-	// TODO: ignore TLMsgCopy
+	// TODO(@benqi): ignore TLMsgCopy
 	if msgContainer, ok := msg.Object.(*mtproto.TLMsgContainer); ok {
 		msgs = msgContainer.Messages
 
@@ -307,7 +307,7 @@ func (c *session) onSessionMessageData(ctx context.Context, gatewayId, clientIp 
 				// 第一次收到
 				c.processMsg(ctx, gatewayId, clientIp, inMsg, m2.Object)
 			} else {
-				// TODO: resend
+				// TODO(@benqi): resend
 				// 已经收到，返回发送状态
 				// c.notifyMsgsStateInfo(gatewayId, inMsg)
 				continue
@@ -684,7 +684,7 @@ func (c *session) sendQueueToGateway(ctx context.Context, gatewayId string) {
 			}
 			logx.WithContext(ctx).Infof("sendRawDirectToGateway - TLMsgRawDataContainer")
 			b, err = c.sendDirectToGateway(ctx, gatewayId, false, msgContainer, func(sentRaw *mtproto.TLMessageRawData) {
-				// TODO:
+				// TODO(@benqi):
 				// nothing do
 			})
 			// log.Debugf("err: %v, b: %v", err, b)
@@ -711,7 +711,7 @@ func (c *session) sendQueueToGateway(ctx context.Context, gatewayId string) {
 			}
 			logx.WithContext(ctx).Infof("sendRawDirectToGateway - TLMsgRawDataContainer")
 			b, err = c.sendDirectToGateway(ctx, gatewayId, false, msgContainer, func(sentRaw *mtproto.TLMessageRawData) {
-				// TODO:
+				// TODO(@benqi):
 				// nothing do
 			})
 			// log.Debugf("err: %v, b: %v", err, b)

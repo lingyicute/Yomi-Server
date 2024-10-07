@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package none
@@ -21,8 +21,8 @@ package none
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/pkg/code/conf"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/pkg/code/conf"
 )
 
 func New(c *conf.SmsVerifyCodeConfig) *noneVerifyCode {
@@ -40,7 +40,7 @@ func (m *noneVerifyCode) SendSmsVerifyCode(ctx context.Context, phoneNumber, cod
 }
 
 func (m *noneVerifyCode) VerifySmsCode(ctx context.Context, codeHash, code, extraData string) error {
-	if code != "92323" {
+	if code != "12345" {
 		return mtproto.ErrPhoneCodeInvalid
 	}
 	return nil

@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package idgen_client
@@ -9,12 +9,12 @@ package idgen_client
 import (
 	"strconv"
 
-	"github.com/lingyicute/papercraft-server/app/service/idgen/idgen"
+	"github.com/teamgram/teamgram-server/app/service/idgen/idgen"
 )
 
 // ///////////////////////////////////////////////////////////////////////////////////////////
 var (
-	// TODO: 使用更紧凑的前缀
+	// TODO(@benqi): 使用更紧凑的前缀
 	messageDataNgenId       = "message_data_ngen_"
 	messageBoxUpdatesNgenId = "message_box_ngen_"
 	channelMessageBoxNgenId = "channel_message_box_ngen_"

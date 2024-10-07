@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lingyicute/papercraft-server/pkg/goffmpeg/ffmpeg"
-	"github.com/lingyicute/papercraft-server/pkg/goffmpeg/models"
-	"github.com/lingyicute/papercraft-server/pkg/goffmpeg/utils"
+	"github.com/teamgram/teamgram-server/pkg/goffmpeg/ffmpeg"
+	"github.com/teamgram/teamgram-server/pkg/goffmpeg/models"
+	"github.com/teamgram/teamgram-server/pkg/goffmpeg/utils"
 )
 
 // Transcoder Main struct

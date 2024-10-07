@@ -1,7 +1,7 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package gnet
@@ -9,8 +9,8 @@ package gnet
 import (
 	"bytes"
 
-	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/server/gnet/codec"
-	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/server/gnet/ws"
+	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/server/gnet/codec"
+	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/server/gnet/ws"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"github.com/zeromicro/go-zero/core/logx"

@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package codec
@@ -24,13 +24,13 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	log "github.com/zeromicro/go-zero/core/logx"
 )
 
 // FullCodec
-// https://papercraft-official.github.io/mtproto#tcp-transport
+// https://core.telegram.org/mtproto#tcp-transport
 //
 // If a payload (packet) needs to be transmitted from server to client or from client to server,
 // it is encapsulated as follows:
@@ -85,11 +85,11 @@ func (c *FullCodec) Receive() (interface{}, error) {
 	}
 
 	seqNum := binary.LittleEndian.Uint32(buf[:4])
-	// TODO: check seqNum, save last seq_num
+	// TODO(@benqi): check seqNum, save last seq_num
 	_ = seqNum
 
 	crc32 := binary.LittleEndian.Uint32(buf[len(buf)-4:])
-	// TODO: check crc32
+	// TODO(@benqi): check crc32
 	_ = crc32
 
 	authKeyId := int64(binary.LittleEndian.Uint64(buf[4:]))
@@ -113,7 +113,7 @@ func (c *FullCodec) Send(msg interface{}) error {
 	size := len(b) / 4
 
 	binary.LittleEndian.PutUint32(sb, uint32(size))
-	// TODO: gen seq_num
+	// TODO(@benqi): gen seq_num
 	var seqNum uint32 = 0
 	binary.LittleEndian.PutUint32(sb[4:], seqNum)
 	b = append(sb, b...)

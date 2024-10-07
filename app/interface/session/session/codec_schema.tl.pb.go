@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package session
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -197,7 +197,7 @@ func (m *TLHttpSessionData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_httpSessionData, layer)
 		return nil
 	}
@@ -349,7 +349,7 @@ func (m *TLSessionClientData) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_sessionClientData, layer)
 		return nil
 	}
@@ -498,7 +498,7 @@ func (m *TLSessionClientEvent) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_sessionClientEvent, layer)
 		return nil
 	}
@@ -799,7 +799,7 @@ func (m *TLSessionPushUpdatesData) Encode(x *mtproto.EncodeBuf, layer int32) err
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetPermAuthKeyId())
 		m.GetUpdates().Encode(x, layer)
 
@@ -821,7 +821,7 @@ func (m *TLSessionPushUpdatesData) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.PermAuthKeyId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m.Notification = true
@@ -852,7 +852,7 @@ func (m *TLSessionPushSessionUpdatesData) Encode(x *mtproto.EncodeBuf, layer int
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetPermAuthKeyId())
 		x.Long(m.GetAuthKeyId())
 		x.Long(m.GetSessionId())
@@ -876,7 +876,7 @@ func (m *TLSessionPushSessionUpdatesData) Decode(dBuf *mtproto.DecodeBuf) error 
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.PermAuthKeyId = dBuf.Long()
 		m.AuthKeyId = dBuf.Long()
 		m.SessionId = dBuf.Long()

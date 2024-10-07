@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
 // PaddedIntermediateCodec
-// https://papercraft-official.github.io/mtproto#tcp-transport
+// https://core.telegram.org/mtproto#tcp-transport
 //
 // In case 4-byte data alignment is needed,
 // an intermediate version of the original protocol may be used:
@@ -95,7 +95,7 @@ func (c *PaddedIntermediateCodec) Decode(conn CodecReader) (interface{}, error) 
 	_ = needAck
 	n = int(c.packetLen & 0xffffff)
 	if n > MAX_MTPRORO_FRAME_SIZE {
-		// TODO: close conn
+		// TODO(@benqi): close conn
 		return nil, fmt.Errorf("too large data(%d)", n)
 	}
 

@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package mq
@@ -11,10 +11,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	kafka "github.com/papercraft/marmota/pkg/mq"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/core"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/internal/svc"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
+	kafka "github.com/teamgram/marmota/pkg/mq"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/core"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/internal/svc"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/threading"

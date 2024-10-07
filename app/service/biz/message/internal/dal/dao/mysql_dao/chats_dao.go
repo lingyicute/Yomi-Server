@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  *   Created from by 'dalgen'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package mysql_dao
@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/internal/dal/dataobject"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

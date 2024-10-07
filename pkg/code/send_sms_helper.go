@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package code
@@ -21,8 +21,8 @@ package code
 import (
 	"context"
 
-	"github.com/lingyicute/papercraft-server/pkg/code/conf"
-	"github.com/lingyicute/papercraft-server/pkg/code/none"
+	"github.com/teamgram/teamgram-server/pkg/code/conf"
+	"github.com/teamgram/teamgram-server/pkg/code/none"
 )
 
 type VerifyCodeInterface interface {

@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package imaging
@@ -23,8 +23,8 @@ import (
 	"image"
 	"strings"
 
-	"github.com/papercraft/marmota/pkg/bytes2"
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/marmota/pkg/bytes2"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/disintegration/imaging"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -116,7 +116,7 @@ func ReSizeImage(rb []byte, extName string, isABC bool, cb func(szType string, l
 			}
 		}
 
-		// TODO: FIXME
+		// TODO(@benqi): FIXME
 		var dst *image.NRGBA
 		if imgSz.isWidth {
 			dst = imaging.Resize(img, rsz, 0, imaging.Lanczos)

@@ -1,10 +1,10 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
@@ -12,8 +12,8 @@ package core
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto/rpc/metadata"
-	"github.com/lingyicute/papercraft-server/app/service/status/internal/svc"
+	"github.com/teamgram/proto/mtproto/rpc/metadata"
+	"github.com/teamgram/teamgram-server/app/service/status/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

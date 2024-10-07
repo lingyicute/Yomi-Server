@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package sess
@@ -24,7 +24,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -44,7 +44,7 @@ func (c *session) onMsgsAck(ctx context.Context, gatewayId string, msgId int64, 
 			c.inQueue.ChangeAckReceived(inMsgId)
 		} else {
 			// 3. push
-			// TODO: client received updates, will remove it from cache
+			// TODO(@benqi): client received updates, will remove it from cache
 		}
 	})
 }
@@ -226,7 +226,7 @@ func (c *session) checkBadMsgNotification(ctx context.Context, gatewayId string,
 	//
 
 	//=============================================================================================
-	// TODO: Time Synchronization, https://papercraft-official.github.io/mtproto#time-synchronization
+	// TODO(@benqi): Time Synchronization, https://core.telegram.org/mtproto#time-synchronization
 	//
 	// Time Synchronization
 	//
@@ -287,12 +287,12 @@ func (c *session) checkBadMsgNotification(ctx context.Context, gatewayId string,
 			}
 		}
 
-		// TODO: 检查低32位
+		// TODO(@benqi): 检查低32位
 
 		//=================================================================================================
 		// Check Message Identifier (msg_id)
 		//
-		// https://papercraft-official.github.io/mtproto/description#message-identifier-msg-id
+		// https://core.telegram.org/mtproto/description#message-identifier-msg-id
 		// Message Identifier (msg_id)
 		//
 		// A (time-dependent) 64-bit number used uniquely to identify a message within a session.
@@ -321,7 +321,7 @@ func (c *session) checkBadMsgNotification(ctx context.Context, gatewayId string,
 			break
 		}
 
-		//// TODO: check kSeqNoTooHigh and kSeqNoTooLow
+		//// TODO(@benqi): check kSeqNoTooHigh and kSeqNoTooLow
 		//lMsg := c.inQueue.FindLowerEntry(msg.MsgId)
 		//if lMsg != nil && lMsg.seqNo > msg.Seqno {
 		//	errorCode = kSeqNoTooLow
@@ -584,7 +584,7 @@ func (c *session) onMsgsStateInfo(ctx context.Context, gatewayId string, msgId *
 	case *mtproto.TLMsgResendReq:
 		msgIds = r.(*mtproto.TLMsgResendReq).GetMsgIds()
 	default:
-		// TODO: process tdektop client: resend
+		// TODO(@benqi): process tdektop client: resend
 		logx.WithContext(ctx).Errorf("not found reqMsgId - %d", reqMsgId)
 		return
 	}
@@ -612,11 +612,11 @@ func (c *session) onMsgsStateInfo(ctx context.Context, gatewayId string, msgId *
 		// Notes: ignore notifyId
 		if inMsgId <= math.MaxInt32 {
 			// 3. push
-			// TODO: client received updates, will remove it from cache
+			// TODO(@benqi): client received updates, will remove it from cache
 		}
 	})
 
-	// TODO: resend
+	// TODO(@benqi): resend
 	if len(resendIds) > 0 {
 		//
 	}
@@ -669,11 +669,11 @@ func (c *session) onMsgsAllInfo(ctx context.Context, gatewayId string, msgId *in
 		// Notes: ignore notifyId
 		if inMsgId <= math.MaxInt32 {
 			// 3. push
-			// TODO: client received updates, will remove it from cache
+			// TODO(@benqi): client received updates, will remove it from cache
 		}
 	})
 
-	// TODO: resend
+	// TODO(@benqi): resend
 	if len(resendIds) > 0 {
 		//
 	}
@@ -736,7 +736,7 @@ func (c *session) onMsgResendReq(ctx context.Context, gatewayId string, msgId *i
 				continue
 			}
 
-			// TODO:
+			// TODO(@benqi):
 			iMsgId := c.inQueue.Lookup(msgIds[i])
 			if iMsgId == nil {
 				info[i] = NOT_RECEIVED
@@ -768,7 +768,7 @@ func (c *session) onMsgDetailInfo(ctx context.Context, gatewayId string, msgId *
 		msgId.seqNo,
 		request)
 
-	// NOTE: not received by server
+	// NOTE(@benqi): not received by server
 }
 
 func (c *session) onMsgNewDetailInfo(ctx context.Context, gatewayId string, msgId *inboxMsg, request *mtproto.TLMsgDetailedInfo) {
@@ -779,12 +779,12 @@ func (c *session) onMsgNewDetailInfo(ctx context.Context, gatewayId string, msgI
 		msgId.seqNo,
 		request)
 
-	// NOTE: not received by server
+	// NOTE(@benqi): not received by server
 }
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (c *session) notifyMsgsStateInfo(ctx context.Context, gatewayId string, inMsg *inboxMsg) {
-	// TODO: if aced and < resendSize, send rsp.
+	// TODO(@benqi): if aced and < resendSize, send rsp.
 	msgsStateInfo := mtproto.MakeTLMsgsStateInfo(&mtproto.MsgsStateInfo{
 		ReqMsgId: inMsg.msgId,
 		Info:     string([]byte{inMsg.state}),
@@ -795,11 +795,11 @@ func (c *session) notifyMsgsStateInfo(ctx context.Context, gatewayId string, inM
 }
 
 func (c *session) notifyMsgsStateReq() {
-	// TODO:
+	// TODO(@benqi):
 }
 
 func (c *session) notifyMsgsAllInfo() {
-	// TODO:
+	// TODO(@benqi):
 }
 
 // Extended Voluntary Communication of Status of One Message
@@ -823,14 +823,14 @@ func (c *session) notifyMsgDetailedInfo(inMsg *inboxMsg) {
 }
 
 func (c *session) notifyNewMsgDetailedInfo() {
-	// TODO:
+	// TODO(@benqi):
 
 }
 
-// FIXME: 看起来像已经废弃了
+// FIXME(@benqi): 看起来像已经废弃了
 // case *mtproto.TLMsgResendA
 func (c *session) notifyMsgResendAnsSeq() {
-	// TODO: not impl
+	// TODO(@benqi): not impl
 
 	// Explicit Request to Re-Send Answers
 	//

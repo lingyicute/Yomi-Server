@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package bff_proxy_client
@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/net/rpcx"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/papercraft/proto/mtproto/rpc/metadata"
+	"github.com/teamgram/marmota/pkg/net/rpcx"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/proto/mtproto/rpc/metadata"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/zrpc"
@@ -67,10 +67,10 @@ func (c *BFFProxyClient) GetRpcClientByRequest(t interface{}) (zrpc.Client, erro
 		return c2, nil
 	} else {
 		// logx.Errorf("not found method: %s", rt.Name())
-		// logx.Errorf("%s blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.", rt.Name())
+		// logx.Errorf("%s blocked, License key from https://teamgram.net required to unlock enterprise features.", rt.Name())
 	}
 
-	// TODO:
+	// TODO(@benqi):
 	// err := mtproto.ErrMethodNotImpl
 	return nil, fmt.Errorf("not found method: %s", rt.Name())
 }
@@ -148,7 +148,7 @@ func (c *BFFProxyClient) InvokeContext(ctx context.Context, rpcMetaData *metadat
 		err,
 		time.Since(rt))
 
-	// TODO: process header from serverF
+	// TODO(@benqi): process header from serverF
 	// grpc.Header(&header)
 	// log.Debugf("Invoke - error: {%v}", err)
 
@@ -163,10 +163,10 @@ func (c *BFFProxyClient) InvokeContext(ctx context.Context, rpcMetaData *metadat
 		//	return nil, mtproto.NewRpcError(int32(mtproto.TLRpcErrorCodes_INTERNAL), "INTERNAL_SERVER_ERROR")
 		//}
 		//
-		//// TODO: 哪些情况需要断开客户端连接
+		//// TODO(@benqi): 哪些情况需要断开客户端连接
 		//if s, ok := status.FromError(err); ok {
 		//	//switch s.Code() {
-		//	//// TODO: Rpc error, trailer has rpc_error metadata
+		//	//// TODO(@benqi): Rpc error, trailer has rpc_error metadata
 		//	//case codes.Unknown:
 		//	//	return nil, grpc_util.RpcErrorFromMD(trailer)
 		//	//}

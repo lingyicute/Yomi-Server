@@ -1,20 +1,20 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/inbox/inbox"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
-	"github.com/lingyicute/papercraft-server/app/messenger/msg/msg/plugin"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/inbox/inbox"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	"github.com/teamgram/teamgram-server/app/messenger/msg/msg/plugin"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
 )
 
 // MsgPushUserMessage
@@ -32,12 +32,12 @@ func (c *MsgCore) MsgPushUserMessage(in *msg.TLMsgPushUserMessage) (*mtproto.Boo
 
 	sendMe := in.UserId == peer.PeerId
 	if !sendMe {
-		// TODO
+		// TODO(@benqi)
 		// 1. check blocked
 		// 2. span
 	}
 
-	// TODO: r.From.Type
+	// TODO(@benqi): r.From.Type
 	switch in.PushType {
 	case 0:
 		_, err := c.sendUserOutgoingMessageV2(in.UserId, 0, peer.PeerId, boxMsg)
@@ -67,7 +67,7 @@ func (c *MsgCore) MsgPushUserMessage(in *msg.TLMsgPushUserMessage) (*mtproto.Boo
 			return nil, err
 		}
 
-		// TODO: check
+		// TODO(@benqi): check
 		// if sender.Restricted() {
 		//	err = mtproto.ErrUserRestricted
 		//	return
@@ -82,7 +82,7 @@ func (c *MsgCore) MsgPushUserMessage(in *msg.TLMsgPushUserMessage) (*mtproto.Boo
 
 		//sendMe := fromUserId == toUserId
 		//if !sendMe {
-		//	// TODO
+		//	// TODO(@benqi)
 		//	// 1. check blocked
 		//	// 2. span
 		//}

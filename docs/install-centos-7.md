@@ -1,4 +1,4 @@
-# CentOS7 papercraft-server环境搭建
+# CentOS7 teamgram-server环境搭建
 > 原文: https://www.jianshu.com/p/60a64203ca13
 >
 > 作者 @saeipi
@@ -118,6 +118,6 @@
 
 ### 9、Get source code
 ```
-    git clone https://github.com/lingyicute/papercraft-server.git
-    cd papercraft-server
+    git clone https://github.com/teamgram/teamgram-server.git
+    cd teamgram-server
 ```

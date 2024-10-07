@@ -1,17 +1,17 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
 )
 
 // UsernameCheckAccountUsername
@@ -21,7 +21,7 @@ func (c *UsernameCore) UsernameCheckAccountUsername(in *username.TLUsernameCheck
 		checked = usernameNotExisted
 	)
 
-	// TODO: check len(username) >= 5
+	// TODO(@benqi): check len(username) >= 5
 	usernameDO, _ := c.svcCtx.UsernameDAO.SelectByUsername(c.ctx, in.Username)
 	if usernameDO != nil {
 		if usernameDO.PeerType == mtproto.PEER_USER && usernameDO.PeerId == in.UserId {

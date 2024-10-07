@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package code
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -222,7 +222,7 @@ func (m *TLPhoneCodeTransaction) Encode(x *mtproto.EncodeBuf, layer int32) error
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_phoneCodeTransaction, layer)
 		return nil
 	}
@@ -282,7 +282,7 @@ func (m *TLCodeCreatePhoneCode) Encode(x *mtproto.EncodeBuf, layer int32) error 
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetAuthKeyId())
 		x.Long(m.GetSessionId())
 		x.String(m.GetPhone())
@@ -308,7 +308,7 @@ func (m *TLCodeCreatePhoneCode) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.AuthKeyId = dBuf.Long()
 		m.SessionId = dBuf.Long()
 		m.Phone = dBuf.String()

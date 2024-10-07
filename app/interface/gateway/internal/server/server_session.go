@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package server
@@ -21,8 +21,8 @@ package server
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/interface/gateway/gateway"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/interface/gateway/gateway"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -69,7 +69,7 @@ func (s *Server) GatewaySendDataToGateway(ctx context.Context, in *gateway.TLGat
 		authKey *authKeyUtil
 	)
 
-	// TODO: 并发问题
+	// TODO(@benqi): 并发问题
 	authKey, connIdList := s.authSessionMgr.FoundSessionConnIdList(in.AuthKeyId, in.SessionId)
 	if connIdList == nil {
 		logger.Errorf("ReceiveData - not found connIdList - keyId: %d, sessionId: %d", in.AuthKeyId, in.SessionId)

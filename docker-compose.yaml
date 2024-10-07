@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  papercraft:
+  teamgram:
     build: .
     restart: always
     ports:
@@ -21,10 +21,10 @@ services:
       - "20670:20670"
       - "20420:20420"
     networks:
-      - papercraft_net
+      - teamgram_net
 
 networks:
-  papercraft_net:
+  teamgram_net:
     driver: bridge
     ipam:
       config:

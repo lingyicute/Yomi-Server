@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright 2022 Papercraft Authors.
+ * Copyright 2022 Teamgram Authors.
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package service
@@ -14,9 +14,9 @@ import (
 	"context"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/status/internal/core"
-	"github.com/lingyicute/papercraft-server/app/service/status/status"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/status/internal/core"
+	"github.com/teamgram/teamgram-server/app/service/status/status"
 )
 
 // StatusSetSessionOnline
@@ -83,7 +83,7 @@ func (s *Service) StatusGetUsersOnlineSessionsList(ctx context.Context, request 
 // status.getChannelOnlineUsers channel_id:long = Vector<long>;
 func (s *Service) StatusGetChannelOnlineUsers(ctx context.Context, request *status.TLStatusGetChannelOnlineUsers) (*status.Vector_Long, error) {
 	// TODO: not impl
-	logx.WithContext(ctx).Errorf("status.getChannelOnlineUsers blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	logx.WithContext(ctx).Errorf("status.getChannelOnlineUsers blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }
@@ -92,7 +92,7 @@ func (s *Service) StatusGetChannelOnlineUsers(ctx context.Context, request *stat
 // status.setUserChannelsOnline user_id:long channels:Vector<long> = Bool;
 func (s *Service) StatusSetUserChannelsOnline(ctx context.Context, request *status.TLStatusSetUserChannelsOnline) (*mtproto.Bool, error) {
 	// TODO: not impl
-	logx.WithContext(ctx).Errorf("status.setUserChannelsOnline blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	logx.WithContext(ctx).Errorf("status.setUserChannelsOnline blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }
@@ -101,7 +101,7 @@ func (s *Service) StatusSetUserChannelsOnline(ctx context.Context, request *stat
 // status.setUserChannelsOffline user_id:long channels:Vector<long> = Bool;
 func (s *Service) StatusSetUserChannelsOffline(ctx context.Context, request *status.TLStatusSetUserChannelsOffline) (*mtproto.Bool, error) {
 	// TODO: not impl
-	logx.WithContext(ctx).Errorf("status.setUserChannelsOffline blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	logx.WithContext(ctx).Errorf("status.setUserChannelsOffline blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }
@@ -110,7 +110,7 @@ func (s *Service) StatusSetUserChannelsOffline(ctx context.Context, request *sta
 // status.setChannelUserOffline channel_id:long user_id:long = Bool;
 func (s *Service) StatusSetChannelUserOffline(ctx context.Context, request *status.TLStatusSetChannelUserOffline) (*mtproto.Bool, error) {
 	// TODO: not impl
-	logx.WithContext(ctx).Errorf("status.setChannelUserOffline blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	logx.WithContext(ctx).Errorf("status.setChannelUserOffline blocked, License key from https://teamgram.net required to unlock enterprise features.")
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }
 
@@ -118,7 +118,7 @@ func (s *Service) StatusSetChannelUserOffline(ctx context.Context, request *stat
 // status.setChannelUsersOnline channel_id:long user_id:long = Bool;
 func (s *Service) StatusSetChannelUsersOnline(ctx context.Context, request *status.TLStatusSetChannelUsersOnline) (*mtproto.Bool, error) {
 	// TODO: not impl
-	logx.WithContext(ctx).Errorf("status.setChannelUsersOnline blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	logx.WithContext(ctx).Errorf("status.setChannelUsersOnline blocked, License key from https://teamgram.net required to unlock enterprise features.")
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }
 
@@ -126,6 +126,6 @@ func (s *Service) StatusSetChannelUsersOnline(ctx context.Context, request *stat
 // status.setChannelOffline channel_id:long = Bool;
 func (s *Service) StatusSetChannelOffline(ctx context.Context, request *status.TLStatusSetChannelOffline) (*mtproto.Bool, error) {
 	// TODO: not impl
-	logx.WithContext(ctx).Errorf("status.setChannelOffline blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	logx.WithContext(ctx).Errorf("status.setChannelOffline blocked, License key from https://teamgram.net required to unlock enterprise features.")
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

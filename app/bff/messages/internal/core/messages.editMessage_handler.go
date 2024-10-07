@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -22,9 +22,9 @@ import (
 	"google.golang.org/protobuf/proto"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
-	"github.com/lingyicute/papercraft-server/app/service/biz/message/message"
+	"github.com/teamgram/proto/mtproto"
+	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	"github.com/teamgram/teamgram-server/app/service/biz/message/message"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -54,7 +54,7 @@ func (c *MessagesCore) MessagesEditMessage(in *mtproto.TLMessagesEditMessage) (*
 			IdList: []int32{in.Id},
 		})
 	case mtproto.PEER_CHANNEL:
-		c.Logger.Errorf("messages.editMessage blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+		c.Logger.Errorf("messages.editMessage blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 		return nil, mtproto.ErrEnterpriseIsBlocked
 	default:
@@ -69,7 +69,7 @@ func (c *MessagesCore) MessagesEditMessage(in *mtproto.TLMessagesEditMessage) (*
 		return nil, err
 	}
 
-	// TODO: check
+	// TODO(@benqi): check
 	// editMessage := editMessages[0]
 	if editMessages.Datas[0].SenderUserId != c.MD.UserId {
 		err = mtproto.ErrMessageAuthorRequired

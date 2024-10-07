@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,20 +13,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
 // AuthResetLoginEmail
 // auth.resetLoginEmail#7e960193 phone_number:string phone_code_hash:string = auth.SentCode;
 func (c *AuthorizationCore) AuthResetLoginEmail(in *mtproto.TLAuthResetLoginEmail) (*mtproto.Auth_SentCode, error) {
 	// TODO: not impl
-	c.Logger.Errorf("auth.resetLoginEmail blocked, License key from https://papercraft-official.github.io required to unlock enterprise features.")
+	c.Logger.Errorf("auth.resetLoginEmail blocked, License key from https://teamgram.net required to unlock enterprise features.")
 
 	return nil, mtproto.ErrEnterpriseIsBlocked
 }

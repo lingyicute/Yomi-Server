@@ -12,7 +12,7 @@ import (
 	"image/color"
 	"io"
 
-	"github.com/lingyicute/papercraft-server/app/service/dfs/internal/imaging/jpeg/imageutil"
+	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging/jpeg/imageutil"
 )
 
 // TODO(nigeltao): fix up the doc comment style so that sentences start with

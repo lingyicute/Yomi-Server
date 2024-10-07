@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,10 +19,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
-// https://papercraft-official.github.io/mtproto#tcp-transport
+// https://core.telegram.org/mtproto#tcp-transport
 //
 // If a payload (packet) needs to be transmitted from server to client or from client to server,
 // it is encapsulated as follows:
@@ -57,7 +57,7 @@ func (c *FullCodec) Encode(conn CodecWriter, msg interface{}) ([]byte, error) {
 	size := len(b) / 4
 
 	binary.LittleEndian.PutUint32(sb, uint32(size))
-	// TODO: gen seq_num
+	// TODO(@benqi): gen seq_num
 	var seqNum uint32 = 0
 	binary.LittleEndian.PutUint32(sb[4:], seqNum)
 	b = append(sb, b...)
@@ -100,11 +100,11 @@ func (c *FullCodec) Decode(conn CodecReader) (interface{}, error) {
 	conn.Discard(size)
 
 	seq := binary.LittleEndian.Uint32(buf[:4])
-	// TODO: check seqNum, save last seq_num
+	// TODO(@benqi): check seqNum, save last seq_num
 	_ = seq
 
 	crc32 := binary.LittleEndian.Uint32(buf[len(buf)-4:])
-	// TODO: check crc32
+	// TODO(@benqi): check crc32
 	_ = crc32
 
 	message := mtproto.NewMTPRawMessage(int64(binary.LittleEndian.Uint64(buf[4:])), 0, TRANSPORT_TCP)

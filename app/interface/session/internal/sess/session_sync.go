@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package sess
@@ -21,7 +21,7 @@ package sess
 import (
 	"context"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -54,7 +54,7 @@ func (c *session) onSyncData(ctx context.Context, obj mtproto.TLObject) {
 }
 
 func (c *session) onSyncRpcResultData(ctx context.Context, reqMsgId int64, data []byte) {
-	// TODO:
+	// TODO(@benqi):
 	// log.Debugf("genericSession]]>> - %v", cntl)
 	c.pendingQueue.Remove(reqMsgId)
 	gatewayId := c.getGatewayId()
@@ -62,7 +62,7 @@ func (c *session) onSyncRpcResultData(ctx context.Context, reqMsgId int64, data 
 }
 
 func (c *session) onSyncSessionData(ctx context.Context, obj mtproto.TLObject) {
-	// TODO:
+	// TODO(@benqi):
 	gatewayId := c.getGatewayId()
 	pusMsgId := c.sessList.cb.getNextPushId()
 

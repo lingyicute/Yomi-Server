@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -22,15 +22,15 @@ import (
 	"context"
 	"math/rand"
 
-	"github.com/papercraft/marmota/pkg/threading2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/papercraft/proto/mtproto/crypto"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/logic"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
-	msgpb "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/msg"
-	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
-	"github.com/lingyicute/papercraft-server/pkg/phonenumber"
+	"github.com/teamgram/marmota/pkg/threading2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/logic"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
+	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
+	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/teamgram/teamgram-server/pkg/phonenumber"
 )
 
 /*
@@ -94,7 +94,7 @@ func (c *AuthorizationCore) AuthSignUp(in *mtproto.TLAuthSignUp) (*mtproto.Auth_
 		return nil, err
 	}
 
-	// TODO: register name ruler
+	// TODO(@benqi): register name ruler
 	// check first name invalid
 	if in.FirstName == "" {
 		c.Logger.Errorf("check first_name error - empty")
@@ -102,7 +102,7 @@ func (c *AuthorizationCore) AuthSignUp(in *mtproto.TLAuthSignUp) (*mtproto.Auth_
 		return nil, err
 	}
 
-	// TODO: PHONE_NUMBER_FLOOD
+	// TODO(@benqi): PHONE_NUMBER_FLOOD
 	// <string name="PhoneNumberFlood">Sorry, you have deleted and re-created your account too many times recently.
 	//    Please wait for a few days before signing up again.</string>
 	//
@@ -159,7 +159,7 @@ func (c *AuthorizationCore) AuthSignUp(in *mtproto.TLAuthSignUp) (*mtproto.Auth_
 		return nil, err
 	}
 
-	// TODO: remove to createNewUser
+	// TODO(@benqi): remove to createNewUser
 	// user.Self = true
 
 	// bind auth_key and user_id

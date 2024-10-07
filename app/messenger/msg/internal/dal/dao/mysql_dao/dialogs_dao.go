@@ -2,16 +2,16 @@
  * WARNING! All changes made in this file will be lost!
  *   Created from by 'dalgen'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package mysql_dao
 
 import (
-	dialog_helper "github.com/lingyicute/papercraft-server/app/service/biz/dialog"
+	dialog_helper "github.com/teamgram/teamgram-server/app/service/biz/dialog"
 )
 
 type (

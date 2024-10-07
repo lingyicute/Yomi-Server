@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,14 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package main
 
 import (
-	"github.com/papercraft/marmota/pkg/commands"
-	"github.com/lingyicute/papercraft-server/app/interface/gnetway"
+	"github.com/teamgram/marmota/pkg/commands"
+	"github.com/teamgram/teamgram-server/app/interface/gnetway"
 )
 
 func main() {

@@ -21,7 +21,7 @@ Routine:
   Size: 100
 
 Mysql:
-  DSN: root:@tcp(127.0.0.1:3306)/papercraft?charset=utf8mb4&parseTime=true
+  DSN: root:@tcp(127.0.0.1:3306)/teamgram?charset=utf8mb4&parseTime=true
   Active: 64
   Idle: 64
   IdleTimeout: 4h

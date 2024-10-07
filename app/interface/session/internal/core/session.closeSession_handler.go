@@ -1,4 +1,4 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,14 +13,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/interface/session/session"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/interface/session/session"
 )
 
 // SessionCloseSession
@@ -38,7 +38,7 @@ func (c *SessionCore) SessionCloseSession(in *session.TLSessionCloseSession) (*m
 
 	mainAuth := c.svcCtx.MainAuthMgr.GetMainAuthWrapper(cli.PermAuthKeyId)
 	if mainAuth == nil {
-		c.Logger.Errorf("session.closeSession - not found sessList by keyId: %d", cli)
+		c.Logger.Errorf("session.closeSession - not found sessList by keyId: %s", cli)
 	} else {
 		mainAuth.SessionClientClosed(c.ctx, int(cli.KeyType), cli.AuthKeyId, cli.ServerId, cli.SessionId)
 	}

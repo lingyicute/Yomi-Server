@@ -5,6 +5,6 @@ RUN ./build.sh
 
 FROM ubuntu:latest
 WORKDIR /app
-COPY --from=builder /app/papercraftd/ /app/
+COPY --from=builder /app/yomid/ /app/
 RUN apt update -y && apt install -y ffmpeg && chmod +x /app/docker/entrypoint.sh
 ENTRYPOINT /app/docker/entrypoint.sh

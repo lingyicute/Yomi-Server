@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -13,7 +13,7 @@ import (
 )
 
 func (d *Dao) CheckApiIdAndHash(apiId int32, apiHash string) error {
-	// TODO: check api_id and api_hash
+	// TODO(@benqi): check api_id and api_hash
 	// 400	API_ID_INVALID	API ID无效
 	// 400	API_ID_PUBLISHED_FLOOD	这个API ID已发布在某个地方，您现在不能使用
 

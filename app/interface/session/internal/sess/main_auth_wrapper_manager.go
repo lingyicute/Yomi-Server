@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package sess
@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/lingyicute/papercraft-server/app/interface/session/internal/dao"
+	"github.com/teamgram/teamgram-server/app/interface/session/internal/dao"
 )
 
 type MainAuthWrapperManager struct {

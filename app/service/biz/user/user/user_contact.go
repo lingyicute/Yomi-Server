@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,13 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package user
 
 import (
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 )
 
 type BlockedList []*mtproto.PeerBlocked
@@ -32,7 +32,7 @@ func (m BlockedList) Swap(i, j int) {
 	m[j], m[i] = m[i], m[j]
 }
 func (m BlockedList) Less(i, j int) bool {
-	// TODO: if date[i] == date[j]
+	// TODO(@benqi): if date[i] == date[j]
 	return m[i].Date < m[j].Date
 }
 

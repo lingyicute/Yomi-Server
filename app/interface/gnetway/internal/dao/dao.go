@@ -1,13 +1,13 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package dao
 
 import (
-	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/config"
+	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/config"
 )
 
 type Dao struct {

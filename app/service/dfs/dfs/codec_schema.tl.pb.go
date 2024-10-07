@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package dfs
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -124,7 +124,7 @@ func (m *TLDfsWriteFilePartData) Encode(x *mtproto.EncodeBuf, layer int32) error
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetCreator())
 		x.Long(m.GetFileId())
 		x.Int(m.GetFilePart())
@@ -151,7 +151,7 @@ func (m *TLDfsWriteFilePartData) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.Creator = dBuf.Long()
 		m.FileId = dBuf.Long()
 		m.FilePart = dBuf.Int()
@@ -238,7 +238,7 @@ func (m *TLDfsUploadProfilePhotoFileV2) Encode(x *mtproto.EncodeBuf, layer int32
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetCreator())
 		if m.GetFile() != nil {
 			m.GetFile().Encode(x, layer)
@@ -270,7 +270,7 @@ func (m *TLDfsUploadProfilePhotoFileV2) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.Creator = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {
 			m3 := &mtproto.InputFile{}
@@ -584,7 +584,7 @@ func (m *TLDfsUploadThemeFile) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetCreator())
 		m.GetFile().Encode(x, layer)
 		if m.GetThumb() != nil {
@@ -612,7 +612,7 @@ func (m *TLDfsUploadThemeFile) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.Creator = dBuf.Long()
 
 		m3 := &mtproto.InputFile{}

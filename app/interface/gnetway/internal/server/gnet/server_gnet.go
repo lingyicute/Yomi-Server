@@ -1,4 +1,4 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,15 +20,16 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 	"errors"
+	"fmt"
 	"math/rand"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/interface/gnetway/internal/server/gnet/ws"
-	"github.com/lingyicute/papercraft-server/app/interface/session/client"
-	"github.com/lingyicute/papercraft-server/app/interface/session/session"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/interface/gnetway/internal/server/gnet/ws"
+	"github.com/teamgram/teamgram-server/app/interface/session/client"
+	"github.com/teamgram/teamgram-server/app/interface/session/session"
 
 	"github.com/gobwas/ws/wsutil"
 	"github.com/panjf2000/gnet/v2"
@@ -191,15 +192,43 @@ func (s *Server) onEncryptedMessage(c gnet.Conn, ctx *connContext, authKey *auth
 	)
 
 	if permAuthKeyId == 0 {
-		permAuthKeyId = tryGetPermAuthKeyId(mtpRwaData[16:])
-		if permAuthKeyId == 0 {
-			logx.Debugf("not get key_id(%s)", c)
-			// return nil
-		} else {
-			clone := proto.Clone(authKey.keyData).(*mtproto.AuthKeyInfo)
-			clone.PermAuthKeyId = permAuthKeyId
-			authKey.keyData = clone
-			s.PutAuthKey(clone)
+		// hack
+		for _, unknown := range tryGetUnknownTLObject(mtpRwaData[16:]) {
+			switch unknownMsg := unknown.(type) {
+			case *mtproto.TLAuthBindTempAuthKey:
+				permAuthKeyId = unknownMsg.PermAuthKeyId
+
+				clone := proto.Clone(authKey.keyData).(*mtproto.AuthKeyInfo)
+				clone.PermAuthKeyId = permAuthKeyId
+				authKey.keyData = clone
+				s.PutAuthKey(clone)
+			case *mtproto.TLPing:
+				payload := serializeToBuffer2(salt, sessionId, &mtproto.TLMessage2{
+					MsgId: nextMessageId(false),
+					Seqno: 0,
+					Bytes: 0,
+					Object: mtproto.MakeTLPong(&mtproto.Pong{
+						MsgId:  int64(binary.LittleEndian.Uint64(mtpRwaData[16:])),
+						PingId: unknownMsg.PingId,
+					}).To_Pong(),
+				})
+
+				msgKey, mtpRawData, _ := authKey.AesIgeEncrypt(payload)
+				x2 := mtproto.NewEncodeBuf(8 + len(msgKey) + len(mtpRawData))
+				x2.Long(authKey.AuthKeyId())
+				x2.Bytes(msgKey)
+				x2.Bytes(mtpRawData)
+				UnThreadSafeWrite(c, &mtproto.MTPRawMessage{Payload: x2.GetBuf()})
+
+				return nil
+			default:
+				if permAuthKeyId == 0 {
+					logx.Errorf("recv unknown msg: %v, ignore it", unknownMsg)
+					return fmt.Errorf("unknown msg")
+				} else {
+					// ignore it
+				}
+			}
 		}
 	}
 

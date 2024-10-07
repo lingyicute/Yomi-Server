@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -22,13 +22,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/logic"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
-	"github.com/lingyicute/papercraft-server/app/messenger/sync/sync"
-	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
-	"github.com/lingyicute/papercraft-server/pkg/code/conf"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/logic"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
+	"github.com/teamgram/teamgram-server/app/messenger/sync/sync"
+	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	"github.com/teamgram/teamgram-server/pkg/code/conf"
 
 	"google.golang.org/grpc/status"
 )
@@ -129,7 +129,7 @@ func (c *AuthorizationCore) AuthSignIn(in *mtproto.TLAuthSignIn) (*mtproto.Auth_
 		}
 	}
 
-	// TODO: err handle
+	// TODO(@benqi): err handle
 	// do signIn...
 	var (
 		user *mtproto.ImmutableUser

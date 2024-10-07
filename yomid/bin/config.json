@@ -41,7 +41,7 @@
     "call_ring_timeout_ms": 90000,
     "call_connect_timeout_ms": 30000,
     "call_packet_timeout_ms": 10000,
-    "me_url_prefix": "https://papercraft.io/",
+    "me_url_prefix": "https://teamgram.io/",
     "gif_search_username": {
       "value": "gif"
     },
@@ -52,7 +52,7 @@
       "value": "bing"
     },
     "static_maps_provider": {
-      "value": "papercraft"
+      "value": "telegram"
     },
     "caption_length_max": 200,
     "message_length_max": 4096,

@@ -1,4 +1,4 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,19 +13,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
 
 import (
-	kafka "github.com/papercraft/marmota/pkg/mq"
-	"github.com/papercraft/marmota/pkg/net/rpcx"
-	"github.com/lingyicute/papercraft-server/app/bff/privacysettings/internal/config"
-	sync_client "github.com/lingyicute/papercraft-server/app/messenger/sync/client"
-	authsession_client "github.com/lingyicute/papercraft-server/app/service/authsession/client"
-	chat_client "github.com/lingyicute/papercraft-server/app/service/biz/chat/client"
-	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
+	kafka "github.com/teamgram/marmota/pkg/mq"
+	"github.com/teamgram/marmota/pkg/net/rpcx"
+	"github.com/teamgram/teamgram-server/app/bff/privacysettings/internal/config"
+	sync_client "github.com/teamgram/teamgram-server/app/messenger/sync/client"
+	authsession_client "github.com/teamgram/teamgram-server/app/service/authsession/client"
+	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
+	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
 )
 
 type Dao struct {

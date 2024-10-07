@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package plugin
@@ -10,9 +10,9 @@ import (
 	"context"
 	"sort"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/username/username"
-	"github.com/lingyicute/papercraft-server/pkg/mention"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/username/username"
+	"github.com/teamgram/teamgram-server/pkg/mention"
 
 	"mvdan.cc/xurls/v2"
 )
@@ -80,7 +80,7 @@ func RemakeMessage(ctx context.Context, plugin MsgPlugin, message *mtproto.Messa
 			}
 
 			if entity.UserId_INPUTUSER.UserId != 0 {
-				// TODO: check user_id
+				// TODO(@benqi): check user_id
 				entityMentionName := mtproto.MakeTLMessageEntityMentionName(&mtproto.MessageEntity{
 					Offset:       entity.Offset,
 					Length:       entity.Length,

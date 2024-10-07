@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -22,10 +22,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/papercraft/marmota/pkg/random2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/papercraft/proto/mtproto/crypto"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
+	"github.com/teamgram/marmota/pkg/random2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -100,7 +100,7 @@ func (d *Dao) UpdatePhoneCodeData(ctx context.Context,
 	authKeyId int64,
 	phoneNumber, phoneCodeHash string,
 	codeData *model.PhoneCodeTransaction) error {
-	// TODO: check state??
+	// TODO(@benqi): check state??
 	return d.PutCachePhoneCode(ctx, authKeyId, phoneNumber, codeData)
 }
 
@@ -108,7 +108,7 @@ func (d *Dao) CheckCanDoAction(ctx context.Context,
 	authKeyId int64,
 	phoneNumber string,
 	actionType int) error {
-	// TODO: check can do action
+	// TODO(@benqi): check can do action
 
 	_ = authKeyId
 	_ = phoneNumber

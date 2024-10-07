@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package dao
@@ -21,16 +21,16 @@ package dao
 import (
 	"flag"
 	"github.com/oschwald/geoip2-golang"
-	kafka "github.com/papercraft/marmota/pkg/mq"
-	"github.com/papercraft/marmota/pkg/net/rpcx"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/config"
-	msg_client "github.com/lingyicute/papercraft-server/app/messenger/msg/msg/client"
-	sync_client "github.com/lingyicute/papercraft-server/app/messenger/sync/client"
-	authsession_client "github.com/lingyicute/papercraft-server/app/service/authsession/client"
-	chat_client "github.com/lingyicute/papercraft-server/app/service/biz/chat/client"
-	user_client "github.com/lingyicute/papercraft-server/app/service/biz/user/client"
-	username_client "github.com/lingyicute/papercraft-server/app/service/biz/username/client"
-	status_client "github.com/lingyicute/papercraft-server/app/service/status/client"
+	kafka "github.com/teamgram/marmota/pkg/mq"
+	"github.com/teamgram/marmota/pkg/net/rpcx"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/config"
+	msg_client "github.com/teamgram/teamgram-server/app/messenger/msg/msg/client"
+	sync_client "github.com/teamgram/teamgram-server/app/messenger/sync/client"
+	authsession_client "github.com/teamgram/teamgram-server/app/service/authsession/client"
+	chat_client "github.com/teamgram/teamgram-server/app/service/biz/chat/client"
+	user_client "github.com/teamgram/teamgram-server/app/service/biz/user/client"
+	username_client "github.com/teamgram/teamgram-server/app/service/biz/username/client"
+	status_client "github.com/teamgram/teamgram-server/app/service/status/client"
 	"github.com/zeromicro/go-zero/core/stores/kv"
 )
 

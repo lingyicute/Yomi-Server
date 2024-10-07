@@ -1,17 +1,17 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package core
 
 import (
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/updates/updates"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/updates/updates"
 	"time"
 )
 
@@ -31,7 +31,7 @@ func (c *UpdatesCore) UpdatesGetStateV2(in *updates.TLUpdatesGetStateV2) (*mtpro
 		Pts:         pts,
 		Qts:         0,
 		Seq:         seq,
-		Date:        int32(time.Now().Unix()), // TODO: do.Date2???
+		Date:        int32(time.Now().Unix()), // TODO(@benqi): do.Date2???
 		UnreadCount: 0,
 	}).To_Updates_State(), nil
 }

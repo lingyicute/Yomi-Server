@@ -1,7 +1,7 @@
-// Copyright 2023 Papercraft Authors
+// Copyright 2023 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package dao
@@ -10,11 +10,11 @@ import (
 	"context"
 	"errors"
 
-	"github.com/papercraft/marmota/pkg/stores/sqlc"
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/dialog"
-	"github.com/lingyicute/papercraft-server/app/service/biz/dialog/internal/dal/dataobject"
+	"github.com/teamgram/marmota/pkg/stores/sqlc"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/service/biz/dialog/dialog"
+	"github.com/teamgram/teamgram-server/app/service/biz/dialog/internal/dal/dataobject"
 
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -23,7 +23,7 @@ import (
 func (d *Dao) MakeDialog(dialogDO *dataobject.DialogsDO) *dialog.DialogExt {
 	dialog2 := mtproto.MakeTLDialog(&mtproto.Dialog{
 		Pinned:               false,
-		UnreadMark:           dialogDO.UnreadMark, // TODO
+		UnreadMark:           dialogDO.UnreadMark, // TODO(@benqi)
 		ViewForumAsMessages:  false,
 		Peer:                 mtproto.MakePeer(dialogDO.PeerType, dialogDO.PeerId),
 		TopMessage:           dialogDO.TopMessage,

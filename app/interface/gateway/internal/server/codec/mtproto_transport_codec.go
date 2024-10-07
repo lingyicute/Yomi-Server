@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package codec
@@ -27,14 +27,14 @@ import (
 	"io"
 	"net"
 
-	"github.com/papercraft/marmota/pkg/net/ip"
-	"github.com/papercraft/marmota/pkg/net2"
-	"github.com/papercraft/proto/mtproto/crypto"
+	"github.com/teamgram/marmota/pkg/net/ip"
+	"github.com/teamgram/marmota/pkg/net2"
+	"github.com/teamgram/proto/mtproto/crypto"
 
 	log "github.com/zeromicro/go-zero/core/logx"
 )
 
-// TODO: Quick ack (https://papercraft-official.github.io/mtproto#tcp-transport)
+// TODO(@benqi): Quick ack (https://core.telegram.org/mtproto#tcp-transport)
 //
 // The full, the intermediate and the abridged versions of the protocol have support for quick acknowledgment.
 // In this case, the client sets the highest-order length bit in the query packet,
@@ -50,7 +50,7 @@ import (
 const (
 	TRANSPORT_TCP  = 1 // TCP
 	TRANSPORT_HTTP = 2 // HTTP
-	TRANSPORT_UDP  = 3 // UDP, TODO: 未发现有支持UDP的客户端
+	TRANSPORT_UDP  = 3 // UDP, TODO(@benqi): 未发现有支持UDP的客户端
 )
 
 const (

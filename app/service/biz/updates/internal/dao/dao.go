@@ -1,19 +1,19 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+ * Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
  *  All rights reserved.
  *
- * Author: papercraftio (papercraft.io@gmail.com)
+ * Author: teamgramio (teamgram.io@gmail.com)
  */
 
 package dao
 
 import (
-	"github.com/papercraft/marmota/pkg/net/rpcx"
-	"github.com/papercraft/marmota/pkg/stores/sqlx"
-	"github.com/lingyicute/papercraft-server/app/service/biz/updates/internal/config"
-	idgen_client "github.com/lingyicute/papercraft-server/app/service/idgen/client"
+	"github.com/teamgram/marmota/pkg/net/rpcx"
+	"github.com/teamgram/marmota/pkg/stores/sqlx"
+	"github.com/teamgram/teamgram-server/app/service/biz/updates/internal/config"
+	idgen_client "github.com/teamgram/teamgram-server/app/service/idgen/client"
 
 	"github.com/zeromicro/go-zero/core/stores/kv"
 )

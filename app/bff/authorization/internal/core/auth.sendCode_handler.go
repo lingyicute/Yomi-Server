@@ -1,4 +1,4 @@
-// Copyright 2022 Papercraft Authors
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package core
@@ -22,13 +22,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/papercraft/marmota/pkg/threading2"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/logic"
-	"github.com/lingyicute/papercraft-server/app/bff/authorization/internal/model"
-	"github.com/lingyicute/papercraft-server/app/service/authsession/authsession"
-	userpb "github.com/lingyicute/papercraft-server/app/service/biz/user/user"
-	statuspb "github.com/lingyicute/papercraft-server/app/service/status/status"
+	"github.com/teamgram/marmota/pkg/threading2"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/logic"
+	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/model"
+	"github.com/teamgram/teamgram-server/app/service/authsession/authsession"
+	userpb "github.com/teamgram/teamgram-server/app/service/biz/user/user"
+	statuspb "github.com/teamgram/teamgram-server/app/service/status/status"
 
 	"google.golang.org/grpc/status"
 )
@@ -104,7 +104,7 @@ import (
 |303 |	NETWORK_MIGRATE_X |	Repeat the query to data-center X |
 |303 |	PHONE_MIGRATE_X |	Repeat the query to data-center X |
 |400 |	PHONE_NUMBER_APP_SIGNUP_FORBIDDEN |	You can't sign up using this app |
-|400 |	PHONE_NUMBER_BANNED |	The provided phone number is banned from papercraft |
+|400 |	PHONE_NUMBER_BANNED |	The provided phone number is banned from telegram |
 |400 |	PHONE_NUMBER_FLOOD |	You asked for the code too many times. |
 |400 |	PHONE_NUMBER_INVALID |	Invalid phone number |
 |406 |	PHONE_PASSWORD_FLOOD |	You have tried logging in too many times |
@@ -150,7 +150,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 		} else {
 			currentNumber = mtproto.FromBool(request.CurrentNumber)
 		}
-		// TODO: check allow_flashcall rule
+		// TODO(@benqi): check allow_flashcall rule
 		if !currentNumber && request.GetAllowFlashcall() {
 			err = mtproto.NewRpcError2(mtproto.TLRpcErrorCodes_BAD_REQUEST)
 			log.Errorf("current_number is true but allow_flashcall is false - %v", err)
@@ -172,13 +172,13 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 	// 	303	NETWORK_MIGRATE_X	重复查询到数据中心X
 	// 	303	PHONE_MIGRATE_X	重复查询到数据中心X
 	//
-	// TODO: MIGRATE datacenter
+	// TODO(@benqi): MIGRATE datacenter
 	// android client:
 	//  migrateErrors.push_back("NETWORK_MIGRATE_");
 	//  migrateErrors.push_back("PHONE_MIGRATE_");
 	//  migrateErrors.push_back("USER_MIGRATE_");
 	//
-	// https://papercraft-official.github.io/api/datacenter
+	// https://core.telegram.org/api/datacenter
 	// The auth.sendCode method is the basic entry point when registering a new user or authorizing an existing user.
 	//   95% of all redirection cases to a different DC will occure when invoking this method.
 	//
@@ -194,13 +194,13 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 	//
 	// if userDO == nil {
 	//	// phone registered
-	//	// TODO: 由phoneNumber和ip优选
+	//	// TODO(@benqi): 由phoneNumber和ip优选
 	// } else {
-	//	// TODO: 由userId优选
+	//	// TODO(@benqi): 由userId优选
 	// }
 
 	// 5. Check INPUT_REQUEST_TOO_LONG
-	// TODO:
+	// TODO(@benqi):
 	// 	400	INPUT_REQUEST_TOO_LONG	The request is too big
 
 	// 5. banned phone number
@@ -215,7 +215,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 
 	// 400	PHONE_NUMBER_FLOOD	You asked for the code too many times.
 	// phone number flood
-	// TODO: PHONE_NUMBER_FLOOD
+	// TODO(@benqi): PHONE_NUMBER_FLOOD
 	// <string name="PhoneNumberFlood">Sorry, you have deleted and re-created your account too many times recently.
 	//    Please wait for a few days before signing up again.</string>
 	//
@@ -269,7 +269,7 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 	}
 
 	if phoneRegistered {
-		// https://papercraft-official.github.io/api/auth#future-auth-tokens
+		// https://core.telegram.org/api/auth#future-auth-tokens
 		// TODO:
 		//  At all times, the future auth token database should contain at most 20 tokens:
 		//  evict older tokens as new tokens are added to stay below this limit.
@@ -334,8 +334,8 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 				if user.GetUser().GetUserType() == userpb.UserTypeTest {
 					needSendSms = false
 					codeData2.SentCodeType = model.SentCodeTypeApp
-					codeData2.PhoneCode = "92323"
-					codeData2.PhoneCodeExtraData = "92323"
+					codeData2.PhoneCode = "12345"
+					codeData2.PhoneCodeExtraData = "12345"
 					c.Logger.Infof("is test server: %v", codeData2)
 				} else {
 					if status, _ := c.svcCtx.StatusClient.StatusGetUserOnlineSessions(c.ctx, &statuspb.TLStatusGetUserOnlineSessions{
@@ -372,8 +372,8 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 			//if user.User.UserType == userpb.UserTypeTest {
 			//	c.Logger.Infof("test user: %s, %s", phoneNumber, user)
 			//	codeData2.SentCodeType = model.CodeTypeApp
-			//	codeData2.PhoneCode = "92323"
-			//	codeData2.PhoneCodeExtraData = "92323"
+			//	codeData2.PhoneCode = "12345"
+			//	codeData2.PhoneCodeExtraData = "12345"
 			//	go func() {
 			//		// c.pushSignInMessage(context.Background(), user.Id, codeData2.PhoneCode)
 			//	}()

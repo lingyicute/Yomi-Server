@@ -1,7 +1,7 @@
-// Copyright 2024 Papercraft Authors
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
-// Author: @lingyicute
+// Author: Benqi (wubenqi@gmail.com)
 //
 
 package core
@@ -11,10 +11,10 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/papercraft/proto/mtproto"
-	"github.com/papercraft/proto/mtproto/crypto"
-	"github.com/lingyicute/papercraft-server/app/interface/httpserver/internal/dao"
-	sessionpb "github.com/lingyicute/papercraft-server/app/interface/session/session"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/proto/mtproto/crypto"
+	"github.com/teamgram/teamgram-server/app/interface/httpserver/internal/dao"
+	sessionpb "github.com/teamgram/teamgram-server/app/interface/session/session"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -45,7 +45,7 @@ const (
 const (
 	TRANSPORT_TCP  = 1 // TCP
 	TRANSPORT_HTTP = 2 // HTTP
-	TRANSPORT_UDP  = 3 // UDP, TODO: 未发现有支持UDP的客户端
+	TRANSPORT_UDP  = 3 // UDP, TODO(@benqi): 未发现有支持UDP的客户端
 )
 
 // HttpserverApiw1

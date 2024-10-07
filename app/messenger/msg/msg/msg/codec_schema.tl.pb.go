@@ -2,10 +2,10 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Papercraft Authors.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
- * Author: @lingyicute
+ * Author: Benqi (wubenqi@gmail.com)
  */
 
 // ConstructorList
@@ -16,7 +16,7 @@ package msg
 import (
 	"fmt"
 
-	"github.com/papercraft/proto/mtproto"
+	"github.com/teamgram/proto/mtproto"
 
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )
@@ -255,7 +255,7 @@ func (m *TLContentMessage) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_contentMessage, layer)
 		return nil
 	}
@@ -423,7 +423,7 @@ func (m *TLOutboxMessage) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_outboxMessage, layer)
 		return nil
 	}
@@ -564,7 +564,7 @@ func (m *TLSender) Encode(x *mtproto.EncodeBuf, layer int32) error {
 	if f, ok := encodeF[uint32(clazzId)]; ok {
 		return f()
 	} else {
-		// TODO: handle error
+		// TODO(@benqi): handle error
 		// log.Errorf("not found clazzId by (%s, %d)", Predicate_sender, layer)
 		return nil
 	}
@@ -898,7 +898,7 @@ func (m *TLMsgDeleteMessages) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Long(m.GetAuthKeyId())
 		x.Int(m.GetPeerType())
@@ -924,7 +924,7 @@ func (m *TLMsgDeleteMessages) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		m.AuthKeyId = dBuf.Long()
 		m.PeerType = dBuf.Int()
@@ -963,7 +963,7 @@ func (m *TLMsgDeleteHistory) Encode(x *mtproto.EncodeBuf, layer int32) error {
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Long(m.GetAuthKeyId())
 		x.Int(m.GetPeerType())
@@ -988,7 +988,7 @@ func (m *TLMsgDeleteHistory) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		m.AuthKeyId = dBuf.Long()
 		m.PeerType = dBuf.Int()
@@ -1025,7 +1025,7 @@ func (m *TLMsgDeletePhoneCallHistory) Encode(x *mtproto.EncodeBuf, layer int32) 
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Long(m.GetAuthKeyId())
 
@@ -1047,7 +1047,7 @@ func (m *TLMsgDeletePhoneCallHistory) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		m.AuthKeyId = dBuf.Long()
 		if (flags & (1 << 1)) != 0 {
@@ -1216,7 +1216,7 @@ func (m *TLMsgUpdatePinnedMessage) Encode(x *mtproto.EncodeBuf, layer int32) err
 
 		x.UInt(flags)
 
-		// flags Debug 
+		// flags Debug by @benqi
 		x.Long(m.GetUserId())
 		x.Long(m.GetAuthKeyId())
 		x.Int(m.GetPeerType())
@@ -1241,7 +1241,7 @@ func (m *TLMsgUpdatePinnedMessage) Decode(dBuf *mtproto.DecodeBuf) error {
 		flags := dBuf.UInt()
 		_ = flags
 
-		// flags Debug 
+		// flags Debug by @benqi
 		m.UserId = dBuf.Long()
 		m.AuthKeyId = dBuf.Long()
 		if (flags & (1 << 0)) != 0 {

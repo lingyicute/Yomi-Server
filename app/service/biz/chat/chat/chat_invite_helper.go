@@ -1,7 +1,7 @@
-// Copyright (c) 2021-present,  Papercraft Studio (https://papercraft.io).
+// Copyright (c) 2021-present,  Teamgram Studio (https://teamgram.io).
 //  All rights reserved.
 //
-// Author: papercraftio (papercraft.io@gmail.com)
+// Author: teamgramio (teamgram.io@gmail.com)
 //
 
 package chat
@@ -9,10 +9,10 @@ package chat
 import (
 	"strings"
 
-	"github.com/papercraft/marmota/pkg/random2"
-	"github.com/papercraft/marmota/pkg/utils"
-	"github.com/papercraft/proto/mtproto"
-	"github.com/lingyicute/papercraft-server/pkg/env2"
+	"github.com/teamgram/marmota/pkg/random2"
+	"github.com/teamgram/marmota/pkg/utils"
+	"github.com/teamgram/proto/mtproto"
+	"github.com/teamgram/teamgram-server/pkg/env2"
 )
 
 func GetChatTypeByInviteHash(hash string) int {
