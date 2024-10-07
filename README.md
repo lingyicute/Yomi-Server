@@ -54,35 +54,35 @@ cd teamgram-server
 	```
 	1. create database teamgram
 	2. init teamgram database
-		mysql -uroot teamgram < yomid/sql/1_teamgram.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220321.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220326.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220328.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220401.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220412.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220419.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220423.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220504.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220721.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220826.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20220919.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20221008.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20221011.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20221016.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20221023.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20221101.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20221127.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20230707.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240107.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240108.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240111.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240112.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240113.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240114.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240420.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240620.sql
-		mysql -uroot teamgram < yomid/sql/migrate-20240828.sql
-		mysql -uroot teamgram < yomid/sql/z_init.sql
+		mysql -uroot teamgram < teamgramd/sql/1_teamgram.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220321.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220326.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220328.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220401.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220412.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220419.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220423.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220504.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220721.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220826.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20220919.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20221008.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20221011.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20221016.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20221023.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20221101.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20221127.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20230707.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240107.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240108.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240111.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240112.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240113.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240114.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240420.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240620.sql
+		mysql -uroot teamgram < teamgramd/sql/migrate-20240828.sql
+		mysql -uroot teamgram < teamgramd/sql/z_init.sql
 	```
 
 - init minio buckets
@@ -103,7 +103,7 @@ make
 #### Run
 
 ```
-cd yomid/bin
+cd teamgramd/bin
 ./runall2.sh
 ```
 

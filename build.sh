@@ -2,7 +2,7 @@
 
 PWD=`pwd`
 TEAMGRAMAPP=${PWD}"/app"
-INSTALL=${PWD}"/yomid"
+INSTALL=${PWD}"/teamgramd"
 
 echo "build idgen ..."
 cd ${TEAMGRAMAPP}/service/idgen/cmd/idgen

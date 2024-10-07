@@ -125,9 +125,9 @@ mysql> exit
 
 - import sql scripts
 ```
-mysql -uroot teamgram < yomid/sql/1_teamgram.sql
-mysql -uroot teamgram < yomid/sql/migrate-*.sql
-mysql -uroot teamgram < yomid/sql/z_init.sql
+mysql -uroot teamgram < teamgramd/sql/1_teamgram.sql
+mysql -uroot teamgram < teamgramd/sql/migrate-*.sql
+mysql -uroot teamgram < teamgramd/sql/z_init.sql
 ```
 
 ### Build
@@ -138,7 +138,7 @@ make
 
 ### Modify config file 
 ```
-vim ../yomid/etc/dfs.yaml
+vim ../teamgramd/etc/dfs.yaml
 {
 AccessKeyID: minioadmin
 SecretAccessKey: minioadmin
@@ -147,7 +147,7 @@ SSDB:
   - Host: 127.0.0.1:9221
 }
 
-vim ../yomid/etc/gateway.yaml
+vim ../teamgramd/etc/gateway.yaml
 {
 Addrs:
     - 0.0.0.0:10443  #modity listen port..
@@ -155,7 +155,7 @@ Addrs:
 ```
 
 ```
-cd ../yomid/bin/
+cd ../teamgramd/bin/
 ./runall2.sh
 firewall-cmd --zone=public --permanent --add-port=10443/tcp
 firewall-cmd --reload

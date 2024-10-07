@@ -1,8 +1,6 @@
 #folder
 target/
 .vagrant/
-
-#fixed file
 .class
 .exe
 .log
@@ -29,15 +27,15 @@ Thumbs.db
 data/*
 !data/.gitkeep
 
-yomid/bin/*
-!yomid/bin/config.json
-!yomid/bin/killall.sh
-!yomid/bin/runall2.sh
-!yomid/bin/runall-docker.sh
-!yomid/bin/server_pkcs1.key
+teamgramd/bin/*
+!teamgramd/bin/config.json
+!teamgramd/bin/killall.sh
+!teamgramd/bin/runall2.sh
+!teamgramd/bin/runall-docker.sh
+!teamgramd/bin/server_pkcs1.key
 
-yomid/logs/*
-!yomid/logs/.gitkeep
+teamgramd/logs/*
+!teamgramd/logs/.gitkeep
 
 /app/messenger/biz_server
 /app/bff/account/cmd/account/account

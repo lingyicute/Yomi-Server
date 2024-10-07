@@ -101,7 +101,7 @@ services:
     volumes:
       # 数据挂载 - Data mounting
       - ./data/mysql/data:/var/lib/mysql
-      - ./yomid/sql:/docker-entrypoint-initdb.d/
+      - ./teamgramd/sql:/docker-entrypoint-initdb.d/
       #- /etc/localtime:/etc/localtime
       # 日志
     command:

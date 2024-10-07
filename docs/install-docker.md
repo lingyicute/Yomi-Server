@@ -27,12 +27,12 @@ FROM centos:7.9.2009
 RUN yum -y install vim && yum -y install net-tools
 
 RUN mkdir -p /teamgram
-COPY --from=build /teamgram/yomid /teamgram/yomid
+COPY --from=build /teamgram/teamgramd /teamgram/teamgramd
 
-WORKDIR /teamgram/yomid/etc
+WORKDIR /teamgram/teamgramd/etc
 RUN rm -rf *
 
-WORKDIR /teamgram/yomid/bin
+WORKDIR /teamgram/teamgramd/bin
 RUN chmod -R 777 *.sh
 ENTRYPOINT ["./runall2.sh"]
 
@@ -162,8 +162,8 @@ ports:
 networks:
 - teamgram-net
 volumes:
-- ./docker/etc:/teamgram/yomid/etc
-- /Volumes/data/teamgram/volumes/logs:/teamgram/yomid/logs
+- ./docker/etc:/teamgram/teamgramd/etc
+- /Volumes/data/teamgram/volumes/logs:/teamgram/teamgramd/logs
 depends_on:
 - mysql
 - redis
@@ -271,8 +271,8 @@ Cache:
 #    networks:
 #      - teamgram-net
 #    volumes:
-#      - ./docker/etc:/teamgram/yomid/etc
-#      - /Volumes/data/teamgram/volumes/logs:/teamgram/yomid/logs
+#      - ./docker/etc:/teamgram/teamgramd/etc
+#      - /Volumes/data/teamgram/volumes/logs:/teamgram/teamgramd/logs
 #    depends_on:
 #      - mysql
 #      - redis
