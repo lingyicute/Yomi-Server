@@ -1,7 +1,7 @@
 /*
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright 2022 Teamgram Authors
+ * Copyright 2022 Yomi
  *  All rights reserved.
  *
  * Author: teamgramio (teamgram.io@gmail.com)
