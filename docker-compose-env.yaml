@@ -1,10 +1,4 @@
-version: "3"
-
-######## 项目依赖的环境，启动项目之前要先启动此环境 #######
-######## The environment that the project depends on, starting this environment before starting the project #######
-
 services:
-  #zookeeper是kafka的依赖 - Zookeeper is the dependencies of Kafka
   zookeeper:
     image: wurstmeister/zookeeper
     container_name: zookeeper
@@ -17,14 +11,12 @@ services:
     networks:
       - teamgram_net
 
-  #消息队列 - Message queue
   kafka:
     image: wurstmeister/kafka
     container_name: kafka
     ports:
       - 127.0.0.1:9092:9092
     environment:
-      #TZ: Asia/Shanghai
       KAFKA_BROKER_ID: 0
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "Inbox-T:1:0,Sync-T:1:0"
