@@ -17,6 +17,7 @@ services:
     ports:
       - 127.0.0.1:9092:9092
     environment:
+      TZ: Asia/Shanghai
       KAFKA_BROKER_ID: 0
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "Inbox-T:1:0,Sync-T:1:0"
@@ -67,7 +68,7 @@ services:
       #redis config file
       #- ./deploy/redis/config/redis.conf:/usr/local/redis/config/redis.conf
     environment:
-      TZ: Europe/Moscow
+      TZ: Asia/Shanghai
     restart: always
     privileged: true
     command: redis-server --appendonly yes
@@ -80,8 +81,7 @@ services:
     # image: mysql/mysql-server:5.7
     container_name: mysql
     environment:
-      # 时区上海 - Time zone Shanghai (Change if needed)
-      #TZ: Asia/Shanghai
+      TZ: Asia/Shanghai
       # root 密码 - root password
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-my_root_secret}
       MYSQL_DATABASE: teamgram
