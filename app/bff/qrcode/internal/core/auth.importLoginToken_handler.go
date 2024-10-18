@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,11 +22,22 @@ import (
 	"github.com/teamgram/proto/mtproto"
 )
 
+/**
+# auth.importLoginToken
+
+Login using a redirected login token, generated in case of DC mismatch during QR code login.
+
+For more info, see login via QR code.
+
+**/
+
 // AuthImportLoginToken
 // auth.importLoginToken#95ac5ce4 token:bytes = auth.LoginToken;
 func (c *QrCodeCore) AuthImportLoginToken(in *mtproto.TLAuthImportLoginToken) (*mtproto.Auth_LoginToken, error) {
 	// TODO: not impl
-	c.Logger.Errorf("auth.importLoginToken blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	// teamgram does not implement multi-datacenter support, so this method is not implemented.
 
-	return nil, mtproto.ErrAuthTokenInvalid
+	c.Logger.Errorf("auth.importLoginToken - method not impl")
+
+	return nil, mtproto.ErrAuthTokenAlreadyAccepted
 }

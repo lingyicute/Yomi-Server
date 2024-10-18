@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -112,7 +112,7 @@ func (trans *FFmpegUtil) ConvertToMp4(gifPath string) (err error) {
 		logx.Errorf("convertGifToMp4 - error: %v", err)
 	}
 
-	//data, err = ioutil.ReadFile(videoPath)
+	//data, err = os.ReadFile(videoPath)
 	//if err != nil {
 	//	log.Errorf("convertGifToMp4 - error: %v", err)
 	//}

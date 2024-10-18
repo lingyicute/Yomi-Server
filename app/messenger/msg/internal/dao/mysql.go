@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,17 +30,19 @@ type Mysql struct {
 	*mysql_dao.HashTagsDAO
 	*mysql_dao.DialogsDAO
 	*mysql_dao.SavedDialogsDAO
+	*mysql_dao.MessageReadOutboxDAO
 	*sqlx.CommonDAO
 }
 
 func NewMysqlDao(db *sqlx.DB, shardingSize int) *Mysql {
 	return &Mysql{
-		DB:                  db,
-		MessagesDAO:         mysql_dao.NewMessagesDAO(db, shardingSize),
-		ChatParticipantsDAO: mysql_dao.NewChatParticipantsDAO(db),
-		HashTagsDAO:         mysql_dao.NewHashTagsDAO(db),
-		DialogsDAO:          mysql_dao.NewDialogsDAO(db),
-		SavedDialogsDAO:     mysql_dao.NewSavedDialogsDAO(db),
-		CommonDAO:           sqlx.NewCommonDAO(db),
+		DB:                   db,
+		MessagesDAO:          mysql_dao.NewMessagesDAO(db, shardingSize),
+		ChatParticipantsDAO:  mysql_dao.NewChatParticipantsDAO(db),
+		HashTagsDAO:          mysql_dao.NewHashTagsDAO(db),
+		DialogsDAO:           mysql_dao.NewDialogsDAO(db),
+		SavedDialogsDAO:      mysql_dao.NewSavedDialogsDAO(db),
+		MessageReadOutboxDAO: mysql_dao.NewMessageReadOutboxDAO(db),
+		CommonDAO:            sqlx.NewCommonDAO(db),
 	}
 }

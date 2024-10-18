@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,14 +31,16 @@ type Dao struct {
 	user_client.UserClient
 	chat_client.ChatClient
 	dialog_client.DialogClient
-	Plugin plugin.StoryPlugin
+	plugin.StoryPlugin
+	plugin.PersonalChannelPlugin
 }
 
-func New(c config.Config, plugin plugin.StoryPlugin) *Dao {
+func New(c config.Config, plugin1 plugin.StoryPlugin, plugin2 plugin.PersonalChannelPlugin) *Dao {
 	return &Dao{
-		UserClient:   user_client.NewUserClient(rpcx.GetCachedRpcClient(c.UserClient)),
-		ChatClient:   chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
-		DialogClient: dialog_client.NewDialogClient(rpcx.GetCachedRpcClient(c.DialogClient)),
-		Plugin:       plugin,
+		UserClient:            user_client.NewUserClient(rpcx.GetCachedRpcClient(c.UserClient)),
+		ChatClient:            chat_client.NewChatClient(rpcx.GetCachedRpcClient(c.ChatClient)),
+		DialogClient:          dialog_client.NewDialogClient(rpcx.GetCachedRpcClient(c.DialogClient)),
+		StoryPlugin:           plugin1,
+		PersonalChannelPlugin: plugin2,
 	}
 }

@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,13 +21,14 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/minio/minio-go/v7/pkg/credentials"
 	"io/ioutil"
+	"os"
 	"path/filepath"
 
-	"github.com/minio/minio-go/v7"
-
 	"github.com/teamgram/teamgram-server/app/service/dfs/internal/imaging"
+
+	"github.com/minio/minio-go/v7"
+	"github.com/minio/minio-go/v7/pkg/credentials"
 )
 
 var imageFile = flag.String("image", "", "convert image file")
@@ -46,7 +47,7 @@ func main() {
 	}
 
 	ext := filepath.Ext(*imageFile)
-	rb, err := ioutil.ReadFile(*imageFile)
+	rb, err := os.ReadFile(*imageFile)
 	if err != nil {
 		fmt.Println(err)
 		return

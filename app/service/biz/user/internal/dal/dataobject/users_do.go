@@ -2,7 +2,7 @@
  * WARNING! All changes made in this file will be lost!
  *   Created from by 'dalgen'
  *
- * Copyright (c) 2024-present,  Yomi.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
  * Author: teamgramio (teamgram.io@gmail.com)
@@ -41,6 +41,7 @@ type UsersDO struct {
 	ProfileColor                     int32  `db:"profile_color" json:"profile_color"`
 	ProfileColorBackgroundEmojiId    int64  `db:"profile_color_background_emoji_id" json:"profile_color_background_emoji_id"`
 	Birthday                         string `db:"birthday" json:"birthday"`
+	PersonalChannelId                int64  `db:"personal_channel_id" json:"personal_channel_id"`
 	Deleted                          bool   `db:"deleted" json:"deleted"`
 	DeleteReason                     string `db:"delete_reason" json:"delete_reason"`
 }

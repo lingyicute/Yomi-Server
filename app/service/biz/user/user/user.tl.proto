@@ -2,7 +2,7 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Yomi.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
  * Author: Benqi (wubenqi@gmail.com)
@@ -98,6 +98,8 @@ enum TLConstructor {
     CRC32_user_updateBirthday = 1484434322;
     CRC32_user_getBirthdays = -24199258;
     CRC32_user_setStoriesHidden = -138012584;
+    CRC32_user_updatePersonalChannel = -940065072;
+    CRC32_user_getUserIdByPhone = -72645694;
 }
 
 
@@ -695,6 +697,19 @@ message TL_user_setStoriesHidden {
     mtproto.Bool hidden = 5;
 }
 
+//--------------------------------------------------------------------------------------------
+message TL_user_updatePersonalChannel {
+    TLConstructor  constructor = 1;
+    int64 user_id = 3;
+    int64 channel_id = 4;
+}
+
+//--------------------------------------------------------------------------------------------
+message TL_user_getUserIdByPhone {
+    TLConstructor  constructor = 1;
+    string phone = 3;
+}
+
 
 //--------------------------------------------------------------------------------------------
 // Vector api result type
@@ -806,5 +821,7 @@ service RPCUser {
  rpc user_updateBirthday(TL_user_updateBirthday) returns (mtproto.Bool) {}
  rpc user_getBirthdays(TL_user_getBirthdays) returns (Vector_ContactBirthday) {}
  rpc user_setStoriesHidden(TL_user_setStoriesHidden) returns (mtproto.Bool) {}
+ rpc user_updatePersonalChannel(TL_user_updatePersonalChannel) returns (mtproto.Bool) {}
+ rpc user_getUserIdByPhone(TL_user_getUserIdByPhone) returns (mtproto.Int64) {}
 }
 

@@ -2,7 +2,7 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Yomi.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
  * Author: Benqi (wubenqi@gmail.com)
@@ -414,6 +414,16 @@ var clazzIdRegisters2 = map[int32]func() mtproto.TLObject{
 	-138012584: func() mtproto.TLObject { // 0xf7c61858
 		return &TLUserSetStoriesHidden{
 			Constructor: -138012584,
+		}
+	},
+	-940065072: func() mtproto.TLObject { // 0xc7f7bed0
+		return &TLUserUpdatePersonalChannel{
+			Constructor: -940065072,
+		}
+	},
+	-72645694: func() mtproto.TLObject { // 0xfbab83c2
+		return &TLUserGetUserIdByPhone{
+			Constructor: -72645694,
 		}
 	},
 }
@@ -4291,6 +4301,84 @@ func (m *TLUserSetStoriesHidden) Decode(dBuf *mtproto.DecodeBuf) error {
 		m3.Decode(dBuf)
 		m.Hidden = m3
 
+		return dBuf.GetError()
+
+	default:
+		// log.Errorf("")
+	}
+	return dBuf.GetError()
+}
+
+// TLUserUpdatePersonalChannel
+///////////////////////////////////////////////////////////////////////////////
+
+func (m *TLUserUpdatePersonalChannel) Encode(x *mtproto.EncodeBuf, layer int32) error {
+	switch uint32(m.Constructor) {
+	case 0xc7f7bed0:
+		x.UInt(0xc7f7bed0)
+
+		// no flags
+
+		x.Long(m.GetUserId())
+		x.Long(m.GetChannelId())
+
+	default:
+		// log.Errorf("")
+	}
+
+	return nil
+}
+
+func (m *TLUserUpdatePersonalChannel) CalcByteSize(layer int32) int {
+	return 0
+}
+
+func (m *TLUserUpdatePersonalChannel) Decode(dBuf *mtproto.DecodeBuf) error {
+	switch uint32(m.Constructor) {
+	case 0xc7f7bed0:
+
+		// not has flags
+
+		m.UserId = dBuf.Long()
+		m.ChannelId = dBuf.Long()
+		return dBuf.GetError()
+
+	default:
+		// log.Errorf("")
+	}
+	return dBuf.GetError()
+}
+
+// TLUserGetUserIdByPhone
+///////////////////////////////////////////////////////////////////////////////
+
+func (m *TLUserGetUserIdByPhone) Encode(x *mtproto.EncodeBuf, layer int32) error {
+	switch uint32(m.Constructor) {
+	case 0xfbab83c2:
+		x.UInt(0xfbab83c2)
+
+		// no flags
+
+		x.String(m.GetPhone())
+
+	default:
+		// log.Errorf("")
+	}
+
+	return nil
+}
+
+func (m *TLUserGetUserIdByPhone) CalcByteSize(layer int32) int {
+	return 0
+}
+
+func (m *TLUserGetUserIdByPhone) Decode(dBuf *mtproto.DecodeBuf) error {
+	switch uint32(m.Constructor) {
+	case 0xfbab83c2:
+
+		// not has flags
+
+		m.Phone = dBuf.String()
 		return dBuf.GetError()
 
 	default:

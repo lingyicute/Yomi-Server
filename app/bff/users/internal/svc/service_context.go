@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,9 +29,9 @@ type ServiceContext struct {
 	*dao.Dao
 }
 
-func NewServiceContext(c config.Config, plugin plugin.StoryPlugin) *ServiceContext {
+func NewServiceContext(c config.Config, plugin1 plugin.StoryPlugin, plugin2 plugin.PersonalChannelPlugin) *ServiceContext {
 	return &ServiceContext{
 		Config: c,
-		Dao:    dao.New(c, plugin),
+		Dao:    dao.New(c, plugin1, plugin2),
 	}
 }

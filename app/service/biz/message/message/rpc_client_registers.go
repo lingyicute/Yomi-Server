@@ -2,7 +2,7 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Yomi.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
  * Author: Benqi (wubenqi@gmail.com)
@@ -47,6 +47,7 @@ var rpcContextRegisters = map[string]RPCContextTuple{
 	"TLMessageGetUnreadMentions":                    RPCContextTuple{"/mtproto.RPCMessage/message_getUnreadMentions", func() interface{} { return new(Vector_MessageBox) }},
 	"TLMessageGetUnreadMentionsCount":               RPCContextTuple{"/mtproto.RPCMessage/message_getUnreadMentionsCount", func() interface{} { return new(mtproto.Int32) }},
 	"TLMessageGetSavedHistoryMessages":              RPCContextTuple{"/mtproto.RPCMessage/message_getSavedHistoryMessages", func() interface{} { return new(mtproto.MessageBoxList) }},
+	"TLMessageGetOutboxReadDate":                    RPCContextTuple{"/mtproto.RPCMessage/message_getOutboxReadDate", func() interface{} { return new(Vector_ReadParticipantDate) }},
 }
 
 func FindRPCContextTuple(t interface{}) *RPCContextTuple {

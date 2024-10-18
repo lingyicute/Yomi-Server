@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Author: Benqi (wubenqi@gmail.com)
@@ -10,13 +10,13 @@ import (
 	"bytes"
 	"image"
 	"io"
-	"io/ioutil"
+	"os"
 
 	"github.com/chai2010/webp"
 )
 
 func OpenWebp(filename string) (image.Image, error) {
-	srcData, _ := ioutil.ReadFile(filename)
+	srcData, _ := os.ReadFile(filename)
 	img, err := webp.Decode(bytes.NewReader(srcData))
 	if err != nil {
 		return nil, err

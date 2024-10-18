@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -61,10 +61,14 @@ func (c *DraftsCore) MessagesSaveDraft(in *mtproto.TLMessagesSaveDraft) (*mtprot
 	} else {
 		draft = mtproto.MakeTLDraftMessage(&mtproto.DraftMessage{
 			NoWebpage:    in.GetNoWebpage(),
+			InvertMedia:  in.GetInvertMedia(),
 			ReplyToMsgId: in.GetReplyToMsgId(),
+			ReplyTo:      in.GetReplyTo(),
 			Message:      in.GetMessage(),
 			Entities:     in.GetEntities(),
+			Media:        in.GetMedia(),
 			Date_INT32:   date,
+			Effect:       in.GetEffect(),
 		}).To_DraftMessage()
 
 		c.svcCtx.Dao.DialogClient.DialogSaveDraftMessage(c.ctx, &dialog.TLDialogSaveDraftMessage{

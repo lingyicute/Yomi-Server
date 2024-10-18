@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -256,12 +256,15 @@ func (s *Server) Initialize() error {
 		// users_helper
 		mtproto.RegisterRPCUsersServer(
 			grpcServer,
-			users_helper.New(users_helper.Config{
-				RpcServerConf: c.RpcServerConf,
-				UserClient:    c.BizServiceClient,
-				ChatClient:    c.BizServiceClient,
-				DialogClient:  c.BizServiceClient,
-			}, nil))
+			users_helper.New(
+				users_helper.Config{
+					RpcServerConf: c.RpcServerConf,
+					UserClient:    c.BizServiceClient,
+					ChatClient:    c.BizServiceClient,
+					DialogClient:  c.BizServiceClient,
+				},
+				nil,
+				nil))
 
 		// nsfw_helper
 		mtproto.RegisterRPCNsfwServer(

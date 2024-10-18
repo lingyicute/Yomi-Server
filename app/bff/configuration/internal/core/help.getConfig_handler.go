@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,11 +19,13 @@
 package core
 
 import (
+	"os"
+	"time"
+
 	"github.com/teamgram/proto/mtproto"
+
 	"github.com/zeromicro/go-zero/core/jsonx"
 	"google.golang.org/protobuf/proto"
-	"io/ioutil"
-	"time"
 )
 
 const (
@@ -31,12 +33,15 @@ const (
 	// date = 1509066502,    2017/10/27 09:08:22
 	// expires = 1509070295, 2017/10/27 10:11:35
 	expiresTimeout = 3600 // 超时时间设置为3600秒
+
+	// support user: @benqi
+	// SUPPORT_USER_ID = 2
 )
 
 var config mtproto.TLConfig
 
 func init() {
-	configData, err := ioutil.ReadFile(configFile)
+	configData, err := os.ReadFile(configFile)
 	if err != nil {
 		panic(err)
 		return

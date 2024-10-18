@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,14 +27,16 @@ type Mysql struct {
 	*sqlx.DB
 	*mysql_dao.MessagesDAO
 	*mysql_dao.HashTagsDAO
+	*mysql_dao.MessageReadOutboxDAO
 	*sqlx.CommonDAO
 }
 
 func newMysqlDao(db *sqlx.DB, shardingSize int) *Mysql {
 	return &Mysql{
-		DB:          db,
-		MessagesDAO: mysql_dao.NewMessagesDAO(db, shardingSize),
-		HashTagsDAO: mysql_dao.NewHashTagsDAO(db),
-		CommonDAO:   sqlx.NewCommonDAO(db),
+		DB:                   db,
+		MessagesDAO:          mysql_dao.NewMessagesDAO(db, shardingSize),
+		HashTagsDAO:          mysql_dao.NewHashTagsDAO(db),
+		MessageReadOutboxDAO: mysql_dao.NewMessageReadOutboxDAO(db),
+		CommonDAO:            sqlx.NewCommonDAO(db),
 	}
 }

@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,7 +88,7 @@ func (d *Dao) CreateNewUserV2(
 		FirstName:      firstName,
 		LastName:       lastName,
 		CountryCode:    countryCode,
-		AccountDaysTtl: 180,
+		AccountDaysTtl: 548,
 	}
 	if lastInsertId, _, err2 := d.UsersDAO.Insert(ctx, userDO); err2 != nil {
 		if sqlx.IsDuplicate(err2) {
@@ -939,4 +939,25 @@ func (d *Dao) GetMutableUsersV2(ctx context.Context, idList2 []int64, privacy bo
 		keyList...)
 
 	return cUserList
+}
+
+func (d *Dao) UpdatePersonalChannel(ctx context.Context, id int64, personalChanelId int64) bool {
+	_, _, err := d.CachedConn.Exec(
+		ctx,
+		func(ctx context.Context, conn *sqlx.DB) (int64, int64, error) {
+			rowsAffected, err := d.UsersDAO.UpdatePersonalChannelId(ctx, personalChanelId, id)
+
+			if err != nil {
+				return 0, 0, err
+			}
+
+			return 0, rowsAffected, nil
+		},
+		genCacheUserDataCacheKey(id))
+	if err != nil {
+		logx.WithContext(ctx).Errorf("updatePersonalChannel - error: %v", err)
+		return false
+	}
+
+	return true
 }

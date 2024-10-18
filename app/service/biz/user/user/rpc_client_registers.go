@@ -2,7 +2,7 @@
  * WARNING! All changes made in this file will be lost!
  * Created from 'scheme.tl' by 'mtprotoc'
  *
- * Copyright (c) 2024-present,  Yomi.
+ * Copyright (c) 2024-present,  Teamgram Authors.
  *  All rights reserved.
  *
  * Author: Benqi (wubenqi@gmail.com)
@@ -98,6 +98,8 @@ var rpcContextRegisters = map[string]RPCContextTuple{
 	"TLUserUpdateBirthday":               RPCContextTuple{"/mtproto.RPCUser/user_updateBirthday", func() interface{} { return new(mtproto.Bool) }},
 	"TLUserGetBirthdays":                 RPCContextTuple{"/mtproto.RPCUser/user_getBirthdays", func() interface{} { return new(Vector_ContactBirthday) }},
 	"TLUserSetStoriesHidden":             RPCContextTuple{"/mtproto.RPCUser/user_setStoriesHidden", func() interface{} { return new(mtproto.Bool) }},
+	"TLUserUpdatePersonalChannel":        RPCContextTuple{"/mtproto.RPCUser/user_updatePersonalChannel", func() interface{} { return new(mtproto.Bool) }},
+	"TLUserGetUserIdByPhone":             RPCContextTuple{"/mtproto.RPCUser/user_getUserIdByPhone", func() interface{} { return new(mtproto.Int64) }},
 }
 
 func FindRPCContextTuple(t interface{}) *RPCContextTuple {

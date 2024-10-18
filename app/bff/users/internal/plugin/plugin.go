@@ -1,4 +1,4 @@
-// Copyright 2022 Yomi
+// Copyright 2022 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,4 +34,8 @@ type StoryPlugin interface {
 	// GetActiveStories
 	// stories	flags.25?PeerStories	Active stories »
 	GetActiveStories(ctx context.Context, peerUserId, toSelfUserId int64) *mtproto.PeerStories
+}
+
+type PersonalChannelPlugin interface {
+	GetPersonalChannel(ctx context.Context, channelId, toSelfUserId int64) (*mtproto.Chat, int32)
 }

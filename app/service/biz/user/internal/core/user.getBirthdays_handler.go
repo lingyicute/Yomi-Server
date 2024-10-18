@@ -1,4 +1,4 @@
-// Copyright 2024 Yomi
+// Copyright 2024 Teamgram Authors
 //  All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +27,7 @@ import (
 // user.getBirthdays user_id:long = Vector<ContactBirthday>;
 func (c *UserCore) UserGetBirthdays(in *user.TLUserGetBirthdays) (*user.Vector_ContactBirthday, error) {
 	// TODO: not impl
-	c.Logger.Errorf("user.getBirthdays blocked, License key from https://teamgram.net required to unlock enterprise features.")
+	// c.Logger.Errorf("user.getBirthdays - method not impl")
 
 	rV := &user.Vector_ContactBirthday{
 		Datas: make([]*mtproto.ContactBirthday, 0),
