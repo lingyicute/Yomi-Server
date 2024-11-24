@@ -18,8 +18,8 @@ Cache:
   - Host: 127.0.0.1:6379
 Minio:
   Endpoint: localhost:9000
-  AccessKeyID: minio
-  SecretAccessKey: miniostorage
+  AccessKeyID: minioadmin
+  SecretAccessKey: minioadmin
   UseSSL: false
 IdGen:
   Etcd:
@@ -27,4 +27,4 @@ IdGen:
       - 127.0.0.1:2379
     Key: service.idgen
 SSDB:
-  - Host: 127.0.0.1:6379 # if use pika, change to 9221
+  - Host: 127.0.0.1:6379

@@ -11,9 +11,9 @@ import (
 )
 
 var (
-	MyAppName      = "Teamgram"
-	MyWebSite      = "teamgram.net"
-	TDotMe         = "t.me"
+	MyAppName      = "Yomi"
+	MyWebSite      = "yomi-io.github.io"
+	TDotMe         = "yomi-io.github.io"
 	PredefinedUser = false
 
 	// PredefinedUser2
@@ -31,9 +31,7 @@ func init() {
 
 func IsTDotMe(me string) bool {
 	switch me {
-	case "teamgram.me":
-		return true
-	case "t.me":
+	case "yomi-io.github.io":
 		return true
 	case TDotMe:
 		return true

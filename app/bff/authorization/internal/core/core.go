@@ -96,14 +96,6 @@ func checkPhoneNumberInvalid(phone string) (string, string, error) {
 	return pNumber.GetRegionCode(), pNumber.GetNormalizeDigits(), nil
 }
 
-const (
-	signInMessageTpl = `Login code: %s. Do not give this code to anyone, even if they say they are from %s!
-
-This code can be used to log in to your %s account. We never ask it for anything else.
-
-If you didn't request this code by trying to log in on another device, simply ignore this message.`
-)
-
 func (c *AuthorizationCore) pushSignInMessage(ctx context.Context, signInUserId int64, code string) {
 	time.AfterFunc(2*time.Second, func() {
 		message := mtproto.MakeTLMessage(&mtproto.Message{
@@ -111,28 +103,14 @@ func (c *AuthorizationCore) pushSignInMessage(ctx context.Context, signInUserId 
 			Date:    int32(time.Now().Unix()),
 			FromId:  mtproto.MakePeerUser(777000),
 			PeerId:  mtproto.MakeTLPeerUser(&mtproto.Peer{UserId: signInUserId}).To_Peer(),
-			Message: fmt.Sprintf(signInMessageTpl, code, env2.MyAppName, env2.MyAppName),
-			Entities: []*mtproto.MessageEntity{
-				mtproto.MakeTLMessageEntityBold(&mtproto.MessageEntity{
-					Offset: 0,
-					Length: 11,
-				}).To_MessageEntity(),
-				mtproto.MakeTLMessageEntityBold(&mtproto.MessageEntity{
-					Offset: 22,
-					Length: 3,
-				}).To_MessageEntity(),
-			},
-		}).To_Message()
+			Message: "宝，注意啦！
+星愿刚刚发现有人正在尝试登录你的账号。
 
-		if len(c.svcCtx.Config.SignInMessage) > 0 {
-			builder := conf.ToMessageBuildHelper(
-				c.svcCtx.Config.SignInMessage,
-				map[string]interface{}{
-					"code":     code,
-					"app_name": env2.MyAppName,
-				})
-			message.Message, message.Entities = mtproto.MakeTextAndMessageEntities(builder)
-		}
+如果是你本人在登录，那么你可以安全地忽略这条消息啦。但如果不是你在尝试登录，请确保你的账号已经设置了足够安全的密码。如果愿意的话，你还可以去“设置-已登录设备”里看看，并把所有不认识的设备踢下线。
+
+有什么问题的话，记得去找你的梨哦！", 
+			Entities: nil, 
+		}).To_Message()
 
 		c.svcCtx.Dao.MsgClient.MsgPushUserMessage(
 			ctx,

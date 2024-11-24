@@ -38,6 +38,6 @@ createConfigs() {
 createConfigs
 
 cd /app/bin
-./runall-docker.sh
+ping localhost
 
 tail -f /dev/null
